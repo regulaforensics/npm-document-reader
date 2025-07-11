@@ -1,0 +1,12 @@
+repositories {
+    maven {
+        url "https://maven.regulaforensics.com/RegulaDocumentReader"
+    }
+}
+
+dependencies {
+    //noinspection GradleDependency
+    implementation('com.regula.documentreader:api:8.1.11551'){
+        transitive = true
+    }
+}
