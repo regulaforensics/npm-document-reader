@@ -187,6 +187,12 @@ export class DocumentReader {
     /** Environment type. */
     env: string | null;
 
+    /** 
+     * Custom language locale code of DocumentReaderSDK.
+     * If empty or doesn't exist - app language is used. Format "en-US" or "en".
+     */
+    locale: string | null;
+
     /**
      * A localization dictionary to override default localization logic.
      * Allows to replace any string of DocumentReader SDK with an arbitrary string.

@@ -1302,7 +1302,11 @@ export declare enum FieldType {
   /** Issuing state code alpha 2. */
   ISSUING_STATE_CODE_ALPHA_2 = 696,
   /** Nationality code alpha 2. */
-  NATIONALITY_CODE_ALPHA_2 = 697
+  NATIONALITY_CODE_ALPHA_2 = 697,
+  /** First issue date check digit. */
+  FIRST_ISSUE_DATE_CHECKDIGIT = 698,
+  /** First issue date checksum. */
+  FIRST_ISSUE_DATE_CHECKSUM = 699,
 }
 
 export declare namespace FieldType {

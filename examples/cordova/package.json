@@ -6,7 +6,7 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "8.2.186-beta",
+    "@regulaforensics/document-reader": "8.2.204-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "8.2.8-beta",
     "@regulaforensics/document-reader-btdevice": "8.2.8-beta",
     "cordova-ios": "7.1.1",

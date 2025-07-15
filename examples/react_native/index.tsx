@@ -1,5 +1,6 @@
 import { registerRootComponent } from 'expo'
 import WebView from 'react-native-webview'
+import React from 'react'
 import { onload } from './src/main'
 
 var webViewRef: any
@@ -24,13 +25,13 @@ export const document = {
             }; true
           `)
         } else
-          webViewRef.injectJavaScript(`document.getElementById("${id}").${prop} = "${value}"; true`)
+          webViewRef.injectJavaScript(`document.getElementById("${id}").${prop} = ${parseValue(value)}; true`)
         return true
       },
       get(_, prop: string) {
         if (prop === "style") return new Proxy({}, {
           set(_, styleProp: string, value) {
-            webViewRef.injectJavaScript(`document.getElementById("${id}").style.${styleProp} = "${value}"; true`)
+            webViewRef.injectJavaScript(`document.getElementById("${id}").style.${styleProp} = ${parseValue(value)}; true`)
             return true
           }
         })
@@ -39,6 +40,11 @@ export const document = {
     }
     )
   }
+}
+
+function parseValue(value: any) {
+  if (value !== true && value !== false) return `"${value}"`
+  return value
 }
 
 registerRootComponent(() =>

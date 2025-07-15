@@ -28,7 +28,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   android: {
     package: 'com.regula.dr.fullauthrfid',
-    permissions: ['android.permission.BLUETOOTH_CONNECT'],
+    permissions: [
+      'android.permission.BLUETOOTH_CONNECT',
+      'android.permission.NFC'],
     adaptiveIcon: {
       foregroundImage: './images/icon/adaptive-icon.png',
       backgroundColor: '#ffffff'

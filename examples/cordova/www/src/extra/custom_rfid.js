@@ -1,5 +1,4 @@
-import { DocReaderAction, DocumentReader, RFIDConfig, RFIDDataFileType, RFIDNotificationCodes } from "@regulaforensics/document-reader"
-import { displayResults, setStatus } from "../main"
+import { displayResults, setStatus } from "../main.js"
 
 export const useRfidSelfHostedUI = false
 

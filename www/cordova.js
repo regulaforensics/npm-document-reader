@@ -759,6 +759,13 @@ class DocumentReader {
         this._setEnv(val);
     }
 
+    get locale() { return this._locale }
+    _locale = null
+    set locale(val) {
+        this._locale = val;
+        this._setLocale(val);
+    }
+
     get localizationDictionary() { return this._localizationDictionary }
     _localizationDictionary = null
     set localizationDictionary(val) {
@@ -954,6 +961,7 @@ class DocumentReader {
         this._tag = await this._getTag();
         this._tenant = await this._getTenant();
         this._env = await this._getEnv();
+        this._locale = await this._getLocale();
         this._rfidSessionStatus = await this._getRfidSessionStatus();
         this._functionality = await this._getFunctionality();
         this._processParams = await this._getProcessParams();
@@ -1030,6 +1038,14 @@ class DocumentReader {
 
     _setEnv(env) {
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setEnv", [env]);
+    }
+
+    async _getLocale() {
+        return await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getLocale", []);
+    }
+
+    _setLocale(locale) {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setLocale", [locale]);
     }
 
     _setLocalizationDictionary(dictionary) {
@@ -2230,6 +2246,12 @@ class Customization {
         this._set({ "livenessAnimationImage": val });
     }
 
+    get multipageButtonImage() { return this._multipageButtonImage; }
+    set multipageButtonImage(val) {
+        this._multipageButtonImage = val;
+        this._set({ "multipageButtonImage": val });
+    }
+
     get statusTextFont() { return this._statusTextFont; }
     set statusTextFont(val) {
         this._statusTextFont = val;
@@ -2400,6 +2422,7 @@ class Customization {
         result._changeFrameButtonExpandImage = jsonObject["changeFrameButtonExpandImage"];
         result._changeFrameButtonCollapseImage = jsonObject["changeFrameButtonCollapseImage"];
         result._livenessAnimationImage = jsonObject["livenessAnimationImage"];
+        result._multipageButtonImage = jsonObject["multipageButtonImage"];
         result._customLabelStatus = jsonObject["customLabelStatus"];
         result._cameraFrameLineCap = jsonObject["cameraFrameLineCap"];
         result._uiCustomizationLayer = jsonObject["uiCustomizationLayer"];
@@ -8608,7 +8631,9 @@ const FieldType = {
   AIRLINE_CODE: 694,
   MVC_AGENCY: 695,
   ISSUING_STATE_CODE_ALPHA_2: 696,
-  NATIONALITY_CODE_ALPHA_2: 697
+  NATIONALITY_CODE_ALPHA_2: 697,
+  FIRST_ISSUE_DATE_CHECKDIGIT: 698,
+  FIRST_ISSUE_DATE_CHECKSUM: 699,
 }
 
 FieldType.getTranslation = async function (value) {

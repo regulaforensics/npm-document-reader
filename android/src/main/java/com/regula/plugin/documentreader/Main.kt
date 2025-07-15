@@ -55,6 +55,8 @@ fun methodCall(method: String, callback: (Any?) -> Unit): Any = when (method) {
     "setTenant" -> setTenant(argsNullable(0))
     "getEnv" -> getEnv(callback)
     "setEnv" -> setEnv(argsNullable(0))
+    "getLocale" -> getLocale(callback)
+    "setLocale" -> setLocale(argsNullable(0))
     "getFunctionality" -> getFunctionality(callback)
     "setFunctionality" -> setFunctionality(args(0))
     "getProcessParams" -> getProcessParams(callback)
@@ -159,6 +161,10 @@ fun setTenant(tag: String?) = tag.let { Instance().tenant = it }
 fun getEnv(callback: Callback) = callback(Instance().env)
 
 fun setEnv(tag: String?) = tag.let { Instance().env = it }
+
+fun getLocale(callback: Callback) = callback(Instance().locale)
+
+fun setLocale(locale: String?) = locale.let { Instance().locale = it }
 
 fun getFunctionality(callback: Callback) = callback(getFunctionality(Instance().functionality()))
 

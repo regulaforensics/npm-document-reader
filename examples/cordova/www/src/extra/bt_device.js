@@ -1,5 +1,4 @@
-import { DocumentReader, InitConfig } from "@regulaforensics/document-reader"
-import { handleException, setStatus } from "../main"
+import { handleException, setStatus } from "../main.js"
 
 export const useBtDevice = false
 const btDeviceName = "Regula 0000"

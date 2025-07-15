@@ -3,11 +3,12 @@
     <name>DocumentReader</name>
     <platform name="android">
         <preference name="orientation" value="portrait" />
-        <preference name="GradlePluginKotlinEnabled" value="true" />
         <preference name="android-minSdkVersion" value="24" />
         <preference name="android-targetSdkVersion" value="35" />
+        <preference name="GradlePluginKotlinEnabled" value="true" />
         <config-file parent="/*" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.NFC" />
+            <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
         </config-file>
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />

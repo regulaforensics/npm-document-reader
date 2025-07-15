@@ -1,3 +1,4 @@
+import { document } from '../../index'
 import { DocumentReader, InitConfig } from "@regulaforensics/document-reader"
 import { handleException, setStatus } from "../main"
 

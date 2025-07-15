@@ -1,3 +1,4 @@
+import { document } from '../../index'
 import { DocReaderAction, DocumentReader, RFIDConfig, RFIDDataFileType, RFIDNotificationCodes } from "@regulaforensics/document-reader"
 import { displayResults, setStatus } from "../main"
 

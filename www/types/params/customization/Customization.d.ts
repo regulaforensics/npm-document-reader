@@ -343,6 +343,11 @@ export declare class Customization {
     livenessAnimationImage?: string;
 
     /**
+     * Allows you to set any UIImage for the "Skip next page" button.
+     */
+    multipageButtonImage?: string;
+
+    /**
      * Allows you to set a font for the status messages.
      */
     statusTextFont?: Font;

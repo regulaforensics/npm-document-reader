@@ -1,4 +1,4 @@
-import { NativeModules, NativeEventEmitter } from './cordova'
+import { NativeModules, NativeEventEmitter } from 'react-native'
 
 import { Results } from '../results/Results'
 import { DocReaderException } from '../info/DocReaderException'

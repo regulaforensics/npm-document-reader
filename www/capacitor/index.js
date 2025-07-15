@@ -184,6 +184,13 @@ export class DocumentReader {
         this._setEnv(val);
     }
 
+    get locale() { return this._locale }
+    _locale = null
+    set locale(val) {
+        this._locale = val;
+        this._setLocale(val);
+    }
+
     get localizationDictionary() { return this._localizationDictionary }
     _localizationDictionary = null
     set localizationDictionary(val) {
@@ -379,6 +386,7 @@ export class DocumentReader {
         this._tag = await this._getTag();
         this._tenant = await this._getTenant();
         this._env = await this._getEnv();
+        this._locale = await this._getLocale();
         this._rfidSessionStatus = await this._getRfidSessionStatus();
         this._functionality = await this._getFunctionality();
         this._processParams = await this._getProcessParams();
@@ -455,6 +463,14 @@ export class DocumentReader {
 
     _setEnv(env) {
         exec("setEnv", [env]);
+    }
+
+    async _getLocale() {
+        return await exec("getLocale", []);
+    }
+
+    _setLocale(locale) {
+        exec("setLocale", [locale]);
     }
 
     _setLocalizationDictionary(dictionary) {

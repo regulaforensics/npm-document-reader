@@ -312,6 +312,12 @@ export class Customization {
         this._set({ "livenessAnimationImage": val });
     }
 
+    get multipageButtonImage() { return this._multipageButtonImage; }
+    set multipageButtonImage(val) {
+        this._multipageButtonImage = val;
+        this._set({ "multipageButtonImage": val });
+    }
+
     get statusTextFont() { return this._statusTextFont; }
     set statusTextFont(val) {
         this._statusTextFont = val;
@@ -482,6 +488,7 @@ export class Customization {
         result._changeFrameButtonExpandImage = jsonObject["changeFrameButtonExpandImage"];
         result._changeFrameButtonCollapseImage = jsonObject["changeFrameButtonCollapseImage"];
         result._livenessAnimationImage = jsonObject["livenessAnimationImage"];
+        result._multipageButtonImage = jsonObject["multipageButtonImage"];
         result._customLabelStatus = jsonObject["customLabelStatus"];
         result._cameraFrameLineCap = jsonObject["cameraFrameLineCap"];
         result._uiCustomizationLayer = jsonObject["uiCustomizationLayer"];
