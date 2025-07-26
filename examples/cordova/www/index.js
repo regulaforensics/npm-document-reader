@@ -1,40 +1,30 @@
-document.addEventListener('deviceready', () => {
-    // imports
-    window.DocumentReader = DocumentReaderPlugin.DocumentReader
-    DocReaderAction = DocumentReaderPlugin.DocReaderAction
-    FieldType = DocumentReaderPlugin.FieldType
-    GraphicFieldType = DocumentReaderPlugin.GraphicFieldType
-    InitConfig = DocumentReaderPlugin.InitConfig
-    RecognizeConfig = DocumentReaderPlugin.RecognizeConfig
-    ResultType = DocumentReaderPlugin.ResultType
-    RFIDConfig = DocumentReaderPlugin.RFIDConfig
-    ScannerConfig = DocumentReaderPlugin.ScannerConfig
-    Scenario = DocumentReaderPlugin.Scenario
-    RFIDDataFileType = DocumentReaderPlugin.RFIDDataFileType
-    RFIDNotificationCodes = DocumentReaderPlugin.RFIDNotificationCodes
+import { main } from './src/main.js'
 
-    window.resolveLocalFileSystemURL(cordova.file.applicationDirectory + 'www/src/main.html', (fileEntry) => {
+export async function loadAsset(path) {
+    path = cordova.file.applicationDirectory + "www/" + path
+    return new Promise((resolve, _) => {
+      window.resolveLocalFileSystemURL(path, (fileEntry) => {
         fileEntry.file((file) => {
-            const reader = new FileReader()
-            reader.onloadend = async function () {
-                await loadModule('src/main.js')
-                await loadModule('src/extra/bt_device.js')
-                await loadModule('src/extra/custom_rfid.js')
-
-                document.getElementById('content').innerHTML = this.result
-                document.dispatchEvent(new CustomEvent("ready"))
-            }
-            reader.readAsText(file)
+          var reader = new FileReader()
+          reader.onloadend = function (_) { resolve(this.result) }
+          reader.readAsDataURL(file)
         })
+      })
     })
-})
-
-function loadModule(src) {
-    return new Promise((resolve) => {
-        const script = document.createElement('script');
-        script.type = 'module';
-        script.src = src;
-        script.onload = resolve;
-        document.body.appendChild(script);
-    });
-}
+  }
+  
+  export async function pickImage() {
+    return new Promise((resolve, _) => {
+      navigator.camera.getPicture(
+        (imageData) => resolve(imageData),
+        (_) => resolve(null),
+        {
+          destinationType: Camera.DestinationType.DATA_URL,
+          sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+          mediaType: Camera.MediaType.PICTURE
+        }
+      )
+    })
+  }
+  
+  document.addEventListener('ready', main)

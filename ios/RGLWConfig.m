@@ -184,6 +184,7 @@
     if (options[@"generateDTCVC"]) processParams.generateDTCVC = options[@"generateDTCVC"];
     if (options[@"strictDLCategoryExpiry"]) processParams.strictDLCategoryExpiry = options[@"strictDLCategoryExpiry"];
     if (options[@"generateAlpha2Codes"]) processParams.generateAlpha2Codes = options[@"generateAlpha2Codes"];
+    if (options[@"disableAuthResolutionFilter"]) processParams.disableAuthResolutionFilter = options[@"disableAuthResolutionFilter"];
 
     // Int
     if([options valueForKey:@"measureSystem"] != nil)
@@ -314,6 +315,7 @@
     result[@"generateDTCVC"] = processParams.generateDTCVC;
     result[@"strictDLCategoryExpiry"] = processParams.strictDLCategoryExpiry;
     result[@"generateAlpha2Codes"] = processParams.generateAlpha2Codes;
+    result[@"disableAuthResolutionFilter"] = processParams.disableAuthResolutionFilter;
     
     // Int
     result[@"measureSystem"] = [NSNumber numberWithInteger:processParams.measureSystem];

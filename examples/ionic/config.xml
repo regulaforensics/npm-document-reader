@@ -4,6 +4,7 @@
     <name>DocumentReader</name>
     <icon src="src/images/icon.png" />
     <platform name="android">
+        <resource-file src="src/assets/db.dat" target="app/src/main/assets/Regula/db.dat"/>
         <preference name="orientation" value="portrait" />
         <preference name="android-minSdkVersion" value="24" />
         <preference name="android-targetSdkVersion" value="35" />
@@ -17,6 +18,7 @@
         </edit-config>
     </platform>
     <platform name="ios">
+        <resource-file src="src/assets/db.dat" />
         <preference name="orientation" value="portrait" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />

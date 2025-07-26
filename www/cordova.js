@@ -839,8 +839,8 @@ class DocumentReader {
         return await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("connectBluetoothDevice", [deviceName]);
     }
 
-    async deinitializeReader() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("deinitializeReader", []);
+    deinitializeReader() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("deinitializeReader", []);
     }
 
     async prepareDatabase(databaseID, prepareCompletion) {
@@ -868,12 +868,12 @@ class DocumentReader {
         return await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("removeDatabase", []);
     }
 
-    async startNewPage() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewPage", []);
+    startNewPage() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewPage", []);
     }
 
-    async startNewSession() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewSession", []);
+    startNewSession() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewSession", []);
     }
 
     scan(config, completion) {
@@ -912,20 +912,20 @@ class DocumentReader {
         ]);
     }
 
-    async stopScanner() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopScanner", []);
+    stopScanner() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopScanner", []);
     }
 
-    async stopRFIDReader() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopRFIDReader", []);
+    stopRFIDReader() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopRFIDReader", []);
     }
 
-    async addPKDCertificates(certificates) {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
+    addPKDCertificates(certificates) {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
     }
 
-    async clearPKDCertificates() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("clearPKDCertificates", []);
+    clearPKDCertificates() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("clearPKDCertificates", []);
     }
 
     async setTCCParams(params) {
@@ -943,8 +943,8 @@ class DocumentReader {
         return [action, info, error];
     }
 
-    async endBackendTransaction() {
-        await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("endBackendTransaction", []);
+    endBackendTransaction() {
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("endBackendTransaction", []);
     }
 
     _successOrErrorFromJson(jsonString) {
@@ -3473,6 +3473,12 @@ class ProcessParams {
         this._set({ "generateAlpha2Codes": val });
     }
 
+    get disableAuthResolutionFilter() { return this._disableAuthResolutionFilter; }
+    set disableAuthResolutionFilter(val) {
+        this._disableAuthResolutionFilter = val;
+        this._set({ "disableAuthResolutionFilter": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -3736,6 +3742,7 @@ class ProcessParams {
         result._generateDTCVC = jsonObject["generateDTCVC"];
         result._strictDLCategoryExpiry = jsonObject["strictDLCategoryExpiry"];
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
+        result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];

@@ -194,6 +194,10 @@ export declare class ProcessParams {
     strictDLCategoryExpiry?: boolean;
     generateAlpha2Codes?: boolean;
     /**
+     * This parameter if enabled will ignore the minimum barcode resolution needed to start processing.
+     */
+    disableAuthResolutionFilter?: boolean;
+    /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
      * setting the barcode parser type which should be used during recognition.

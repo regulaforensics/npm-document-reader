@@ -1,7 +1,9 @@
 <widget android-packageName="com.regula.dr.fullauthrfid" ios-CFBundleIdentifier="regula.DocumentReader" version="1.0.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>DocumentReader</name>
+    <hook type="before_prepare" src="scripts/bundle.sh" />
     <platform name="android">
+        <resource-file src="www/db.dat" target="app/src/main/assets/Regula/db.dat" />
         <preference name="orientation" value="portrait" />
         <preference name="android-minSdkVersion" value="24" />
         <preference name="android-targetSdkVersion" value="35" />
@@ -15,6 +17,7 @@
         </edit-config>
     </platform>
     <platform name="ios">
+        <resource-file src="www/db.dat" />
         <preference name="orientation" value="portrait" />
         <preference name="DisallowOverscroll" value="true" />
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">

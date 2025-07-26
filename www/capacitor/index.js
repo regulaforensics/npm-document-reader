@@ -264,8 +264,8 @@ export class DocumentReader {
         return await exec("connectBluetoothDevice", [deviceName]);
     }
 
-    async deinitializeReader() {
-        await exec("deinitializeReader", []);
+    deinitializeReader() {
+        exec("deinitializeReader", []);
     }
 
     async prepareDatabase(databaseID, prepareCompletion) {
@@ -293,12 +293,12 @@ export class DocumentReader {
         return await exec("removeDatabase", []);
     }
 
-    async startNewPage() {
-        await exec("startNewPage", []);
+    startNewPage() {
+        exec("startNewPage", []);
     }
 
-    async startNewSession() {
-        await exec("startNewSession", []);
+    startNewSession() {
+        exec("startNewSession", []);
     }
 
     scan(config, completion) {
@@ -337,20 +337,20 @@ export class DocumentReader {
         ]);
     }
 
-    async stopScanner() {
-        await exec("stopScanner", []);
+    stopScanner() {
+        exec("stopScanner", []);
     }
 
-    async stopRFIDReader() {
-        await exec("stopRFIDReader", []);
+    stopRFIDReader() {
+        exec("stopRFIDReader", []);
     }
 
-    async addPKDCertificates(certificates) {
-        await exec("addPKDCertificates", [certificates]);
+    addPKDCertificates(certificates) {
+        exec("addPKDCertificates", [certificates]);
     }
 
-    async clearPKDCertificates() {
-        await exec("clearPKDCertificates", []);
+    clearPKDCertificates() {
+        exec("clearPKDCertificates", []);
     }
 
     async setTCCParams(params) {
@@ -368,8 +368,8 @@ export class DocumentReader {
         return [action, info, error];
     }
 
-    async endBackendTransaction() {
-        await exec("endBackendTransaction", []);
+    endBackendTransaction() {
+        exec("endBackendTransaction", []);
     }
 
     _successOrErrorFromJson(jsonString) {

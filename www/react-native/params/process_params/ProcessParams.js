@@ -229,6 +229,12 @@ export class ProcessParams {
         this._set({ "generateAlpha2Codes": val });
     }
 
+    get disableAuthResolutionFilter() { return this._disableAuthResolutionFilter; }
+    set disableAuthResolutionFilter(val) {
+        this._disableAuthResolutionFilter = val;
+        this._set({ "disableAuthResolutionFilter": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -492,6 +498,7 @@ export class ProcessParams {
         result._generateDTCVC = jsonObject["generateDTCVC"];
         result._strictDLCategoryExpiry = jsonObject["strictDLCategoryExpiry"];
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
+        result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];

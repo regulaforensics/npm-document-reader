@@ -251,7 +251,7 @@ export class DocumentReader {
     connectBluetoothDevice(deviceName: string): Promise<boolean>;
 
     /**  Used to deinitialize Document Reader and free up RAM as a consequence of this. */
-    deinitializeReader(): Promise<void>;
+    deinitializeReader(): void;
 
     /**
      * Allows you to download a database from the Regula server.
@@ -296,10 +296,10 @@ export class DocumentReader {
     removeDatabase(): Promise<void>;
 
     /** Used to start the processing of the next page of the document once the current one is processed. */
-    startNewPage(): Promise<void>;
+    startNewPage(): void;
 
     /** Used to start a scanning process. */
-    startNewSession(): Promise<void>;
+    startNewSession(): void;
 
     /**
      * Used for multiple frames processing which are captured from the camera(old UI).
@@ -335,22 +335,22 @@ export class DocumentReader {
     rfid(config: RFIDConfig): void;
 
     /** Stops the document scanner if it's active. */
-    stopScanner(): Promise<void>;
+    stopScanner(): void;
 
     /** Stops the RFID reader if it's active. */
-    stopRFIDReader(): Promise<void>;
+    stopRFIDReader(): void;
 
     /** Used to pass certificates to Document Reader that will be used during the
      * RFID chip processing.
      *
      * @param certificates - PKD certificates.
      */
-    addPKDCertificates(certificates: [PKDCertificate]): Promise<void>;
+    addPKDCertificates(certificates: [PKDCertificate]): void;
 
     /** It's used to remove certificates from your app that are used during the
      * RFID chip processing.
      */
-    clearPKDCertificates(): Promise<void>;
+    clearPKDCertificates(): void;
 
     /** Sets the given `TCCParams` to the RFID  session.
      * The parameters are required to be set before starting RFID session.
@@ -368,7 +368,7 @@ export class DocumentReader {
     finalizePackage(): Promise<[action: DocReaderAction, info: TransactionInfo | null, error: DocReaderException | null]>;
 
     /** It's used to end transaction during backend processing. */
-    endBackendTransaction(): Promise<void>;
+    endBackendTransaction(): void;
 }
 
 /**

@@ -1,4 +1,5 @@
-import { setupBTDevice, useBtDevice } from './extra/bt_device.js'
+import { loadAsset, pickImage } from '../index.js'
+import { initializeWithBTDevice, setupBTDevice, useBtDevice } from './extra/bt_device.js'
 import { useRfidSelfHostedUI, rfidSelfHostedUI } from './extra/custom_rfid.js'
 
 var documentReader = DocumentReader.instance
@@ -6,7 +7,7 @@ var selectedScenario
 var doRfid = false
 var isReadingRfid = false
 
-async function init() {
+export async function init() {
   if (!await initialize()) return
   setScenarios(documentReader.availableScenarios)
   setCanRfid(await documentReader.isRFIDAvailableForUse())
@@ -69,7 +70,7 @@ function shouldRfid(results) {
     results != null && results.chipPage != 0
 }
 
-async function initialize() {
+var initialize = async () => {
   setStatus("Initializing...")
 
   var license = await loadAsset("regula.license")
@@ -87,7 +88,26 @@ export function handleException(error) {
   }
 }
 
-// ui --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+
+var documentUIImage
+var portraitUIImage
+export function main() {
+  documentUIImage = document.getElementById("document-image")
+  portraitUIImage = document.getElementById("portrait-image")
+  document.getElementById("scan").onclick = () => scan()
+  document.getElementById("recognize").onclick = () => recognize()
+
+  // custom rfid
+  if (useRfidSelfHostedUI) readRfid = () => rfidSelfHostedUI()
+
+  // bt device
+  if (!useBtDevice) init()
+  else {
+    setupBTDevice()
+    initialize = initializeWithBTDevice
+  }
+}
 
 export function setStatus(data) {
   if (data != null)
@@ -117,86 +137,37 @@ function setCanRfid(data) {
   if (data) {
     checkbox.disabled = false
     checkboxDescription.innerHTML = "Process rfid reading"
-    checkboxDescription.onclick = () => {
+    var onclick = () => {
       doRfid = !doRfid
       checkbox.checked = doRfid
     }
+    checkbox.onclick = onclick
+    checkboxDescription.onclick = onclick
   }
 }
 
-// not equal --------------------------------------------------------------------------------------------------------------------
-
-async function loadAsset(path) {
-  path = cordova.file.applicationDirectory + "www/" + path
-  return new Promise((resolve, _) => {
-    window.resolveLocalFileSystemURL(path, (fileEntry) => {
-      fileEntry.file((file) => {
-        var reader = new FileReader()
-        reader.onloadend = function (_) { resolve(this.result) }
-        reader.readAsDataURL(file)
-      })
-    })
-  })
-}
-
-function pickImage() {
-  return new Promise((resolve, _) => {
-    navigator.camera.getPicture(
-      (imageData) => resolve(imageData),
-      (_) => resolve(null),
-      {
-        destinationType: Camera.DestinationType.DATA_URL,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-        mediaType: Camera.MediaType.PICTURE
-      }
-    )
-  })
-}
-
-var documentUIImage
-var portraitUIImage
-document.addEventListener('ready', () => {
-  documentUIImage = document.getElementById("document-image")
-  portraitUIImage = document.getElementById("portrait-image")
-  document.getElementById("scan").onclick = () => scan()
-  document.getElementById("recognize").onclick = () => recognize()
-
-  // custom rfid
-  if (useRfidSelfHostedUI) readRfid = () => rfidSelfHostedUI()
-
-  // bt device
-  if (!useBtDevice) init()
-  else setupBTDevice()
-})
-
-// not resolved --------------------------------------------------------------------------------------------------------------------
-
 function setScenarios(data) {
   selectedScenario = Scenario.MRZ
-  const scenariosContainer = document.getElementById("scenarios")
-  data.forEach(scenario => scenariosContainer.appendChild(createScenarioElement(scenario)))
-}
+  var scenariosContainer = document.getElementById("scenarios")
 
-function createScenarioElement(scenario) {
-  const div = document.createElement('div')
-  div.className = 'row radio'
+  data.forEach(scenario => {
+    var checked = selectedScenario == scenario.name ? "checked" : ""
+    var scenarioElement = `<div class="row radio">
+      <input type="radio" name="scenario" id="${scenario.name}" value="${scenario.name}" ${checked}>
+      <span id="${scenario.name}-caption" style="width: 200px; padding-left: 5px;">${scenario.caption}</span>
+    </div>`
+    scenariosContainer.insertAdjacentHTML("beforeend", scenarioElement)
+  })
 
-  const input = document.createElement('input')
-  input.type = 'radio'
-  input.name = 'scenario'
-  input.value = scenario.name
-  input.checked = scenario.name === selectedScenario
-
-  const span = document.createElement('span')
-  span.style.width = '200px'
-  span.style.paddingLeft = '5px'
-  span.textContent = scenario.caption
-
-  input.onclick = () => selectedScenario = scenario.name
-  span.onclick = () => input.click()
-
-  div.appendChild(input)
-  div.appendChild(span)
-
-  return div
+  data.forEach(scenario => {
+    var element
+    element = document.getElementById(scenario.name)
+    var elementCaption = document.getElementById(scenario.name + "-caption")
+    var onclick = () => {
+      selectedScenario = scenario.name
+      element.checked = true
+    }
+    element.onclick = onclick
+    elementCaption.onclick = onclick
+  })
 }
