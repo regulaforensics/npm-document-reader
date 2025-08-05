@@ -28,7 +28,7 @@ function setup() {
     setProgress(-1)
     currentProgress = -1
     setShowing(true)
-    document.getElementById("cancel-rfid").onclick = () => stop()
+    document.getElementById("cancel-rfid")!.onclick = () => stop()
 }
 
 function stop() {
@@ -37,13 +37,13 @@ function stop() {
     setShowing(false)
 }
 
-function setDescription(data) {
-    document.getElementById("rfid-description").innerHTML = data
+function setDescription(data: string) {
+    document.getElementById("rfid-description")!.innerHTML = data
 }
 
 var currentProgress = -1
-function setProgress(next) {
-    var progress = document.getElementById("progress")
+function setProgress(next: number) {
+    var progress = document.getElementById("progress")!
     // make progress bar look better
     if (next == 0) return // ignore idle 0s, leave progress at 100 while its not moving
     if (next < currentProgress) next = 0 // move to 0 if progress finaly started moving
@@ -55,7 +55,7 @@ function setProgress(next) {
     currentProgress = next
 }
 
-function setShowing(data) {
-    document.getElementById("main").style.display = data ? "none" : "flex"
-    document.getElementById("custom-rfid").style.display = data ? "flex" : "none"
+function setShowing(data: boolean) {
+    document.getElementById("main")!.style.display = data ? "none" : "flex"
+    document.getElementById("custom-rfid")!.style.display = data ? "flex" : "none"
 }

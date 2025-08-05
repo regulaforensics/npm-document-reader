@@ -16,7 +16,7 @@ const onMessage = (json: any) => {
   }
 }
 
-export const document = {
+const document = {
   getElementById(id: string): any {
     return new Proxy({}, {
       set(_, prop: string, value) {
@@ -54,6 +54,7 @@ function parseValue(value: any) {
   return value
 }
 
+(globalThis as any).document = document;
 registerRootComponent(() =>
   <WebView
     ref={ref => { webViewRef = ref }}

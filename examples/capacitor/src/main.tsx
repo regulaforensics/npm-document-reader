@@ -1,10 +1,10 @@
-import { DocumentReader, DocReaderAction, FieldType, GraphicFieldType, InitConfig, RecognizeConfig, ResultType, RFIDConfig, ScannerConfig, Scenario } from '@regulaforensics/document-reader'
+import { DocumentReader, DocReaderAction, FieldType, GraphicFieldType, InitConfig, RecognizeConfig, ResultType, RFIDConfig, ScannerConfig, Scenario, Results, DocReaderException, DocReaderScenario } from '@regulaforensics/document-reader'
 import { loadAsset, pickImage } from '../index'
 import { initializeWithBTDevice, setupBTDevice, useBtDevice } from './extra/bt_device'
 import { useRfidSelfHostedUI, rfidSelfHostedUI } from './extra/custom_rfid'
 
 var documentReader = DocumentReader.instance
-var selectedScenario
+var selectedScenario = Scenario.MRZ
 var doRfid = false
 var isReadingRfid = false
 
@@ -36,7 +36,7 @@ async function recognize() {
   )
 }
 
-export function handleCompletion(action, results, error) {
+export function handleCompletion(action: DocReaderAction, results: Results | null, error: DocReaderException | null) {
   handleException(error)
   if (DocReaderAction.stopped(action) && !shouldRfid(results)) {
     displayResults(results)
@@ -46,7 +46,7 @@ export function handleCompletion(action, results, error) {
   }
 }
 
-export async function displayResults(results) {
+export async function displayResults(results: Results | null) {
   isReadingRfid = false
   clearResults()
   if (results == null) return
@@ -65,7 +65,7 @@ var readRfid = () => {
   documentReader.rfid(new RFIDConfig(handleCompletion))
 }
 
-function shouldRfid(results) {
+function shouldRfid(results: Results | null) {
   return doRfid &&
     !isReadingRfid &&
     results != null && results.chipPage != 0
@@ -82,7 +82,7 @@ var initialize = async () => {
   return success
 }
 
-export function handleException(error) {
+export function handleException(error: DocReaderException | null) {
   if (error != null) {
     setStatus(error.message)
     console.log(error.code + ": " + error.message)
@@ -91,13 +91,13 @@ export function handleException(error) {
 
 // --------------------------------------------------------------------------------------------------------------------
 
-var documentUIImage
-var portraitUIImage
+var documentUIImage: HTMLImageElement
+var portraitUIImage: HTMLImageElement
 export function main() {
-  documentUIImage = document.getElementById("document-image")
-  portraitUIImage = document.getElementById("portrait-image")
-  document.getElementById("scan").onclick = () => scan()
-  document.getElementById("recognize").onclick = () => recognize()
+  documentUIImage = document.getElementById("document-image") as HTMLImageElement
+  portraitUIImage = document.getElementById("portrait-image") as HTMLImageElement
+  document.getElementById("scan")!.onclick = () => scan()
+  document.getElementById("recognize")!.onclick = () => recognize()
 
   // custom rfid
   if (useRfidSelfHostedUI) readRfid = () => rfidSelfHostedUI()
@@ -110,17 +110,17 @@ export function main() {
   }
 }
 
-export function setStatus(data) {
+export function setStatus(data: string | null) {
   if (data != null)
-    document.getElementById("status").innerHTML = data
+    document.getElementById("status")!.innerHTML = data
 }
 
-function setPortrait(data) {
+function setPortrait(data: string | null) {
   if (data != null)
     portraitUIImage.src = "data:image/png;base64," + data
 }
 
-function setDocImage(data) {
+function setDocImage(data: string | null) {
   if (data != null)
     documentUIImage.src = "data:image/png;base64," + data
 }
@@ -131,10 +131,9 @@ function clearResults() {
   documentUIImage.src = "images/document.png"
 }
 
-function setCanRfid(data) {
-  var checkbox // implicitly any, since cordova sample is pure js
-  checkbox = document.getElementById('rfid-checkbox')
-  var checkboxDescription = document.getElementById("rfid-checkbox-description")
+function setCanRfid(data: boolean) {
+  var checkbox = document.getElementById('rfid-checkbox') as HTMLInputElement
+  var checkboxDescription = document.getElementById("rfid-checkbox-description")!
   if (data) {
     checkbox.disabled = false
     checkboxDescription.innerHTML = "Process rfid reading"
@@ -147,9 +146,8 @@ function setCanRfid(data) {
   }
 }
 
-function setScenarios(data) {
-  selectedScenario = Scenario.MRZ
-  var scenariosContainer = document.getElementById("scenarios")
+function setScenarios(data: DocReaderScenario[]) {
+  var scenariosContainer = document.getElementById("scenarios")!
 
   data.forEach(scenario => {
     var checked = selectedScenario == scenario.name ? "checked" : ""
@@ -161,11 +159,10 @@ function setScenarios(data) {
   })
 
   data.forEach(scenario => {
-    var element
-    element = document.getElementById(scenario.name)
-    var elementCaption = document.getElementById(scenario.name + "-caption")
+    var element = document.getElementById(scenario.name) as HTMLInputElement
+    var elementCaption = document.getElementById(scenario.name + "-caption")!
     var onclick = () => {
-      selectedScenario = scenario.name
+      selectedScenario = scenario.name as Scenario
       element.checked = true
     }
     element.onclick = onclick

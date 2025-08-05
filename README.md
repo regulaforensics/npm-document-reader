@@ -1,10 +1,9 @@
 # Regula Document Reader plugin
-Document Reader allows you to read various kinds of identification documents, passports, driving licenses, ID cards, etc. All processing is performed completely offline on your device. This plugin makes possible to use it with react-native, cordova and ionic applications.
+Document Reader allows you to read various kinds of identification documents, passports, driving licenses, ID cards, etc. All processing is performed completely offline on your device. This plugin makes possible to use it with react-native, cordova and capacitor applications.
 
 ## Demo applications
-In the [examples](examples/) folder you can find 4 demo applications:
+In the [examples](examples/) folder you can find 3 demo applications:
 * [React-native](examples/react-native)
-* [Cordova](examples/cordova)
 * [Ionic(ionic app with cordova, angular)](examples/ionic)
 * [Capacitor(ionic app with capacitor, react)](examples/capacitor)
 
