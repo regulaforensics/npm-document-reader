@@ -76,6 +76,7 @@ var initialize = async () => {
 
   var license = await loadAsset("regula.license")
   var initConfig = new InitConfig(license)
+  initConfig.delayedNNLoad = true
   var [success, error] = await documentReader.initialize(initConfig)
 
   handleException(error)

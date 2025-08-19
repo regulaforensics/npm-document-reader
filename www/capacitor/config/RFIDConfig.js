@@ -1,4 +1,4 @@
-import { DocumentReaderCompletion, DocReaderAction } from "../index";
+import { DocReaderAction } from "../index";
 import { Results } from "../results/Results";
 import { RFIDException } from "../info/RFIDException";
 import { RFIDNotification } from "../rfid/RFIDNotification";

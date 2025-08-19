@@ -1,7 +1,7 @@
 import { exec } from '../../internal/bridge';
 import { DocumentReader } from '../../index';
 import { ImageQA } from './ImageQA';
-import { RFIDParams } from './RfidParams';
+import { RFIDParams } from './RFIDParams';
 import { FaceApiParams } from './FaceApiParams';
 import { BackendProcessingConfig } from './BackendProcessingConfig';
 import { AuthenticityParams } from './AuthenticityParams';

@@ -22,4 +22,31 @@ export class InitConfig {
         this.blackList = options?.blackList
         this.useBleDevice = false
     }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        var result = new InitConfig(jsonObject["license"]);
+
+        result.customDb = jsonObject["customDb"];
+        result.delayedNNLoad = jsonObject["delayedNNLoad"];
+        result.licenseUpdate = jsonObject["licenseUpdate"];
+        result.blackList = jsonObject["blackList"];
+        result.databasePath = jsonObject["databasePath"];
+        result.useBleDevice = jsonObject["useBleDevice"];
+
+        return result;
+    }
+
+
+    toJson() {
+        return {
+            "license": this.license,
+            "delayedNNLoad": this.delayedNNLoad,
+            "licenseUpdate": this.licenseUpdate,
+            "blackList": this.blackList,
+            "customDb": this.customDb,
+            "databasePath": this.databasePath,
+            "useBleDevice": this.useBleDevice,
+        }
+    }
 }

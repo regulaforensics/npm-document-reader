@@ -1,6 +1,6 @@
 import { exec } from '../../internal/bridge';
 import { DocumentReader } from '../../index';
-import { DTCDataGroup } from "./DTCDataGroups";
+import { DTCDataGroup } from "./DTCDataGroup";
 import { EDLDataGroups } from "./EDLDataGroups";
 import { EIDDataGroups } from "./EIDDataGroups";
 import { EPassportDataGroups } from "./EPassportDataGroups";

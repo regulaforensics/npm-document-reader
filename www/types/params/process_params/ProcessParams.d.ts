@@ -2,7 +2,7 @@ import { AuthenticityParams } from "./AuthenticityParams";
 import { BackendProcessingConfig } from "./BackendProcessingConfig";
 import { FaceApiParams } from "./FaceApiParams";
 import { ImageQA } from "./ImageQA";
-import { RFIDParams } from "./RfidParams";
+import { RFIDParams } from "./RFIDParams";
 import { Scenario } from "../../info/DocReaderScenario";
 import { BarcodeType } from "../../results/barcode/BarcodeType";
 import { DocType, DocFormat } from "../../results/DocumentType";

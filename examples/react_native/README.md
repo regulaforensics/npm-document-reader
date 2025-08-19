@@ -2,9 +2,7 @@
 
 ## How to build demo application
 1. Download or the clone current repository using the command `git clone https://github.com/regulaforensics/npm-document-reader.git`.
-
 2. Execute `npm run setup` within this directory.
-
 3. Run the app: 
   * IOS: `npm run ios`.
   * Android: `npm run android`.
@@ -15,7 +13,7 @@
 
 ### Bluetooth device
 
-In order to connect to an external scanning device, change the `useBtDevice` constant to true in `src/extra/bt_device`, and set `btDeviceName` to the name of you device. After running the app, click `Connect`.
+In order to connect to an external scanning device, change the `useBtDevice` constant to true in `src/extra/bt_device`, and set `btDeviceName` to the name of your device. After running the app, click `Connect`.
 
 ### RFID self hosted UI
 

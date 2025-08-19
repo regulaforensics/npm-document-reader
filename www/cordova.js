@@ -36,6 +36,33 @@ class InitConfig {
         this.blackList = options?.blackList
         this.useBleDevice = false
     }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        var result = new InitConfig(jsonObject["license"]);
+
+        result.customDb = jsonObject["customDb"];
+        result.delayedNNLoad = jsonObject["delayedNNLoad"];
+        result.licenseUpdate = jsonObject["licenseUpdate"];
+        result.blackList = jsonObject["blackList"];
+        result.databasePath = jsonObject["databasePath"];
+        result.useBleDevice = jsonObject["useBleDevice"];
+
+        return result;
+    }
+
+
+    toJson() {
+        return {
+            "license": this.license,
+            "delayedNNLoad": this.delayedNNLoad,
+            "licenseUpdate": this.licenseUpdate,
+            "blackList": this.blackList,
+            "customDb": this.customDb,
+            "databasePath": this.databasePath,
+            "useBleDevice": this.useBleDevice,
+        }
+    }
 }
 
 
@@ -367,7 +394,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_88__.CustomizationColors),
 /* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_84__.CustomizationFonts),
 /* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_85__.CustomizationImages),
-/* harmony export */   DTCDataGroups: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroups__WEBPACK_IMPORTED_MODULE_91__.DTCDataGroup),
+/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_91__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_56__.DataField),
 /* harmony export */   DocFormat: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_28__.DocFormat),
 /* harmony export */   DocReaderAction: () => (/* binding */ DocReaderAction),
@@ -438,6 +465,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_97__.RFIDNotification),
 /* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_97__.RFIDNotificationCodes),
 /* harmony export */   RFIDOrigin: () => (/* reexport safe */ _results_visual_results_RFIDOrigin__WEBPACK_IMPORTED_MODULE_24__.RFIDOrigin),
+/* harmony export */   RFIDParams: () => (/* reexport safe */ _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_78__.RFIDParams),
 /* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_92__.RFIDPasswordType),
 /* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_92__.RFIDReadingBufferSize),
 /* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_92__.RFIDSDKProfilerType),
@@ -452,7 +480,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   ResultType: () => (/* reexport safe */ _results_Results__WEBPACK_IMPORTED_MODULE_29__.ResultType),
 /* harmony export */   Results: () => (/* reexport safe */ _results_Results__WEBPACK_IMPORTED_MODULE_29__.Results),
 /* harmony export */   ResultsStatus: () => (/* reexport safe */ _results_status_ResultsStatus__WEBPACK_IMPORTED_MODULE_33__.ResultsStatus),
-/* harmony export */   RfidParams: () => (/* reexport safe */ _params_process_params_RfidParams__WEBPACK_IMPORTED_MODULE_78__.RFIDParams),
 /* harmony export */   ScannerConfig: () => (/* reexport safe */ _config_ScannerConfig__WEBPACK_IMPORTED_MODULE_4__.ScannerConfig),
 /* harmony export */   Scenario: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_11__.Scenario),
 /* harmony export */   SecurityFeatureType: () => (/* reexport safe */ _results_authenticity_SecurityFeatureType__WEBPACK_IMPORTED_MODULE_40__.SecurityFeatureType),
@@ -550,7 +577,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./params/process_params/ProcessParams */ "./src/params/process_params/ProcessParams.js");
 /* harmony import */ var _params_process_params_GlaresCheckParams__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./params/process_params/GlaresCheckParams */ "./src/params/process_params/GlaresCheckParams.js");
 /* harmony import */ var _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./params/process_params/FaceApiParams */ "./src/params/process_params/FaceApiParams.js");
-/* harmony import */ var _params_process_params_RfidParams__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./params/process_params/RfidParams */ "./src/params/process_params/RfidParams.js");
+/* harmony import */ var _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./params/process_params/RFIDParams */ "./src/params/process_params/RFIDParams.js");
 /* harmony import */ var _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./params/process_params/ImageQA */ "./src/params/process_params/ImageQA.js");
 /* harmony import */ var _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./params/process_params/AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
 /* harmony import */ var _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./params/process_params/BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
@@ -563,7 +590,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
 /* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
 /* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_DTCDataGroups__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroups */ "./src/params/rfid_scenario/DTCDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
 /* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
 /* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
 /* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
@@ -3238,7 +3265,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../index */ "./src/index.js");
 /* harmony import */ var _ImageQA__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImageQA */ "./src/params/process_params/ImageQA.js");
-/* harmony import */ var _RfidParams__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RfidParams */ "./src/params/process_params/RfidParams.js");
+/* harmony import */ var _RFIDParams__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RFIDParams */ "./src/params/process_params/RFIDParams.js");
 /* harmony import */ var _FaceApiParams__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FaceApiParams */ "./src/params/process_params/FaceApiParams.js");
 /* harmony import */ var _BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
 /* harmony import */ var _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
@@ -3776,7 +3803,7 @@ class ProcessParams {
         result._lcidIgnoreFilter = jsonObject["lcidIgnoreFilter"];
         result._lcidFilter = jsonObject["lcidFilter"];
         result._imageQA = _ImageQA__WEBPACK_IMPORTED_MODULE_2__.ImageQA.fromJson(jsonObject["imageQA"]);
-        result._rfidParams = _RfidParams__WEBPACK_IMPORTED_MODULE_3__.RFIDParams.fromJson(jsonObject["rfidParams"]);
+        result._rfidParams = _RFIDParams__WEBPACK_IMPORTED_MODULE_3__.RFIDParams.fromJson(jsonObject["rfidParams"]);
         result._faceApiParams = _FaceApiParams__WEBPACK_IMPORTED_MODULE_4__.FaceApiParams.fromJson(jsonObject["faceApiParams"]);
         result._backendProcessingConfig = _BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_5__.BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
         result._authenticityParams = _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__.AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
@@ -3823,9 +3850,9 @@ const MrzDetectionModes = {
 
 /***/ }),
 
-/***/ "./src/params/process_params/RfidParams.js":
+/***/ "./src/params/process_params/RFIDParams.js":
 /*!*************************************************!*\
-  !*** ./src/params/process_params/RfidParams.js ***!
+  !*** ./src/params/process_params/RFIDParams.js ***!
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3852,10 +3879,10 @@ class RFIDParams {
 
 /***/ }),
 
-/***/ "./src/params/rfid_scenario/DTCDataGroups.js":
-/*!***************************************************!*\
-  !*** ./src/params/rfid_scenario/DTCDataGroups.js ***!
-  \***************************************************/
+/***/ "./src/params/rfid_scenario/DTCDataGroup.js":
+/*!**************************************************!*\
+  !*** ./src/params/rfid_scenario/DTCDataGroup.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -4394,7 +4421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../index */ "./src/index.js");
-/* harmony import */ var _DTCDataGroups__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DTCDataGroups */ "./src/params/rfid_scenario/DTCDataGroups.js");
+/* harmony import */ var _DTCDataGroup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
 /* harmony import */ var _EDLDataGroups__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
 /* harmony import */ var _EIDDataGroups__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
 /* harmony import */ var _EPassportDataGroups__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
@@ -4833,7 +4860,7 @@ class RFIDScenario {
         result._eDLDataGroups = _EDLDataGroups__WEBPACK_IMPORTED_MODULE_3__.EDLDataGroups.fromJson(jsonObject["eDLDataGroups"]);
         result._ePassportDataGroups = _EPassportDataGroups__WEBPACK_IMPORTED_MODULE_5__.EPassportDataGroups.fromJson(jsonObject["ePassportDataGroups"]);
         result._eIDDataGroups = _EIDDataGroups__WEBPACK_IMPORTED_MODULE_4__.EIDDataGroups.fromJson(jsonObject["eIDDataGroups"]);
-        result._dtcDataGroups = _DTCDataGroups__WEBPACK_IMPORTED_MODULE_2__.DTCDataGroup.fromJson(jsonObject["dtcDataGroups"]);
+        result._dtcDataGroups = _DTCDataGroup__WEBPACK_IMPORTED_MODULE_2__.DTCDataGroup.fromJson(jsonObject["dtcDataGroups"]);
         
         return result;
     }
@@ -4925,7 +4952,7 @@ class DocumentType {
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
         const result = new DocumentType();
-        
+
         result.name = jsonObject["name"];
         result.id = jsonObject["documentID"];
         result.iCAOCode = jsonObject["ICAOCode"];
@@ -4938,8 +4965,25 @@ class DocumentType {
         result.year = jsonObject["dYear"];
         result.countryName = jsonObject["dCountryName"];
         result.pageIndex = jsonObject["pageIndex"];
-        
+
         return result;
+    }
+
+    toJson() {
+        return {
+            name: this.name,
+            documentID: this.id,
+            ICAOCode: this.iCAOCode,
+            FDSID: this.fDSID,
+            dType: this.type,
+            dFormat: this.format,
+            dMRZ: this.mrz,
+            isDeprecated: this.isDeprecated,
+            dDescription: this.description,
+            dYear: this.year,
+            dCountryName: this.countryName,
+            pageIndex: this.pageIndex,
+        }
     }
 }
 

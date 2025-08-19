@@ -15,7 +15,7 @@ export class DocumentType {
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
         const result = new DocumentType();
-        
+
         result.name = jsonObject["name"];
         result.id = jsonObject["documentID"];
         result.iCAOCode = jsonObject["ICAOCode"];
@@ -28,8 +28,25 @@ export class DocumentType {
         result.year = jsonObject["dYear"];
         result.countryName = jsonObject["dCountryName"];
         result.pageIndex = jsonObject["pageIndex"];
-        
+
         return result;
+    }
+
+    toJson() {
+        return {
+            name: this.name,
+            documentID: this.id,
+            ICAOCode: this.iCAOCode,
+            FDSID: this.fDSID,
+            dType: this.type,
+            dFormat: this.format,
+            dMRZ: this.mrz,
+            isDeprecated: this.isDeprecated,
+            dDescription: this.description,
+            dYear: this.year,
+            dCountryName: this.countryName,
+            pageIndex: this.pageIndex,
+        }
     }
 }
 

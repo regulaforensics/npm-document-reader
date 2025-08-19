@@ -96,12 +96,12 @@ import { LivenessParams } from './params/process_params/LivenessParams';
 import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
-import { RFIDParams } from './params/process_params/RfidParams';
+import { RFIDParams } from './params/process_params/RFIDParams';
 import { ImageQA } from './params/process_params/ImageQA';
 import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams as RfidParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
+export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
@@ -115,10 +115,10 @@ export { CustomizationFonts, CustomizationImages, Font, FontStyle, Customization
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
-import { DTCDataGroup } from './params/rfid_scenario/DTCDataGroups';
+import { DTCDataGroup } from './params/rfid_scenario/DTCDataGroup';
 import { RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize } from './params/rfid_scenario/RFIDScenario';
 import { EDLDataGroups } from './params/rfid_scenario/EDLDataGroups';
-export { EPassportDataGroups, EIDDataGroups, DTCDataGroup as DTCDataGroups, RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize, EDLDataGroups };
+export { EPassportDataGroups, EIDDataGroups, DTCDataGroup, RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize, EDLDataGroups };
 
 import { PAResourcesIssuer } from './rfid/PAResourcesIssuer';
 import { RFIDErrorCodes } from './rfid/RFIDErrorCodes';
@@ -290,10 +290,10 @@ export class DocumentReader {
     checkDatabaseUpdate(databaseID: string): Promise<DocumentsDatabase | null>;
 
     /** Cancels any ongoing database update or preparation. */
-    cancelDBUpdate(): Promise<void>;
+    cancelDBUpdate(): Promise<boolean>;
 
     /** Removes the current document database. */
-    removeDatabase(): Promise<void>;
+    removeDatabase(): Promise<boolean>;
 
     /** Used to start the processing of the next page of the document once the current one is processed. */
     startNewPage(): void;

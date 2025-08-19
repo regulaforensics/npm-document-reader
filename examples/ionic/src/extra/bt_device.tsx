@@ -16,7 +16,7 @@ async function connect() {
   if (await DocumentReader.instance.connectBluetoothDevice(btDeviceName)) {
     await init()
     DocumentReader.instance.functionality.useAuthenticator = true
-    document.getElementById("bt-device")!.style.display = "none"
+    document.getElementById("connect")!.style.display = "none"
   } else
     setStatus("Failed to connect")
 }
