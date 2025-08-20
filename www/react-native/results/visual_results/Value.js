@@ -36,4 +36,17 @@ export class Value {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "value": this.value,
+            "originalValue": this.originalValue,
+            "pageIndex": this.pageIndex,
+            "boundRect": this.boundRect?.toJson(),
+            "rfidOrigin": this.rfidOrigin?.toJson(),
+            "originalSymbols": this.originalSymbols?.map(e => e.toJson()),
+            "probability": this.probability,
+        }
+    }
 } 

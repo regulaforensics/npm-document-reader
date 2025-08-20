@@ -27,4 +27,18 @@ export class OpticalStatus {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "mrz": this.mrz,
+            "text": this.text,
+            "docType": this.docType,
+            "security": this.security,
+            "imageQA": this.imageQA,
+            "expiry": this.expiry,
+            "vds": this.vds,
+            "pagesCount": this.pagesCount,
+        }
+    }
 }

@@ -27,4 +27,13 @@ export class ImageQualityGroup {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "count": this.count,
+            "result": this.result,
+            "pageIndex": this.pageIndex,
+            "imageQualityList": this.imageQualityList?.map(e => e.toJson()),
+        }
+    }
 }

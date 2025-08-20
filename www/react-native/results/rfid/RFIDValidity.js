@@ -13,4 +13,11 @@ export class RFIDValidity {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "notAfter": this.notAfter?.toJson(),
+            "notBefore": this.notBefore?.toJson(),
+        }
+    }
 }

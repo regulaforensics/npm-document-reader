@@ -37,4 +37,12 @@ export class CustomizationFonts {
         var parent = DocumentReader.instance.customization;
         if (this === parent.fonts) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenHintLabel": this.rfidProcessingScreenHintLabel?.toJson(),
+            "rfidProcessingScreenProgressLabel": this.rfidProcessingScreenProgressLabel?.toJson(),
+            "rfidProcessingScreenResultLabel": this.rfidProcessingScreenResultLabel?.toJson(),
+        }
+    }
 }

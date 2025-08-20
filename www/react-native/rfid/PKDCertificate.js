@@ -17,6 +17,14 @@ export class PKDCertificate {
             { privateKey: jsonObject["privateKey"] }
         )
     }
+
+    toJson() {
+        return {
+            "binaryData": this.binaryData,
+            "resourceType": this.resourceType,
+            "privateKey": this.privateKey,
+        }
+    }
 }
 
 export const PKDResourceType = {

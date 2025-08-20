@@ -25,4 +25,12 @@ export class Authority {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "attributes": this.attributes?.map(e => e.toJson()),
+            "data": this.data,
+            "friendlyName": this.friendlyName?.toJson(),
+        }
+    }
 }

@@ -78,6 +78,21 @@ export class RecognizeConfig {
 
         return result
     }
+
+    toJson() {
+        return {
+            "scenario": this.scenario,
+            "onlineProcessingConfig": this.onlineProcessingConfig?.toJson(),
+            "image": this.image,
+            "images": this.images,
+            "data": this.data,
+            "imageInputData": this.imageInputData?.map(e => e.toJson()),
+            "dtc": this.dtc,
+            "livePortrait": this.livePortrait,
+            "extPortrait": this.extPortrait,
+            "oneShotIdentification": this.oneShotIdentification,
+        }
+    }
 }
 
 export class ImageInputData {
@@ -99,5 +114,13 @@ export class ImageInputData {
         result.light = jsonObject["light"]
 
         return result
+    }
+
+    toJson() {
+        return {
+            "image": this.image,
+            "light": this.light,
+            "pageIndex": this.pageIndex,
+        }
     }
 }

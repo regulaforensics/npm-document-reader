@@ -19,4 +19,12 @@ export class License {
 
         return result
     }
+
+    toJson() {
+        return {
+            "expiryDate": this.expiryDate,
+            "countryFilter": this.countryFilter,
+            "isRfidAvailable": this.isRfidAvailable,
+        }
+    }
 }

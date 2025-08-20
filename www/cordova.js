@@ -112,6 +112,17 @@ class OnlineProcessingConfig {
         
         return result
     }
+
+    toJson() {
+        return {
+            "mode": this.mode,
+            "url": this.url,
+            "imageFormat": this.imageFormat,
+            "imageCompressionQuality": this.imageCompressionQuality,
+            "processParams": this.processParams?.toJson(),
+            "requestHeaders": this.requestHeaders,
+        }
+    }
 }
 
 const ImageFormat = {
@@ -273,6 +284,21 @@ class RecognizeConfig {
 
         return result
     }
+
+    toJson() {
+        return {
+            "scenario": this.scenario,
+            "onlineProcessingConfig": this.onlineProcessingConfig?.toJson(),
+            "image": this.image,
+            "images": this.images,
+            "data": this.data,
+            "imageInputData": this.imageInputData?.map(e => e.toJson()),
+            "dtc": this.dtc,
+            "livePortrait": this.livePortrait,
+            "extPortrait": this.extPortrait,
+            "oneShotIdentification": this.oneShotIdentification,
+        }
+    }
 }
 
 class ImageInputData {
@@ -294,6 +320,14 @@ class ImageInputData {
         result.light = jsonObject["light"]
 
         return result
+    }
+
+    toJson() {
+        return {
+            "image": this.image,
+            "light": this.light,
+            "pageIndex": this.pageIndex,
+        }
     }
 }
 
@@ -347,6 +381,16 @@ class ScannerConfig {
         result.cameraId = jsonObject["cameraId"]
 
         return result
+    }
+
+    toJson() {
+        return {
+            "scenario": this.scenario,
+            "onlineProcessingConfig": this.onlineProcessingConfig?.toJson(),
+            "livePortrait": this.livePortrait,
+            "extPortrait": this.extPortrait,
+            "cameraId": this.cameraId,
+        }
     }
 }
 
@@ -1130,6 +1174,13 @@ class DocReaderException {
 
         return result
     }
+
+    toJson() {
+        return {
+            "code": this.code,
+            "message": this.message,
+        }
+    }
 }
 
 const ErrorCodes = {
@@ -1228,6 +1279,24 @@ class DocReaderScenario {
 
         return result
     }
+
+    toJson() {
+        return {
+            "uvTorch": this.uvTorch,
+            "frameOrientation": this.frameOrientation,
+            "faceExt": this.faceExt,
+            "multiPageOff": this.multiPageOff,
+            "seriesProcessMode": this.seriesProcessMode,
+            "frameKWHLandscape": this.frameKWHLandscape,
+            "frameKWHPortrait": this.frameKWHPortrait,
+            "frameKWHDoublePageSpreadPortrait": this.frameKWHDoublePageSpreadPortrait,
+            "frameKWHDoublePageSpreadLandscape": this.frameKWHDoublePageSpreadLandscape,
+            "name": this.name,
+            "caption": this.caption,
+            "description": this.description,
+            "manualCrop": this.manualCrop,
+        }
+    }
 }
 
 const Scenario = {
@@ -1298,6 +1367,15 @@ class DocReaderVersion {
 
         return result
     }
+
+    toJson() {
+        return {
+            "api": this.api,
+            "core": this.core,
+            "coreMode": this.coreMode,
+            "database": this.database?.toJson(),
+        }
+    }
 }
 
 
@@ -1339,6 +1417,18 @@ class DocumentsDatabase {
 
         return result
     }
+
+    toJson() {
+        return {
+            "databaseID": this.databaseID,
+            "version": this.version,
+            "date": this.date,
+            "databaseDescription": this.databaseDescription,
+            "countriesNumber": this.countriesNumber,
+            "documentsNumber": this.documentsNumber,
+            "size": this.size,
+        }
+    }
 }
 
 
@@ -1374,6 +1464,14 @@ class License {
         result.isRfidAvailable = jsonObject["isRfidAvailable"] ?? false
 
         return result
+    }
+
+    toJson() {
+        return {
+            "expiryDate": this.expiryDate,
+            "countryFilter": this.countryFilter,
+            "isRfidAvailable": this.isRfidAvailable,
+        }
     }
 }
 
@@ -1412,6 +1510,14 @@ class PrepareProgress {
             jsonObject["progress"]
         )
     }
+
+    toJson() {
+        return {
+            "downloadedBytes": this.downloadedBytes,
+            "totalBytes": this.totalBytes,
+            "progress": this.progress,
+        }
+    }
 }
 
 
@@ -1445,6 +1551,13 @@ class RFIDException {
         result.message = jsonObject["message"] ?? ""
 
         return result
+    }
+
+    toJson() {
+        return {
+            "code": this.code,
+            "message": this.message,
+        }
     }
 }
 
@@ -1869,6 +1982,43 @@ class Functionality {
         return result;
     }
 
+    toJson() {
+        return {
+            "pictureOnBoundsReady": this.pictureOnBoundsReady,
+            "showTorchButton": this.showTorchButton,
+            "showCloseButton": this.showCloseButton,
+            "videoCaptureMotionControl": this.videoCaptureMotionControl,
+            "showCaptureButton": this.showCaptureButton,
+            "showChangeFrameButton": this.showChangeFrameButton,
+            "showSkipNextPageButton": this.showSkipNextPageButton,
+            "useAuthenticator": this.useAuthenticator,
+            "skipFocusingFrames": this.skipFocusingFrames,
+            "showCameraSwitchButton": this.showCameraSwitchButton,
+            "displayMetadata": this.displayMetadata,
+            "isZoomEnabled": this.isZoomEnabled,
+            "isCameraTorchCheckDisabled": this.isCameraTorchCheckDisabled,
+            "recordScanningProcess": this.recordScanningProcess,
+            "manualMultipageMode": this.manualMultipageMode,
+            "singleResult": this.singleResult,
+            "torchTurnedOn": this.torchTurnedOn,
+            "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
+            "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
+            "rfidTimeout": this.rfidTimeout,
+            "forcePagesCount": this.forcePagesCount,
+            "orientation": this.orientation,
+            "captureMode": this.captureMode,
+            "cameraMode": this.cameraMode,
+            "cameraPositionIOS": this.cameraPositionIOS,
+            "cameraFrame": this.cameraFrame,
+            "btDeviceName": this.btDeviceName,
+            "zoomFactor": this.zoomFactor,
+            "exposure": this.exposure,
+            "excludedCamera2Models": this.excludedCamera2Models,
+            "cameraSize": this.cameraResolutionAndroid?.toJson(),
+            "videoSessionPreset": this.cameraResolutionIOS,
+        }
+    }
+
     _apply() { this._set(this); }
     _set(json) {
         if (this === _index__WEBPACK_IMPORTED_MODULE_1__.DocumentReader.instance.functionality)
@@ -1933,6 +2083,13 @@ class CameraSize {
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
         return new CameraSize(jsonObject["width"], jsonObject["height"]);
+    }
+
+    toJson() {
+        return {
+            "width": this.width,
+            "height": this.height,
+        }
     }
 }
 
@@ -2474,6 +2631,82 @@ class Customization {
         return result;
     }
 
+    toJson() {
+        return {
+            "showStatusMessages": this.showStatusMessages,
+            "showResultStatusMessages": this.showResultStatusMessages,
+            "showHelpAnimation": this.showHelpAnimation,
+            "showNextPageAnimation": this.showNextPageAnimation,
+            "showBackgroundMask": this.showBackgroundMask,
+            "cameraFrameBorderWidth": this.cameraFrameBorderWidth,
+            "cameraFrameLineLength": this.cameraFrameLineLength,
+            "cameraFrameShapeType": this.cameraFrameShapeType,
+            "cameraFrameOffsetWidth": this.cameraFrameOffsetWidth,
+            "status": this.status,
+            "resultStatus": this.resultStatus,
+            "multipageButtonText": this.multipageButtonText,
+            "cameraFrameDefaultColor": this.cameraFrameDefaultColor,
+            "cameraFrameActiveColor": this.cameraFrameActiveColor,
+            "statusTextColor": this.statusTextColor,
+            "resultStatusTextColor": this.resultStatusTextColor,
+            "resultStatusBackgroundColor": this.resultStatusBackgroundColor,
+            "multipageButtonBackgroundColor": this.multipageButtonBackgroundColor,
+            "tintColor": this.tintColor,
+            "activityIndicatorColor": this.activityIndicatorColor,
+            "statusBackgroundColor": this.statusBackgroundColor,
+            "cameraPreviewBackgroundColor": this.cameraPreviewBackgroundColor,
+            "backgroundMaskColor": this.backgroundMaskColor,
+            "multipageButtonTextColor": this.multipageButtonTextColor,
+            "statusPositionMultiplier": this.statusPositionMultiplier,
+            "resultStatusPositionMultiplier": this.resultStatusPositionMultiplier,
+            "toolbarSize": this.toolbarSize,
+            "backgroundMaskAlpha": this.backgroundMaskAlpha,
+            "customStatusPositionMultiplier": this.customStatusPositionMultiplier,
+            "cameraFrameVerticalPositionMultiplier": this.cameraFrameVerticalPositionMultiplier,
+            "cameraFrameLandscapeAspectRatio": this.cameraFrameLandscapeAspectRatio,
+            "cameraFramePortraitAspectRatio": this.cameraFramePortraitAspectRatio,
+            "cameraFrameCornerRadius": this.cameraFrameCornerRadius,
+            "livenessAnimationPositionMultiplier": this.livenessAnimationPositionMultiplier,
+            "nextPageAnimationStartDelay": this.nextPageAnimationStartDelay,
+            "nextPageAnimationEndDelay": this.nextPageAnimationEndDelay,
+            "activityIndicatorPortraitPositionMultiplier": this.activityIndicatorPortraitPositionMultiplier,
+            "activityIndicatorLandscapePositionMultiplier": this.activityIndicatorLandscapePositionMultiplier,
+            "cameraPreviewVerticalPositionMultiplier": this.cameraPreviewVerticalPositionMultiplier,
+            "multipageAnimationFrontImage": this.multipageAnimationFrontImage,
+            "multipageAnimationBackImage": this.multipageAnimationBackImage,
+            "borderBackgroundImage": this.borderBackgroundImage,
+            "helpAnimationImage": this.helpAnimationImage,
+            "closeButtonImage": this.closeButtonImage,
+            "captureButtonImage": this.captureButtonImage,
+            "cameraSwitchButtonImage": this.cameraSwitchButtonImage,
+            "torchButtonOnImage": this.torchButtonOnImage,
+            "torchButtonOffImage": this.torchButtonOffImage,
+            "changeFrameButtonExpandImage": this.changeFrameButtonExpandImage,
+            "changeFrameButtonCollapseImage": this.changeFrameButtonCollapseImage,
+            "livenessAnimationImage": this.livenessAnimationImage,
+            "multipageButtonImage": this.multipageButtonImage,
+            "customLabelStatus": this.customLabelStatus,
+            "cameraFrameLineCap": this.cameraFrameLineCap,
+            "uiCustomizationLayer": this.uiCustomizationLayer,
+            "statusTextFont": this.statusTextFont?.toJson(),
+            "resultStatusTextFont": this.resultStatusTextFont?.toJson(),
+            "multipageButtonTextFont": this.multipageButtonTextFont?.toJson(),
+            "helpAnimationImageContentMode": this.helpAnimationImageTransformsIOS,
+            "multipageAnimationFrontImageContentMode": this.multipageAnimationFrontImageTransformsIOS,
+            "multipageAnimationBackImageContentMode": this.multipageAnimationBackImageTransformsIOS,
+            "livenessAnimationImageContentMode": this.livenessAnimationImageTransformsIOS,
+            "borderBackgroundImageContentMode": this.borderBackgroundImageTransformsIOS,
+            "helpAnimationImageMatrix": this.helpAnimationImageTransformsAndroid,
+            "multipageAnimationFrontImageMatrix": this.multipageAnimationFrontImageTransformsAndroid,
+            "multipageAnimationBackImageMatrix": this.multipageAnimationBackImageTransformsAndroid,
+            "livenessAnimationImageMatrix": this.livenessAnimationImageTransformsAndroid,
+            "borderBackgroundImageMatrix": this.borderBackgroundImageTransformsAndroid,
+            "colors": this.colors?.toJson(),
+            "fonts": this.fonts?.toJson(),
+            "images": this.images?.toJson(),
+        }
+    }
+
     _apply() { this._set(this); }
     _set(json) {
         if (this === _index__WEBPACK_IMPORTED_MODULE_1__.DocumentReader.instance.customization)
@@ -2604,6 +2837,19 @@ class CustomizationColors {
         var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
         if (this === parent.colors) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenBackground": this.rfidProcessingScreenBackground,
+            "rfidProcessingScreenHintLabelText": this.rfidProcessingScreenHintLabelText,
+            "rfidProcessingScreenHintLabelBackground": this.rfidProcessingScreenHintLabelBackground,
+            "rfidProcessingScreenProgressLabelText": this.rfidProcessingScreenProgressLabelText,
+            "rfidProcessingScreenProgressBar": this.rfidProcessingScreenProgressBar,
+            "rfidProcessingScreenProgressBarBackground": this.rfidProcessingScreenProgressBarBackground,
+            "rfidProcessingScreenResultLabelText": this.rfidProcessingScreenResultLabelText,
+            "rfidProcessingScreenLoadingBar": this.rfidProcessingScreenLoadingBar,
+        }
+    }
 }
 
 
@@ -2660,6 +2906,14 @@ class CustomizationFonts {
         var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
         if (this === parent.fonts) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenHintLabel": this.rfidProcessingScreenHintLabel?.toJson(),
+            "rfidProcessingScreenProgressLabel": this.rfidProcessingScreenProgressLabel?.toJson(),
+            "rfidProcessingScreenResultLabel": this.rfidProcessingScreenResultLabel?.toJson(),
+        }
+    }
 }
 
 
@@ -2700,6 +2954,12 @@ class CustomizationImages {
         var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
         if (this === parent.images) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
+        }
+    }
 }
 
 
@@ -2735,6 +2995,14 @@ class Font {
         result.style = jsonObject["style"];
 
         return result;
+    }
+
+    toJson() {
+        return {
+            "name": this.name,
+            "size": this.size,
+            "style": this.style,
+        }
     }
 }
 
@@ -2888,6 +3156,27 @@ class AuthenticityParams {
         const parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.processParams;
         if (this === parent.authenticityParams) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "useLivenessCheck": this.useLivenessCheck,
+            "livenessParams": this.livenessParams?.toJson(),
+            "checkUVLuminiscence": this.checkUVLuminiscence,
+            "checkIRB900": this.checkIRB900,
+            "checkImagePatterns": this.checkImagePatterns,
+            "checkFibers": this.checkFibers,
+            "checkExtMRZ": this.checkExtMRZ,
+            "checkExtOCR": this.checkExtOCR,
+            "checkAxial": this.checkAxial,
+            "checkBarcodeFormat": this.checkBarcodeFormat,
+            "checkIRVisibility": this.checkIRVisibility,
+            "checkIPI": this.checkIPI,
+            "checkPhotoEmbedding": this.checkPhotoEmbedding,
+            "checkPhotoComparison": this.checkPhotoComparison,
+            "checkLetterScreen": this.checkLetterScreen,
+            "checkSecurityText": this.checkSecurityText,
+        }
+    }
 }
 
 
@@ -2926,6 +3215,15 @@ class BackendProcessingConfig {
         result.timeoutConnection = jsonObject["timeoutConnection"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "url": this.url,
+            "rfidServerSideChipVerification": this.rfidServerSideChipVerification,
+            "httpHeaders": this.httpHeaders,
+            "timeoutConnection": this.timeoutConnection,
+        }
     }
 }
 
@@ -2980,6 +3278,19 @@ class FaceApiParams {
             proxyType: jsonObject["proxyType"]
         });
     }
+
+    toJson() {
+        return {
+            "url": this.url,
+            "mode": this.mode,
+            "threshold": this.threshold,
+            "searchParams": this.searchParams?.toJson(),
+            "serviceTimeout": this.serviceTimeout,
+            "proxy": this.proxy,
+            "proxyPassword": this.proxyPassword,
+            "proxyType": this.proxyType,
+        }
+    }
 }
 
 
@@ -3015,6 +3326,14 @@ class FaceApiSearchParams {
             groupIds: jsonObject["groupIds"]
         });
     }
+
+    toJson() {
+        return {
+            "limit": this.limit,
+            "threshold": this.threshold,
+            "groupIds": this.groupIds,
+        }
+    }
 }
 
 
@@ -3046,6 +3365,13 @@ class GlaresCheckParams {
             imgMarginPart: jsonObject["imgMarginPart"],
             maxGlaringPart: jsonObject["maxGlaringPart"]
         });
+    }
+
+    toJson() {
+        return {
+            "imgMarginPart": this.imgMarginPart,
+            "maxGlaringPart": this.maxGlaringPart,
+        }
     }
 }
 
@@ -3161,6 +3487,22 @@ class ImageQA {
         var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.processParams;
         if (this === parent.imageQA) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "dpiThreshold": this.dpiThreshold,
+            "angleThreshold": this.angleThreshold,
+            "documentPositionIndent": this.documentPositionIndent,
+            "focusCheck": this.focusCheck,
+            "glaresCheck": this.glaresCheck,
+            "colornessCheck": this.colornessCheck,
+            "screenCapture": this.screenCapture,
+            "expectedPass": this.expectedPass,
+            "glaresCheckParams": this.glaresCheckParams?.toJson(),
+            "brightnessThreshold": this.brightnessThreshold,
+            "occlusionCheck": this.occlusionCheck,
+        }
+    }
 }
 
 
@@ -3242,6 +3584,18 @@ class LivenessParams {
         const parentJson = { "livenessParams": json };
         var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.processParams.authenticityParams;
         if (this === parent.livenessParams) parent._set(parentJson);
+    }
+
+    toJson() {
+        return {
+            "checkOVI": this.checkOVI,
+            "checkMLI": this.checkMLI,
+            "checkHolo": this.checkHolo,
+            "checkED": this.checkED,
+            "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
+            "checkDynaprint": this.checkDynaprint,
+            "checkGeometry": this.checkGeometry,
+        }
     }
 }
 
@@ -3730,8 +4084,8 @@ class ProcessParams {
 
     static fromJson(jsonObject) {
         if (jsonObject == null) return new ProcessParams();
-        
         const result = new ProcessParams();
+
         result._multipageProcessing = jsonObject["multipageProcessing"];
         result._logs = jsonObject["logs"];
         result._debugSaveImages = jsonObject["debugSaveImages"];
@@ -3808,8 +4162,88 @@ class ProcessParams {
         result._backendProcessingConfig = _BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_5__.BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
         result._authenticityParams = _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__.AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
-        
+
         return result;
+    }
+
+    toJson() {
+        return {
+            "multipageProcessing": this.multipageProcessing,
+            "debugSaveImages": this.debugSaveImages,
+            "debugSaveLogs": this.debugSaveLogs,
+            "returnUncroppedImage": this.returnUncroppedImage,
+            "uvTorchEnabled": this.uvTorchEnabled,
+            "debugSaveCroppedImages": this.debugSaveCroppedImages,
+            "disableFocusingCheck": this.disableFocusingCheck,
+            "debugSaveRFIDSession": this.debugSaveRFIDSession,
+            "doublePageSpread": this.doublePageSpread,
+            "manualCrop": this.manualCrop,
+            "integralImage": this.integralImage,
+            "returnCroppedBarcode": this.returnCroppedBarcode,
+            "checkRequiredTextFields": this.checkRequiredTextFields,
+            "depersonalizeLog": this.depersonalizeLog,
+            "generateDoublePageSpreadImage": this.generateDoublePageSpreadImage,
+            "alreadyCropped": this.alreadyCropped,
+            "matchTextFieldMask": this.matchTextFieldMask,
+            "updateOCRValidityByGlare": this.updateOCRValidityByGlare,
+            "noGraphics": this.noGraphics,
+            "multiDocOnImage": this.multiDocOnImage,
+            "forceReadMrzBeforeLocate": this.forceReadMrzBeforeLocate,
+            "parseBarcodes": this.parseBarcodes,
+            "shouldReturnPackageForReprocess": this.shouldReturnPackageForReprocess,
+            "disablePerforationOCR": this.disablePerforationOCR,
+            "respectImageQuality": this.respectImageQuality,
+            "strictImageQuality": this.strictImageQuality,
+            "splitNames": this.splitNames,
+            "useFaceApi": this.useFaceApi,
+            "useAuthenticityCheck": this.useAuthenticityCheck,
+            "checkHologram": this.checkHologram,
+            "generateNumericCodes": this.generateNumericCodes,
+            "strictBarcodeDigitalSignatureCheck": this.strictBarcodeDigitalSignatureCheck,
+            "selectLongestNames": this.selectLongestNames,
+            "generateDTCVC": this.generateDTCVC,
+            "strictDLCategoryExpiry": this.strictDLCategoryExpiry,
+            "generateAlpha2Codes": this.generateAlpha2Codes,
+            "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
+            "measureSystem": this.measureSystem,
+            "barcodeParserType": this.barcodeParserType,
+            "perspectiveAngle": this.perspectiveAngle,
+            "minDPI": this.minDPI,
+            "imageDpiOutMax": this.imageDpiOutMax,
+            "forceDocID": this.forceDocID,
+            "pdfPagesLimit": this.pdfPagesLimit,
+            "forceDocFormat": this.forceDocFormat,
+            "shiftExpiryDate": this.shiftExpiryDate,
+            "minimalHolderAge": this.minimalHolderAge,
+            "imageOutputMaxHeight": this.imageOutputMaxHeight,
+            "imageOutputMaxWidth": this.imageOutputMaxWidth,
+            "processAuth": this.processAuth,
+            "convertCase": this.convertCase,
+            "logLevel": this.logLevel,
+            "mrzDetectMode": this.mrzDetectMode,
+            "dateFormat": this.dateFormat,
+            "scenario": this.scenario,
+            "captureButtonScenario": this.captureButtonScenario,
+            "timeout": this.timeout,
+            "timeoutFromFirstDetect": this.timeoutFromFirstDetect,
+            "timeoutFromFirstDocType": this.timeoutFromFirstDocType,
+            "documentAreaMin": this.documentAreaMin,
+            "timeoutLiveness": this.timeoutLiveness,
+            "documentIDList": this.documentIDList,
+            "barcodeTypes": this.barcodeTypes,
+            "fieldTypesFilter": this.fieldTypesFilter,
+            "resultTypeOutput": this.resultTypeOutput,
+            "mrzFormatsFilter": this.mrzFormatsFilter,
+            "documentGroupFilter": this.documentGroupFilter,
+            "lcidIgnoreFilter": this.lcidIgnoreFilter,
+            "lcidFilter": this.lcidFilter,
+            "imageQA": this.imageQA?.toJson(),
+            "rfidParams": this.rfidParams?.toJson(),
+            "faceApiParams": this.faceApiParams?.toJson(),
+            "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
+            "authenticityParams": this.authenticityParams?.toJson(),
+            "customParams": this.customParams,
+        }
     }
 
     _apply() { this._set(this); }
@@ -3873,6 +4307,12 @@ class RFIDParams {
         return new RFIDParams({
             paIgnoreNotificationCodes: jsonObject["paIgnoreNotificationCodes"]
         });
+    }
+
+    toJson() {
+        return {
+            "paIgnoreNotificationCodes": this.paIgnoreNotificationCodes,
+        }
     }
 }
 
@@ -3941,6 +4381,16 @@ class DTCDataGroup {
         var rfidScenarioJson = { "dtcDataGroups": json };
         var rfidScenario = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.dtcDataGroups) rfidScenario._set(rfidScenarioJson);
+    }
+
+    toJson() {
+        return {
+            "DG17": this.dg17,
+            "DG18": this.dg18,
+            "DG22": this.dg22,
+            "DG23": this.dg23,
+            "DG24": this.dg24,
+        }
     }
 }
 
@@ -4072,6 +4522,25 @@ class EDLDataGroups {
         var rfidScenarioJson = { "eDLDataGroups": json };
         var rfidScenario = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.eDLDataGroups) rfidScenario._set(rfidScenarioJson);
+    }
+
+    toJson() {
+        return {
+            "DG1": this.dg1,
+            "DG2": this.dg2,
+            "DG3": this.dg3,
+            "DG4": this.dg4,
+            "DG5": this.dg5,
+            "DG6": this.dg6,
+            "DG7": this.dg7,
+            "DG8": this.dg8,
+            "DG9": this.dg9,
+            "DG10": this.dg10,
+            "DG11": this.dg11,
+            "DG12": this.dg12,
+            "DG13": this.dg13,
+            "DG14": this.dg14,
+        }
     }
 }
 
@@ -4253,6 +4722,32 @@ class EIDDataGroups {
         var rfidScenario = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.eIDDataGroups) rfidScenario._set(rfidScenarioJson);
     }
+
+    toJson() {
+        return {
+            "DG1": this.dg1,
+            "DG2": this.dg2,
+            "DG3": this.dg3,
+            "DG4": this.dg4,
+            "DG5": this.dg5,
+            "DG6": this.dg6,
+            "DG7": this.dg7,
+            "DG8": this.dg8,
+            "DG9": this.dg9,
+            "DG10": this.dg10,
+            "DG11": this.dg11,
+            "DG12": this.dg12,
+            "DG13": this.dg13,
+            "DG14": this.dg14,
+            "DG15": this.dg15,
+            "DG16": this.dg16,
+            "DG17": this.dg17,
+            "DG18": this.dg18,
+            "DG19": this.dg19,
+            "DG20": this.dg20,
+            "DG21": this.dg21,
+        }
+    }
 }
 
 
@@ -4397,6 +4892,27 @@ class EPassportDataGroups {
         var rfidScenarioJson = { "ePassportDataGroups": json };
         var rfidScenario = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.ePassportDataGroups) rfidScenario._set(rfidScenarioJson);
+    }
+
+    toJson() {
+        return {
+            "DG1": this.dg1,
+            "DG2": this.dg2,
+            "DG3": this.dg3,
+            "DG4": this.dg4,
+            "DG5": this.dg5,
+            "DG6": this.dg6,
+            "DG7": this.dg7,
+            "DG8": this.dg8,
+            "DG9": this.dg9,
+            "DG10": this.dg10,
+            "DG11": this.dg11,
+            "DG12": this.dg12,
+            "DG13": this.dg13,
+            "DG14": this.dg14,
+            "DG15": this.dg15,
+            "DG16": this.dg16,
+        }
     }
 }
 
@@ -4865,6 +5381,73 @@ class RFIDScenario {
         return result;
     }
 
+    toJson() {
+        return {
+            "paceStaticBinding": this.paceStaticBinding,
+            "onlineTA": this.onlineTA,
+            "writeEid": this.writeEid,
+            "universalAccessRights": this.universalAccessRights,
+            "authorizedRestrictedIdentification": this.authorizedRestrictedIdentification,
+            "auxVerificationCommunityID": this.auxVerificationCommunityID,
+            "auxVerificationDateOfBirth": this.auxVerificationDateOfBirth,
+            "skipAA": this.skipAA,
+            "strictProcessing": this.strictProcessing,
+            "pkdDSCertPriority": this.pkdDSCertPriority,
+            "pkdUseExternalCSCA": this.pkdUseExternalCSCA,
+            "trustedPKD": this.trustedPKD,
+            "passiveAuth": this.passiveAuth,
+            "useSFI": this.useSFI,
+            "readEPassport": this.readEPassport,
+            "readEID": this.readEID,
+            "readEDL": this.readEDL,
+            "authorizedSTSignature": this.authorizedSTSignature,
+            "authorizedSTQSignature": this.authorizedSTQSignature,
+            "authorizedWriteDG17": this.authorizedWriteDG17,
+            "authorizedWriteDG18": this.authorizedWriteDG18,
+            "authorizedWriteDG19": this.authorizedWriteDG19,
+            "authorizedWriteDG20": this.authorizedWriteDG20,
+            "authorizedWriteDG21": this.authorizedWriteDG21,
+            "authorizedVerifyAge": this.authorizedVerifyAge,
+            "authorizedVerifyCommunityID": this.authorizedVerifyCommunityID,
+            "authorizedPrivilegedTerminal": this.authorizedPrivilegedTerminal,
+            "authorizedCANAllowed": this.authorizedCANAllowed,
+            "authorizedPINManagement": this.authorizedPINManagement,
+            "authorizedInstallCert": this.authorizedInstallCert,
+            "authorizedInstallQCert": this.authorizedInstallQCert,
+            "applyAmendments": this.applyAmendments,
+            "autoSettings": this.autoSettings,
+            "proceedReadingAlways": this.proceedReadingAlways,
+            "readDTC": this.readDTC,
+            "mrzStrictCheck": this.mrzStrictCheck,
+            "loadCRLFromRemote": this.loadCRLFromRemote,
+            "independentSODStatus": this.independentSODStatus,
+            "readingBuffer": this.readingBuffer,
+            "onlineTAToSignDataType": this.onlineTAToSignDataType,
+            "defaultReadingBufferSize": this.defaultReadingBufferSize,
+            "signManagementAction": this.signManagementAction,
+            "profilerType": this.profilerType,
+            "authProcType": this.authProcType,
+            "baseSMProcedure": this.baseSMProcedure,
+            "pacePasswordType": this.pacePasswordType,
+            "terminalType": this.terminalType,
+            "password": this.password,
+            "pkdPA": this.pkdPA,
+            "pkdEAC": this.pkdEAC,
+            "mrz": this.mrz,
+            "eSignPINDefault": this.eSignPINDefault,
+            "eSignPINNewValue": this.eSignPINNewValue,
+            "cardAccess": this.cardAccess,
+            "mrzHash": this.mrzHash,
+            "documentNumber": this.documentNumber,
+            "dateOfBirth": this.dateOfBirth,
+            "dateOfExpiry": this.dateOfExpiry,
+            "eDLDataGroups": this.eDLDataGroups?.toJson(),
+            "ePassportDataGroups": this.ePassportDataGroups?.toJson(),
+            "eIDDataGroups": this.eIDDataGroups?.toJson(),
+            "dtcDataGroups": this.dtcDataGroups?.toJson(),
+        }
+    }
+
     _apply() { this._set(this); }
     _set(json) {
         if (this === _index__WEBPACK_IMPORTED_MODULE_1__.DocumentReader.instance.rfidScenario)
@@ -5298,6 +5881,27 @@ class Position {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "docFormat": this.docFormat,
+            "resultStatus": this.resultStatus,
+            "width": this.width,
+            "height": this.height,
+            "angle": this.angle,
+            "dpi": this.dpi,
+            "inverse": this.inverse,
+            "perspectiveTr": this.perspectiveTr,
+            "objArea": this.objArea,
+            "objIntAngleDev": this.objIntAngleDev,
+            "pageIndex": this.pageIndex,
+            "center": this.center?.toJson(),
+            "leftTop": this.leftTop?.toJson(),
+            "leftBottom": this.leftBottom?.toJson(),
+            "rightTop": this.rightTop?.toJson(),
+            "rightBottom": this.rightBottom?.toJson(),
+        }
+    }
 }
 
 class Coordinate {
@@ -5312,6 +5916,13 @@ class Coordinate {
         result.y = jsonObject["y"];
 
         return result;
+    }
+
+    toJson() {
+        return {
+            "x": this.x,
+            "y": this.y,
+        }
     }
 }
 
@@ -5610,6 +6221,31 @@ class Results {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "documentType": this.documentType?.map(e => e.toJson()),
+            "documentPosition": this.documentPosition?.map(e => e.toJson()),
+            "barcodePosition": this.barcodePosition?.map(e => e.toJson()),
+            "mrzPosition": this.mrzPosition?.map(e => e.toJson()),
+            "imageQuality": this.imageQuality?.map(e => e.toJson()),
+            "textResult": this.textResult?.toJson(),
+            "graphicResult": this.graphicResult?.toJson(),
+            "status": this.status?.toJson(),
+            "authenticityResult": this.authenticityResult?.toJson(),
+            "rfidSessionData": this.rfidSessionData?.toJson(),
+            "barcodeResult": this.barcodeResult?.toJson(),
+            "vdsncData": this.vdsncData?.toJson(),
+            "dtcData": this.dtcData,
+            "chipPage": this.chipPage,
+            "processingFinishedStatus": this.processingFinishedStatus,
+            "morePagesAvailable": this.morePagesAvailable,
+            "elapsedTime": this.elapsedTime,
+            "elapsedTimeRFID": this.elapsedTimeRFID,
+            "rawResult": this.rawResult,
+            "transactionInfo": this.transactionInfo?.toJson(),
+        }
+    }
 }
 
 const ProcessingFinishedStatus = {
@@ -5694,6 +6330,14 @@ class TransactionInfo {
         result.sessionLogFolder = jsonObject["sessionLogFolder"]
 
         return result
+    }
+
+    toJson() {
+        return {
+            "transactionId": this.transactionId,
+            "tag": this.tag,
+            "sessionLogFolder": this.sessionLogFolder,
+        }
     }
 }
 
@@ -5782,6 +6426,16 @@ class AuthenticityCheck {
 
         return result
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "status": this.status,
+            "pageIndex": this.pageIndex,
+            "typeName": this.typeName,
+            "elements": this.elements?.map(e => e.toJson()),
+        }
+    }
 }
 
 
@@ -5826,6 +6480,16 @@ class AuthenticityElement {
 
         return result
     }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "elementType": this.elementType,
+            "elementDiagnose": this.elementDiagnose,
+            "elementTypeName": this.elementTypeName,
+            "elementDiagnoseName": this.elementDiagnoseName,
+        }
+    }
 }
 
 
@@ -5867,6 +6531,13 @@ class AuthenticityResult {
         }
 
         return result
+    }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "checks": this.checks?.map(e => e.toJson()),
+        }
     }
 }
 
@@ -6120,6 +6791,16 @@ class BarcodeField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "barcodeType": this.barcodeType,
+            "status": this.status,
+            "pdf417Info": this.pdf417Info?.toJson(),
+            "data": this.data,
+            "pageIndex": this.pageIndex,
+        }
+    }
 }
 
 
@@ -6158,6 +6839,12 @@ class BarcodeResult {
         }
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "fields": this.fields?.map(e => e.toJson()),
+        }
     }
 }
 
@@ -6271,6 +6958,14 @@ class PDF417Info {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "errorLevel": this.errorLevel,
+            "columns": this.columns,
+            "rows": this.rows,
+        }
+    }
 }
 
 
@@ -6318,6 +7013,15 @@ class ImageQuality {
         }
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "featureType": this.featureType,
+            "result": this.result,
+            "type": this.type,
+            "boundRects": this.boundRects?.map(e => e.toJson()),
+        }
     }
 }
 
@@ -6399,6 +7103,15 @@ class ImageQualityGroup {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "count": this.count,
+            "result": this.result,
+            "pageIndex": this.pageIndex,
+            "imageQualityList": this.imageQualityList?.map(e => e.toJson()),
+        }
+    }
 }
 
 
@@ -6435,6 +7148,15 @@ class AccessControlProcedureType {
         result.notifications = jsonObject["notifications"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "activeOptionIdx": this.activeOptionIdx,
+            "notifications": this.notifications,
+            "status": this.status,
+            "type": this.type,
+        }
     }
 }
 
@@ -6489,6 +7211,18 @@ class Application {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "applicationID": this.applicationID,
+            "dataHashAlgorithm": this.dataHashAlgorithm,
+            "files": this.files?.map(e => e.toJson()),
+            "status": this.status,
+            "type": this.type,
+            "unicodeVersion": this.unicodeVersion,
+            "version": this.version,
+        }
+    }
 }
 
 const RFIDApplicationType = {
@@ -6530,6 +7264,13 @@ class Attribute {
         result.value = _RFIDValue__WEBPACK_IMPORTED_MODULE_0__.RFIDValue.fromJson(jsonObject["value"]);
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "value": this.value?.toJson(),
+        }
     }
 }
 
@@ -6574,6 +7315,14 @@ class Authority {
         }
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "attributes": this.attributes?.map(e => e.toJson()),
+            "data": this.data,
+            "friendlyName": this.friendlyName?.toJson(),
+        }
     }
 }
 
@@ -6626,6 +7375,25 @@ class CardProperties {
         result.uID = jsonObject["uID"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "aTQA": this.aTQA,
+            "bitRateR": this.bitRateR,
+            "bitRateS": this.bitRateS,
+            "chipTypeA": this.chipTypeA,
+            "mifareMemory": this.mifareMemory,
+            "rfidType": this.rfidType,
+            "sAK": this.sAK,
+            "support4": this.support4,
+            "supportMifare": this.supportMifare,
+            "aTQB": this.aTQB,
+            "aTR": this.aTR,
+            "baudrate1": this.baudrate1,
+            "baudrate2": this.baudrate2,
+            "uID": this.uID,
+        }
     }
 }
 
@@ -6697,6 +7465,24 @@ class CertificateChain {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "extensions": this.extensions?.map(e => e.toJson()),
+            "fileName": this.fileName?.toJson(),
+            "issuer": this.issuer?.toJson(),
+            "notifications": this.notifications,
+            "origin": this.origin,
+            "paStatus": this.paStatus,
+            "serialNumber": this.serialNumber,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "subject": this.subject?.toJson(),
+            "subjectPKAlgorithm": this.subjectPKAlgorithm,
+            "validity": this.validity?.toJson(),
+            "version": this.version,
+        }
+    }
 }
 
 
@@ -6724,6 +7510,13 @@ class CertificateData {
         result.length = jsonObject["length"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+        }
     }
 } 
 
@@ -6755,6 +7548,13 @@ class DataField {
         
         return result;
     }
+    
+    toJson() {
+        return {
+            "data": this.data,
+            "fieldType": this.fieldType,
+        }
+    }
 } 
 
 /***/ }),
@@ -6781,6 +7581,13 @@ class Extension {
         result.type = jsonObject["type"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "type": this.type,
+        }
     }
 } 
 
@@ -6838,6 +7645,23 @@ class File {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "fileData": this.fileData?.toJson(),
+            "fileID": this.fileID,
+            "notifications": this.notifications,
+            "pAStatus": this.pAStatus,
+            "readingStatus": this.readingStatus,
+            "readingTime": this.readingTime,
+            "type": this.type,
+            "typeName": this.typeName,
+            "docFieldsText": this.docFieldsText,
+            "docFieldsGraphics": this.docFieldsGraphics,
+            "docFieldsOriginals": this.docFieldsOriginals,
+            "certificates": this.certificates?.toJson(),
+        }
+    }
 }
 
 
@@ -6869,6 +7693,15 @@ class FileData {
         result.status = jsonObject["status"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "type": this.type,
+            "status": this.status,
+        }
     }
 }
 
@@ -7131,6 +7964,22 @@ class RFIDSessionData {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "cardProperties": this.cardProperties?.toJson(),
+            "totalBytesReceived": this.totalBytesReceived,
+            "totalBytesSent": this.totalBytesSent,
+            "status": this.status,
+            "extLeSupport": this.extLeSupport,
+            "processTime": this.processTime,
+            "accessControls": this.accessControls?.map(e => e.toJson()),
+            "applications": this.applications?.map(e => e.toJson()),
+            "securityObjects": this.securityObjects?.map(e => e.toJson()),
+            "dataFields": this.dataFields?.map(e => e.toJson()),
+            "dataGroups": this.dataGroups,
+        }
+    }
 }
 
 
@@ -7161,6 +8010,13 @@ class RFIDValidity {
         result.notBefore = _RFIDValue__WEBPACK_IMPORTED_MODULE_0__.RFIDValue.fromJson(jsonObject["notBefore"]);
 
         return result;
+    }
+
+    toJson() {
+        return {
+            "notAfter": this.notAfter?.toJson(),
+            "notBefore": this.notBefore?.toJson(),
+        }
     }
 }
 
@@ -7195,6 +8051,16 @@ class RFIDValue {
         result.format = jsonObject["format"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "status": this.status,
+            "type": this.type,
+            "format": this.format,
+        }
     }
 }
 
@@ -7242,6 +8108,16 @@ class SecurityObject {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "fileReference": this.fileReference,
+            "objectType": this.objectType,
+            "version": this.version,
+            "signerInfos": this.signerInfos?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }
 
 
@@ -7270,6 +8146,12 @@ class SecurityObjectCertificates {
         result.securityObject = _CertificateData__WEBPACK_IMPORTED_MODULE_0__.CertificateData.fromJson(jsonObject["securityObject"]);
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "securityObject": this.securityObject?.toJson(),
+        }
     }
 }
 
@@ -7346,6 +8228,23 @@ class SignerInfo {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "dataToHash": this.dataToHash,
+            "digestAlgorithm": this.digestAlgorithm,
+            "version": this.version,
+            "paStatus": this.paStatus,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "issuer": this.issuer?.toJson(),
+            "serialNumber": this.serialNumber?.toJson(),
+            "signature": this.signature?.toJson(),
+            "subjectKeyIdentifier": this.subjectKeyIdentifier?.toJson(),
+            "signedAttributes": this.signedAttributes?.map(e => e.toJson()),
+            "certificateChain": this.certificateChain?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }
 
 
@@ -7410,6 +8309,20 @@ class OpticalStatus {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "mrz": this.mrz,
+            "text": this.text,
+            "docType": this.docType,
+            "security": this.security,
+            "imageQA": this.imageQA,
+            "expiry": this.expiry,
+            "vds": this.vds,
+            "pagesCount": this.pagesCount,
+        }
+    }
 }
 
 
@@ -7450,6 +8363,18 @@ class RFIDStatus {
         result.overallStatus = jsonObject["overallStatus"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "pa": this.pa,
+            "ca": this.ca,
+            "aa": this.aa,
+            "ta": this.ta,
+            "bac": this.bac,
+            "pace": this.pace,
+        }
     }
 }
 
@@ -7496,6 +8421,18 @@ class ResultsStatus {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "optical": this.optical,
+            "rfid": this.rfid,
+            "portrait": this.portrait,
+            "stopList": this.stopList,
+            "detailsOptical": this.detailsOptical?.toJson(),
+            "detailsRFID": this.detailsRFID?.toJson(),
+        }
+    }
 }
 
 
@@ -7527,6 +8464,15 @@ class BytesData {
         result.type = jsonObject["type"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "status": this.status,
+            "type": this.type,
+        }
     }
 }
 
@@ -7980,6 +8926,20 @@ class VDSNCData {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "version": this.version,
+            "issuingCountry": this.issuingCountry,
+            "message": this.message,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "signature": this.signature?.toJson(),
+            "certificate": this.certificate?.toJson(),
+            "certificateChain": this.certificateChain?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }
 
 
@@ -8014,6 +8974,14 @@ class Comparison {
         result.status = jsonObject["status"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "sourceTypeLeft": this.sourceTypeLeft,
+            "sourceTypeRight": this.sourceTypeRight,
+            "status": this.status,
+        }
     }
 } 
 
@@ -8740,6 +9708,20 @@ class GraphicField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "fieldType": this.fieldType,
+            "fieldName": this.fieldName,
+            "light": this.light,
+            "lightName": this.lightName,
+            "pageIndex": this.pageIndex,
+            "originalPageIndex": this.originalPageIndex,
+            "value": this.value,
+            "fieldRect": this.fieldRect?.toJson(),
+        }
+    }
 } 
 
 /***/ }),
@@ -8813,6 +9795,12 @@ class GraphicResult {
         }
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "fields": this.fields?.map(e => e.toJson()),
+        }
     }
 } 
 
@@ -9058,6 +10046,15 @@ class RFIDOrigin {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "dg": this.dg,
+            "dgTag": this.dgTag,
+            "entryView": this.entryView,
+            "tagEntry": this.tagEntry,
+        }
+    }
 } 
 
 /***/ }),
@@ -9088,6 +10085,15 @@ class Rect {
         result.right = jsonObject["right"];
         
         return result;
+    }
+    
+    toJson() {
+        return {
+            "bottom": this.bottom,
+            "top": this.top,
+            "left": this.left,
+            "right": this.right,
+        }
     }
 } 
 
@@ -9120,6 +10126,14 @@ class Symbol {
         result.probability = jsonObject["probability"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "rect": this.rect?.toJson(),
+            "code": this.code,
+            "probability": this.probability,
+        }
     }
 } 
 
@@ -9208,6 +10222,23 @@ class TextField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "fieldType": this.fieldType,
+            "fieldName": this.fieldName,
+            "lcid": this.lcid,
+            "lcidName": this.lcidName,
+            "value": this.value,
+            "getValue": this.getValue?.toJson(),
+            "values": this.values?.map(e => e.toJson()),
+            "status": this.status,
+            "comparisonList": this.comparisonList?.map(e => e.toJson()),
+            "validityList": this.validityList?.map(e => e.toJson()),
+            "comparisonStatus": this.comparisonStatus,
+            "validityStatus": this.validityStatus,
+        }
+    }
 } 
 
 /***/ }),
@@ -9266,6 +10297,16 @@ class TextResult {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "comparisonStatus": this.comparisonStatus,
+            "validityStatus": this.validityStatus,
+            "availableSourceList": this.availableSourceList?.map(e => e.toJson()),
+            "fields": this.fields?.map(e => e.toJson()),
+        }
+    }
 } 
 
 /***/ }),
@@ -9300,6 +10341,14 @@ class TextSource {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "source": this.source,
+            "validityStatus": this.validityStatus,
+        }
+    }
 } 
 
 /***/ }),
@@ -9331,6 +10380,13 @@ class Validity {
         result.status = jsonObject["status"];
         
         return result;
+    }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "status": this.status,
+        }
     }
 } 
 
@@ -9388,6 +10444,19 @@ class Value {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "value": this.value,
+            "originalValue": this.originalValue,
+            "pageIndex": this.pageIndex,
+            "boundRect": this.boundRect?.toJson(),
+            "rfidOrigin": this.rfidOrigin?.toJson(),
+            "originalSymbols": this.originalSymbols?.map(e => e.toJson()),
+            "probability": this.probability,
+        }
+    }
 } 
 
 /***/ }),
@@ -9417,6 +10486,13 @@ class PAAttribute {
         result.value = jsonObject["value"] ?? ""
 
         return result
+    }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "value": this.value,
+        }
     }
 }
 
@@ -9460,6 +10536,14 @@ class PAResourcesIssuer {
 
         return result
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "friendlyName": this.friendlyName,
+            "attributes": this.attributes?.map(e => e.toJson()),
+        }
+    }
 }
 
 
@@ -9494,6 +10578,14 @@ class PKDCertificate {
             jsonObject["resourceType"],
             { privateKey: jsonObject["privateKey"] }
         )
+    }
+
+    toJson() {
+        return {
+            "binaryData": this.binaryData,
+            "resourceType": this.resourceType,
+            "privateKey": this.privateKey,
+        }
     }
 }
 
@@ -9704,6 +10796,14 @@ class RFIDNotification {
 
         return result
     }
+
+    toJson() {
+        return {
+            "notificationCode": this.notificationCode,
+            "dataFileType": this.dataFileType,
+            "progress": this.progress,
+        }
+    }
 }
 
 const RFIDNotificationCodes = {
@@ -9780,6 +10880,16 @@ class TAChallenge {
 
         return result
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "auxPCD": this.auxPCD,
+            "challengePICC": this.challengePICC,
+            "hashPK": this.hashPK,
+            "idPICC": this.idPICC,
+        }
+    }
 }
 
 
@@ -9817,6 +10927,16 @@ class TccParams {
         result.pfxCert = jsonObject["pfxCert"]
 
         return result
+    }
+
+    toJson() {
+        return {
+            "serviceUrlTA": this.serviceUrlTA,
+            "serviceUrlPA": this.serviceUrlPA,
+            "pfxCertUrl": this.pfxCertUrl,
+            "pfxPassPhrase": this.pfxPassPhrase,
+            "pfxCert": this.pfxCert,
+        }
     }
 }
 

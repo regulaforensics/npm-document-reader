@@ -16,4 +16,11 @@ export class RFIDException {
 
         return result
     }
+
+    toJson() {
+        return {
+            "code": this.code,
+            "message": this.message,
+        }
+    }
 }

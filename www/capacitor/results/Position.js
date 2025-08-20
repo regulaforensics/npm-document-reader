@@ -42,6 +42,27 @@ export class Position {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "docFormat": this.docFormat,
+            "resultStatus": this.resultStatus,
+            "width": this.width,
+            "height": this.height,
+            "angle": this.angle,
+            "dpi": this.dpi,
+            "inverse": this.inverse,
+            "perspectiveTr": this.perspectiveTr,
+            "objArea": this.objArea,
+            "objIntAngleDev": this.objIntAngleDev,
+            "pageIndex": this.pageIndex,
+            "center": this.center?.toJson(),
+            "leftTop": this.leftTop?.toJson(),
+            "leftBottom": this.leftBottom?.toJson(),
+            "rightTop": this.rightTop?.toJson(),
+            "rightBottom": this.rightBottom?.toJson(),
+        }
+    }
 }
 
 export class Coordinate {
@@ -56,5 +77,12 @@ export class Coordinate {
         result.y = jsonObject["y"];
 
         return result;
+    }
+
+    toJson() {
+        return {
+            "x": this.x,
+            "y": this.y,
+        }
     }
 }

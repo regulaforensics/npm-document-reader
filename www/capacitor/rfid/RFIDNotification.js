@@ -18,6 +18,14 @@ export class RFIDNotification {
 
         return result
     }
+
+    toJson() {
+        return {
+            "notificationCode": this.notificationCode,
+            "dataFileType": this.dataFileType,
+            "progress": this.progress,
+        }
+    }
 }
 
 export const RFIDNotificationCodes = {

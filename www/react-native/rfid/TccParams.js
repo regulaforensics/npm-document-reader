@@ -21,4 +21,14 @@ export class TccParams {
 
         return result
     }
+
+    toJson() {
+        return {
+            "serviceUrlTA": this.serviceUrlTA,
+            "serviceUrlPA": this.serviceUrlPA,
+            "pfxCertUrl": this.pfxCertUrl,
+            "pfxPassPhrase": this.pfxPassPhrase,
+            "pfxCert": this.pfxCert,
+        }
+    }
 }

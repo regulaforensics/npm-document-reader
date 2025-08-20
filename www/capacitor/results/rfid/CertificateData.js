@@ -11,4 +11,11 @@ export class CertificateData {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+        }
+    }
 } 

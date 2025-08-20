@@ -1,34 +1,38 @@
-import test from 'node:test';
-import * as assert from 'assert';
+import test from 'node:test'
+import * as assert from 'assert'
 
 export function compare(
-    name: string,
-    json: Record<string, any>,
-    fromJson: (json: Record<string, any>) => any,
-) {
-    test(name, () => {
-        var actual = fromJson(json).toJson();
-        assert.deepEqual(actual, json);
-    });
-}
-
-export function compareParams(
     name: string,
     json: Record<string, any>,
     fromJson: (json: Record<string, any>) => any,
     skip?: string[],
 ) {
     test(name, () => {
-        var object = fromJson(json);
-        var actual = object.toJson();
-        // var testSetters = object.testSetters;
-        if (skip != null) {
-            for (var item in skip) {
-                delete actual[item];
-                // delete testSetters[item];
-            }
-        }
-        // assert.deepEqual(json, actual);
-        // assert.deepEqual(json, testSetters);
-    });
+        var actual = removeUndefineds(fromJson(json).toJson())
+        if (skip) for (const item of skip) delete actual[item]
+        assert.deepEqual(actual, json)
+    })
 }
+
+function removeUndefineds(input) {
+    const isPlainObject = obj => Object.prototype.toString.call(obj) === '[object Object]';
+  
+    if (input === undefined) return undefined;
+    if (input === null || typeof input !== 'object') return input;
+  
+    if (Array.isArray(input)) {
+      return input
+        .map(item => removeUndefineds(item))
+        .filter(item => item !== undefined);
+    }
+  
+    if (!isPlainObject(input)) return input;
+  
+    const result = {};
+    for (const [key, value] of Object.entries(input)) {
+      if (value === undefined) continue;
+      const cleaned = removeUndefineds(value);
+      if (cleaned !== undefined) result[key] = cleaned;
+    }
+    return result;
+  }

@@ -24,4 +24,16 @@ export class DocumentsDatabase {
 
         return result
     }
+
+    toJson() {
+        return {
+            "databaseID": this.databaseID,
+            "version": this.version,
+            "date": this.date,
+            "databaseDescription": this.databaseDescription,
+            "countriesNumber": this.countriesNumber,
+            "documentsNumber": this.documentsNumber,
+            "size": this.size,
+        }
+    }
 }

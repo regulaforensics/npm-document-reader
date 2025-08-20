@@ -13,4 +13,11 @@ export class Attribute {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "value": this.value?.toJson(),
+        }
+    }
 }

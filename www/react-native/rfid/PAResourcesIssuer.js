@@ -24,4 +24,12 @@ export class PAResourcesIssuer {
 
         return result
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "friendlyName": this.friendlyName,
+            "attributes": this.attributes?.map(e => e.toJson()),
+        }
+    }
 }

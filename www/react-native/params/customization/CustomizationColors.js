@@ -71,4 +71,17 @@ export class CustomizationColors {
         var parent = DocumentReader.instance.customization;
         if (this === parent.colors) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenBackground": this.rfidProcessingScreenBackground,
+            "rfidProcessingScreenHintLabelText": this.rfidProcessingScreenHintLabelText,
+            "rfidProcessingScreenHintLabelBackground": this.rfidProcessingScreenHintLabelBackground,
+            "rfidProcessingScreenProgressLabelText": this.rfidProcessingScreenProgressLabelText,
+            "rfidProcessingScreenProgressBar": this.rfidProcessingScreenProgressBar,
+            "rfidProcessingScreenProgressBarBackground": this.rfidProcessingScreenProgressBarBackground,
+            "rfidProcessingScreenResultLabelText": this.rfidProcessingScreenResultLabelText,
+            "rfidProcessingScreenLoadingBar": this.rfidProcessingScreenLoadingBar,
+        }
+    }
 }

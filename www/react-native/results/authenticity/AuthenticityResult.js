@@ -23,4 +23,11 @@ export class AuthenticityResult {
 
         return result
     }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "checks": this.checks?.map(e => e.toJson()),
+        }
+    }
 }

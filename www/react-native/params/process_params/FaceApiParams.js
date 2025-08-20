@@ -35,4 +35,17 @@ export class FaceApiParams {
             proxyType: jsonObject["proxyType"]
         });
     }
+
+    toJson() {
+        return {
+            "url": this.url,
+            "mode": this.mode,
+            "threshold": this.threshold,
+            "searchParams": this.searchParams?.toJson(),
+            "serviceTimeout": this.serviceTimeout,
+            "proxy": this.proxy,
+            "proxyPassword": this.proxyPassword,
+            "proxyType": this.proxyType,
+        }
+    }
 }

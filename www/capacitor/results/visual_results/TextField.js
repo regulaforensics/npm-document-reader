@@ -65,4 +65,21 @@ export class TextField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "fieldType": this.fieldType,
+            "fieldName": this.fieldName,
+            "lcid": this.lcid,
+            "lcidName": this.lcidName,
+            "value": this.value,
+            "getValue": this.getValue?.toJson(),
+            "values": this.values?.map(e => e.toJson()),
+            "status": this.status,
+            "comparisonList": this.comparisonList?.map(e => e.toJson()),
+            "validityList": this.validityList?.map(e => e.toJson()),
+            "comparisonStatus": this.comparisonStatus,
+            "validityStatus": this.validityStatus,
+        }
+    }
 } 

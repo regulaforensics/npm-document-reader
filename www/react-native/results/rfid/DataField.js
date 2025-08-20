@@ -13,4 +13,11 @@ export class DataField {
         
         return result;
     }
+    
+    toJson() {
+        return {
+            "data": this.data,
+            "fieldType": this.fieldType,
+        }
+    }
 } 

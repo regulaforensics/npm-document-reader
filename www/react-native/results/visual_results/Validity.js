@@ -14,4 +14,11 @@ export class Validity {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "status": this.status,
+        }
+    }
 } 

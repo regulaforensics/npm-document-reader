@@ -13,4 +13,12 @@ export class PDF417Info {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "errorLevel": this.errorLevel,
+            "columns": this.columns,
+            "rows": this.rows,
+        }
+    }
 }

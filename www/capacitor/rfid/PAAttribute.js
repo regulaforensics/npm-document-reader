@@ -14,4 +14,11 @@ export class PAAttribute {
 
         return result
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "value": this.value,
+        }
+    }
 }

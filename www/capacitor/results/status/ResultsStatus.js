@@ -25,4 +25,16 @@ export class ResultsStatus {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "optical": this.optical,
+            "rfid": this.rfid,
+            "portrait": this.portrait,
+            "stopList": this.stopList,
+            "detailsOptical": this.detailsOptical?.toJson(),
+            "detailsRFID": this.detailsRFID?.toJson(),
+        }
+    }
 }

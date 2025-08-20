@@ -30,4 +30,14 @@ export class AuthenticityCheck {
 
         return result
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "status": this.status,
+            "pageIndex": this.pageIndex,
+            "typeName": this.typeName,
+            "elements": this.elements?.map(e => e.toJson()),
+        }
+    }
 }

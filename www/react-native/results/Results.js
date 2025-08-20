@@ -260,6 +260,31 @@ export class Results {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "documentType": this.documentType?.map(e => e.toJson()),
+            "documentPosition": this.documentPosition?.map(e => e.toJson()),
+            "barcodePosition": this.barcodePosition?.map(e => e.toJson()),
+            "mrzPosition": this.mrzPosition?.map(e => e.toJson()),
+            "imageQuality": this.imageQuality?.map(e => e.toJson()),
+            "textResult": this.textResult?.toJson(),
+            "graphicResult": this.graphicResult?.toJson(),
+            "status": this.status?.toJson(),
+            "authenticityResult": this.authenticityResult?.toJson(),
+            "rfidSessionData": this.rfidSessionData?.toJson(),
+            "barcodeResult": this.barcodeResult?.toJson(),
+            "vdsncData": this.vdsncData?.toJson(),
+            "dtcData": this.dtcData,
+            "chipPage": this.chipPage,
+            "processingFinishedStatus": this.processingFinishedStatus,
+            "morePagesAvailable": this.morePagesAvailable,
+            "elapsedTime": this.elapsedTime,
+            "elapsedTimeRFID": this.elapsedTimeRFID,
+            "rawResult": this.rawResult,
+            "transactionInfo": this.transactionInfo?.toJson(),
+        }
+    }
 }
 
 export const ProcessingFinishedStatus = {

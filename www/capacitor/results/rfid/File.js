@@ -36,4 +36,21 @@ export class File {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "fileData": this.fileData?.toJson(),
+            "fileID": this.fileID,
+            "notifications": this.notifications,
+            "pAStatus": this.pAStatus,
+            "readingStatus": this.readingStatus,
+            "readingTime": this.readingTime,
+            "type": this.type,
+            "typeName": this.typeName,
+            "docFieldsText": this.docFieldsText,
+            "docFieldsGraphics": this.docFieldsGraphics,
+            "docFieldsOriginals": this.docFieldsOriginals,
+            "certificates": this.certificates?.toJson(),
+        }
+    }
 }

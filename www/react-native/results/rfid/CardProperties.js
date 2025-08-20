@@ -35,4 +35,23 @@ export class CardProperties {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "aTQA": this.aTQA,
+            "bitRateR": this.bitRateR,
+            "bitRateS": this.bitRateS,
+            "chipTypeA": this.chipTypeA,
+            "mifareMemory": this.mifareMemory,
+            "rfidType": this.rfidType,
+            "sAK": this.sAK,
+            "support4": this.support4,
+            "supportMifare": this.supportMifare,
+            "aTQB": this.aTQB,
+            "aTR": this.aTR,
+            "baudrate1": this.baudrate1,
+            "baudrate2": this.baudrate2,
+            "uID": this.uID,
+        }
+    }
 }

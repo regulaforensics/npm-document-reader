@@ -21,4 +21,10 @@ export class BarcodeResult {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "fields": this.fields?.map(e => e.toJson()),
+        }
+    }
 }

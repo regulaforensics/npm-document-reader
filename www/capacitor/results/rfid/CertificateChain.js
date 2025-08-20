@@ -48,4 +48,22 @@ export class CertificateChain {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "extensions": this.extensions?.map(e => e.toJson()),
+            "fileName": this.fileName?.toJson(),
+            "issuer": this.issuer?.toJson(),
+            "notifications": this.notifications,
+            "origin": this.origin,
+            "paStatus": this.paStatus,
+            "serialNumber": this.serialNumber,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "subject": this.subject?.toJson(),
+            "subjectPKAlgorithm": this.subjectPKAlgorithm,
+            "validity": this.validity?.toJson(),
+            "version": this.version,
+        }
+    }
 }

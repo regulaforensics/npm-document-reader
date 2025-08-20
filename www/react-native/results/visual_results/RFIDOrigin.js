@@ -15,4 +15,13 @@ export class RFIDOrigin {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "dg": this.dg,
+            "dgTag": this.dgTag,
+            "entryView": this.entryView,
+            "tagEntry": this.tagEntry,
+        }
+    }
 } 

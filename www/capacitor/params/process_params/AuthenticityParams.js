@@ -126,4 +126,25 @@ export class AuthenticityParams {
         const parent = DocumentReader.instance.processParams;
         if (this === parent.authenticityParams) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "useLivenessCheck": this.useLivenessCheck,
+            "livenessParams": this.livenessParams?.toJson(),
+            "checkUVLuminiscence": this.checkUVLuminiscence,
+            "checkIRB900": this.checkIRB900,
+            "checkImagePatterns": this.checkImagePatterns,
+            "checkFibers": this.checkFibers,
+            "checkExtMRZ": this.checkExtMRZ,
+            "checkExtOCR": this.checkExtOCR,
+            "checkAxial": this.checkAxial,
+            "checkBarcodeFormat": this.checkBarcodeFormat,
+            "checkIRVisibility": this.checkIRVisibility,
+            "checkIPI": this.checkIPI,
+            "checkPhotoEmbedding": this.checkPhotoEmbedding,
+            "checkPhotoComparison": this.checkPhotoComparison,
+            "checkLetterScreen": this.checkLetterScreen,
+            "checkSecurityText": this.checkSecurityText,
+        }
+    }
 }

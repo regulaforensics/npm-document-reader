@@ -36,6 +36,24 @@ export class DocReaderScenario {
 
         return result
     }
+
+    toJson() {
+        return {
+            "uvTorch": this.uvTorch,
+            "frameOrientation": this.frameOrientation,
+            "faceExt": this.faceExt,
+            "multiPageOff": this.multiPageOff,
+            "seriesProcessMode": this.seriesProcessMode,
+            "frameKWHLandscape": this.frameKWHLandscape,
+            "frameKWHPortrait": this.frameKWHPortrait,
+            "frameKWHDoublePageSpreadPortrait": this.frameKWHDoublePageSpreadPortrait,
+            "frameKWHDoublePageSpreadLandscape": this.frameKWHDoublePageSpreadLandscape,
+            "name": this.name,
+            "caption": this.caption,
+            "description": this.description,
+            "manualCrop": this.manualCrop,
+        }
+    }
 }
 
 export const Scenario = {

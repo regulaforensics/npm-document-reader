@@ -1,9 +1,6 @@
 {
   "name": "test-runner",
   "type": "module",
-  "scripts": {
-    "test": "tsx --test"
-  },
   "devDependencies": {
     "@regulaforensics/document-reader": "file:../",
     "@types/node": "24.3.0",

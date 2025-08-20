@@ -162,4 +162,30 @@ export class EIDDataGroups {
         var rfidScenario = DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.eIDDataGroups) rfidScenario._set(rfidScenarioJson);
     }
+
+    toJson() {
+        return {
+            "DG1": this.dg1,
+            "DG2": this.dg2,
+            "DG3": this.dg3,
+            "DG4": this.dg4,
+            "DG5": this.dg5,
+            "DG6": this.dg6,
+            "DG7": this.dg7,
+            "DG8": this.dg8,
+            "DG9": this.dg9,
+            "DG10": this.dg10,
+            "DG11": this.dg11,
+            "DG12": this.dg12,
+            "DG13": this.dg13,
+            "DG14": this.dg14,
+            "DG15": this.dg15,
+            "DG16": this.dg16,
+            "DG17": this.dg17,
+            "DG18": this.dg18,
+            "DG19": this.dg19,
+            "DG20": this.dg20,
+            "DG21": this.dg21,
+        }
+    }
 }

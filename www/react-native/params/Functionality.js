@@ -235,6 +235,43 @@ export class Functionality {
         return result;
     }
 
+    toJson() {
+        return {
+            "pictureOnBoundsReady": this.pictureOnBoundsReady,
+            "showTorchButton": this.showTorchButton,
+            "showCloseButton": this.showCloseButton,
+            "videoCaptureMotionControl": this.videoCaptureMotionControl,
+            "showCaptureButton": this.showCaptureButton,
+            "showChangeFrameButton": this.showChangeFrameButton,
+            "showSkipNextPageButton": this.showSkipNextPageButton,
+            "useAuthenticator": this.useAuthenticator,
+            "skipFocusingFrames": this.skipFocusingFrames,
+            "showCameraSwitchButton": this.showCameraSwitchButton,
+            "displayMetadata": this.displayMetadata,
+            "isZoomEnabled": this.isZoomEnabled,
+            "isCameraTorchCheckDisabled": this.isCameraTorchCheckDisabled,
+            "recordScanningProcess": this.recordScanningProcess,
+            "manualMultipageMode": this.manualMultipageMode,
+            "singleResult": this.singleResult,
+            "torchTurnedOn": this.torchTurnedOn,
+            "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
+            "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
+            "rfidTimeout": this.rfidTimeout,
+            "forcePagesCount": this.forcePagesCount,
+            "orientation": this.orientation,
+            "captureMode": this.captureMode,
+            "cameraMode": this.cameraMode,
+            "cameraPositionIOS": this.cameraPositionIOS,
+            "cameraFrame": this.cameraFrame,
+            "btDeviceName": this.btDeviceName,
+            "zoomFactor": this.zoomFactor,
+            "exposure": this.exposure,
+            "excludedCamera2Models": this.excludedCamera2Models,
+            "cameraSize": this.cameraResolutionAndroid?.toJson(),
+            "videoSessionPreset": this.cameraResolutionIOS,
+        }
+    }
+
     _apply() { this._set(this); }
     _set(json) {
         if (this === DocumentReader.instance.functionality)
@@ -299,5 +336,12 @@ export class CameraSize {
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
         return new CameraSize(jsonObject["width"], jsonObject["height"]);
+    }
+
+    toJson() {
+        return {
+            "width": this.width,
+            "height": this.height,
+        }
     }
 }

@@ -15,4 +15,12 @@ export class Symbol {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "rect": this.rect?.toJson(),
+            "code": this.code,
+            "probability": this.probability,
+        }
+    }
 } 

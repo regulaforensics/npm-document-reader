@@ -21,4 +21,14 @@ export class BarcodeField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "barcodeType": this.barcodeType,
+            "status": this.status,
+            "pdf417Info": this.pdf417Info?.toJson(),
+            "data": this.data,
+            "pageIndex": this.pageIndex,
+        }
+    }
 }

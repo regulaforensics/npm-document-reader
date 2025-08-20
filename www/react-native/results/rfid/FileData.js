@@ -15,4 +15,13 @@ export class FileData {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "type": this.type,
+            "status": this.status,
+        }
+    }
 }

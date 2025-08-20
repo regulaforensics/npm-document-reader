@@ -22,4 +22,10 @@ export class CustomizationImages {
         var parent = DocumentReader.instance.customization;
         if (this === parent.images) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
+        }
+    }
 }

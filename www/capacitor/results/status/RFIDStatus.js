@@ -23,4 +23,16 @@ export class RFIDStatus {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "overallStatus": this.overallStatus,
+            "pa": this.pa,
+            "ca": this.ca,
+            "aa": this.aa,
+            "ta": this.ta,
+            "bac": this.bac,
+            "pace": this.pace,
+        }
+    }
 }

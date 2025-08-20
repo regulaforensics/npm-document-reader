@@ -24,4 +24,14 @@ export class AuthenticityElement {
 
         return result
     }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "elementType": this.elementType,
+            "elementDiagnose": this.elementDiagnose,
+            "elementTypeName": this.elementTypeName,
+            "elementDiagnoseName": this.elementDiagnoseName,
+        }
+    }
 }

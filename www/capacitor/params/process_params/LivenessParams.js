@@ -64,4 +64,16 @@ export class LivenessParams {
         var parent = DocumentReader.instance.processParams.authenticityParams;
         if (this === parent.livenessParams) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "checkOVI": this.checkOVI,
+            "checkMLI": this.checkMLI,
+            "checkHolo": this.checkHolo,
+            "checkED": this.checkED,
+            "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
+            "checkDynaprint": this.checkDynaprint,
+            "checkGeometry": this.checkGeometry,
+        }
+    }
 }

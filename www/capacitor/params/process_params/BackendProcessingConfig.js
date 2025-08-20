@@ -22,4 +22,13 @@ export class BackendProcessingConfig {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "url": this.url,
+            "rfidServerSideChipVerification": this.rfidServerSideChipVerification,
+            "httpHeaders": this.httpHeaders,
+            "timeoutConnection": this.timeoutConnection,
+        }
+    }
 }

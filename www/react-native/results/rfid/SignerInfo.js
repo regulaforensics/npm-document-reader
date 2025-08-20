@@ -54,4 +54,21 @@ export class SignerInfo {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "dataToHash": this.dataToHash,
+            "digestAlgorithm": this.digestAlgorithm,
+            "version": this.version,
+            "paStatus": this.paStatus,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "issuer": this.issuer?.toJson(),
+            "serialNumber": this.serialNumber?.toJson(),
+            "signature": this.signature?.toJson(),
+            "subjectKeyIdentifier": this.subjectKeyIdentifier?.toJson(),
+            "signedAttributes": this.signedAttributes?.map(e => e.toJson()),
+            "certificateChain": this.certificateChain?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }

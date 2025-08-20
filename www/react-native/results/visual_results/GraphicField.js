@@ -30,4 +30,18 @@ export class GraphicField {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "fieldType": this.fieldType,
+            "fieldName": this.fieldName,
+            "light": this.light,
+            "lightName": this.lightName,
+            "pageIndex": this.pageIndex,
+            "originalPageIndex": this.originalPageIndex,
+            "value": this.value,
+            "fieldRect": this.fieldRect?.toJson(),
+        }
+    }
 } 

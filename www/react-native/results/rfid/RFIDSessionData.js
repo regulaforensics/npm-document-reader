@@ -73,4 +73,20 @@ export class RFIDSessionData {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "cardProperties": this.cardProperties?.toJson(),
+            "totalBytesReceived": this.totalBytesReceived,
+            "totalBytesSent": this.totalBytesSent,
+            "status": this.status,
+            "extLeSupport": this.extLeSupport,
+            "processTime": this.processTime,
+            "accessControls": this.accessControls?.map(e => e.toJson()),
+            "applications": this.applications?.map(e => e.toJson()),
+            "securityObjects": this.securityObjects?.map(e => e.toJson()),
+            "dataFields": this.dataFields?.map(e => e.toJson()),
+            "dataGroups": this.dataGroups,
+        }
+    }
 }

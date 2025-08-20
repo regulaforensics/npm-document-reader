@@ -94,4 +94,20 @@ export class ImageQA {
         var parent = DocumentReader.instance.processParams;
         if (this === parent.imageQA) parent._set(parentJson);
     }
+
+    toJson() {
+        return {
+            "dpiThreshold": this.dpiThreshold,
+            "angleThreshold": this.angleThreshold,
+            "documentPositionIndent": this.documentPositionIndent,
+            "focusCheck": this.focusCheck,
+            "glaresCheck": this.glaresCheck,
+            "colornessCheck": this.colornessCheck,
+            "screenCapture": this.screenCapture,
+            "expectedPass": this.expectedPass,
+            "glaresCheckParams": this.glaresCheckParams?.toJson(),
+            "brightnessThreshold": this.brightnessThreshold,
+            "occlusionCheck": this.occlusionCheck,
+        }
+    }
 }

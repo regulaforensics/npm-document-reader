@@ -28,4 +28,14 @@ export class SecurityObject {
 
         return result;
     }
+
+    toJson() {
+        return {
+            "fileReference": this.fileReference,
+            "objectType": this.objectType,
+            "version": this.version,
+            "signerInfos": this.signerInfos?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }

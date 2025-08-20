@@ -11,4 +11,10 @@ export class SecurityObjectCertificates {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "securityObject": this.securityObject?.toJson(),
+        }
+    }
 }

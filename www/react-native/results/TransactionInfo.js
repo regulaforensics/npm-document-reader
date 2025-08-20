@@ -13,4 +13,12 @@ export class TransactionInfo {
 
         return result
     }
+
+    toJson() {
+        return {
+            "transactionId": this.transactionId,
+            "tag": this.tag,
+            "sessionLogFolder": this.sessionLogFolder,
+        }
+    }
 }

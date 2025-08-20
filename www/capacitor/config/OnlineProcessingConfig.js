@@ -28,6 +28,17 @@ export class OnlineProcessingConfig {
         
         return result
     }
+
+    toJson() {
+        return {
+            "mode": this.mode,
+            "url": this.url,
+            "imageFormat": this.imageFormat,
+            "imageCompressionQuality": this.imageCompressionQuality,
+            "processParams": this.processParams?.toJson(),
+            "requestHeaders": this.requestHeaders,
+        }
+    }
 }
 
 export const ImageFormat = {

@@ -35,4 +35,14 @@ export class ScannerConfig {
 
         return result
     }
+
+    toJson() {
+        return {
+            "scenario": this.scenario,
+            "onlineProcessingConfig": this.onlineProcessingConfig?.toJson(),
+            "livePortrait": this.livePortrait,
+            "extPortrait": this.extPortrait,
+            "cameraId": this.cameraId,
+        }
+    }
 }

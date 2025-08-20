@@ -18,4 +18,12 @@ export class FaceApiSearchParams {
             groupIds: jsonObject["groupIds"]
         });
     }
+
+    toJson() {
+        return {
+            "limit": this.limit,
+            "threshold": this.threshold,
+            "groupIds": this.groupIds,
+        }
+    }
 }

@@ -12,4 +12,10 @@ export class RFIDParams {
             paIgnoreNotificationCodes: jsonObject["paIgnoreNotificationCodes"]
         });
     }
+
+    toJson() {
+        return {
+            "paIgnoreNotificationCodes": this.paIgnoreNotificationCodes,
+        }
+    }
 }

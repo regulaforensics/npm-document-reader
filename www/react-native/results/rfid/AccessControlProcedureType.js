@@ -18,4 +18,13 @@ export class AccessControlProcedureType {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "activeOptionIdx": this.activeOptionIdx,
+            "notifications": this.notifications,
+            "status": this.status,
+            "type": this.type,
+        }
+    }
 }

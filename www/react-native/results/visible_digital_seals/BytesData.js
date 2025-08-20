@@ -15,4 +15,13 @@ export class BytesData {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "status": this.status,
+            "type": this.type,
+        }
+    }
 }

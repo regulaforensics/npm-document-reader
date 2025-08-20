@@ -16,4 +16,12 @@ export class Comparison {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceTypeLeft": this.sourceTypeLeft,
+            "sourceTypeRight": this.sourceTypeRight,
+            "status": this.status,
+        }
+    }
 } 

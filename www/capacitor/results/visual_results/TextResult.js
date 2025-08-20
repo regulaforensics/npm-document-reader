@@ -39,4 +39,14 @@ export class TextResult {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "status": this.status,
+            "comparisonStatus": this.comparisonStatus,
+            "validityStatus": this.validityStatus,
+            "availableSourceList": this.availableSourceList?.map(e => e.toJson()),
+            "fields": this.fields?.map(e => e.toJson()),
+        }
+    }
 } 

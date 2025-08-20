@@ -15,4 +15,11 @@ export class GlaresCheckParams {
             maxGlaringPart: jsonObject["maxGlaringPart"]
         });
     }
+
+    toJson() {
+        return {
+            "imgMarginPart": this.imgMarginPart,
+            "maxGlaringPart": this.maxGlaringPart,
+        }
+    }
 }

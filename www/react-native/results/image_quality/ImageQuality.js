@@ -28,4 +28,13 @@ export class ImageQuality {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "featureType": this.featureType,
+            "result": this.result,
+            "type": this.type,
+            "boundRects": this.boundRects?.map(e => e.toJson()),
+        }
+    }
 }

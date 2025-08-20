@@ -20,4 +20,14 @@ export class TAChallenge {
 
         return result
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "auxPCD": this.auxPCD,
+            "challengePICC": this.challengePICC,
+            "hashPK": this.hashPK,
+            "idPICC": this.idPICC,
+        }
+    }
 }

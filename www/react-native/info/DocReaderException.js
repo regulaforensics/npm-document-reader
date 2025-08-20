@@ -11,6 +11,13 @@ export class DocReaderException {
 
         return result
     }
+
+    toJson() {
+        return {
+            "code": this.code,
+            "message": this.message,
+        }
+    }
 }
 
 export const ErrorCodes = {

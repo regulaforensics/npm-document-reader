@@ -50,4 +50,14 @@ export class DTCDataGroup {
         var rfidScenario = DocumentReader.instance.rfidScenario;
         if (this === rfidScenario.dtcDataGroups) rfidScenario._set(rfidScenarioJson);
     }
+
+    toJson() {
+        return {
+            "DG17": this.dg17,
+            "DG18": this.dg18,
+            "DG22": this.dg22,
+            "DG23": this.dg23,
+            "DG24": this.dg24,
+        }
+    }
 }

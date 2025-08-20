@@ -11,4 +11,11 @@ export class Extension {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "type": this.type,
+        }
+    }
 } 

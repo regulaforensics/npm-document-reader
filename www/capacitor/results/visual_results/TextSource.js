@@ -16,4 +16,12 @@ export class TextSource {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "sourceType": this.sourceType,
+            "source": this.source,
+            "validityStatus": this.validityStatus,
+        }
+    }
 } 

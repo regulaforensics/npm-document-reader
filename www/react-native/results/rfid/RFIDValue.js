@@ -17,4 +17,14 @@ export class RFIDValue {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "data": this.data,
+            "length": this.length,
+            "status": this.status,
+            "type": this.type,
+            "format": this.format,
+        }
+    }
 }

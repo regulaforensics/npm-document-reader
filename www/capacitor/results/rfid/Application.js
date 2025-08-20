@@ -33,6 +33,18 @@ export class Application {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "applicationID": this.applicationID,
+            "dataHashAlgorithm": this.dataHashAlgorithm,
+            "files": this.files?.map(e => e.toJson()),
+            "status": this.status,
+            "type": this.type,
+            "unicodeVersion": this.unicodeVersion,
+            "version": this.version,
+        }
+    }
 }
 
 export const RFIDApplicationType = {

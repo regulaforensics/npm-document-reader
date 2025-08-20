@@ -459,8 +459,8 @@ export class ProcessParams {
 
     static fromJson(jsonObject) {
         if (jsonObject == null) return new ProcessParams();
-        
         const result = new ProcessParams();
+
         result._multipageProcessing = jsonObject["multipageProcessing"];
         result._logs = jsonObject["logs"];
         result._debugSaveImages = jsonObject["debugSaveImages"];
@@ -537,8 +537,88 @@ export class ProcessParams {
         result._backendProcessingConfig = BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
         result._authenticityParams = AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
-        
+
         return result;
+    }
+
+    toJson() {
+        return {
+            "multipageProcessing": this.multipageProcessing,
+            "debugSaveImages": this.debugSaveImages,
+            "debugSaveLogs": this.debugSaveLogs,
+            "returnUncroppedImage": this.returnUncroppedImage,
+            "uvTorchEnabled": this.uvTorchEnabled,
+            "debugSaveCroppedImages": this.debugSaveCroppedImages,
+            "disableFocusingCheck": this.disableFocusingCheck,
+            "debugSaveRFIDSession": this.debugSaveRFIDSession,
+            "doublePageSpread": this.doublePageSpread,
+            "manualCrop": this.manualCrop,
+            "integralImage": this.integralImage,
+            "returnCroppedBarcode": this.returnCroppedBarcode,
+            "checkRequiredTextFields": this.checkRequiredTextFields,
+            "depersonalizeLog": this.depersonalizeLog,
+            "generateDoublePageSpreadImage": this.generateDoublePageSpreadImage,
+            "alreadyCropped": this.alreadyCropped,
+            "matchTextFieldMask": this.matchTextFieldMask,
+            "updateOCRValidityByGlare": this.updateOCRValidityByGlare,
+            "noGraphics": this.noGraphics,
+            "multiDocOnImage": this.multiDocOnImage,
+            "forceReadMrzBeforeLocate": this.forceReadMrzBeforeLocate,
+            "parseBarcodes": this.parseBarcodes,
+            "shouldReturnPackageForReprocess": this.shouldReturnPackageForReprocess,
+            "disablePerforationOCR": this.disablePerforationOCR,
+            "respectImageQuality": this.respectImageQuality,
+            "strictImageQuality": this.strictImageQuality,
+            "splitNames": this.splitNames,
+            "useFaceApi": this.useFaceApi,
+            "useAuthenticityCheck": this.useAuthenticityCheck,
+            "checkHologram": this.checkHologram,
+            "generateNumericCodes": this.generateNumericCodes,
+            "strictBarcodeDigitalSignatureCheck": this.strictBarcodeDigitalSignatureCheck,
+            "selectLongestNames": this.selectLongestNames,
+            "generateDTCVC": this.generateDTCVC,
+            "strictDLCategoryExpiry": this.strictDLCategoryExpiry,
+            "generateAlpha2Codes": this.generateAlpha2Codes,
+            "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
+            "measureSystem": this.measureSystem,
+            "barcodeParserType": this.barcodeParserType,
+            "perspectiveAngle": this.perspectiveAngle,
+            "minDPI": this.minDPI,
+            "imageDpiOutMax": this.imageDpiOutMax,
+            "forceDocID": this.forceDocID,
+            "pdfPagesLimit": this.pdfPagesLimit,
+            "forceDocFormat": this.forceDocFormat,
+            "shiftExpiryDate": this.shiftExpiryDate,
+            "minimalHolderAge": this.minimalHolderAge,
+            "imageOutputMaxHeight": this.imageOutputMaxHeight,
+            "imageOutputMaxWidth": this.imageOutputMaxWidth,
+            "processAuth": this.processAuth,
+            "convertCase": this.convertCase,
+            "logLevel": this.logLevel,
+            "mrzDetectMode": this.mrzDetectMode,
+            "dateFormat": this.dateFormat,
+            "scenario": this.scenario,
+            "captureButtonScenario": this.captureButtonScenario,
+            "timeout": this.timeout,
+            "timeoutFromFirstDetect": this.timeoutFromFirstDetect,
+            "timeoutFromFirstDocType": this.timeoutFromFirstDocType,
+            "documentAreaMin": this.documentAreaMin,
+            "timeoutLiveness": this.timeoutLiveness,
+            "documentIDList": this.documentIDList,
+            "barcodeTypes": this.barcodeTypes,
+            "fieldTypesFilter": this.fieldTypesFilter,
+            "resultTypeOutput": this.resultTypeOutput,
+            "mrzFormatsFilter": this.mrzFormatsFilter,
+            "documentGroupFilter": this.documentGroupFilter,
+            "lcidIgnoreFilter": this.lcidIgnoreFilter,
+            "lcidFilter": this.lcidFilter,
+            "imageQA": this.imageQA?.toJson(),
+            "rfidParams": this.rfidParams?.toJson(),
+            "faceApiParams": this.faceApiParams?.toJson(),
+            "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
+            "authenticityParams": this.authenticityParams?.toJson(),
+            "customParams": this.customParams,
+        }
     }
 
     _apply() { this._set(this); }

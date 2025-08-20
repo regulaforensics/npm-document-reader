@@ -37,4 +37,18 @@ export class VDSNCData {
         
         return result;
     }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "version": this.version,
+            "issuingCountry": this.issuingCountry,
+            "message": this.message,
+            "signatureAlgorithm": this.signatureAlgorithm,
+            "signature": this.signature?.toJson(),
+            "certificate": this.certificate?.toJson(),
+            "certificateChain": this.certificateChain?.map(e => e.toJson()),
+            "notifications": this.notifications,
+        }
+    }
 }

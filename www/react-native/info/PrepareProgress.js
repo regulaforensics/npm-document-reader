@@ -20,4 +20,12 @@ export class PrepareProgress {
             jsonObject["progress"]
         )
     }
+
+    toJson() {
+        return {
+            "downloadedBytes": this.downloadedBytes,
+            "totalBytes": this.totalBytes,
+            "progress": this.progress,
+        }
+    }
 }
