@@ -152,10 +152,10 @@ export class DocumentReader {
     /** Information about your license. */
     get license(): License | null;
 
-    /// Allows you to check if native RFID chip reading can be performed
-    /// based on your license and Core framework capabilities.
-    ///
-    /// Returns `true` if native RFID chip reading is supported.
+    /** Allows you to check if native RFID chip reading can be performed
+     * based on your license and Core framework capabilities.
+     * @returns `true` if native RFID chip reading is supported.
+     */
     isRFIDAvailableForUse(): Promise<boolean>;
 
     /**

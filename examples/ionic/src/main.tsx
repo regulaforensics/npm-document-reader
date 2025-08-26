@@ -92,8 +92,6 @@ export function handleException(error: DocReaderException | null) {
 
 // --------------------------------------------------------------------------------------------------------------------
 
-var documentUIImage: HTMLImageElement
-var portraitUIImage: HTMLImageElement
 export function main() {
   documentUIImage = document.getElementById("document-image") as HTMLImageElement
   portraitUIImage = document.getElementById("portrait-image") as HTMLImageElement
@@ -116,11 +114,13 @@ export function setStatus(data: string | null) {
     document.getElementById("status")!.innerHTML = data
 }
 
+var portraitUIImage: HTMLImageElement
 function setPortrait(data: string | null) {
   if (data != null)
     portraitUIImage.src = "data:image/png;base64," + data
 }
 
+var documentUIImage: HTMLImageElement
 function setDocImage(data: string | null) {
   if (data != null)
     documentUIImage.src = "data:image/png;base64," + data

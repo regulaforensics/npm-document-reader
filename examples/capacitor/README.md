@@ -2,8 +2,10 @@
 
 ## How to build demo application
 1. Download or the clone current repository using the command `git clone https://github.com/regulaforensics/npm-document-reader.git`.
-2. Execute `npm run setup` within this directory.
-3. Run the app: 
+2. Put `regula.license` file at `public/assets/` (you can get a trial license [here](https://client.regulaforensics.com)).
+3. Put `db.dat` file at `public/assets/` (you can get a trial database [here](https://client.regulaforensics.com/customer/databases))
+4. Execute `npm run setup` within this directory.
+5. Run the app: 
   * IOS: `npm run ios`.
   * Android: `npm run android`.
 
