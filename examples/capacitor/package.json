@@ -6,7 +6,7 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "8.3.280-beta",
+    "@regulaforensics/document-reader": "8.3.281-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "8.3.9-beta",
     "@regulaforensics/document-reader-btdevice": "8.3.10-beta",
     "@awesome-cordova-plugins/file": "6.6.0",
@@ -21,7 +21,7 @@
     "@capacitor/status-bar": "7.0.0",
     "@ionic/react": "8.4.3",
     "@vitejs/plugin-react": "4.3.4",
-    "vite-plugin-static-copy": "^2.3.1",
+    "vite-plugin-static-copy": "3.1.2",
     "@types/react-router-dom": "5.3.3"
   }
 }
