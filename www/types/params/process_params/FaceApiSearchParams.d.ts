@@ -17,13 +17,13 @@ export declare class FaceApiSearchParams {
     /**
      * The IDs of the groups in which the search is performed.
      */
-    readonly groupIds?: number[];
+    readonly groupIds?: string[];
 
     constructor(
         options?: {
             limit?: number,
             threshold?: number,
-            groupIds?: number[],
+            groupIds?: string[],
         }
     );
 

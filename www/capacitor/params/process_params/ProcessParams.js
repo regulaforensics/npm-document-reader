@@ -235,6 +235,12 @@ export class ProcessParams {
         this._set({ "disableAuthResolutionFilter": val });
     }
 
+    get strictSecurityChecks() { return this._strictSecurityChecks; }
+    set strictSecurityChecks(val) {
+        this._strictSecurityChecks = val;
+        this._set({ "strictSecurityChecks": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -499,6 +505,7 @@ export class ProcessParams {
         result._strictDLCategoryExpiry = jsonObject["strictDLCategoryExpiry"];
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
         result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
+        result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -580,6 +587,7 @@ export class ProcessParams {
             "strictDLCategoryExpiry": this.strictDLCategoryExpiry,
             "generateAlpha2Codes": this.generateAlpha2Codes,
             "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
+            "strictSecurityChecks": this.strictSecurityChecks,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,

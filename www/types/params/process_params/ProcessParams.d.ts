@@ -198,6 +198,10 @@ export declare class ProcessParams {
      */
     disableAuthResolutionFilter?: boolean;
     /**
+     * When enabled, this parameter marks security checks that don’t meet minimum requirements as 'Failed' (instead of 'WasNotDone'), which causes the overall security status to be 'Failed'.
+     */
+    strictSecurityChecks?: boolean;
+    /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
      * setting the barcode parser type which should be used during recognition.

@@ -7,7 +7,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   orientation: 'portrait',
   icon: './images/icon/icon.png',
   ios: {
-    bundleIdentifier: 'regula.DocumentReader',
+    bundleIdentifier: 'com.regula.example.dr.react',
     infoPlist: {
       NSCameraUsageDescription: 'To use camera',
       NSPhotoLibraryUsageDescription: 'To use gallery',
@@ -27,7 +27,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     appleTeamId: ''
   },
   android: {
-    package: 'com.regula.dr.fullauthrfid',
+    package: 'com.regula.example.dr.react',
     permissions: [
       'android.permission.BLUETOOTH_CONNECT',
       'android.permission.NFC'],

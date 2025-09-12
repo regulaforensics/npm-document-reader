@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="com.regula.dr.fullauthrfid" ios-CFBundleIdentifier="regula.DocumentReader" version="1.0.0"
+<widget android-packageName="com.regula.example.dr.ionic" ios-CFBundleIdentifier="com.regula.example.dr.ionic" version="1.0.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <name>DocumentReader</name>
     <icon src="images/icon.png" />

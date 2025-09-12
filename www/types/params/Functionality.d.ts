@@ -210,6 +210,10 @@ export declare class Functionality {
      */
     exposure?: number;
     /**
+     * Android only.
+     */
+    videoRecordingSizeDownscaleFactor?: number;
+    /**
      * A list of devices that must not use the camera2 API.
      *
      * Android only.

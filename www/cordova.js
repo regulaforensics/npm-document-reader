@@ -1924,6 +1924,12 @@ class Functionality {
         this._set({ "exposure": val });
     }
 
+    get videoRecordingSizeDownscaleFactor() { return this._videoRecordingSizeDownscaleFactor; }
+    set videoRecordingSizeDownscaleFactor(val) {
+        this._videoRecordingSizeDownscaleFactor = val;
+        this._set({ "videoRecordingSizeDownscaleFactor": val });
+    }
+
     get excludedCamera2Models() { return this._excludedCamera2Models; }
     set excludedCamera2Models(val) {
         this._excludedCamera2Models = val;
@@ -1975,6 +1981,7 @@ class Functionality {
         result._btDeviceName = jsonObject["btDeviceName"];
         result._zoomFactor = jsonObject["zoomFactor"];
         result._exposure = jsonObject["exposure"];
+        result._videoRecordingSizeDownscaleFactor = jsonObject["videoRecordingSizeDownscaleFactor"];
         result._excludedCamera2Models = jsonObject["excludedCamera2Models"];
         result._cameraResolutionAndroid = CameraSize.fromJson(jsonObject["cameraSize"]);
         result._cameraResolutionIOS = jsonObject["videoSessionPreset"];
@@ -2013,6 +2020,7 @@ class Functionality {
             "btDeviceName": this.btDeviceName,
             "zoomFactor": this.zoomFactor,
             "exposure": this.exposure,
+            "videoRecordingSizeDownscaleFactor": this.videoRecordingSizeDownscaleFactor,
             "excludedCamera2Models": this.excludedCamera2Models,
             "cameraSize": this.cameraResolutionAndroid?.toJson(),
             "videoSessionPreset": this.cameraResolutionIOS,
@@ -3860,6 +3868,12 @@ class ProcessParams {
         this._set({ "disableAuthResolutionFilter": val });
     }
 
+    get strictSecurityChecks() { return this._strictSecurityChecks; }
+    set strictSecurityChecks(val) {
+        this._strictSecurityChecks = val;
+        this._set({ "strictSecurityChecks": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -4124,6 +4138,7 @@ class ProcessParams {
         result._strictDLCategoryExpiry = jsonObject["strictDLCategoryExpiry"];
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
         result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
+        result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -4205,6 +4220,7 @@ class ProcessParams {
             "strictDLCategoryExpiry": this.strictDLCategoryExpiry,
             "generateAlpha2Codes": this.generateAlpha2Codes,
             "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
+            "strictSecurityChecks": this.strictSecurityChecks,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -6631,6 +6647,7 @@ const CheckDiagnose = {
     TEXT_COLOR_SHOULD_BE_GREEN: 131,
     TEXT_COLOR_SHOULD_BE_RED: 132,
     TEXT_SHOULD_BE_BLACK: 133,
+    SECURITY_TEXT_IS_ABSENT: 134,
     BARCODE_WAS_READ_WITH_ERRORS: 140,
     BARCODE_DATA_FORMAT_ERROR: 141,
     BARCODE_SIZE_PARAMS_ERROR: 142,

@@ -1,4 +1,4 @@
-package com.regula.dr.fullauthrfid;
+package com.regula.example.dr.capacitor;
 
 import com.getcapacitor.BridgeActivity;
 

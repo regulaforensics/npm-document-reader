@@ -177,6 +177,12 @@ export class Functionality {
         this._set({ "exposure": val });
     }
 
+    get videoRecordingSizeDownscaleFactor() { return this._videoRecordingSizeDownscaleFactor; }
+    set videoRecordingSizeDownscaleFactor(val) {
+        this._videoRecordingSizeDownscaleFactor = val;
+        this._set({ "videoRecordingSizeDownscaleFactor": val });
+    }
+
     get excludedCamera2Models() { return this._excludedCamera2Models; }
     set excludedCamera2Models(val) {
         this._excludedCamera2Models = val;
@@ -228,6 +234,7 @@ export class Functionality {
         result._btDeviceName = jsonObject["btDeviceName"];
         result._zoomFactor = jsonObject["zoomFactor"];
         result._exposure = jsonObject["exposure"];
+        result._videoRecordingSizeDownscaleFactor = jsonObject["videoRecordingSizeDownscaleFactor"];
         result._excludedCamera2Models = jsonObject["excludedCamera2Models"];
         result._cameraResolutionAndroid = CameraSize.fromJson(jsonObject["cameraSize"]);
         result._cameraResolutionIOS = jsonObject["videoSessionPreset"];
@@ -266,6 +273,7 @@ export class Functionality {
             "btDeviceName": this.btDeviceName,
             "zoomFactor": this.zoomFactor,
             "exposure": this.exposure,
+            "videoRecordingSizeDownscaleFactor": this.videoRecordingSizeDownscaleFactor,
             "excludedCamera2Models": this.excludedCamera2Models,
             "cameraSize": this.cameraResolutionAndroid?.toJson(),
             "videoSessionPreset": this.cameraResolutionIOS,
