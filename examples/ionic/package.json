@@ -18,7 +18,7 @@
     "@awesome-cordova-plugins/file": "6.14.0",
     "@ionic/angular": "8.4.3",
     "@ionic/cordova-builders": "12.3.0",
-    "@regulaforensics/document-reader": "8.3.282-beta",
+    "@regulaforensics/document-reader": "8.3.288-beta",
     "@regulaforensics/document-reader-btdevice": "8.2.8-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "8.2.8-beta",
     "cordova-android": "13.0.0",
