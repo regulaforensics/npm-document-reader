@@ -7,6 +7,7 @@
         <resource-file src="assets/db.dat" target="app/src/main/assets/Regula/db.dat" />
         <preference name="orientation" value="portrait" />
         <preference name="AndroidEdgeToEdge" value="true" />
+        <preference name="GradlePluginKotlinEnabled" value="true" />
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.NFC" />
             <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
