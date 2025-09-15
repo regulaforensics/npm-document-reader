@@ -2,7 +2,7 @@
 
 if [[ $npm_config_o || $npm_config_open ]]; then
     ionic cordova prepare ios
-    open platforms/ios/DocReader.xcworkspace
+    open platforms/ios/Document.xcworkspace
 else
     ionic cordova run ios
 fi

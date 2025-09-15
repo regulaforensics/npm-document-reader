@@ -3,7 +3,7 @@ import { ExpoConfig, ConfigContext } from 'expo/config'
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   slug: 'document-reader',
-  name: 'DocReader',
+  name: 'Document',
   orientation: 'portrait',
   icon: './images/icon/icon.png',
   ios: {

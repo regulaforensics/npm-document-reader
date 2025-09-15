@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget android-packageName="com.regula.example.dr.ionic" ios-CFBundleIdentifier="com.regula.example.dr.ionic" version="1.0.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>DocReader</name>
+    <name>Document</name>
     <icon src="images/icon.png" />
     <platform name="android">
         <resource-file src="assets/db.dat" target="app/src/main/assets/Regula/db.dat" />
