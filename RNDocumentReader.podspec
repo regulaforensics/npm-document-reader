@@ -1,0 +1,21 @@
+require 'json'
+
+package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+source = File.join(__dir__, 'ios')
+
+Pod::Spec.new do |s|
+  s.name         = 'RNDocumentReader'
+  s.version      = '7.1.301-rc'
+  s.summary      = package['description']
+  s.license      = package['license']
+
+  s.authors      = { 'RegulaForensics' => 'support@regulaforensics.com' }
+  s.homepage     = 'https://regulaforensics.com'
+
+  s.source       = { http: "file:#{source}" }
+  s.ios.deployment_target = '14.0'
+  s.source_files = 'ios/**/*.{h,m}'
+  s.exclude_files = [ 'ios/CVDDocumentReader.h', 'ios/CVDDocumentReader.m' ]
+  s.dependency 'DocumentReaderStage', '8.3.5078'
+  s.dependency 'React'
+end

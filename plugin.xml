@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="@regulaforensics/document-reader" version="7.1.301-rc" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>DocumentReader</name>
+  <description>Cordova plugin for Regula Document Reader SDK</description>
+  <license>commercial</license>
+  <keywords>cordova,face,reader,scanner,regula</keywords>
+
+  <js-module name="DocumentReaderPlugin" src="www/cordova.js">
+    <clobbers target="DocumentReaderPlugin" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="DocumentReader">
+        <param name="ios-package" value="CVDDocumentReader" />
+      </feature>
+    </config-file>
+    <header-file src="ios/CVDDocumentReader.h" />
+    <source-file src="ios/CVDDocumentReader.m" />
+    <header-file src="ios/RGLWMain.h" />
+    <source-file src="ios/RGLWMain.m" />
+    <header-file src="ios/RGLWJSONConstructor.h" />
+    <source-file src="ios/RGLWJSONConstructor.m" />
+    <header-file src="ios/RGLWConfig.h" />
+    <source-file src="ios/RGLWConfig.m" />
+    <podspec>
+      <config>
+        <source url="https://github.com/CocoaPods/Specs.git" />
+      </config>
+      <pods>
+        <pod name="DocumentReaderStage" spec="8.3.5078" />
+      </pods>
+    </podspec>
+  </platform>
+
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="DocumentReader">
+        <param name="android-package" value="com.regula.plugin.documentreader.CVDDocumentReader" />
+      </feature>
+    </config-file>
+    <framework src="android/cordova.gradle" custom="true" type="gradleReference" />
+    <source-file src="android/CVDDocumentReader.kt" target-dir="java/com.regula.plugin.documentreader" />
+    <source-file src="android/src/main/java/com/regula/plugin/documentreader/Main.kt" target-dir="java/com.regula.plugin.documentreader" />
+    <source-file src="android/src/main/java/com/regula/plugin/documentreader/JSONConstructor.kt" target-dir="java/com.regula.plugin.documentreader" />
+    <source-file src="android/src/main/java/com/regula/plugin/documentreader/Config.kt" target-dir="java/com.regula.plugin.documentreader" />
+    <source-file src="android/src/main/java/com/regula/plugin/documentreader/Utils.kt" target-dir="java/com.regula.plugin.documentreader" />
+    <source-file src="android/src/main/java/com/regula/plugin/documentreader/BluetoothUtil.kt" target-dir="java/com.regula.plugin.documentreader" />
+  </platform>
+</plugin>

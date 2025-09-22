@@ -1,0 +1,34 @@
+/** Class contains information about PKD certificate. */
+export declare class PKDCertificate {
+    /** Certificate base64 string. */
+    readonly binaryData: string;
+    /** Indicates type of certificate. */
+    readonly resourceType: PKDResourceType;
+    /** Private key base64 string. */
+    readonly privateKey: string | null;
+
+    constructor(binaryData: string, resourceType: PKDResourceType, options?: { privateKey?: string | null });
+}
+
+export declare enum PKDResourceType {
+    /** Certificate file contents (.pem, .cer, .crt, .der). */
+    CERTIFICATE_PA = 0,
+    /** Certificate file contents (.cvcert) and private key file contents (.pkcs8). */
+    CERTIFICATE_TA = 1,
+    /** LDIF file contents (.ldif). */
+    LDIF = 2,
+    /** CRL file contents (.crl). */
+    CRL = 3,
+    /** Master List (.ml, .mls). */
+    ML = 4,
+    /** Defect List (.dl, .dls, .dfl). */
+    DEFL = 5,
+    /** Deviance List (.dl, .dls, .dvl). */
+    DEVL = 6,
+    /** Black List (.bl, .bls). */
+    BL = 7
+}
+
+export declare namespace PKDResourceType {
+    function getType(value: string): PKDResourceType;
+}
