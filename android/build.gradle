@@ -7,11 +7,11 @@ android {
         namespace 'com.regula.plugin.documentreader'
     }
 
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         minSdkVersion 24
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName "1.0"
     }
@@ -29,7 +29,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'
     //noinspection GradleDependency
-    implementation('com.regula.documentreader:api:8.3.11802'){
+    implementation('com.regula.documentreader:api:8.3.11827'){
         transitive = true
     }
 }
