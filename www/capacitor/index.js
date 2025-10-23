@@ -260,7 +260,6 @@ export class DocumentReader {
     }
 
     async connectBluetoothDevice(deviceName) {
-        this.functionality.btDeviceName = deviceName;
         return await exec("connectBluetoothDevice", [deviceName]);
     }
 

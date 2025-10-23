@@ -906,7 +906,6 @@ class DocumentReader {
     }
 
     async connectBluetoothDevice(deviceName) {
-        this.functionality.btDeviceName = deviceName;
         return await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("connectBluetoothDevice", [deviceName]);
     }
 

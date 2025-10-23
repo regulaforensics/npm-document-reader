@@ -39,8 +39,12 @@ var cameraInstance: Camera
 })
 class Main {
     constructor(platform: Platform, camera: Camera) {
-        cameraInstance = camera
-        platform.ready().then(main)
+        (async () => {
+            cameraInstance = camera
+            await platform.ready()
+            await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))
+            main()
+        })()
     }
 }
 

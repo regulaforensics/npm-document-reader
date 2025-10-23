@@ -18,8 +18,8 @@ static NSMutableArray<RCTResponseSenderBlock>* _firedCallbacks = nil;
              paCertificateCompletionEvent,
              taCertificateCompletionEvent,
              taSignatureCompletionEvent,
-             videoEncoderCompletionEvent,
-             onCustomButtonTappedEvent];
+             drVideoEncoderCompletionEvent,
+             drOnCustomButtonTappedEvent];
 }
 
 static bool hasListeners;
