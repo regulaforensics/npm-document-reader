@@ -1,5 +1,6 @@
 import { DocumentReader } from '../../index';
 import { LivenessParams } from './LivenessParams';
+import { FilterObject } from './FilterObject';
 
 export class AuthenticityParams {
     get useLivenessCheck() { return this._useLivenessCheck; }
@@ -95,6 +96,28 @@ export class AuthenticityParams {
         this._set({ "checkSecurityText": val });
     }
 
+    _checkFilters = {};
+
+    setCheckFilter(checkType, filter) {
+        this._checkFilters[checkType] = filter;
+        this._set({
+            "setCheckFilter": {
+                "checkType": checkType,
+                "filterObject": filter.toJson(),
+            },
+        });
+    }
+
+    removeCheckFilter(checkType) {
+        delete this._checkFilters[checkType];
+        this._set({ "removeCheckFilter": checkType });
+    }
+
+    clearCheckFilter() {
+        this._checkFilters = {};
+        this._set({ "clearCheckFilter": null });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new AuthenticityParams();
 
@@ -116,6 +139,8 @@ export class AuthenticityParams {
         result._checkPhotoComparison = jsonObject["checkPhotoComparison"];
         result._checkLetterScreen = jsonObject["checkLetterScreen"];
         result._checkSecurityText = jsonObject["checkSecurityText"];
+        result._checkFilters = Object.fromEntries(Object.entries(jsonObject["checkFilters"] ?? {})
+            .map(([k, v]) => [k, FilterObject.fromJson(v)]));
 
         return result;
     }
@@ -145,6 +170,25 @@ export class AuthenticityParams {
             "checkPhotoComparison": this.checkPhotoComparison,
             "checkLetterScreen": this.checkLetterScreen,
             "checkSecurityText": this.checkSecurityText,
+            "checkFilters": Object.fromEntries(Object.entries(this._checkFilters).map(([k, v]) => [k, v.toJson()])),
         }
     }
 }
+
+export const AuthenticityCheckType = {
+    USE_LIVENESS: "checkLiveness",
+    UV_LUMINISCENCE: "checkUVLuminiscence",
+    IR_B900: "checkIRB900",
+    IMAGE_PATTERNS: "checkImagePatterns",
+    FIBERS: "checkFibers",
+    EXT_MRZ: "checkExtMRZ",
+    EXT_OCR: "checkExtOCR",
+    AXIAL: "checkAxial",
+    BARCODE_FORMAT: "checkBarcodeFormat",
+    IR_VISIBILITY: "checkIRVisibility",
+    IPI: "checkIPI",
+    PHOTO_EMBEDDING: "checkPhotoEmbedding",
+    PHOTO_COMPARISON: "checkPhotoComparison",
+    LETTER_SCREEN: "checkLetterScreen",
+    SECURITY_TEXT: "checkSecurityText",
+};

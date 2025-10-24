@@ -70,6 +70,10 @@ export declare enum ErrorCodes {
     CANNOT_USE_CAMERA_IN_SCENario = 40,
     BACKEND_ONLINE_PROCESSING = 303,
     WRONG_INPUT = 400,
+    /** Missing output result. */
+    RESULT_UNAVAILABLE = 410,
+    /** Incorrect result output. */
+    RESULT_WRONG_OUTPUT = 411,
     STATE_EXCEPTION = 500,
     BLE_EXCEPTION = 600,
     FEATURE_BLUETOOTH_LE_NOT_SUPPORTED = 601,

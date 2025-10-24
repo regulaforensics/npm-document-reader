@@ -1,3 +1,4 @@
+import { FilterObject } from "./FilterObject";
 import { LivenessParams } from "./LivenessParams";
 
 export declare class AuthenticityParams {
@@ -22,9 +23,33 @@ export declare class AuthenticityParams {
     checkLetterScreen?: boolean;
     checkSecurityText?: boolean;
 
+    setCheckFilter(checkType: AuthenticityCheckType, filter: FilterObject): void;
+
+    removeCheckFilter(checkType: AuthenticityCheckType): void;
+
+    clearCheckFilter(): void;
+
     /**
      * Allows you to deserialize object.
      * @param jsonObject
      */
     static fromJson(jsonObject: any): AuthenticityParams;
+}
+
+export declare enum AuthenticityCheckType {
+    USE_LIVENESS = "checkLiveness",
+    UV_LUMINISCENCE = "checkUVLuminiscence",
+    IR_B900 = "checkIRB900",
+    IMAGE_PATTERNS = "checkImagePatterns",
+    FIBERS = "checkFibers",
+    EXT_MRZ = "checkExtMRZ",
+    EXT_OCR = "checkExtOCR",
+    AXIAL = "checkAxial",
+    BARCODE_FORMAT = "checkBarcodeFormat",
+    IR_VISIBILITY = "checkIRVisibility",
+    IPI = "checkIPI",
+    PHOTO_EMBEDDING = "checkPhotoEmbedding",
+    PHOTO_COMPARISON = "checkPhotoComparison",
+    LETTER_SCREEN = "checkLetterScreen",
+    SECURITY_TEXT = "checkSecurityText",
 }

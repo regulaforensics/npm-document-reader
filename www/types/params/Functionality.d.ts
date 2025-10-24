@@ -130,6 +130,12 @@ export declare class Functionality {
      */
     torchTurnedOn?: boolean;
     /**
+     * When enabled, the SDK prevents both screen recording and screenshots.
+     *
+     * @default false
+     */
+    preventScreenRecording?: boolean;
+    /**
      * Allows you to specify a time interval when the Capture button
      * has to be displayed after the document is detected.
      * Don't forget to set the {@link showCaptureButton} to `true`,

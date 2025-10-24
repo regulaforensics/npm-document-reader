@@ -2,7 +2,12 @@ export declare class CustomizationImages {
     /**
      * Base64 string.
      */
-    rfidProcessingScreenFailureImage: string;
+    rfidProcessingScreenFailureImage?: string;
+    
+    /** 
+     * Android only. 
+     */
+    rfidEnableNfcImage?: string;
 
     /**
      * Allows you to deserialize object.

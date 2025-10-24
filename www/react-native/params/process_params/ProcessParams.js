@@ -5,6 +5,7 @@ import { RFIDParams } from './RFIDParams';
 import { FaceApiParams } from './FaceApiParams';
 import { BackendProcessingConfig } from './BackendProcessingConfig';
 import { AuthenticityParams } from './AuthenticityParams';
+import { FilterObject } from './FilterObject';
 
 export class ProcessParams {
     get multipageProcessing() { return this._multipageProcessing; }
@@ -463,6 +464,28 @@ export class ProcessParams {
         this._set({ "customParams": val });
     }
 
+    _checkFilters = {};
+
+    setCheckFilter(checkType, filter) {
+        this._checkFilters[checkType] = filter;
+        this._set({
+            "setCheckFilter": {
+                "checkType": checkType,
+                "filterObject": filter.toJson(),
+            },
+        });
+    }
+
+    removeCheckFilter(checkType) {
+        delete this._checkFilters[checkType];
+        this._set({ "removeCheckFilter": checkType });
+    }
+
+    clearCheckFilter() {
+        this._checkFilters = {};
+        this._set({ "clearCheckFilter": null });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new ProcessParams();
         const result = new ProcessParams();
@@ -544,6 +567,8 @@ export class ProcessParams {
         result._backendProcessingConfig = BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
         result._authenticityParams = AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
+        result._checkFilters = Object.fromEntries(Object.entries(jsonObject["checkFilters"] ?? {})
+            .map(([k, v]) => [k, FilterObject.fromJson(v)]));
 
         return result;
     }
@@ -626,6 +651,7 @@ export class ProcessParams {
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
+            "checkFilters": Object.fromEntries(Object.entries(this._checkFilters).map(([k, v]) => [k, v.toJson()])),
         }
     }
 
@@ -662,4 +688,8 @@ export const MrzDetectionModes = {
     DEFAULT: 0,
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
+};
+
+export const FilterCheckType = {
+    AUTH: "checkAuth",
 };

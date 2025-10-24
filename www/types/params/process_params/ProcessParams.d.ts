@@ -1,3 +1,4 @@
+import { FilterObject } from "./FilterObject";
 import { AuthenticityParams } from "./AuthenticityParams";
 import { BackendProcessingConfig } from "./BackendProcessingConfig";
 import { FaceApiParams } from "./FaceApiParams";
@@ -415,6 +416,12 @@ export declare class ProcessParams {
      */
     customParams?: Record<string, any>;
 
+    setCheckFilter(checkType: FilterCheckType, filter: FilterObject): void;
+
+    removeCheckFilter(checkType: FilterCheckType): void;
+
+    clearCheckFilter(): void;
+
     /**
      * Allows you to deserialize object.
      * @param jsonObject
@@ -470,4 +477,8 @@ export declare enum MrzDetectionModes {
     DEFAULT = 0,
     RESIZE_BINARIZE_WINDOW = 1,
     BLUR_BEFORE_BINARIZATION = 2,
+}
+
+export declare enum FilterCheckType {
+    AUTH = "checkAuth",
 }
