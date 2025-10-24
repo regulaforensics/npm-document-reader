@@ -97,4 +97,8 @@ export declare enum SecurityFeatureType {
     LIVENESS_BLACK_AND_WHITE_COPY_CHECK = 53,
     LIVENESS_DYNAPRINT = 54,
     LIVENESS_GEOMETRY_CHECK = 55,
+    /** Age check. */
+    AGE_CHECK = 56,
+    /** Sex check. */
+    SEX_CHECK = 57,
 }

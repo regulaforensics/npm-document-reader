@@ -105,6 +105,12 @@ export class Functionality {
         this._set({ "torchTurnedOn": val });
     }
 
+    get preventScreenRecording() { return this._preventScreenRecording; }
+    set preventScreenRecording(val) {
+        this._preventScreenRecording = val;
+        this._set({ "preventScreenRecording": val });
+    }
+
     get showCaptureButtonDelayFromDetect() { return this._showCaptureButtonDelayFromDetect; }
     set showCaptureButtonDelayFromDetect(val) {
         this._showCaptureButtonDelayFromDetect = val;
@@ -222,6 +228,7 @@ export class Functionality {
         result._manualMultipageMode = jsonObject["manualMultipageMode"];
         result._singleResult = jsonObject["singleResult"];
         result._torchTurnedOn = jsonObject["torchTurnedOn"];
+        result._preventScreenRecording = jsonObject["preventScreenRecording"];
         result._showCaptureButtonDelayFromDetect = jsonObject["showCaptureButtonDelayFromDetect"];
         result._showCaptureButtonDelayFromStart = jsonObject["showCaptureButtonDelayFromStart"];
         result._rfidTimeout = jsonObject["rfidTimeout"];
@@ -261,6 +268,7 @@ export class Functionality {
             "manualMultipageMode": this.manualMultipageMode,
             "singleResult": this.singleResult,
             "torchTurnedOn": this.torchTurnedOn,
+            "preventScreenRecording": this.preventScreenRecording,
             "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
             "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
             "rfidTimeout": this.rfidTimeout,

@@ -97,6 +97,10 @@ export declare enum CheckDiagnose {
     /** Facial image is found. */
     FIELD_POS_CORRECTOR_FACE_ABSENCE_CHECK_ERROR = 85,
     CHD_FIELD_POS_CORRECTOR_INCORRECT_HEAD_POSITION = 86,
+    /** Age check error. */
+    CHD_FIELD_POS_CORRECTOR_AGE_CHECK_ERROR = 87,
+    /** Sex check error. */
+    CHD_FIELD_POS_CORRECTOR_SEX_CHECK_ERROR = 88,
     /** OVI object is not visible in IR. */
     OVI_IR_INVISIBLE = 90,
     /** Insufficient area of the object OVI. */
