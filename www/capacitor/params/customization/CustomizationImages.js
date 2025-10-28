@@ -7,11 +7,18 @@ export class CustomizationImages {
         this._set({ "rfidProcessingScreenFailureImage": val });
     }
 
+    get rfidEnableNfcImage() { return this._rfidEnableNfcImage; }
+    set rfidEnableNfcImage(val) {
+        this._rfidEnableNfcImage = val;
+        this._set({ "rfidEnableNfcImage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
         
         const result = new CustomizationImages();
         result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
+        result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
         
         return result;
     }
@@ -26,6 +33,7 @@ export class CustomizationImages {
     toJson() {
         return {
             "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
+            "rfidEnableNfcImage": this.rfidEnableNfcImage,
         }
     }
 }

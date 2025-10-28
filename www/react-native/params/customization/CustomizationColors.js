@@ -49,6 +49,30 @@ export class CustomizationColors {
         this._set({ "rfidProcessingScreenLoadingBar": val });
     }
 
+    get rfidEnableNfcTitleText() { return this._rfidEnableNfcTitleText; }
+    set rfidEnableNfcTitleText(val) {
+        this._rfidEnableNfcTitleText = val;
+        this._set({ "rfidEnableNfcTitleText": val });
+    }
+
+    get rfidEnableNfcDescriptionText() { return this._rfidEnableNfcDescriptionText; }
+    set rfidEnableNfcDescriptionText(val) {
+        this._rfidEnableNfcDescriptionText = val;
+        this._set({ "rfidEnableNfcDescriptionText": val });
+    }
+
+    get rfidEnableNfcButtonText() { return this._rfidEnableNfcButtonText; }
+    set rfidEnableNfcButtonText(val) {
+        this._rfidEnableNfcButtonText = val;
+        this._set({ "rfidEnableNfcButtonText": val });
+    }
+
+    get rfidEnableNfcButtonBackground() { return this._rfidEnableNfcButtonBackground; }
+    set rfidEnableNfcButtonBackground(val) {
+        this._rfidEnableNfcButtonBackground = val;
+        this._set({ "rfidEnableNfcButtonBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
 
@@ -61,6 +85,10 @@ export class CustomizationColors {
         result._rfidProcessingScreenProgressBarBackground = jsonObject["rfidProcessingScreenProgressBarBackground"];
         result._rfidProcessingScreenResultLabelText = jsonObject["rfidProcessingScreenResultLabelText"];
         result._rfidProcessingScreenLoadingBar = jsonObject["rfidProcessingScreenLoadingBar"];
+        result._rfidEnableNfcTitleText = jsonObject["rfidEnableNfcTitleText"];
+        result._rfidEnableNfcDescriptionText = jsonObject["rfidEnableNfcDescriptionText"];
+        result._rfidEnableNfcButtonText = jsonObject["rfidEnableNfcButtonText"];
+        result._rfidEnableNfcButtonBackground = jsonObject["rfidEnableNfcButtonBackground"];
 
         return result;
     }
@@ -82,6 +110,10 @@ export class CustomizationColors {
             "rfidProcessingScreenProgressBarBackground": this.rfidProcessingScreenProgressBarBackground,
             "rfidProcessingScreenResultLabelText": this.rfidProcessingScreenResultLabelText,
             "rfidProcessingScreenLoadingBar": this.rfidProcessingScreenLoadingBar,
+            "rfidEnableNfcTitleText": this.rfidEnableNfcTitleText,
+            "rfidEnableNfcDescriptionText": this.rfidEnableNfcDescriptionText,
+            "rfidEnableNfcButtonText": this.rfidEnableNfcButtonText,
+            "rfidEnableNfcButtonBackground": this.rfidEnableNfcButtonBackground,
         }
     }
 }

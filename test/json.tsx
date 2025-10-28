@@ -17,6 +17,24 @@ export var faceApiParams = {
   "proxyType": 3,
   "searchParams": faceApiSearchParams,
 }
+export var filterObject = {
+  "docIDsFilter": {
+    "list": [1, 2, 3],
+    "isInclude": true
+  },
+  "docFormatsFilter": {
+    "list": [4, 5, 6],
+    "isInclude": false
+  },
+  "docCategoriesFilter": {
+    "list": [7, 8, 9],
+    "isInclude": true
+  },
+  "docCountriesFilter": {
+    "list": ["test1", "test2", "test3"],
+    "isInclude": false
+  },
+}
 export var livenessParams = {
   "checkOVI": true,
   "checkMLI": false,
@@ -25,6 +43,11 @@ export var livenessParams = {
   "checkBlackAndWhiteCopy": true,
   "checkDynaprint": false,
   "checkGeometry": true,
+  "checkFilters": {
+    "checkOVI": filterObject,
+    "checkMLI": filterObject,
+    "checkHolo": filterObject
+  },
 }
 export var authenticityParams = {
   "useLivenessCheck": true,
@@ -43,8 +66,13 @@ export var authenticityParams = {
   "checkLetterScreen": false,
   "checkSecurityText": true,
   "livenessParams": livenessParams,
+  "checkFilters": {
+    "checkImagePatterns": filterObject,
+    "checkFibers": filterObject,
+    "checkExtMRZ": filterObject
+  },
 }
-export var glaresCheckParams = {"imgMarginPart": 0.5, "maxGlaringPart": 1.5}
+export var glaresCheckParams = { "imgMarginPart": 0.5, "maxGlaringPart": 1.5 }
 export var imageQA = {
   "dpiThreshold": 1,
   "angleThreshold": 2,
@@ -64,7 +92,7 @@ export var rfidParams = {
 export var backendProcessingConfig = {
   "url": "test",
   "rfidServerSideChipVerification": true,
-  "httpHeaders": {"key1": "val1", "key2": "val2", "key3": "val3"},
+  "httpHeaders": { "key1": "val1", "key2": "val2", "key3": "val3" },
   "timeoutConnection": 0.5,
 }
 export var processParams = {
@@ -143,10 +171,11 @@ export var processParams = {
   "faceApiParams": faceApiParams,
   "backendProcessingConfig": backendProcessingConfig,
   "authenticityParams": authenticityParams,
-  "customParams": {"test1": true, "test2": 1, "test3": "test"},
+  "customParams": { "test1": true, "test2": 1, "test3": "test" },
+  "checkFilters": { "checkAuth": filterObject },
 }
-export var font1 = {"name": "AppleSDGothicNeo-Thin", "size": 10, "style": 2}
-export var font2 = {"name": "Copperplate-Light", "size": 20, "style": 1}
+export var font1 = { "name": "AppleSDGothicNeo-Thin", "size": 10, "style": 2 }
+export var font2 = { "name": "Copperplate-Light", "size": 20, "style": 1 }
 export var customizationColors = {
   "rfidProcessingScreenBackground": 0xff000000,
   "rfidProcessingScreenHintLabelText": 0xff000001,
@@ -156,13 +185,23 @@ export var customizationColors = {
   "rfidProcessingScreenProgressBarBackground": 0xff000005,
   "rfidProcessingScreenResultLabelText": 0xff000006,
   "rfidProcessingScreenLoadingBar": 0xff000007,
+  "rfidEnableNfcTitleText": 0xff000008,
+  "rfidEnableNfcDescriptionText": 0xff000009,
+  "rfidEnableNfcButtonText": 0xff000010,
+  "rfidEnableNfcButtonBackground": 0xff000011,
 }
 export var customizationFonts = {
   "rfidProcessingScreenHintLabel": font1,
   "rfidProcessingScreenProgressLabel": font2,
   "rfidProcessingScreenResultLabel": font1,
+  "rfidEnableNfcTitleText": font2,
+  "rfidEnableNfcDescriptionText": font1,
+  "rfidEnableNfcButtonText": font2,
 }
-export var customizationImages = {"rfidProcessingScreenFailureImage": img1}
+export var customizationImages = {
+  "rfidProcessingScreenFailureImage": img1,
+  "rfidEnableNfcImage": img2,
+}
 export var customization = {
   "showStatusMessages": true,
   "showResultStatusMessages": false,
@@ -218,7 +257,7 @@ export var customization = {
   "multipageButtonImage": img1,
   "customLabelStatus": "test3",
   "cameraFrameLineCap": 2,
-  "uiCustomizationLayer": {"test": "test"},
+  "uiCustomizationLayer": { "test": "test" },
   "statusTextFont": font1,
   "resultStatusTextFont": font2,
   "multipageButtonTextFont": font1,
@@ -256,7 +295,7 @@ export var customization = {
   "fonts": customizationFonts,
   "images": customizationImages,
 }
-export var cameraSize = {"width": 0, "height": 1}
+export var cameraSize = { "width": 0, "height": 1 }
 export var functionality = {
   "pictureOnBoundsReady": true,
   "showTorchButton": false,
@@ -275,6 +314,7 @@ export var functionality = {
   "manualMultipageMode": true,
   "singleResult": false,
   "torchTurnedOn": false,
+  "preventScreenRecording": true,
   "showCaptureButtonDelayFromDetect": 0,
   "showCaptureButtonDelayFromStart": 1,
   "rfidTimeout": 2,
@@ -424,8 +464,9 @@ export var rfidScenario = {
 export var initConfig = {
   "delayedNNLoad": false,
   "licenseUpdate": true,
+  "licenseUpdateTimeout": 1.5,
   "customDb": img1,
-  "blackList": {"key1": "val1", "key2": "val2", "key3": "val3"},
+  "blackList": { "key1": "val1", "key2": "val2", "key3": "val3" },
   "databasePath": "test",
   "license": img2,
   "useBleDevice": true,
@@ -436,9 +477,9 @@ export var onlineProcessingConfig = {
   "imageFormat": 1,
   "imageCompressionQuality": 1.5,
   "processParams": processParams,
-  "requestHeaders": {"key1": "val1", "key2": "val2", "key3": "val3"},
+  "requestHeaders": { "key1": "val1", "key2": "val2", "key3": "val3" },
 }
-export var imageInputData = {"image": img1, "light": 128, "pageIndex": 2}
+export var imageInputData = { "image": img1, "light": 128, "pageIndex": 2 }
 export var recognizeConfig = {
   "scenario": "Mrz",
   "livePortrait": img1,
@@ -503,9 +544,9 @@ export var license = {
   "countryFilter": ["test2", "test3", "test4"],
   "isRfidAvailable": true,
 }
-export var docReaderException = {"code": 1, "message": "test1"}
-export var rfidException = {"code": 2, "message": "test2"}
-export var prepareProgress = {"downloadedBytes": 1, "totalBytes": 2, "progress": 50}
+export var docReaderException = { "code": 1, "message": "test1" }
+export var rfidException = { "code": 2, "message": "test2" }
+export var prepareProgress = { "downloadedBytes": 1, "totalBytes": 2, "progress": 50 }
 
 export var authenticityElement = {
   "status": 1,
@@ -525,7 +566,7 @@ export var authenticityResult = {
   "status": 2,
   "checks": [authenticityCheck, authenticityCheck, authenticityCheck],
 }
-export var pdf417Info = {"errorLevel": 2, "columns": 3, "rows": 4}
+export var pdf417Info = { "errorLevel": 2, "columns": 3, "rows": 4 }
 export var barcodeField = {
   "barcodeType": 5,
   "status": -6001,
@@ -536,7 +577,7 @@ export var barcodeField = {
 export var barcodeResult = {
   "fields": [barcodeField, barcodeField, barcodeField],
 }
-export var rect = {"bottom": 0, "top": 1, "left": 2, "right": 3}
+export var rect = { "bottom": 0, "top": 1, "left": 2, "right": 3 }
 export var imageQuality = {
   "featureType": 1,
   "result": 2,
@@ -555,9 +596,9 @@ export var accessControlProcedureType = {
   "status": 1,
   "notifications": [1, 2, 3],
 }
-export var fileData = {"data": "test", "length": 2, "type": 3, "status": 4}
-export var certificateData = {"data": "test", "length": 1}
-export var securityObjectCertificates = {"securityObject": certificateData}
+export var fileData = { "data": "test", "length": 2, "type": 3, "status": 4 }
+export var certificateData = { "data": "test", "length": 1 }
+export var securityObjectCertificates = { "securityObject": certificateData }
 export var file = {
   "fileData": fileData,
   "fileID": "test1",
@@ -588,7 +629,7 @@ export var rfidValue = {
   "type": 3,
   "format": "test2",
 }
-export var attribute = {"type": "test", "value": rfidValue}
+export var attribute = { "type": "test", "value": rfidValue }
 export var authority = {
   "attributes": [attribute, attribute, attribute],
   "data": "test",
@@ -610,8 +651,8 @@ export var cardProperties = {
   "baudrate2": "test4",
   "uID": "test5",
 }
-export var extension = {"data": "test1", "type": "test2"}
-export var rfidValidity = {"notAfter": rfidValue, "notBefore": rfidValue}
+export var extension = { "data": "test1", "type": "test2" }
+export var rfidValidity = { "notAfter": rfidValue, "notBefore": rfidValue }
 export var certificateChain = {
   "type": 1,
   "extensions": [extension, extension, extension],
@@ -627,7 +668,7 @@ export var certificateChain = {
   "validity": rfidValidity,
   "version": 4,
 }
-export var dataField = {"data": "test", "fieldType": 1}
+export var dataField = { "data": "test", "fieldType": 1 }
 export var signerInfo = {
   "dataToHash": "test1",
   "digestAlgorithm": "test2",
@@ -666,12 +707,12 @@ export var rfidSessionData = {
   "extLeSupport": 1,
   "processTime": 4,
 }
-export var bytesData = {"data": "test", "length": 1, "status": 2, "type": 3}
+export var bytesData = { "data": "test", "length": 1, "status": 2, "type": 3 }
 export var vdsncData = {
   "type": "test1",
   "version": 1,
   "issuingCountry": "test2",
-  "message": {"key1": "val1", "key2": "val2", "key3": "val3"},
+  "message": { "key1": "val1", "key2": "val2", "key3": "val3" },
   "signatureAlgorithm": "test3",
   "signature": bytesData,
   "certificate": bytesData,
@@ -707,7 +748,7 @@ export var resultsStatus = {
   "detailsOptical": opticalStatus,
   "detailsRFID": rfidStatus,
 }
-export var comparison = {"sourceTypeLeft": 0, "sourceTypeRight": 1, "status": 2}
+export var comparison = { "sourceTypeLeft": 0, "sourceTypeRight": 1, "status": 2 }
 export var graphicField = {
   "sourceType": 0,
   "fieldType": 201,
@@ -722,9 +763,9 @@ export var graphicField = {
 export var graphicResult = {
   "fields": [graphicField, graphicField, graphicField],
 }
-export var rfidOrigin = {"dg": 1, "dgTag": 2, "entryView": 3, "tagEntry": 4}
-export var symbol = {"rect": rect, "code": 1, "probability": 2}
-export var validity = {"sourceType": 1, "status": 2}
+export var rfidOrigin = { "dg": 1, "dgTag": 2, "entryView": 3, "tagEntry": 4 }
+export var symbol = { "rect": rect, "code": 1, "probability": 2 }
+export var validity = { "sourceType": 1, "status": 2 }
 export var value = {
   "sourceType": 3,
   "value": "test1",
@@ -789,7 +830,7 @@ export var documentType = {
   "dCountryName": "test5",
   "pageIndex": 3,
 }
-export var coordinate = {"x": 1, "y": 2}
+export var coordinate = { "x": 1, "y": 2 }
 export var position = {
   "docFormat": 0,
   "resultStatus": 1,
@@ -841,7 +882,7 @@ export var rfidNotification = {
   "dataFileType": 1,
   "progress": 2,
 }
-export var paAttribute = {"type": "test1", "value": "test2"}
+export var paAttribute = { "type": "test1", "value": "test2" }
 export var paResourcesIssuer = {
   "data": img1,
   "friendlyName": "test",

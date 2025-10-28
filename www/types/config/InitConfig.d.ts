@@ -15,6 +15,11 @@ export declare class InitConfig {
     licenseUpdate: boolean;
 
     /**
+     * Allows you to configure the maximum time needed for a license update (in seconds).
+     */
+    licenseUpdateTimeout?: number;
+
+    /**
      * Defines whether the {@link DocumentReader} delays loading of neural networks.
      *
      * When set to `true` the initialization starts in the background thread after

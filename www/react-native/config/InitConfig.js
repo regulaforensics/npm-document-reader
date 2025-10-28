@@ -1,6 +1,7 @@
 export class InitConfig {
     license
     licenseUpdate
+    licenseUpdateTimeout
     delayedNNLoad
     databasePath
     customDb
@@ -30,6 +31,7 @@ export class InitConfig {
         result.customDb = jsonObject["customDb"];
         result.delayedNNLoad = jsonObject["delayedNNLoad"];
         result.licenseUpdate = jsonObject["licenseUpdate"];
+        result.licenseUpdateTimeout = jsonObject["licenseUpdateTimeout"];
         result.blackList = jsonObject["blackList"];
         result.databasePath = jsonObject["databasePath"];
         result.useBleDevice = jsonObject["useBleDevice"];
@@ -43,6 +45,7 @@ export class InitConfig {
             "license": this.license,
             "delayedNNLoad": this.delayedNNLoad,
             "licenseUpdate": this.licenseUpdate,
+            "licenseUpdateTimeout": this.licenseUpdateTimeout,
             "blackList": this.blackList,
             "customDb": this.customDb,
             "databasePath": this.databasePath,
