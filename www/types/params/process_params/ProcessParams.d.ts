@@ -203,6 +203,11 @@ export declare class ProcessParams {
      */
     strictSecurityChecks?: boolean;
     /**
+     * Allows transliteration to be turned on or off.
+     * Default: `true`.
+     */
+    returnTransliteratedFields?: boolean;
+    /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
      * setting the barcode parser type which should be used during recognition.

@@ -4119,6 +4119,12 @@ class ProcessParams {
         this._set({ "strictSecurityChecks": val });
     }
 
+    get returnTransliteratedFields() { return this._returnTransliteratedFields; }
+    set returnTransliteratedFields(val) {
+        this._returnTransliteratedFields = val;
+        this._set({ "returnTransliteratedFields": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -4406,6 +4412,7 @@ class ProcessParams {
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
         result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
+        result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -4490,6 +4497,7 @@ class ProcessParams {
             "generateAlpha2Codes": this.generateAlpha2Codes,
             "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
             "strictSecurityChecks": this.strictSecurityChecks,
+            "returnTransliteratedFields": this.returnTransliteratedFields,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
