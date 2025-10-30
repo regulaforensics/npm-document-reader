@@ -1,6 +1,6 @@
 {
   "name": "@regulaforensics/document-reader",
-  "version": "7.2.402-nightly",
+  "version": "7.2.404-nightly",
   "description": "This is an npm module for Regula Document Reader SDK. It allows you to read various kinds of identification documents using your phone's camera.",
   "main": "www/react-native/index.js",
   "module": "www/capacitor/index.js",
