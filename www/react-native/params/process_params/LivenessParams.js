@@ -63,7 +63,7 @@ export class LivenessParams {
 
     clearCheckFilter() {
         this._checkFilters = {};
-        this._set({ "clearCheckFilter": null });
+        this._set({ "clearCheckFilter": '' });
     }
 
     static fromJson(jsonObject) {
