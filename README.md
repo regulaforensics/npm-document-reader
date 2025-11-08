@@ -3,7 +3,7 @@ Document Reader allows you to read various kinds of identification documents, pa
 
 ## Demo applications
 In the [examples](examples/) folder you can find 3 demo applications:
-* [React-native](examples/react-native)
+* [React-native](examples/react_native)
 * [Ionic(ionic app with cordova, angular)](examples/ionic)
 * [Capacitor(ionic app with capacitor, react)](examples/capacitor)
 
