@@ -17,24 +17,6 @@ export var faceApiParams = {
   "proxyType": 3,
   "searchParams": faceApiSearchParams,
 }
-export var filterObject = {
-  "docIDsFilter": {
-    "list": [1, 2, 3],
-    "isInclude": true
-  },
-  "docFormatsFilter": {
-    "list": [4, 5, 6],
-    "isInclude": false
-  },
-  "docCategoriesFilter": {
-    "list": [7, 8, 9],
-    "isInclude": true
-  },
-  "docCountriesFilter": {
-    "list": ["test1", "test2", "test3"],
-    "isInclude": false
-  },
-}
 export var livenessParams = {
   "checkOVI": true,
   "checkMLI": false,
@@ -43,11 +25,6 @@ export var livenessParams = {
   "checkBlackAndWhiteCopy": true,
   "checkDynaprint": false,
   "checkGeometry": true,
-  "checkFilters": {
-    "checkOVI": filterObject,
-    "checkMLI": filterObject,
-    "checkHolo": filterObject
-  },
 }
 export var authenticityParams = {
   "useLivenessCheck": true,
@@ -66,11 +43,6 @@ export var authenticityParams = {
   "checkLetterScreen": false,
   "checkSecurityText": true,
   "livenessParams": livenessParams,
-  "checkFilters": {
-    "checkImagePatterns": filterObject,
-    "checkFibers": filterObject,
-    "checkExtMRZ": filterObject
-  },
 }
 export var glaresCheckParams = { "imgMarginPart": 0.5, "maxGlaringPart": 1.5 }
 export var imageQA = {
@@ -173,7 +145,6 @@ export var processParams = {
   "backendProcessingConfig": backendProcessingConfig,
   "authenticityParams": authenticityParams,
   "customParams": { "test1": true, "test2": 1, "test3": "test" },
-  "checkFilters": { "checkAuth": filterObject },
 }
 export var font1 = { "name": "AppleSDGothicNeo-Thin", "size": 10, "style": 2 }
 export var font2 = { "name": "Copperplate-Light", "size": 20, "style": 1 }
