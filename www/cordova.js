@@ -3122,6 +3122,7 @@ class AuthenticityParams {
         this._set({ "useLivenessCheck": val });
     }
 
+    _livenessParams = new _LivenessParams__WEBPACK_IMPORTED_MODULE_1__.LivenessParams();
     get livenessParams() { return this._livenessParams; }
     set livenessParams(val) { (this._livenessParams = val)._apply(); }
 
@@ -4148,6 +4149,7 @@ class ProcessParams {
         this._set({ "lcidFilter": val });
     }
 
+    _imageQA = new _ImageQA__WEBPACK_IMPORTED_MODULE_2__.ImageQA();
     get imageQA() { return this._imageQA; }
     set imageQA(val) { (this._imageQA = val)._apply(); }
 
@@ -4169,6 +4171,7 @@ class ProcessParams {
         this._set({ "backendProcessingConfig": val });
     }
 
+    _authenticityParams = new _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__.AuthenticityParams();
     get authenticityParams() { return this._authenticityParams; }
     set authenticityParams(val) { (this._authenticityParams = val)._apply(); }
 
