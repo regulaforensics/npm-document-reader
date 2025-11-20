@@ -345,7 +345,7 @@ export class DocumentReader {
      *
      * @param certificates - PKD certificates.
      */
-    addPKDCertificates(certificates: [PKDCertificate]): void;
+    addPKDCertificates(certificates: PKDCertificate[]): void;
 
     /** It's used to remove certificates from your app that are used during the
      * RFID chip processing.

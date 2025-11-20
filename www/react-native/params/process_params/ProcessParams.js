@@ -439,6 +439,7 @@ export class ProcessParams {
         this._set({ "lcidFilter": val });
     }
 
+    _imageQA = new ImageQA();
     get imageQA() { return this._imageQA; }
     set imageQA(val) { (this._imageQA = val)._apply(); }
 
@@ -460,6 +461,7 @@ export class ProcessParams {
         this._set({ "backendProcessingConfig": val });
     }
 
+    _authenticityParams = new AuthenticityParams();
     get authenticityParams() { return this._authenticityParams; }
     set authenticityParams(val) { (this._authenticityParams = val)._apply(); }
 
