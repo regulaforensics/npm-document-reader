@@ -8,6 +8,7 @@ export class AuthenticityParams {
         this._set({ "useLivenessCheck": val });
     }
 
+    _livenessParams = new LivenessParams();
     get livenessParams() { return this._livenessParams; }
     set livenessParams(val) { (this._livenessParams = val)._apply(); }
 
