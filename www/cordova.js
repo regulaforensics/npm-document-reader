@@ -2,11 +2,11 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/config/InitConfig.js":
+/***/ "./src/config/InitConfig.js"
 /*!**********************************!*\
   !*** ./src/config/InitConfig.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -69,13 +69,13 @@ class InitConfig {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/config/OnlineProcessingConfig.js":
+/***/ "./src/config/OnlineProcessingConfig.js"
 /*!**********************************************!*\
   !*** ./src/config/OnlineProcessingConfig.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -139,13 +139,13 @@ const OnlineMode = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/config/RFIDConfig.js":
+/***/ "./src/config/RFIDConfig.js"
 /*!**********************************!*\
   !*** ./src/config/RFIDConfig.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -191,13 +191,13 @@ class RFIDConfig {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/config/RecognizeConfig.js":
+/***/ "./src/config/RecognizeConfig.js"
 /*!***************************************!*\
   !*** ./src/config/RecognizeConfig.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -335,13 +335,13 @@ class ImageInputData {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/config/ScannerConfig.js":
+/***/ "./src/config/ScannerConfig.js"
 /*!*************************************!*\
   !*** ./src/config/ScannerConfig.js ***!
   \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -398,13 +398,13 @@ class ScannerConfig {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/index.js":
+/***/ "./src/index.js"
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1150,13 +1150,13 @@ DocReaderAction.stopped = function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/DocReaderException.js":
+/***/ "./src/info/DocReaderException.js"
 /*!****************************************!*\
   !*** ./src/info/DocReaderException.js ***!
   \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1231,13 +1231,13 @@ const ErrorCodes = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/DocReaderScenario.js":
+/***/ "./src/info/DocReaderScenario.js"
 /*!***************************************!*\
   !*** ./src/info/DocReaderScenario.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1336,13 +1336,13 @@ const DocReaderOrientation = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/DocReaderVersion.js":
+/***/ "./src/info/DocReaderVersion.js"
 /*!**************************************!*\
   !*** ./src/info/DocReaderVersion.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1383,13 +1383,13 @@ class DocReaderVersion {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/DocumentsDatabase.js":
+/***/ "./src/info/DocumentsDatabase.js"
 /*!***************************************!*\
   !*** ./src/info/DocumentsDatabase.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1436,13 +1436,13 @@ class DocumentsDatabase {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/License.js":
+/***/ "./src/info/License.js"
 /*!*****************************!*\
   !*** ./src/info/License.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1480,13 +1480,13 @@ class License {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/PrepareProgress.js":
+/***/ "./src/info/PrepareProgress.js"
 /*!*************************************!*\
   !*** ./src/info/PrepareProgress.js ***!
   \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1525,13 +1525,13 @@ class PrepareProgress {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/info/RFIDException.js":
+/***/ "./src/info/RFIDException.js"
 /*!***********************************!*\
   !*** ./src/info/RFIDException.js ***!
   \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1566,13 +1566,13 @@ class RFIDException {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/internal/bridge.js":
+/***/ "./src/internal/bridge.js"
 /*!********************************!*\
   !*** ./src/internal/bridge.js ***!
   \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1697,13 +1697,13 @@ function _setTaSignatureCompletion(completion) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/internal/cordova.js":
+/***/ "./src/internal/cordova.js"
 /*!*********************************!*\
   !*** ./src/internal/cordova.js ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -1728,13 +1728,13 @@ class NativeEventEmitter {
     }
 }
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/Functionality.js":
+/***/ "./src/params/Functionality.js"
 /*!*************************************!*\
   !*** ./src/params/Functionality.js ***!
   \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -2114,13 +2114,13 @@ class CameraSize {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/customization/Customization.js":
+/***/ "./src/params/customization/Customization.js"
 /*!***************************************************!*\
   !*** ./src/params/customization/Customization.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -2771,13 +2771,13 @@ const CustomButtonTag = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/customization/CustomizationColors.js":
+/***/ "./src/params/customization/CustomizationColors.js"
 /*!*********************************************************!*\
   !*** ./src/params/customization/CustomizationColors.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -2905,13 +2905,13 @@ class CustomizationColors {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/customization/CustomizationFonts.js":
+/***/ "./src/params/customization/CustomizationFonts.js"
 /*!********************************************************!*\
   !*** ./src/params/customization/CustomizationFonts.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -2993,13 +2993,13 @@ class CustomizationFonts {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/customization/CustomizationImages.js":
+/***/ "./src/params/customization/CustomizationImages.js"
 /*!*********************************************************!*\
   !*** ./src/params/customization/CustomizationImages.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3047,13 +3047,13 @@ class CustomizationImages {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/customization/Font.js":
+/***/ "./src/params/customization/Font.js"
 /*!******************************************!*\
   !*** ./src/params/customization/Font.js ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3098,13 +3098,13 @@ const FontStyle = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/AuthenticityParams.js":
+/***/ "./src/params/process_params/AuthenticityParams.js"
 /*!*********************************************************!*\
   !*** ./src/params/process_params/AuthenticityParams.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3265,13 +3265,13 @@ class AuthenticityParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/BackendProcessingConfig.js":
+/***/ "./src/params/process_params/BackendProcessingConfig.js"
 /*!**************************************************************!*\
   !*** ./src/params/process_params/BackendProcessingConfig.js ***!
   \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3313,13 +3313,13 @@ class BackendProcessingConfig {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/FaceApiParams.js":
+/***/ "./src/params/process_params/FaceApiParams.js"
 /*!****************************************************!*\
   !*** ./src/params/process_params/FaceApiParams.js ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3379,13 +3379,13 @@ class FaceApiParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/FaceApiSearchParams.js":
+/***/ "./src/params/process_params/FaceApiSearchParams.js"
 /*!**********************************************************!*\
   !*** ./src/params/process_params/FaceApiSearchParams.js ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3422,13 +3422,13 @@ class FaceApiSearchParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/GlaresCheckParams.js":
+/***/ "./src/params/process_params/GlaresCheckParams.js"
 /*!********************************************************!*\
   !*** ./src/params/process_params/GlaresCheckParams.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3461,13 +3461,13 @@ class GlaresCheckParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/ImageQA.js":
+/***/ "./src/params/process_params/ImageQA.js"
 /*!**********************************************!*\
   !*** ./src/params/process_params/ImageQA.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3591,13 +3591,13 @@ class ImageQA {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/LivenessParams.js":
+/***/ "./src/params/process_params/LivenessParams.js"
 /*!*****************************************************!*\
   !*** ./src/params/process_params/LivenessParams.js ***!
   \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -3685,13 +3685,13 @@ class LivenessParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/ProcessParams.js":
+/***/ "./src/params/process_params/ProcessParams.js"
 /*!****************************************************!*\
   !*** ./src/params/process_params/ProcessParams.js ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -4385,13 +4385,13 @@ const MrzDetectionModes = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/process_params/RFIDParams.js":
+/***/ "./src/params/process_params/RFIDParams.js"
 /*!*************************************************!*\
   !*** ./src/params/process_params/RFIDParams.js ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -4420,13 +4420,13 @@ class RFIDParams {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/rfid_scenario/DTCDataGroup.js":
+/***/ "./src/params/rfid_scenario/DTCDataGroup.js"
 /*!**************************************************!*\
   !*** ./src/params/rfid_scenario/DTCDataGroup.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -4498,13 +4498,13 @@ class DTCDataGroup {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/rfid_scenario/EDLDataGroups.js":
+/***/ "./src/params/rfid_scenario/EDLDataGroups.js"
 /*!***************************************************!*\
   !*** ./src/params/rfid_scenario/EDLDataGroups.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -4648,13 +4648,13 @@ class EDLDataGroups {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/rfid_scenario/EIDDataGroups.js":
+/***/ "./src/params/rfid_scenario/EIDDataGroups.js"
 /*!***************************************************!*\
   !*** ./src/params/rfid_scenario/EIDDataGroups.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -4854,13 +4854,13 @@ class EIDDataGroups {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/rfid_scenario/EPassportDataGroups.js":
+/***/ "./src/params/rfid_scenario/EPassportDataGroups.js"
 /*!*********************************************************!*\
   !*** ./src/params/rfid_scenario/EPassportDataGroups.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -5020,13 +5020,13 @@ class EPassportDataGroups {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/params/rfid_scenario/RFIDScenario.js":
+/***/ "./src/params/rfid_scenario/RFIDScenario.js"
 /*!**************************************************!*\
   !*** ./src/params/rfid_scenario/RFIDScenario.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -5607,13 +5607,13 @@ const RFIDReadingBufferSize = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/DocumentType.js":
+/***/ "./src/results/DocumentType.js"
 /*!*************************************!*\
   !*** ./src/results/DocumentType.js ***!
   \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -5925,13 +5925,13 @@ const DocType = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/Position.js":
+/***/ "./src/results/Position.js"
 /*!*********************************!*\
   !*** ./src/results/Position.js ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6030,13 +6030,13 @@ class Coordinate {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/Results.js":
+/***/ "./src/results/Results.js"
 /*!********************************!*\
   !*** ./src/results/Results.js ***!
   \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6407,13 +6407,13 @@ const ResultType = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/TransactionInfo.js":
+/***/ "./src/results/TransactionInfo.js"
 /*!****************************************!*\
   !*** ./src/results/TransactionInfo.js ***!
   \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6445,13 +6445,13 @@ class TransactionInfo {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/Authenticity.js":
+/***/ "./src/results/authenticity/Authenticity.js"
 /*!**************************************************!*\
   !*** ./src/results/authenticity/Authenticity.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6482,13 +6482,13 @@ const Authenticity = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/AuthenticityCheck.js":
+/***/ "./src/results/authenticity/AuthenticityCheck.js"
 /*!*******************************************************!*\
   !*** ./src/results/authenticity/AuthenticityCheck.js ***!
   \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6542,13 +6542,13 @@ class AuthenticityCheck {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/AuthenticityElement.js":
+/***/ "./src/results/authenticity/AuthenticityElement.js"
 /*!*********************************************************!*\
   !*** ./src/results/authenticity/AuthenticityElement.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6596,13 +6596,13 @@ class AuthenticityElement {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/AuthenticityResult.js":
+/***/ "./src/results/authenticity/AuthenticityResult.js"
 /*!********************************************************!*\
   !*** ./src/results/authenticity/AuthenticityResult.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6645,13 +6645,13 @@ class AuthenticityResult {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/CheckDiagnose.js":
+/***/ "./src/results/authenticity/CheckDiagnose.js"
 /*!***************************************************!*\
   !*** ./src/results/authenticity/CheckDiagnose.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6786,13 +6786,13 @@ const CheckDiagnose = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/authenticity/SecurityFeatureType.js":
+/***/ "./src/results/authenticity/SecurityFeatureType.js"
 /*!*********************************************************!*\
   !*** ./src/results/authenticity/SecurityFeatureType.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6861,13 +6861,13 @@ const SecurityFeatureType = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/barcode/BarcodeField.js":
+/***/ "./src/results/barcode/BarcodeField.js"
 /*!*********************************************!*\
   !*** ./src/results/barcode/BarcodeField.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6912,13 +6912,13 @@ class BarcodeField {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/barcode/BarcodeResult.js":
+/***/ "./src/results/barcode/BarcodeResult.js"
 /*!**********************************************!*\
   !*** ./src/results/barcode/BarcodeResult.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -6957,13 +6957,13 @@ class BarcodeResult {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/barcode/BarcodeStatus.js":
+/***/ "./src/results/barcode/BarcodeStatus.js"
 /*!**********************************************!*\
   !*** ./src/results/barcode/BarcodeStatus.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7004,13 +7004,13 @@ const BarcodeStatus = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/barcode/BarcodeType.js":
+/***/ "./src/results/barcode/BarcodeType.js"
 /*!********************************************!*\
   !*** ./src/results/barcode/BarcodeType.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7039,13 +7039,13 @@ const BarcodeType = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/barcode/PDF417Info.js":
+/***/ "./src/results/barcode/PDF417Info.js"
 /*!*******************************************!*\
   !*** ./src/results/barcode/PDF417Info.js ***!
   \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7077,13 +7077,13 @@ class PDF417Info {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/image_quality/ImageQuality.js":
+/***/ "./src/results/image_quality/ImageQuality.js"
 /*!***************************************************!*\
   !*** ./src/results/image_quality/ImageQuality.js ***!
   \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7134,13 +7134,13 @@ class ImageQuality {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/image_quality/ImageQualityCheckType.js":
+/***/ "./src/results/image_quality/ImageQualityCheckType.js"
 /*!************************************************************!*\
   !*** ./src/results/image_quality/ImageQualityCheckType.js ***!
   \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7168,13 +7168,13 @@ ImageQualityCheckType.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/image_quality/ImageQualityGroup.js":
+/***/ "./src/results/image_quality/ImageQualityGroup.js"
 /*!********************************************************!*\
   !*** ./src/results/image_quality/ImageQualityGroup.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7223,13 +7223,13 @@ class ImageQualityGroup {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/AccessControlProcedureType.js":
+/***/ "./src/results/rfid/AccessControlProcedureType.js"
 /*!********************************************************!*\
   !*** ./src/results/rfid/AccessControlProcedureType.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7269,13 +7269,13 @@ class AccessControlProcedureType {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/Application.js":
+/***/ "./src/results/rfid/Application.js"
 /*!*****************************************!*\
   !*** ./src/results/rfid/Application.js ***!
   \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7345,13 +7345,13 @@ const RFIDApplicationType = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/Attribute.js":
+/***/ "./src/results/rfid/Attribute.js"
 /*!***************************************!*\
   !*** ./src/results/rfid/Attribute.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7383,13 +7383,13 @@ class Attribute {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/Authority.js":
+/***/ "./src/results/rfid/Authority.js"
 /*!***************************************!*\
   !*** ./src/results/rfid/Authority.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7435,13 +7435,13 @@ class Authority {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/CardProperties.js":
+/***/ "./src/results/rfid/CardProperties.js"
 /*!********************************************!*\
   !*** ./src/results/rfid/CardProperties.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7506,13 +7506,13 @@ class CardProperties {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/CertificateChain.js":
+/***/ "./src/results/rfid/CertificateChain.js"
 /*!**********************************************!*\
   !*** ./src/results/rfid/CertificateChain.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7594,13 +7594,13 @@ class CertificateChain {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/CertificateData.js":
+/***/ "./src/results/rfid/CertificateData.js"
 /*!*********************************************!*\
   !*** ./src/results/rfid/CertificateData.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7628,13 +7628,13 @@ class CertificateData {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/DataField.js":
+/***/ "./src/results/rfid/DataField.js"
 /*!***************************************!*\
   !*** ./src/results/rfid/DataField.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7665,13 +7665,13 @@ class DataField {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/Extension.js":
+/***/ "./src/results/rfid/Extension.js"
 /*!***************************************!*\
   !*** ./src/results/rfid/Extension.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7699,13 +7699,13 @@ class Extension {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/File.js":
+/***/ "./src/results/rfid/File.js"
 /*!**********************************!*\
   !*** ./src/results/rfid/File.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7773,13 +7773,13 @@ class File {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/FileData.js":
+/***/ "./src/results/rfid/FileData.js"
 /*!**************************************!*\
   !*** ./src/results/rfid/FileData.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7814,13 +7814,13 @@ class FileData {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDAccessControlProcedureType.js":
+/***/ "./src/results/rfid/RFIDAccessControlProcedureType.js"
 /*!************************************************************!*\
   !*** ./src/results/rfid/RFIDAccessControlProcedureType.js ***!
   \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7838,13 +7838,13 @@ const RFIDAccessControlProcedureType = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDCertificateType.js":
+/***/ "./src/results/rfid/RFIDCertificateType.js"
 /*!*************************************************!*\
   !*** ./src/results/rfid/RFIDCertificateType.js ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7865,13 +7865,13 @@ const RFIDCertificateType = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDDataFileType.js":
+/***/ "./src/results/rfid/RFIDDataFileType.js"
 /*!**********************************************!*\
   !*** ./src/results/rfid/RFIDDataFileType.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -7978,13 +7978,13 @@ RFIDDataFileType.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDSessionData.js":
+/***/ "./src/results/rfid/RFIDSessionData.js"
 /*!*********************************************!*\
   !*** ./src/results/rfid/RFIDSessionData.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8091,13 +8091,13 @@ class RFIDSessionData {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDValidity.js":
+/***/ "./src/results/rfid/RFIDValidity.js"
 /*!******************************************!*\
   !*** ./src/results/rfid/RFIDValidity.js ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8129,13 +8129,13 @@ class RFIDValidity {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/RFIDValue.js":
+/***/ "./src/results/rfid/RFIDValue.js"
 /*!***************************************!*\
   !*** ./src/results/rfid/RFIDValue.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8173,13 +8173,13 @@ class RFIDValue {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/SecurityObject.js":
+/***/ "./src/results/rfid/SecurityObject.js"
 /*!********************************************!*\
   !*** ./src/results/rfid/SecurityObject.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8229,13 +8229,13 @@ class SecurityObject {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/SecurityObjectCertificates.js":
+/***/ "./src/results/rfid/SecurityObjectCertificates.js"
 /*!********************************************************!*\
   !*** ./src/results/rfid/SecurityObjectCertificates.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8264,13 +8264,13 @@ class SecurityObjectCertificates {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/rfid/SignerInfo.js":
+/***/ "./src/results/rfid/SignerInfo.js"
 /*!****************************************!*\
   !*** ./src/results/rfid/SignerInfo.js ***!
   \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8356,13 +8356,13 @@ class SignerInfo {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/status/CheckResult.js":
+/***/ "./src/results/status/CheckResult.js"
 /*!*******************************************!*\
   !*** ./src/results/status/CheckResult.js ***!
   \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8375,13 +8375,13 @@ const CheckResult = {
 };
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/status/OpticalStatus.js":
+/***/ "./src/results/status/OpticalStatus.js"
 /*!*********************************************!*\
   !*** ./src/results/status/OpticalStatus.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8434,13 +8434,13 @@ class OpticalStatus {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/status/RFIDStatus.js":
+/***/ "./src/results/status/RFIDStatus.js"
 /*!******************************************!*\
   !*** ./src/results/status/RFIDStatus.js ***!
   \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8487,13 +8487,13 @@ class RFIDStatus {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/status/ResultsStatus.js":
+/***/ "./src/results/status/ResultsStatus.js"
 /*!*********************************************!*\
   !*** ./src/results/status/ResultsStatus.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8544,13 +8544,13 @@ class ResultsStatus {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visible_digital_seals/BytesData.js":
+/***/ "./src/results/visible_digital_seals/BytesData.js"
 /*!********************************************************!*\
   !*** ./src/results/visible_digital_seals/BytesData.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8585,13 +8585,13 @@ class BytesData {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visible_digital_seals/LDSParsingErrorCodes.js":
+/***/ "./src/results/visible_digital_seals/LDSParsingErrorCodes.js"
 /*!*******************************************************************!*\
   !*** ./src/results/visible_digital_seals/LDSParsingErrorCodes.js ***!
   \*******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8734,13 +8734,13 @@ LDSParsingErrorCodes.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visible_digital_seals/LDSParsingNotificationCodes.js":
+/***/ "./src/results/visible_digital_seals/LDSParsingNotificationCodes.js"
 /*!**************************************************************************!*\
   !*** ./src/results/visible_digital_seals/LDSParsingNotificationCodes.js ***!
   \**************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -8981,13 +8981,13 @@ LDSParsingNotificationCodes.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visible_digital_seals/VDSNCData.js":
+/***/ "./src/results/visible_digital_seals/VDSNCData.js"
 /*!********************************************************!*\
   !*** ./src/results/visible_digital_seals/VDSNCData.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9051,13 +9051,13 @@ class VDSNCData {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Comparison.js":
+/***/ "./src/results/visual_results/Comparison.js"
 /*!**************************************************!*\
   !*** ./src/results/visual_results/Comparison.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9093,13 +9093,13 @@ class Comparison {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/FieldType.js":
+/***/ "./src/results/visual_results/FieldType.js"
 /*!*************************************************!*\
   !*** ./src/results/visual_results/FieldType.js ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9768,13 +9768,13 @@ FieldType.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/GraphicField.js":
+/***/ "./src/results/visual_results/GraphicField.js"
 /*!****************************************************!*\
   !*** ./src/results/visual_results/GraphicField.js ***!
   \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9832,13 +9832,13 @@ class GraphicField {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/GraphicFieldType.js":
+/***/ "./src/results/visual_results/GraphicFieldType.js"
 /*!********************************************************!*\
   !*** ./src/results/visual_results/GraphicFieldType.js ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9870,13 +9870,13 @@ const GraphicFieldType = {
     FINGER_RIGHT_LITTLE: 309
 }; 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/GraphicResult.js":
+/***/ "./src/results/visual_results/GraphicResult.js"
 /*!*****************************************************!*\
   !*** ./src/results/visual_results/GraphicResult.js ***!
   \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -9912,13 +9912,13 @@ class GraphicResult {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/LCID.js":
+/***/ "./src/results/visual_results/LCID.js"
 /*!********************************************!*\
   !*** ./src/results/visual_results/LCID.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10101,13 +10101,13 @@ LCID.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Lights.js":
+/***/ "./src/results/visual_results/Lights.js"
 /*!**********************************************!*\
   !*** ./src/results/visual_results/Lights.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10125,13 +10125,13 @@ const Lights = {
     WHITE_FULL_OVD: 6 | 67108864
 }; 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/RFIDOrigin.js":
+/***/ "./src/results/visual_results/RFIDOrigin.js"
 /*!**************************************************!*\
   !*** ./src/results/visual_results/RFIDOrigin.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10165,13 +10165,13 @@ class RFIDOrigin {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Rect.js":
+/***/ "./src/results/visual_results/Rect.js"
 /*!********************************************!*\
   !*** ./src/results/visual_results/Rect.js ***!
   \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10205,13 +10205,13 @@ class Rect {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Symbol.js":
+/***/ "./src/results/visual_results/Symbol.js"
 /*!**********************************************!*\
   !*** ./src/results/visual_results/Symbol.js ***!
   \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10245,13 +10245,13 @@ class Symbol {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/TextField.js":
+/***/ "./src/results/visual_results/TextField.js"
 /*!*************************************************!*\
   !*** ./src/results/visual_results/TextField.js ***!
   \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10349,13 +10349,13 @@ class TextField {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/TextResult.js":
+/***/ "./src/results/visual_results/TextResult.js"
 /*!**************************************************!*\
   !*** ./src/results/visual_results/TextResult.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10417,13 +10417,13 @@ class TextResult {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/TextSource.js":
+/***/ "./src/results/visual_results/TextSource.js"
 /*!**************************************************!*\
   !*** ./src/results/visual_results/TextSource.js ***!
   \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10459,13 +10459,13 @@ class TextSource {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Validity.js":
+/***/ "./src/results/visual_results/Validity.js"
 /*!************************************************!*\
   !*** ./src/results/visual_results/Validity.js ***!
   \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10498,13 +10498,13 @@ class Validity {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/results/visual_results/Value.js":
+/***/ "./src/results/visual_results/Value.js"
 /*!*********************************************!*\
   !*** ./src/results/visual_results/Value.js ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10567,13 +10567,13 @@ class Value {
     }
 } 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/PAAttribute.js":
+/***/ "./src/rfid/PAAttribute.js"
 /*!*********************************!*\
   !*** ./src/rfid/PAAttribute.js ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10605,13 +10605,13 @@ class PAAttribute {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/PAResourcesIssuer.js":
+/***/ "./src/rfid/PAResourcesIssuer.js"
 /*!***************************************!*\
   !*** ./src/rfid/PAResourcesIssuer.js ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10655,13 +10655,13 @@ class PAResourcesIssuer {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/PKDCertificate.js":
+/***/ "./src/rfid/PKDCertificate.js"
 /*!************************************!*\
   !*** ./src/rfid/PKDCertificate.js ***!
   \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10732,13 +10732,13 @@ const PKDResourceType = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/RFIDErrorCodes.js":
+/***/ "./src/rfid/RFIDErrorCodes.js"
 /*!************************************!*\
   !*** ./src/rfid/RFIDErrorCodes.js ***!
   \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10870,13 +10870,13 @@ RFIDErrorCodes.getTranslation = async function (value) {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/RFIDNotification.js":
+/***/ "./src/rfid/RFIDNotification.js"
 /*!**************************************!*\
   !*** ./src/rfid/RFIDNotification.js ***!
   \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -10954,13 +10954,13 @@ const RFIDNotificationCodes = {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/TAChallenge.js":
+/***/ "./src/rfid/TAChallenge.js"
 /*!*********************************!*\
   !*** ./src/rfid/TAChallenge.js ***!
   \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -11001,13 +11001,13 @@ class TAChallenge {
 }
 
 
-/***/ }),
+/***/ },
 
-/***/ "./src/rfid/TccParams.js":
+/***/ "./src/rfid/TccParams.js"
 /*!*******************************!*\
   !*** ./src/rfid/TccParams.js ***!
   \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -11049,7 +11049,7 @@ class TccParams {
 }
 
 
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -11062,6 +11062,12 @@ class TccParams {
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Check if module exists (development only)
+/******/ 		if (__webpack_modules__[moduleId] === undefined) {
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
