@@ -6,7 +6,7 @@ export var faceApiSearchParams = {
   "limit": 1,
   "threshold": 2,
   "groupIds": ["test1", "test2", "test3"],
-}
+};
 export var faceApiParams = {
   "url": "test1",
   "mode": "test2",
@@ -16,25 +16,7 @@ export var faceApiParams = {
   "proxyPassword": "test4",
   "proxyType": 3,
   "searchParams": faceApiSearchParams,
-}
-export var filterObject = {
-  "docIDsFilter": {
-    "list": [1, 2, 3],
-    "isInclude": true
-  },
-  "docFormatsFilter": {
-    "list": [4, 5, 6],
-    "isInclude": false
-  },
-  "docCategoriesFilter": {
-    "list": [7, 8, 9],
-    "isInclude": true
-  },
-  "docCountriesFilter": {
-    "list": ["test1", "test2", "test3"],
-    "isInclude": false
-  },
-}
+};
 export var livenessParams = {
   "checkOVI": true,
   "checkMLI": false,
@@ -43,12 +25,7 @@ export var livenessParams = {
   "checkBlackAndWhiteCopy": true,
   "checkDynaprint": false,
   "checkGeometry": true,
-  "checkFilters": {
-    "checkOVI": filterObject,
-    "checkMLI": filterObject,
-    "checkHolo": filterObject
-  },
-}
+};
 export var authenticityParams = {
   "useLivenessCheck": true,
   "checkUVLuminiscence": false,
@@ -66,13 +43,8 @@ export var authenticityParams = {
   "checkLetterScreen": false,
   "checkSecurityText": true,
   "livenessParams": livenessParams,
-  "checkFilters": {
-    "checkImagePatterns": filterObject,
-    "checkFibers": filterObject,
-    "checkExtMRZ": filterObject
-  },
-}
-export var glaresCheckParams = { "imgMarginPart": 0.5, "maxGlaringPart": 1.5 }
+};
+export var glaresCheckParams = {"imgMarginPart": 0.5, "maxGlaringPart": 1.5};
 export var imageQA = {
   "dpiThreshold": 1,
   "angleThreshold": 2,
@@ -85,16 +57,16 @@ export var imageQA = {
   "glaresCheckParams": glaresCheckParams,
   "brightnessThreshold": 0.5,
   "occlusionCheck": true,
-}
+};
 export var rfidParams = {
   "paIgnoreNotificationCodes": [1, 2, 3],
-}
+};
 export var backendProcessingConfig = {
   "url": "test",
   "rfidServerSideChipVerification": true,
-  "httpHeaders": { "key1": "val1", "key2": "val2", "key3": "val3" },
+  "httpHeaders": {"key1": "val1", "key2": "val2", "key3": "val3"},
   "timeoutConnection": 0.5,
-}
+};
 export var processParams = {
   "multipageProcessing": true,
   "debugSaveImages": false,
@@ -134,6 +106,8 @@ export var processParams = {
   "generateAlpha2Codes": false,
   "disableAuthResolutionFilter": true,
   "strictSecurityChecks": false,
+  "returnTransliteratedFields": true,
+  "checkCaptureProcessIntegrity": false,
   "measureSystem": 1,
   "barcodeParserType": 3,
   "perspectiveAngle": 4,
@@ -166,16 +140,16 @@ export var processParams = {
   "documentGroupFilter": [135, 136, 137],
   "lcidIgnoreFilter": [10011, 1078, 1052],
   "lcidFilter": [1118, 5121, 15361],
+  "fieldTypesIgnoreFilter": [22, 23, 24],
   "imageQA": imageQA,
   "rfidParams": rfidParams,
   "faceApiParams": faceApiParams,
   "backendProcessingConfig": backendProcessingConfig,
   "authenticityParams": authenticityParams,
-  "customParams": { "test1": true, "test2": 1, "test3": "test" },
-  "checkFilters": { "checkAuth": filterObject },
-}
-export var font1 = { "name": "AppleSDGothicNeo-Thin", "size": 10, "style": 2 }
-export var font2 = { "name": "Copperplate-Light", "size": 20, "style": 1 }
+  "customParams": {"test1": true, "test2": 1, "test3": "test"},
+};
+export var font1 = {"name": "AppleSDGothicNeo-Thin", "size": 10, "style": 2};
+export var font2 = {"name": "Copperplate-Light", "size": 20, "style": 1};
 export var customizationColors = {
   "rfidProcessingScreenBackground": 0xff000000,
   "rfidProcessingScreenHintLabelText": 0xff000001,
@@ -189,7 +163,7 @@ export var customizationColors = {
   "rfidEnableNfcDescriptionText": 0xff000009,
   "rfidEnableNfcButtonText": 0xff000010,
   "rfidEnableNfcButtonBackground": 0xff000011,
-}
+};
 export var customizationFonts = {
   "rfidProcessingScreenHintLabel": font1,
   "rfidProcessingScreenProgressLabel": font2,
@@ -197,11 +171,11 @@ export var customizationFonts = {
   "rfidEnableNfcTitleText": font2,
   "rfidEnableNfcDescriptionText": font1,
   "rfidEnableNfcButtonText": font2,
-}
+};
 export var customizationImages = {
   "rfidProcessingScreenFailureImage": img1,
   "rfidEnableNfcImage": img2,
-}
+};
 export var customization = {
   "showStatusMessages": true,
   "showResultStatusMessages": false,
@@ -242,6 +216,7 @@ export var customization = {
   "activityIndicatorPortraitPositionMultiplier": 12.5,
   "activityIndicatorLandscapePositionMultiplier": 13.5,
   "cameraPreviewVerticalPositionMultiplier": 14.5,
+  "multipageButtonPositionMultiplier": 15.5,
   "multipageAnimationFrontImage": img1,
   "multipageAnimationBackImage": img2,
   "borderBackgroundImage": img3,
@@ -257,7 +232,7 @@ export var customization = {
   "multipageButtonImage": img1,
   "customLabelStatus": "test3",
   "cameraFrameLineCap": 2,
-  "uiCustomizationLayer": { "test": "test" },
+  "uiCustomizationLayer": {"test": "test"},
   "statusTextFont": font1,
   "resultStatusTextFont": font2,
   "multipageButtonTextFont": font1,
@@ -294,8 +269,8 @@ export var customization = {
   "colors": customizationColors,
   "fonts": customizationFonts,
   "images": customizationImages,
-}
-export var cameraSize = { "width": 0, "height": 1 }
+};
+export var cameraSize = {"width": 0, "height": 1};
 export var functionality = {
   "pictureOnBoundsReady": true,
   "showTorchButton": false,
@@ -315,6 +290,7 @@ export var functionality = {
   "singleResult": false,
   "torchTurnedOn": false,
   "preventScreenRecording": true,
+  "homeIndicatorAutoHide": false,
   "showCaptureButtonDelayFromDetect": 0,
   "showCaptureButtonDelayFromStart": 1,
   "rfidTimeout": 2,
@@ -328,10 +304,11 @@ export var functionality = {
   "zoomFactor": 0.5,
   "exposure": 1.5,
   "videoRecordingSizeDownscaleFactor": 2.5,
+  "mdlTimeout": 3.5,
   "excludedCamera2Models": ["test1", "test2", "test3"],
   "cameraSize": cameraSize,
   "videoSessionPreset": 6,
-}
+};
 export var eDLDataGroups = {
   "DG1": true,
   "DG2": false,
@@ -347,7 +324,7 @@ export var eDLDataGroups = {
   "DG12": false,
   "DG13": true,
   "DG14": false,
-}
+};
 export var ePassportDataGroups = {
   "DG1": true,
   "DG2": false,
@@ -365,7 +342,7 @@ export var ePassportDataGroups = {
   "DG14": false,
   "DG15": true,
   "DG16": false,
-}
+};
 export var eIDDataGroups = {
   "DG1": true,
   "DG2": false,
@@ -388,14 +365,14 @@ export var eIDDataGroups = {
   "DG19": true,
   "DG20": false,
   "DG21": true,
-}
+};
 export var dtcDataGroup = {
   "DG17": true,
   "DG18": false,
   "DG22": false,
   "DG23": true,
   "DG24": false,
-}
+};
 export var rfidScenario = {
   "paceStaticBinding": true,
   "onlineTA": false,
@@ -459,27 +436,27 @@ export var rfidScenario = {
   "ePassportDataGroups": ePassportDataGroups,
   "eIDDataGroups": eIDDataGroups,
   "dtcDataGroups": dtcDataGroup,
-}
+};
 
 export var initConfig = {
   "delayedNNLoad": false,
   "licenseUpdate": true,
   "licenseUpdateTimeout": 1.5,
   "customDb": img1,
-  "blackList": { "key1": "val1", "key2": "val2", "key3": "val3" },
+  "blackList": {"key1": "val1", "key2": "val2", "key3": "val3"},
   "databasePath": "test",
   "license": img2,
   "useBleDevice": true,
-}
+};
 export var onlineProcessingConfig = {
   "mode": 1,
   "url": "test",
   "imageFormat": 1,
   "imageCompressionQuality": 1.5,
   "processParams": processParams,
-  "requestHeaders": { "key1": "val1", "key2": "val2", "key3": "val3" },
-}
-export var imageInputData = { "image": img1, "light": 128, "pageIndex": 2 }
+  "requestHeaders": {"key1": "val1", "key2": "val2", "key3": "val3"},
+};
+export var imageInputData = {"image": img1, "light": 128, "pageIndex": 2};
 export var recognizeConfig = {
   "scenario": "Mrz",
   "livePortrait": img1,
@@ -490,7 +467,7 @@ export var recognizeConfig = {
   "data": img1,
   "images": [img1, img2, img3],
   "imageInputData": [imageInputData, imageInputData, imageInputData],
-}
+};
 export var recognizeConfig2 = {
   "onlineProcessingConfig": onlineProcessingConfig,
   "livePortrait": img1,
@@ -500,14 +477,14 @@ export var recognizeConfig2 = {
   "data": img1,
   "images": [img1, img2, img3],
   "imageInputData": [imageInputData, imageInputData, imageInputData],
-}
+};
 export var scannerConfig = {
   "scenario": "Mrz",
   "onlineProcessingConfig": onlineProcessingConfig,
   "livePortrait": img1,
   "extPortrait": img2,
   "cameraId": 1,
-}
+};
 
 export var documentsDatabase = {
   "databaseID": "test1",
@@ -517,13 +494,13 @@ export var documentsDatabase = {
   "countriesNumber": 1,
   "documentsNumber": 2,
   "size": 3,
-}
+};
 export var docReaderVersion = {
   "api": "test1",
   "core": "test2",
   "coreMode": "test3",
   "database": documentsDatabase,
-}
+};
 export var docReaderScenario = {
   "uvTorch": true,
   "frameOrientation": 2,
@@ -538,15 +515,15 @@ export var docReaderScenario = {
   "caption": "test2",
   "description": "test3",
   "manualCrop": false,
-}
+};
 export var license = {
   "expiryDate": "test1",
   "countryFilter": ["test2", "test3", "test4"],
   "isRfidAvailable": true,
-}
-export var docReaderException = { "code": 1, "message": "test1" }
-export var rfidException = { "code": 2, "message": "test2" }
-export var prepareProgress = { "downloadedBytes": 1, "totalBytes": 2, "progress": 50 }
+};
+export var docReaderException = {"code": 1, "message": "test1"};
+export var rfidException = {"code": 2, "message": "test2"};
+export var prepareProgress = {"downloadedBytes": 1, "totalBytes": 2, "progress": 50};
 
 export var authenticityElement = {
   "status": 1,
@@ -554,51 +531,51 @@ export var authenticityElement = {
   "elementDiagnose": 3,
   "elementTypeName": "Photo element",
   "elementDiagnoseName": "Error of internal data processing",
-}
+};
 export var authenticityCheck = {
   "type": 1,
   "status": 2,
   "typeName": "UV dull paper check",
   "pageIndex": 3,
   "elements": [authenticityElement, authenticityElement, authenticityElement],
-}
+};
 export var authenticityResult = {
   "status": 2,
   "checks": [authenticityCheck, authenticityCheck, authenticityCheck],
-}
-export var pdf417Info = { "errorLevel": 2, "columns": 3, "rows": 4 }
+};
+export var pdf417Info = {"errorLevel": 2, "columns": 3, "rows": 4};
 export var barcodeField = {
   "barcodeType": 5,
   "status": -6001,
   "pageIndex": 2,
   "pdf417Info": pdf417Info,
   "data": img1,
-}
+};
 export var barcodeResult = {
   "fields": [barcodeField, barcodeField, barcodeField],
-}
-export var rect = { "bottom": 0, "top": 1, "left": 2, "right": 3 }
+};
+export var rect = {"bottom": 0, "top": 1, "left": 2, "right": 3};
 export var imageQuality = {
   "featureType": 1,
   "result": 2,
   "type": 3,
   "boundRects": [rect, rect, rect],
-}
+};
 export var imageQualityGroup = {
   "count": 1,
   "result": 2,
   "pageIndex": 3,
   "imageQualityList": [imageQuality, imageQuality, imageQuality],
-}
+};
 export var accessControlProcedureType = {
   "activeOptionIdx": 1,
   "type": 2,
   "status": 1,
   "notifications": [1, 2, 3],
-}
-export var fileData = { "data": "test", "length": 2, "type": 3, "status": 4 }
-export var certificateData = { "data": "test", "length": 1 }
-export var securityObjectCertificates = { "securityObject": certificateData }
+};
+export var fileData = {"data": "test", "length": 2, "type": 3, "status": 4};
+export var certificateData = {"data": "test", "length": 1};
+export var securityObjectCertificates = {"securityObject": certificateData};
 export var file = {
   "fileData": fileData,
   "fileID": "test1",
@@ -612,7 +589,7 @@ export var file = {
   "docFieldsGraphics": [7, 8, 9],
   "docFieldsOriginals": [10, 11, 12],
   "certificates": securityObjectCertificates,
-}
+};
 export var application = {
   "applicationID": "test1",
   "dataHashAlgorithm": "test2",
@@ -621,20 +598,20 @@ export var application = {
   "type": 2,
   "unicodeVersion": "test3",
   "version": "test4",
-}
+};
 export var rfidValue = {
   "data": "test1",
   "length": 1,
   "status": 2,
   "type": 3,
   "format": "test2",
-}
-export var attribute = { "type": "test", "value": rfidValue }
+};
+export var attribute = {"type": "test", "value": rfidValue};
 export var authority = {
   "attributes": [attribute, attribute, attribute],
   "data": "test",
   "friendlyName": rfidValue,
-}
+};
 export var cardProperties = {
   "aTQA": 1,
   "bitRateR": 2,
@@ -650,9 +627,9 @@ export var cardProperties = {
   "baudrate1": "test3",
   "baudrate2": "test4",
   "uID": "test5",
-}
-export var extension = { "data": "test1", "type": "test2" }
-export var rfidValidity = { "notAfter": rfidValue, "notBefore": rfidValue }
+};
+export var extension = {"data": "test1", "type": "test2"};
+export var rfidValidity = {"notAfter": rfidValue, "notBefore": rfidValue};
 export var certificateChain = {
   "type": 1,
   "extensions": [extension, extension, extension],
@@ -667,8 +644,8 @@ export var certificateChain = {
   "subjectPKAlgorithm": "test3",
   "validity": rfidValidity,
   "version": 4,
-}
-export var dataField = { "data": "test", "fieldType": 1 }
+};
+export var dataField = {"data": "test", "fieldType": 1};
 export var signerInfo = {
   "dataToHash": "test1",
   "digestAlgorithm": "test2",
@@ -682,14 +659,14 @@ export var signerInfo = {
   "signedAttributes": [extension, extension, extension],
   "certificateChain": [certificateChain, certificateChain, certificateChain],
   "notifications": [1, 2, 3],
-}
+};
 export var securityObject = {
   "fileReference": 1,
   "objectType": "test",
   "version": 2,
   "signerInfos": [signerInfo, signerInfo, signerInfo],
   "notifications": [1, 2, 3],
-}
+};
 export var rfidSessionData = {
   "accessControls": [
     accessControlProcedureType,
@@ -706,19 +683,35 @@ export var rfidSessionData = {
   "status": 1,
   "extLeSupport": 1,
   "processTime": 4,
-}
-export var bytesData = { "data": "test", "length": 1, "status": 2, "type": 3 }
+};
+export var bytesData = {"data": "test", "length": 1, "status": 2, "type": 3};
 export var vdsncData = {
   "type": "test1",
   "version": 1,
   "issuingCountry": "test2",
-  "message": { "key1": "val1", "key2": "val2", "key3": "val3" },
+  "message": {"key1": "val1", "key2": "val2", "key3": "val3"},
   "signatureAlgorithm": "test3",
   "signature": bytesData,
   "certificate": bytesData,
   "certificateChain": [certificateChain, certificateChain, certificateChain],
   "notifications": [3000000001, 3000000002, 3000000003],
-}
+};
+export var docFeature = {"type": 0, "data": bytesData};
+export var vdsData = {
+  "type": 1,
+  "docType": 2,
+  "featureRef": 3,
+  "version": 4,
+  "issuingCountry": "test1",
+  "docIssueDate": "test2",
+  "signature": bytesData,
+  "signatureDate": "test3",
+  "signer": "test4",
+  "certificate": "test5",
+  "certificateChain": [certificateChain, certificateChain, certificateChain],
+  "docFeatures": [docFeature, docFeature, docFeature],
+  "notifications": [3000000001, 3000000002, 3000000003],
+};
 export var opticalStatus = {
   "overallStatus": 0,
   "mrz": 1,
@@ -729,7 +722,15 @@ export var opticalStatus = {
   "expiry": 0,
   "vds": 1,
   "pagesCount": 3,
-}
+};
+export var ageStatus = {
+  "threshold": 0,
+  "overThreshold": 1,
+  "over18": 2,
+  "over21": 0,
+  "over25": 1,
+  "over65": 2,
+};
 export var rfidStatus = {
   "overallStatus": 0,
   "pa": 1,
@@ -738,17 +739,21 @@ export var rfidStatus = {
   "ta": 1,
   "bac": 2,
   "pace": 0,
-}
+};
 export var resultsStatus = {
   "overallStatus": 0,
   "optical": 1,
   "rfid": 2,
   "portrait": 0,
   "stopList": 1,
+  "mDL": 2,
+  "age": 0,
+  "captureProcessIntegrity": 1,
   "detailsOptical": opticalStatus,
+  "detailsAge": ageStatus,
   "detailsRFID": rfidStatus,
-}
-export var comparison = { "sourceTypeLeft": 0, "sourceTypeRight": 1, "status": 2 }
+};
+export var comparison = {"sourceTypeLeft": 0, "sourceTypeRight": 1, "status": 2};
 export var graphicField = {
   "sourceType": 0,
   "fieldType": 201,
@@ -759,13 +764,13 @@ export var graphicField = {
   "originalPageIndex": 4,
   "value": img1,
   "fieldRect": rect,
-}
+};
 export var graphicResult = {
   "fields": [graphicField, graphicField, graphicField],
-}
-export var rfidOrigin = { "dg": 1, "dgTag": 2, "entryView": 3, "tagEntry": 4 }
-export var symbol = { "rect": rect, "code": 1, "probability": 2 }
-export var validity = { "sourceType": 1, "status": 2 }
+};
+export var rfidOrigin = {"dg": 1, "dgTag": 2, "entryView": 3, "tagEntry": 4};
+export var symbol = {"rect": rect, "code": 1, "probability": 2};
+export var validity = {"sourceType": 1, "status": 2};
 export var value = {
   "sourceType": 3,
   "value": "test1",
@@ -775,7 +780,7 @@ export var value = {
   "rfidOrigin": rfidOrigin,
   "originalSymbols": [symbol, symbol, symbol],
   "probability": 1,
-}
+};
 export var textField = {
   "fieldType": 1,
   "fieldName": "Issuing state code",
@@ -789,22 +794,22 @@ export var textField = {
   "validityList": [validity, validity, validity],
   "comparisonStatus": 0,
   "validityStatus": 1,
-}
+};
 export var textSource = {
   "sourceType": validity["sourceType"],
   "source": "sourceType",
   "validityStatus": 1,
-}
+};
 export var documentReaderTextSource2 = {
   "sourceType": comparison["sourceTypeLeft"],
   "source": "sourceTypeLeft",
   "validityStatus": 1,
-}
+};
 export var documentReaderTextSource3 = {
   "sourceType": comparison["sourceTypeRight"],
   "source": "sourceTypeRight",
   "validityStatus": 1,
-}
+};
 export var textResult = {
   "status": 0,
   "comparisonStatus": 1,
@@ -815,7 +820,7 @@ export var textResult = {
     documentReaderTextSource3,
   ],
   "fields": [textField, textField, textField],
-}
+};
 export var documentType = {
   "name": "test1",
   "documentID": 1,
@@ -829,8 +834,8 @@ export var documentType = {
   "dYear": "test4",
   "dCountryName": "test5",
   "pageIndex": 3,
-}
-export var coordinate = { "x": 1, "y": 2 }
+};
+export var coordinate = {"x": 1, "y": 2};
 export var position = {
   "docFormat": 0,
   "resultStatus": 1,
@@ -848,12 +853,12 @@ export var position = {
   "leftBottom": coordinate,
   "rightTop": coordinate,
   "rightBottom": coordinate,
-}
+};
 export var transactionInfo = {
   "transactionId": "test1",
   "tag": "test2",
   "sessionLogFolder": "test3",
-}
+};
 export var results = {
   "chipPage": 0,
   "processingFinishedStatus": 2,
@@ -873,37 +878,109 @@ export var results = {
   "barcodeResult": barcodeResult,
   "status": resultsStatus,
   "vdsncData": vdsncData,
+  "vdsData": vdsData,
   "dtcData": img1,
   "transactionInfo": transactionInfo,
-}
+};
 
 export var rfidNotification = {
   "notificationCode": 65536,
   "dataFileType": 1,
   "progress": 2,
-}
-export var paAttribute = { "type": "test1", "value": "test2" }
+};
+export var paAttribute = {"type": "test1", "value": "test2"};
 export var paResourcesIssuer = {
   "data": img1,
   "friendlyName": "test",
   "attributes": [paAttribute, paAttribute, paAttribute],
-}
+};
 export var pkdCertificate = {
   "binaryData": img1,
   "resourceType": 0,
   "privateKey": img2,
-}
+};
 export var taChallenge = {
   "data": img1,
   "auxPCD": "test1",
   "challengePICC": "test2",
   "hashPK": "test3",
   "idPICC": "test4",
-}
+};
 export var tccParams = {
   "serviceUrlTA": "test1",
   "serviceUrlPA": "test2",
   "pfxCertUrl": "test3",
   "pfxPassPhrase": "test4",
   "pfxCert": img1,
-}
+};
+export var deviceRetrievalMethod = {
+  "type": 1,
+  "version": 2,
+  "cmdMaxLength": 3,
+  "respMaxLength": 4,
+  "clientModeSupport": true,
+  "clientModeUUID": "test1",
+  "serverModeSupport": true,
+  "serverModeUUID": "test2",
+};
+export var deviceEngagement = {
+  "deviceRetrievalMethods": [
+    deviceRetrievalMethod,
+    deviceRetrievalMethod,
+    deviceRetrievalMethod,
+  ],
+};
+export var nameSpaceMDL = {
+  "name": "test1",
+  "map": {"test2": 0, "test3": 1, "test4": 0},
+};
+export var documentRequestMDL = {
+  "docType": "test1",
+  "namespaces": [nameSpaceMDL, nameSpaceMDL, nameSpaceMDL],
+};
+export var documentRequest18013MDL = {
+  "docType": "org.iso.18013.5.1.mDL",
+  "namespaces": [nameSpaceMDL, nameSpaceMDL, nameSpaceMDL],
+  "familyName": 0,
+  "givenName": 1,
+  "birthDate": 1,
+  "issueDate": 0,
+  "expiryDate": 1,
+  "issuingCountry": 0,
+  "issuingAuthority": 0,
+  "documentNumber": 0,
+  "portrait": 1,
+  "drivingPrivileges": 0,
+  "unDistinguishingSign": 0,
+  "administrativeNumber": 1,
+  "sex": 0,
+  "height": 0,
+  "weight": 0,
+  "eyeColour": 1,
+  "hairColour": 0,
+  "birthPlace": 1,
+  "residentAddress": 0,
+  "portraitCaptureDate": 0,
+  "ageInYears": 1,
+  "ageBirthYear": 1,
+  "ageOver18": 1,
+  "issuingJurisdiction": 0,
+  "nationality": 0,
+  "residentCity": 1,
+  "residentState": 0,
+  "residentPostalCode": 0,
+  "residentCountry": 1,
+  "biometricTemplateFace": 0,
+  "biometricTemplateIris": 0,
+  "biometricTemplateFinger": 1,
+  "biometricTemplateSignatureSign": 1,
+  "familyNameNationalCharacter": 0,
+  "givenNameNationalCharacter": 1,
+  "signatureUsualMark": 0,
+};
+export var dataRetrieval = {
+  "deviceRetrieval": 2,
+  "docRequestPreset": 1,
+  "intentToRetain": 0,
+  "requests": [documentRequestMDL, documentRequest18013MDL],
+};

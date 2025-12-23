@@ -1,5 +1,4 @@
 import { DocumentReader } from '../../index';
-import { FilterObject } from './FilterObject';
 
 export class LivenessParams {
     get checkOVI() { return this._checkOVI; }
@@ -44,28 +43,6 @@ export class LivenessParams {
         this._set({ "checkGeometry": val });
     }
 
-    _checkFilters = {};
-
-    setCheckFilter(checkType, filter) {
-        this._checkFilters[checkType] = filter;
-        this._set({
-            "setCheckFilter": {
-                "checkType": checkType,
-                "filterObject": filter.toJson(),
-            },
-        });
-    }
-
-    removeCheckFilter(checkType) {
-        delete this._checkFilters[checkType];
-        this._set({ "removeCheckFilter": checkType });
-    }
-
-    clearCheckFilter() {
-        this._checkFilters = {};
-        this._set({ "clearCheckFilter": null });
-    }
-
     static fromJson(jsonObject) {
         if (jsonObject == null) return new LivenessParams();
 
@@ -77,8 +54,6 @@ export class LivenessParams {
         result._checkBlackAndWhiteCopy = jsonObject["checkBlackAndWhiteCopy"];
         result._checkDynaprint = jsonObject["checkDynaprint"];
         result._checkGeometry = jsonObject["checkGeometry"];
-        result._checkFilters = Object.fromEntries(Object.entries(jsonObject["checkFilters"] ?? {})
-            .map(([k, v]) => [k, FilterObject.fromJson(v)]));
 
         return result;
     }
@@ -99,17 +74,6 @@ export class LivenessParams {
             "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
             "checkDynaprint": this.checkDynaprint,
             "checkGeometry": this.checkGeometry,
-            "checkFilters": Object.fromEntries(Object.entries(this._checkFilters).map(([k, v]) => [k, v.toJson()])),
         }
     }
 }
-
-export const LivenessCheckType = {
-    OVI: "checkOVI",
-    MLI: "checkMLI",
-    HOLO: "checkHolo",
-    ED: "checkED",
-    BLACK_AND_WHITE_COPY: "checkBlackAndWhiteCopy",
-    DYNAPRINT: "checkDynaprint",
-    GEOMETRY: "checkGeometry",
-};

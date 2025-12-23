@@ -43,8 +43,9 @@ import { RFIDStatus } from './results/status/RFIDStatus';
 import { ResultsStatus } from './results/status/ResultsStatus';
 import { CheckResult } from './results/status/CheckResult';
 import { OpticalStatus } from './results/status/OpticalStatus';
+import { AgeStatus } from './results/status/AgeStatus';
 import { ProcessingFinishedStatus } from './results/Results';
-export { RFIDStatus, ResultsStatus, CheckResult, OpticalStatus, ProcessingFinishedStatus };
+export { RFIDStatus, ResultsStatus, CheckResult, OpticalStatus, AgeStatus, ProcessingFinishedStatus };
 
 import { CheckDiagnose } from './results/authenticity/CheckDiagnose';
 import { AuthenticityElement } from './results/authenticity/AuthenticityElement';
@@ -69,8 +70,10 @@ export { ImageQuality, ImageQualityGroup, ImageQualityCheckType };
 import { LDSParsingErrorCodes } from './results/visible_digital_seals/LDSParsingErrorCodes';
 import { VDSNCData } from './results/visible_digital_seals/VDSNCData';
 import { BytesData } from './results/visible_digital_seals/BytesData';
+import { DocFeature } from './results/visible_digital_seals/DocFeature';
+import { VDSData } from './results/visible_digital_seals/VDSData';
 import { LDSParsingNotificationCodes } from './results/visible_digital_seals/LDSParsingNotificationCodes';
-export { LDSParsingErrorCodes, VDSNCData, BytesData, LDSParsingNotificationCodes };
+export { LDSParsingErrorCodes, VDSNCData, BytesData, DocFeature, VDSData, LDSParsingNotificationCodes };
 
 import { SecurityObject } from './results/rfid/SecurityObject';
 import { CardProperties } from './results/rfid/CardProperties';
@@ -94,17 +97,16 @@ import { Extension } from './results/rfid/Extension';
 import { AccessControlProcedureType } from './results/rfid/AccessControlProcedureType';
 export { SecurityObject, CardProperties, DataField, Attribute, SignerInfo, SecurityObjectCertificates, CertificateChain, Authority, File, RFIDValue, RFIDValidity, RFIDDataFileType, CertificateData, FileData, RFIDCertificateType, RFIDSessionData, Application, RFIDApplicationType, RFIDAccessControlProcedureType, Extension, AccessControlProcedureType };
 
-import { FilterObject, FilterObjectType } from './params/process_params/FilterObject';
-import { LivenessParams, LivenessCheckType } from './params/process_params/LivenessParams';
-import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, FilterCheckType } from './params/process_params/ProcessParams';
+import { LivenessParams } from './params/process_params/LivenessParams';
+import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
 import { RFIDParams } from './params/process_params/RFIDParams';
 import { ImageQA } from './params/process_params/ImageQA';
-import { AuthenticityParams, AuthenticityCheckType } from './params/process_params/AuthenticityParams';
+import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { FilterObject, FilterObjectType, LivenessParams, LivenessCheckType, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, FilterCheckType, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, AuthenticityCheckType, BackendProcessingConfig, FaceApiSearchParams };
+export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
@@ -131,6 +133,13 @@ import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
 export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+
+import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './engagement/DataRetrieval';
+import { DeviceEngagement, MDLDeviceEngagement } from './engagement/DeviceEngagement';
+import { NameSpaceMDL, MDLIntentToRetain } from './engagement/NameSpaceMDL';
+import { DocumentRequestMDL, DocumentRequest18013MDL } from './engagement/DocumentRequestMDL';
+import { DeviceRetrievalMethod } from './engagement/DeviceRetrievalMethod';
+export { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval, DeviceEngagement, MDLDeviceEngagement, DeviceRetrievalMethod, DocumentRequest18013MDL, MDLIntentToRetain, NameSpaceMDL, DocumentRequestMDL };
 
 export class DocumentReader {
     static get instance() { return DocumentReader._instance }
@@ -370,6 +379,48 @@ export class DocumentReader {
 
     endBackendTransaction() {
         exec("endBackendTransaction", []);
+    }
+
+    async readMDL(type, retrieval) {
+        var response = await exec("startReadMDl", [type, retrieval.toJson()]);
+        var jsonObject = JSON.parse(response);
+        return [
+            jsonObject["action"],
+            Results.fromJson(jsonObject["results"]),
+            DocReaderException.fromJson(jsonObject["error"]),
+        ]
+    }
+
+    async engageDevice(type, options) {
+        var response = "";
+        if (options?.withoutUI != true) {
+            response = await exec("startEngageDevice", [type.value]);
+          } else if (type == MDLDeviceEngagement.NFC) {
+            response = await exec("engageDeviceNFC", []);
+          } else if (type == MDLDeviceEngagement.QR && options?.data != null) {
+            response = await exec("engageDeviceData", [options.data]);
+          }
+
+        var jsonObject = JSON.parse(response);
+        return [
+            DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
+            DocReaderException.fromJson(jsonObject["error"]),
+        ]
+    }
+
+    async retrieveData(retrieval, options) {
+        var func = "startRetrieveData";
+        if (options?.withoutUI == MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
+        if (options?.withoutUI == MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
+        
+        var response = await exec(func, [retrieval.toJson(), options?.engagement?.toJson()]);
+        var jsonObject = JSON.parse(response);
+
+        return [
+            jsonObject["action"],
+            Results.fromJson(jsonObject["results"]),
+            DocReaderException.fromJson(jsonObject["error"]),
+        ]
     }
 
     _successOrErrorFromJson(jsonString) {

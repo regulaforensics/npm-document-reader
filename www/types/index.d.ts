@@ -41,8 +41,9 @@ import { RFIDStatus } from './results/status/RFIDStatus';
 import { ResultsStatus } from './results/status/ResultsStatus';
 import { CheckResult } from './results/status/CheckResult';
 import { OpticalStatus } from './results/status/OpticalStatus';
+import { AgeStatus } from './results/status/AgeStatus';
 import { ProcessingFinishedStatus } from './results/Results';
-export { RFIDStatus, ResultsStatus, CheckResult, OpticalStatus, ProcessingFinishedStatus };
+export { RFIDStatus, ResultsStatus, CheckResult, OpticalStatus, AgeStatus, ProcessingFinishedStatus };
 
 import { CheckDiagnose } from './results/authenticity/CheckDiagnose';
 import { AuthenticityElement } from './results/authenticity/AuthenticityElement';
@@ -67,8 +68,10 @@ export { ImageQuality, ImageQualityGroup, ImageQualityCheckType };
 import { LDSParsingErrorCodes } from './results/visible_digital_seals/LDSParsingErrorCodes';
 import { VDSNCData } from './results/visible_digital_seals/VDSNCData';
 import { BytesData } from './results/visible_digital_seals/BytesData';
+import { DocFeature } from './results/visible_digital_seals/DocFeature';
+import { VDSData } from './results/visible_digital_seals/VDSData';
 import { LDSParsingNotificationCodes } from './results/visible_digital_seals/LDSParsingNotificationCodes';
-export { LDSParsingErrorCodes, VDSNCData, BytesData, LDSParsingNotificationCodes };
+export { LDSParsingErrorCodes, VDSNCData, BytesData, DocFeature, VDSData, LDSParsingNotificationCodes };
 
 import { SecurityObject } from './results/rfid/SecurityObject';
 import { CardProperties } from './results/rfid/CardProperties';
@@ -92,17 +95,16 @@ import { Extension } from './results/rfid/Extension';
 import { AccessControlProcedureType } from './results/rfid/AccessControlProcedureType';
 export { SecurityObject, CardProperties, DataField, Attribute, SignerInfo, SecurityObjectCertificates, CertificateChain, Authority, File, RFIDValue, RFIDValidity, RFIDDataFileType, CertificateData, FileData, RFIDCertificateType, RFIDSessionData, Application, RFIDApplicationType, RFIDAccessControlProcedureType, Extension, AccessControlProcedureType };
 
-import { FilterObject, FilterObjectType } from './params/process_params/FilterObject';
-import { LivenessParams, LivenessCheckType } from './params/process_params/LivenessParams';
-import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, FilterCheckType } from './params/process_params/ProcessParams';
+import { LivenessParams } from './params/process_params/LivenessParams';
+import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
 import { RFIDParams } from './params/process_params/RFIDParams';
 import { ImageQA } from './params/process_params/ImageQA';
-import { AuthenticityParams, AuthenticityCheckType } from './params/process_params/AuthenticityParams';
+import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { FilterObject, FilterObjectType, LivenessParams, LivenessCheckType, ProcessParams, FilterCheckType, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, AuthenticityCheckType,BackendProcessingConfig, FaceApiSearchParams };
+export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams,BackendProcessingConfig, FaceApiSearchParams };
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
@@ -129,6 +131,13 @@ import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
 export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+
+import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './engagement/DataRetrieval';
+import { DeviceEngagement, MDLDeviceEngagement } from './engagement/DeviceEngagement';
+import { NameSpaceMDL, MDLIntentToRetain } from './engagement/NameSpaceMDL';
+import { DocumentRequestMDL, DocumentRequest18013MDL } from './engagement/DocumentRequestMDL';
+import { DeviceRetrievalMethod } from './engagement/DeviceRetrievalMethod';
+export { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval, DeviceEngagement, MDLDeviceEngagement, DeviceRetrievalMethod, DocumentRequest18013MDL, MDLIntentToRetain, NameSpaceMDL, DocumentRequestMDL };
 
 
 /**
@@ -346,7 +355,7 @@ export class DocumentReader {
      *
      * @param certificates - PKD certificates.
      */
-    addPKDCertificates(certificates: [PKDCertificate]): void;
+    addPKDCertificates(certificates: PKDCertificate[]): void;
 
     /** It's used to remove certificates from your app that are used during the
      * RFID chip processing.
@@ -370,6 +379,29 @@ export class DocumentReader {
 
     /** It's used to end transaction during backend processing. */
     endBackendTransaction(): void;
+
+    /**
+     * Used to read MDL.
+     */
+    readMDL(type: MDLDeviceEngagement, retrieval: DataRetrieval): Promise<[action: DocReaderAction, results: Results | null, error: DocReaderException | null]>;
+
+    /**
+     * Used to engage device.
+     * 
+     * @param withoutUI - If `true`, then Regula's UI will not be shown and user is supposed to implement the UI himself.
+     * 
+     * @param data - Required if @param type = {@link MDLDeviceEngagement.QR} and @param withoutUI = `true`.
+     */
+    engageDevice(type: MDLDeviceEngagement, options?: {withoutUI: boolean, data?: string}): Promise<[engagement: DeviceEngagement | null, error: DocReaderException | null]>;
+
+    /**
+     * Used to retrieve data.
+     * 
+     * @param withoutUI - If set, then Regula's UI will not be shown and user is supposed to implement the UI himself.
+     * 
+     * @param engagement - Required for @param withoutUI = `null` or {@link MDLDeviceRetrieval.BLE}. Not needed for {@link MDLDeviceRetrieval.NFC}
+     */
+    retrieveData(retrieval: DataRetrieval, options?: {withoutUI: MDLDeviceRetrieval, engagement?: DeviceEngagement}): Promise<[action: DocReaderAction, results: Results | null, error: DocReaderException | null]>;
 }
 
 /**

@@ -5,7 +5,6 @@ import { RFIDParams } from './RFIDParams';
 import { FaceApiParams } from './FaceApiParams';
 import { BackendProcessingConfig } from './BackendProcessingConfig';
 import { AuthenticityParams } from './AuthenticityParams';
-import { FilterObject } from './FilterObject';
 
 export class ProcessParams {
     get multipageProcessing() { return this._multipageProcessing; }
@@ -242,6 +241,18 @@ export class ProcessParams {
         this._set({ "strictSecurityChecks": val });
     }
 
+    get returnTransliteratedFields() { return this._returnTransliteratedFields; }
+    set returnTransliteratedFields(val) {
+        this._returnTransliteratedFields = val;
+        this._set({ "returnTransliteratedFields": val });
+    }
+
+    get checkCaptureProcessIntegrity() { return this._checkCaptureProcessIntegrity; }
+    set checkCaptureProcessIntegrity(val) {
+        this._checkCaptureProcessIntegrity = val;
+        this._set({ "checkCaptureProcessIntegrity": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -434,6 +445,13 @@ export class ProcessParams {
         this._set({ "lcidFilter": val });
     }
 
+    get fieldTypesIgnoreFilter() { return this._fieldTypesIgnoreFilter; }
+    set fieldTypesIgnoreFilter(val) {
+        this._fieldTypesIgnoreFilter = val;
+        this._set({ "fieldTypesIgnoreFilter": val });
+    }
+
+    _imageQA = new ImageQA();
     get imageQA() { return this._imageQA; }
     set imageQA(val) { (this._imageQA = val)._apply(); }
 
@@ -455,6 +473,7 @@ export class ProcessParams {
         this._set({ "backendProcessingConfig": val });
     }
 
+    _authenticityParams = new AuthenticityParams();
     get authenticityParams() { return this._authenticityParams; }
     set authenticityParams(val) { (this._authenticityParams = val)._apply(); }
 
@@ -462,28 +481,6 @@ export class ProcessParams {
     set customParams(val) {
         this._customParams = val;
         this._set({ "customParams": val });
-    }
-
-    _checkFilters = {};
-
-    setCheckFilter(checkType, filter) {
-        this._checkFilters[checkType] = filter;
-        this._set({
-            "setCheckFilter": {
-                "checkType": checkType,
-                "filterObject": filter.toJson(),
-            },
-        });
-    }
-
-    removeCheckFilter(checkType) {
-        delete this._checkFilters[checkType];
-        this._set({ "removeCheckFilter": checkType });
-    }
-
-    clearCheckFilter() {
-        this._checkFilters = {};
-        this._set({ "clearCheckFilter": null });
     }
 
     static fromJson(jsonObject) {
@@ -529,6 +526,8 @@ export class ProcessParams {
         result._generateAlpha2Codes = jsonObject["generateAlpha2Codes"];
         result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
+        result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
+        result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -561,14 +560,13 @@ export class ProcessParams {
         result._documentGroupFilter = jsonObject["documentGroupFilter"];
         result._lcidIgnoreFilter = jsonObject["lcidIgnoreFilter"];
         result._lcidFilter = jsonObject["lcidFilter"];
+        result._fieldTypesIgnoreFilter = jsonObject["fieldTypesIgnoreFilter"];
         result._imageQA = ImageQA.fromJson(jsonObject["imageQA"]);
         result._rfidParams = RFIDParams.fromJson(jsonObject["rfidParams"]);
         result._faceApiParams = FaceApiParams.fromJson(jsonObject["faceApiParams"]);
         result._backendProcessingConfig = BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
         result._authenticityParams = AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
-        result._checkFilters = Object.fromEntries(Object.entries(jsonObject["checkFilters"] ?? {})
-            .map(([k, v]) => [k, FilterObject.fromJson(v)]));
 
         return result;
     }
@@ -613,6 +611,8 @@ export class ProcessParams {
             "generateAlpha2Codes": this.generateAlpha2Codes,
             "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
             "strictSecurityChecks": this.strictSecurityChecks,
+            "returnTransliteratedFields": this.returnTransliteratedFields,
+            "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -645,13 +645,13 @@ export class ProcessParams {
             "documentGroupFilter": this.documentGroupFilter,
             "lcidIgnoreFilter": this.lcidIgnoreFilter,
             "lcidFilter": this.lcidFilter,
+            "fieldTypesIgnoreFilter": this.fieldTypesIgnoreFilter,
             "imageQA": this.imageQA?.toJson(),
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
-            "checkFilters": Object.fromEntries(Object.entries(this._checkFilters).map(([k, v]) => [k, v.toJson()])),
         }
     }
 
@@ -688,8 +688,4 @@ export const MrzDetectionModes = {
     DEFAULT: 0,
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
-};
-
-export const FilterCheckType = {
-    AUTH: "checkAuth",
 };

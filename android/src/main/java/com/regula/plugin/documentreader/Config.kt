@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat
 import com.regula.documentreader.api.enums.CustomizationColor
 import com.regula.documentreader.api.enums.CustomizationFont
 import com.regula.documentreader.api.enums.CustomizationImage
-import com.regula.documentreader.api.internal.enums.LogLevel
+import com.regula.documentreader.api.enums.LogLevel
 import com.regula.documentreader.api.params.AuthenticityParams
 import com.regula.documentreader.api.params.Functionality
 import com.regula.documentreader.api.params.ImageQA
@@ -60,6 +60,7 @@ fun setFunctionality(config: Functionality, input: JSONObject) = input.forEach {
         "zoomFactor" -> editor.setZoomFactor(v.toFloat())
         "exposure" -> editor.setExposure(v.toFloat())
         "videoRecordingSizeDownscaleFactor" -> editor.setVideoRecordingSizeDownscaleFactor(v.toFloat())
+        "mdlTimeout" -> editor.setMDLTimeout(v.toDouble())
         "excludedCamera2Models" -> editor.setExcludedCamera2Models((v as JSONArray).toList())
         "cameraSize" -> editor.setCameraSize(cameraSizeFromJSON(v as JSONObject).first, cameraSizeFromJSON(v).second)
     }
@@ -96,6 +97,7 @@ fun getFunctionality(input: Functionality) = mapOf(
     "zoomFactor" to input.zoomFactor,
     "exposure" to input.exposure,
     "videoRecordingSizeDownscaleFactor" to input.videoRecordingSizeDownscaleFactor,
+    "mdlTimeout" to input.mdlTimeout,
     "excludedCamera2Models" to input.excludedCamera2Models.toJson(),
     "cameraSize" to generateCameraSize(input.cameraWidth, input.cameraHeight)
 ).toJson()
@@ -143,6 +145,8 @@ fun setProcessParams(processParams: ProcessParam, opts: JSONObject) = opts.forEa
         "generateAlpha2Codes" -> processParams.generateAlpha2Codes = v as Boolean
         "disableAuthResolutionFilter" -> processParams.disableAuthResolutionFilter = v as Boolean
         "strictSecurityChecks" -> processParams.strictSecurityChecks = v as Boolean
+        "returnTransliteratedFields" -> processParams.returnTransliteratedFields = v as Boolean
+        "checkCaptureProcessIntegrity" -> processParams.checkCaptureProcessIntegrity = v as Boolean
         "measureSystem" -> processParams.measureSystem = v.toInt()
         "barcodeParserType" -> processParams.barcodeParserType = v.toInt()
         "perspectiveAngle" -> processParams.perspectiveAngle = v.toInt()
@@ -173,6 +177,7 @@ fun setProcessParams(processParams: ProcessParam, opts: JSONObject) = opts.forEa
         "documentGroupFilter" -> processParams.documentGroupFilter = v.toIntArray()
         "lcidIgnoreFilter" -> processParams.lcidIgnoreFilter = v.toIntArray()
         "lcidFilter" -> processParams.lcidFilter = v.toIntArray()
+        "fieldTypesIgnoreFilter" -> processParams.fieldTypesIgnoreFilter = v.toIntArray()
         "barcodeTypes" -> processParams.doBarcodes = barcodeTypeArrayFromJson(v as JSONArray)
         "mrzFormatsFilter" -> processParams.mrzFormatsFilter = (v as JSONArray).toArray()
         "customParams" -> processParams.customParams = v as JSONObject
@@ -183,16 +188,6 @@ fun setProcessParams(processParams: ProcessParam, opts: JSONObject) = opts.forEa
         "authenticityParams" -> {
             if (processParams.authenticityParams == null) processParams.authenticityParams = AuthenticityParams.defaultParams()
             setAuthenticityParams(processParams.authenticityParams!!, v as JSONObject)
-        }
-
-        "setCheckFilter" -> processParams.setCheckFilter((v as JSONObject).getString("checkType"), filterObjectFromJSON(v.getJSONObject("filterObject")))
-        "removeCheckFilter" -> processParams.removeCheckFilter(v as String)
-        "clearCheckFilter" -> processParams.clearCheckFilter()
-        "checkFilters" -> {
-            processParams.clearCheckFilter()
-            (v as JSONObject).forEach { key, value ->
-                processParams.setCheckFilter(key, filterObjectFromJSON(value as JSONObject))
-            }
         }
     }
 }
@@ -239,6 +234,8 @@ fun getProcessParams(processParams: ProcessParam) = mapOf(
     "generateAlpha2Codes" to processParams.generateAlpha2Codes,
     "disableAuthResolutionFilter" to processParams.disableAuthResolutionFilter,
     "strictSecurityChecks" to processParams.strictSecurityChecks,
+    "returnTransliteratedFields" to processParams.returnTransliteratedFields,
+    "checkCaptureProcessIntegrity" to processParams.checkCaptureProcessIntegrity,
     "measureSystem" to processParams.measureSystem,
     "barcodeParserType" to processParams.barcodeParserType,
     "perspectiveAngle" to processParams.perspectiveAngle,
@@ -268,6 +265,7 @@ fun getProcessParams(processParams: ProcessParam) = mapOf(
     "documentGroupFilter" to processParams.documentGroupFilter.toJson(),
     "lcidIgnoreFilter" to processParams.lcidIgnoreFilter.toJson(),
     "lcidFilter" to processParams.lcidFilter.toJson(),
+    "fieldTypesIgnoreFilter" to processParams.fieldTypesIgnoreFilter.toJson(),
     "resultTypeOutput" to processParams.resultTypeOutput.toJson(),
     "mrzFormatsFilter" to processParams.mrzFormatsFilter.toJson(),
     "barcodeTypes" to generateBarcodeTypeArray(processParams.doBarcodes),
@@ -322,6 +320,7 @@ fun setCustomization(customization: ParamsCustomization, opts: JSONObject) = opt
         "activityIndicatorPortraitPositionMultiplier" -> editor.setActivityIndicatorPortraitPositionMultiplier(v.toFloat())
         "activityIndicatorLandscapePositionMultiplier" -> editor.setActivityIndicatorLandscapePositionMultiplier(v.toFloat())
         "cameraPreviewVerticalPositionMultiplier" -> editor.setCameraPreviewVerticalPositionMultiplier(v.toFloat())
+        "multipageButtonPositionMultiplier" -> editor.setMultipageButtonPositionMultiplier(v.toFloat())
         "multipageAnimationFrontImage" -> editor.setMultipageAnimationFrontImage(v.toDrawable())
         "multipageAnimationBackImage" -> editor.setMultipageAnimationBackImage(v.toDrawable())
         "borderBackgroundImage" -> editor.setBorderBackgroundImage(v.toDrawable())
@@ -408,6 +407,7 @@ fun getCustomization(customization: ParamsCustomization) = mapOf(
     "activityIndicatorPortraitPositionMultiplier" to customization.activityIndicatorPortraitPositionMultiplier,
     "activityIndicatorLandscapePositionMultiplier" to customization.activityIndicatorLandscapePositionMultiplier,
     "cameraPreviewVerticalPositionMultiplier" to customization.cameraPreviewVerticalPositionMultiplier,
+    "multipageButtonPositionMultiplier" to customization.multipageButtonPositionMultiplier,
     "multipageAnimationFrontImage" to customization.multipageAnimationFrontImage.toBase64(),
     "multipageAnimationBackImage" to customization.multipageAnimationBackImage.toBase64(),
     "borderBackgroundImage" to customization.borderBackgroundImage.toBase64(),
@@ -705,16 +705,6 @@ fun setAuthenticityParams(input: AuthenticityParams, opts: JSONObject) = opts.fo
             if (input.livenessParams == null) input.livenessParams = LivenessParams.defaultParams()
             setLivenessParams(input.livenessParams!!, v as JSONObject)
         }
-
-        "setCheckFilter" -> input.setCheckFilter((v as JSONObject).getString("checkType"), filterObjectFromJSON(v.getJSONObject("filterObject")))
-        "removeCheckFilter" -> input.removeCheckFilter(v as String)
-        "clearCheckFilter" -> input.clearCheckFilter()
-        "checkFilters" -> {
-            input.clearCheckFilter()
-            (v as JSONObject).forEach { key, value ->
-                input.setCheckFilter(key, filterObjectFromJSON(value as JSONObject))
-            }
-        }
     }
 }
 
@@ -748,16 +738,6 @@ fun setLivenessParams(input: LivenessParams, opts: JSONObject) = opts.forEach { 
         "checkBlackAndWhiteCopy" -> input.checkBlackAndWhiteCopy = v as Boolean
         "checkDynaprint" -> input.checkDynaprint = v as Boolean
         "checkGeometry" -> input.checkGeometry = v as Boolean
-
-        "setCheckFilter" -> input.setCheckFilter((v as JSONObject).getString("checkType"), filterObjectFromJSON(v.getJSONObject("filterObject")))
-        "removeCheckFilter" -> input.removeCheckFilter(v as String)
-        "clearCheckFilter" -> input.clearCheckFilter()
-        "checkFilters" -> {
-            input.clearCheckFilter()
-            (v as JSONObject).forEach { key, value ->
-                input.setCheckFilter(key, filterObjectFromJSON(value as JSONObject))
-            }
-        }
     }
 }
 

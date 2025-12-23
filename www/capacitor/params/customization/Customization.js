@@ -240,6 +240,12 @@ export class Customization {
         this._set({ "cameraPreviewVerticalPositionMultiplier": val });
     }
 
+    get multipageButtonPositionMultiplier() { return this._multipageButtonPositionMultiplier; }
+    set multipageButtonPositionMultiplier(val) {
+        this._multipageButtonPositionMultiplier = val;
+        this._set({ "multipageButtonPositionMultiplier": val });
+    }
+
     get multipageAnimationFrontImage() { return this._multipageAnimationFrontImage; }
     set multipageAnimationFrontImage(val) {
         this._multipageAnimationFrontImage = val;
@@ -476,6 +482,7 @@ export class Customization {
         result._activityIndicatorPortraitPositionMultiplier = jsonObject["activityIndicatorPortraitPositionMultiplier"];
         result._activityIndicatorLandscapePositionMultiplier = jsonObject["activityIndicatorLandscapePositionMultiplier"];
         result._cameraPreviewVerticalPositionMultiplier = jsonObject["cameraPreviewVerticalPositionMultiplier"];
+        result._multipageButtonPositionMultiplier = jsonObject["multipageButtonPositionMultiplier"];
         result._multipageAnimationFrontImage = jsonObject["multipageAnimationFrontImage"];
         result._multipageAnimationBackImage = jsonObject["multipageAnimationBackImage"];
         result._borderBackgroundImage = jsonObject["borderBackgroundImage"];
@@ -554,6 +561,7 @@ export class Customization {
             "activityIndicatorPortraitPositionMultiplier": this.activityIndicatorPortraitPositionMultiplier,
             "activityIndicatorLandscapePositionMultiplier": this.activityIndicatorLandscapePositionMultiplier,
             "cameraPreviewVerticalPositionMultiplier": this.cameraPreviewVerticalPositionMultiplier,
+            "multipageButtonPositionMultiplier": this.multipageButtonPositionMultiplier,
             "multipageAnimationFrontImage": this.multipageAnimationFrontImage,
             "multipageAnimationBackImage": this.multipageAnimationBackImage,
             "borderBackgroundImage": this.borderBackgroundImage,

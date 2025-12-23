@@ -1,5 +1,6 @@
 import { CheckResult } from './CheckResult';
 import { OpticalStatus } from './OpticalStatus';
+import { AgeStatus } from './AgeStatus';
 import { RFIDStatus } from './RFIDStatus';
 
 export class ResultsStatus {
@@ -10,6 +11,10 @@ export class ResultsStatus {
     detailsRFID
     portrait
     stopList
+    mDL
+    age
+    captureProcessIntegrity
+    ageStatus
 
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
@@ -22,6 +27,10 @@ export class ResultsStatus {
         result.detailsRFID = RFIDStatus.fromJson(jsonObject["detailsRFID"]);
         result.portrait = jsonObject["portrait"];
         result.stopList = jsonObject["stopList"];
+        result.mDL = jsonObject["mDL"];
+        result.age = jsonObject["age"];
+        result.captureProcessIntegrity = jsonObject["captureProcessIntegrity"];
+        result.ageStatus = AgeStatus.fromJson(jsonObject["detailsAge"]);
         
         return result;
     }
@@ -33,8 +42,12 @@ export class ResultsStatus {
             "rfid": this.rfid,
             "portrait": this.portrait,
             "stopList": this.stopList,
+            "mDL": this.mDL,
+            "age": this.age,
+            "captureProcessIntegrity": this.captureProcessIntegrity,
             "detailsOptical": this.detailsOptical?.toJson(),
             "detailsRFID": this.detailsRFID?.toJson(),
+            "detailsAge": this.ageStatus?.toJson(),
         }
     }
 }

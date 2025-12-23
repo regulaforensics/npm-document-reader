@@ -35,6 +35,7 @@
         functionality.singleResult = [[options valueForKey:@"singleResult"] boolValue];
     if(options[@"torchTurnedOn"]) functionality.torchTurnedOn = [options[@"torchTurnedOn"] boolValue];
     if(options[@"preventScreenRecording"]) functionality.preventScreenRecording = [options[@"preventScreenRecording"] boolValue];
+    if(options[@"homeIndicatorAutoHide"]) functionality.homeIndicatorAutoHide = [options[@"homeIndicatorAutoHide"] boolValue];
     
     // Int
     if([options valueForKey:@"showCaptureButtonDelayFromDetect"] != nil)
@@ -61,6 +62,7 @@
     // Float
     if([options valueForKey:@"zoomFactor"] != nil)
         functionality.zoomFactor = [[options valueForKey:@"zoomFactor"] floatValue];
+    if(options[@"mdlTimeout"]) functionality.mDLTimeout = [options[@"mdlTimeout"] doubleValue];
     
     // Custom
     // in android - cameraSize
@@ -90,6 +92,7 @@
     result[@"singleResult"] = [NSNumber numberWithBool:functionality.singleResult];
     result[@"torchTurnedOn"] = @(functionality.torchTurnedOn);
     result[@"preventScreenRecording"] = @(functionality.preventScreenRecording);
+    result[@"homeIndicatorAutoHide"] = @(functionality.homeIndicatorAutoHide);
     
     // Int
     result[@"showCaptureButtonDelayFromDetect"] = [NSNumber numberWithDouble:functionality.showCaptureButtonDelayFromDetect];
@@ -107,6 +110,7 @@
     
     // Float
     result[@"zoomFactor"] = [NSNumber numberWithFloat:functionality.zoomFactor];
+    result[@"mdlTimeout"] = @(functionality.mDLTimeout);
     
     // Custom
     // in android - cameraSize
@@ -188,6 +192,7 @@
     if (options[@"generateAlpha2Codes"]) processParams.generateAlpha2Codes = options[@"generateAlpha2Codes"];
     if (options[@"disableAuthResolutionFilter"]) processParams.disableAuthResolutionFilter = options[@"disableAuthResolutionFilter"];
     if (options[@"strictSecurityChecks"]) processParams.strictSecurityChecks = options[@"strictSecurityChecks"];
+    if (options[@"returnTransliteratedFields"]) processParams.returnTransliteratedFields = options[@"returnTransliteratedFields"];
 
     // Int
     if([options valueForKey:@"measureSystem"] != nil)
@@ -255,8 +260,8 @@
         processParams.documentGroupFilter = [options mutableArrayValueForKey:@"documentGroupFilter"];
     if([options valueForKey:@"lcidIgnoreFilter"] != nil)
         processParams.lcidIgnoreFilter = [options mutableArrayValueForKey:@"lcidIgnoreFilter"];
-    if([options valueForKey:@"lcidFilter"] != nil)
-        processParams.lcidFilter = [options mutableArrayValueForKey:@"lcidFilter"];
+    if (options[@"lcidFilter"]) processParams.lcidFilter = options[@"lcidFilter"];
+    if (options[@"fieldTypesIgnoreFilter"]) processParams.fieldTypesIgnoreFilter = options[@"fieldTypesIgnoreFilter"];
 
     // JSONObject
     if (options[@"customParams"]) processParams.customParams = options[@"customParams"];
@@ -271,16 +276,6 @@
     if ([options valueForKey:@"authenticityParams"] != nil) {
         if(processParams.authenticityParams == nil) processParams.authenticityParams = [RGLAuthenticityParams defaultParams];
         [self setAuthenticityParams:processParams.authenticityParams input:[options valueForKey:@"authenticityParams"]];
-    }
-    
-    if (options[@"setCheckFilter"]) [processParams
-                                     addFilter:[RGLWJSONConstructor filterObjectFromJson: options[@"setCheckFilter"][@"filterObject"]] forCheckType:options[@"setCheckFilter"][@"checkType"]];
-    if (options[@"removeCheckFilter"]) [processParams removeFilterForCheckType: options[@"removeCheckFilter"]];
-    if (options[@"clearCheckFilter"]) [processParams clearCheckFilter];
-    if (options[@"checkFilters"]) {
-        [processParams clearCheckFilter];
-        for (NSString* key in options[@"checkFilters"])
-            [processParams addFilter:[RGLWJSONConstructor filterObjectFromJson: options[@"checkFilters"][key]] forCheckType: key];
     }
 }
 
@@ -327,6 +322,7 @@
     result[@"generateAlpha2Codes"] = processParams.generateAlpha2Codes;
     result[@"disableAuthResolutionFilter"] = processParams.disableAuthResolutionFilter;
     result[@"strictSecurityChecks"] = processParams.strictSecurityChecks;
+    result[@"returnTransliteratedFields"] = processParams.returnTransliteratedFields;
     
     // Int
     result[@"measureSystem"] = [NSNumber numberWithInteger:processParams.measureSystem];
@@ -365,6 +361,7 @@
     result[@"documentGroupFilter"] = processParams.documentGroupFilter;
     result[@"lcidIgnoreFilter"] = processParams.lcidIgnoreFilter;
     result[@"lcidFilter"] = processParams.lcidFilter;
+    result[@"fieldTypesIgnoreFilter"] = processParams.fieldTypesIgnoreFilter;
     result[@"mrzFormatsFilter"] = processParams.mrzFormatsFilter;
     result[@"resultTypeOutput"] = processParams.resultTypeOutput;
     
@@ -462,6 +459,7 @@
     if(options[@"activityIndicatorPortraitPositionMultiplier"]) customization.activityIndicatorPortraitPositionMultiplier = [options[@"activityIndicatorPortraitPositionMultiplier"] floatValue];
     if(options[@"activityIndicatorLandscapePositionMultiplier"]) customization.activityIndicatorLandscapePositionMultiplier = [options[@"activityIndicatorLandscapePositionMultiplier"] floatValue];
     if(options[@"cameraPreviewVerticalPositionMultiplier"]) customization.previewLayerPositionMultiplier = [options[@"cameraPreviewVerticalPositionMultiplier"] floatValue];
+    if(options[@"multipageButtonPositionMultiplier"]) customization.multipageButtonPositionMultiplier = [options[@"multipageButtonPositionMultiplier"] floatValue];
     
     // Drawable
     if([options valueForKey:@"multipageAnimationFrontImage"] != nil)
@@ -576,6 +574,7 @@
     result[@"activityIndicatorPortraitPositionMultiplier"] = [NSNumber numberWithFloat:customization.activityIndicatorPortraitPositionMultiplier];
     result[@"activityIndicatorLandscapePositionMultiplier"] = [NSNumber numberWithFloat:customization.activityIndicatorLandscapePositionMultiplier];
     result[@"cameraPreviewVerticalPositionMultiplier"] = [NSNumber numberWithFloat:customization.previewLayerPositionMultiplier];
+    result[@"multipageButtonPositionMultiplier"] = [NSNumber numberWithFloat:customization.multipageButtonPositionMultiplier];
     
     // Drawable
     result[@"multipageAnimationFrontImage"] = [RGLWJSONConstructor base64WithImage:customization.multipageAnimationFrontImage];
@@ -1017,16 +1016,6 @@
     if([input valueForKey:@"checkLetterScreen"] != nil)
         result.checkLetterScreen = [input valueForKey:@"checkLetterScreen"];
     if(input[@"checkSecurityText"]) result.checkSecurityText = input[@"checkSecurityText"];
-    
-    if (input[@"setCheckFilter"]) [result
-                                     addFilter:[RGLWJSONConstructor filterObjectFromJson: input[@"setCheckFilter"][@"filterObject"]] forCheckType:input[@"setCheckFilter"][@"checkType"]];
-    if (input[@"removeCheckFilter"]) [result removeFilterForCheckType: input[@"removeCheckFilter"]];
-    if (input[@"clearCheckFilter"]) [result clearCheckFilter];
-    if (input[@"checkFilters"]) {
-        [result clearCheckFilter];
-        for (NSString* key in input[@"checkFilters"])
-            [result addFilter:[RGLWJSONConstructor filterObjectFromJson: input[@"checkFilters"][key]] forCheckType: key];
-    }
 }
 
 +(NSDictionary*)getAuthenticityParams:(RGLAuthenticityParams*)input {
@@ -1065,16 +1054,6 @@
     if(input[@"checkBlackAndWhiteCopy"]) result.checkBlackAndWhiteCopy = input[@"checkBlackAndWhiteCopy"];
     if(input[@"checkDynaprint"]) result.checkDynaprint = input[@"checkDynaprint"];
     if(input[@"checkGeometry"]) result.checkGeometry = input[@"checkGeometry"];
-
-    if (input[@"setCheckFilter"]) [result
-                                     addFilter:[RGLWJSONConstructor filterObjectFromJson: input[@"setCheckFilter"][@"filterObject"]] forCheckType:input[@"setCheckFilter"][@"checkType"]];
-    if (input[@"removeCheckFilter"]) [result removeFilterForCheckType: input[@"removeCheckFilter"]];
-    if (input[@"clearCheckFilter"]) [result clearCheckFilter];
-    if (input[@"checkFilters"]) {
-        [result clearCheckFilter];
-        for (NSString* key in input[@"checkFilters"])
-            [result addFilter:[RGLWJSONConstructor filterObjectFromJson: input[@"checkFilters"][key]] forCheckType: key];
-    }
 }
 
 +(NSDictionary*)getLivenessParams:(RGLLivenessParams*)input {

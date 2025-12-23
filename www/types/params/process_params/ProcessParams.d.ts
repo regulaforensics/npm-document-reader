@@ -1,4 +1,3 @@
-import { FilterObject } from "./FilterObject";
 import { AuthenticityParams } from "./AuthenticityParams";
 import { BackendProcessingConfig } from "./BackendProcessingConfig";
 import { FaceApiParams } from "./FaceApiParams";
@@ -203,6 +202,16 @@ export declare class ProcessParams {
      */
     strictSecurityChecks?: boolean;
     /**
+     * Allows transliteration to be turned on or off.
+     * Default: `true`.
+     */
+    returnTransliteratedFields?: boolean;
+
+    /** 
+     * Android only. 
+     */
+    checkCaptureProcessIntegrity?: boolean;
+    /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
      * setting the barcode parser type which should be used during recognition.
@@ -393,6 +402,14 @@ export declare class ProcessParams {
      */
     lcidFilter?: LCID[];
     /**
+     * If a document contains a Visual zone, you can specify a list of field types that should be excluded from extraction.
+     * All field types listed in this array are skipped during processing, while the remaining fields are recognized.
+     * This filter is not applicable to the MRZ, barcode or RFID. If the fieldTypesIgnoreFilter is empty, all fields are extracted.
+     *
+     * Unmodifiable property. Use setter instead of editing.
+     */
+    fieldTypesIgnoreFilter?: FieldType[];
+    /**
      * Controls properties of {@link ImageQA} checks.
      */
     imageQA: ImageQA;
@@ -415,12 +432,6 @@ export declare class ProcessParams {
      * Unmodifiable property. Use setter instead of editing.
      */
     customParams?: Record<string, any>;
-
-    setCheckFilter(checkType: FilterCheckType, filter: FilterObject): void;
-
-    removeCheckFilter(checkType: FilterCheckType): void;
-
-    clearCheckFilter(): void;
 
     /**
      * Allows you to deserialize object.
@@ -477,8 +488,4 @@ export declare enum MrzDetectionModes {
     DEFAULT = 0,
     RESIZE_BINARIZE_WINDOW = 1,
     BLUR_BEFORE_BINARIZATION = 2,
-}
-
-export declare enum FilterCheckType {
-    AUTH = "checkAuth",
 }
