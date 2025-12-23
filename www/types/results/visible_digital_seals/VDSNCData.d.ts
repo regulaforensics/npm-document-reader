@@ -28,7 +28,7 @@ export declare class VDSNCData {
      * The list of remarks occured during the scanning procedure.
      * Each element belongs to the {@link LDSParsingErrorCodes} or the {@link LDSParsingNotificationCodes}.
      */
-    readonly notifications?: number[];
+    readonly notifications: number[];
 
     /** Allows you to deserialize object. */
     static fromJson(jsonObject: any): VDSNCData | null;

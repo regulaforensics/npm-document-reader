@@ -206,6 +206,11 @@ export declare class ProcessParams {
      * Default: `true`.
      */
     returnTransliteratedFields?: boolean;
+
+    /** 
+     * Android only. 
+     */
+    checkCaptureProcessIntegrity?: boolean;
     /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
@@ -396,6 +401,14 @@ export declare class ProcessParams {
      * Unmodifiable property. Use setter instead of editing.
      */
     lcidFilter?: LCID[];
+    /**
+     * If a document contains a Visual zone, you can specify a list of field types that should be excluded from extraction.
+     * All field types listed in this array are skipped during processing, while the remaining fields are recognized.
+     * This filter is not applicable to the MRZ, barcode or RFID. If the fieldTypesIgnoreFilter is empty, all fields are extracted.
+     *
+     * Unmodifiable property. Use setter instead of editing.
+     */
+    fieldTypesIgnoreFilter?: FieldType[];
     /**
      * Controls properties of {@link ImageQA} checks.
      */

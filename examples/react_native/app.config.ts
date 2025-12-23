@@ -20,7 +20,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         'A0000002480100',
         'A0000002480200',
         'A0000002480300',
-        'A00000045645444C2D3031'
+        'A0000002480400',
+        'A00000045645444C2D3031',
+        'D2760000850101',
       ]
     },
     entitlements: { 'com.apple.developer.nfc.readersession.formats': ['TAG'] },

@@ -1,5 +1,6 @@
 import { CheckResult } from "./CheckResult";
 import { OpticalStatus } from "./OpticalStatus";
+import { AgeStatus } from "./AgeStatus";
 import { RFIDStatus } from "./RFIDStatus";
 
 /** Provision of document verification status. */
@@ -18,6 +19,14 @@ export declare class ResultsStatus {
     readonly portrait: CheckResult;
     /** Verification status for document data against database. */
     readonly stopList: CheckResult;
+    /** Summary of all mDL results. */
+    readonly mDL: CheckResult;
+    /** Summary of all age results. */
+    readonly age: CheckResult;
+    /** Android only. */
+    readonly captureProcessIntegrity: CheckResult;
+    /** Container for an age related scanning statuses. */
+    readonly ageStatus: AgeStatus;
 
     /** Allows you to deserialize object. */
     static fromJson(jsonObject: any): ResultsStatus | null;
