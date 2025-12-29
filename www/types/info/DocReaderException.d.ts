@@ -68,6 +68,7 @@ export declare enum ErrorCodes {
     CAMERA_NOT_AVAILABLE = 30,
     /** The camera not supported in this scenario. */
     CANNOT_USE_CAMERA_IN_SCENario = 40,
+    BLUETOOTH_NO_PERMISSION = 41,
     BACKEND_ONLINE_PROCESSING = 303,
     WRONG_INPUT = 400,
     /** Missing output result. */
@@ -79,5 +80,6 @@ export declare enum ErrorCodes {
     FEATURE_BLUETOOTH_LE_NOT_SUPPORTED = 601,
     APP_BACKGROUND = 700,
     ONLINE_PROCESSING_WRONG_INPUT = 800,
+    MDL_EXCEPTION = 900,
     NATIVE_JAVA_EXCEPTION = 1000,
 }

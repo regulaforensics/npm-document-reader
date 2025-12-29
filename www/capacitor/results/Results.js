@@ -13,6 +13,7 @@ import { GraphicResult } from "./visual_results/GraphicResult";
 import { TextResult } from "./visual_results/TextResult";
 import { TextField } from "./visual_results/TextField";
 import { VDSNCData } from "./visible_digital_seals/VDSNCData";
+import { VDSData } from "./visible_digital_seals/VDSData";
 import { Position } from "./Position";
 import { DocumentType } from "./DocumentType";
 import { TransactionInfo } from "./TransactionInfo";
@@ -31,6 +32,7 @@ export class Results {
     chipPage
     barcodeResult
     vdsncData
+    vdsData
     dtcData
     processingFinishedStatus
     morePagesAvailable
@@ -205,6 +207,7 @@ export class Results {
         result.barcodeResult = BarcodeResult.fromJson(jsonObject["barcodeResult"]);
         result.status = ResultsStatus.fromJson(jsonObject["status"]);
         result.vdsncData = VDSNCData.fromJson(jsonObject["vdsncData"]);
+        result.vdsData = VDSData.fromJson(jsonObject["vdsData"]);
         result.dtcData = jsonObject["dtcData"];
         result.transactionInfo = TransactionInfo.fromJson(jsonObject["transactionInfo"]);
 
@@ -275,6 +278,7 @@ export class Results {
             "rfidSessionData": this.rfidSessionData?.toJson(),
             "barcodeResult": this.barcodeResult?.toJson(),
             "vdsncData": this.vdsncData?.toJson(),
+            "vdsData": this.vdsData?.toJson(),
             "dtcData": this.dtcData,
             "chipPage": this.chipPage,
             "processingFinishedStatus": this.processingFinishedStatus,
@@ -339,5 +343,8 @@ export const ResultType = {
     RFID_IMAGE_DATA: 103,
     RFID_BINARY_DATA: 104,
     RFID_ORIGINAL_GRAPHICS: 105,
-    RFID_DTC_VC: 109
+    RFID_DTC_VC: 109,
+    MDL_PARSED_RESPONSE: 121,
+    VDS_NC: 124,
+    VDS: 125,
 };
