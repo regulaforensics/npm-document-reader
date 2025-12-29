@@ -2,7 +2,7 @@ import { CheckResult } from "./CheckResult";
 
 /** Container for an age related scanning statuses. */
 export declare class AgeStatus {
-    readonly threshold: number;
+    readonly threshold: number | null;
     readonly overThreshold: CheckResult;
     readonly over18: CheckResult;
     readonly over21: CheckResult;
