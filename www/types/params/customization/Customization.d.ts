@@ -273,6 +273,11 @@ export declare class Customization {
     cameraPreviewVerticalPositionMultiplier?: number;
 
     /**
+     * Allows you to change the location of the multipage button.
+     */
+    multipageButtonPositionMultiplier?: number;
+
+    /**
      * Allows you to set any image for the multipage animation (front side). Base64 string.
      */
     multipageAnimationFrontImage?: string;

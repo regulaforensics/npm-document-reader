@@ -15,6 +15,7 @@ import { VDSNCData } from "./visible_digital_seals/VDSNCData";
 import { Position } from "./Position";
 import { DocumentType } from "./DocumentType";
 import { TransactionInfo } from "./TransactionInfo";
+import { VDSData } from "./visible_digital_seals/VDSData";
 
 /** Class describing results returned on completion of Document Reader work. */
 export declare class Results {
@@ -47,6 +48,8 @@ export declare class Results {
     readonly barcodeResult: BarcodeResult | null;
     /** Visible Digital Seal data. */
     readonly vdsncData: VDSNCData | null;
+    /** Visible Digital Seal data. */
+    readonly vdsData: VDSData | null;
     /** DTCVC data. */
     readonly dtcData: string | null;
     /** Document processing finish status, one of RGLProcessingFinishedStatus values. */
@@ -279,5 +282,10 @@ export declare enum ResultType {
      */
     RFID_ORIGINAL_GRAPHICS = 105,
     /** Digital Travel Credential data. */
-    RFID_DTC_VC = 109
+    RFID_DTC_VC = 109,
+    MDL_PARSED_RESPONSE = 121,
+    /** VDS_NC. */
+    VDS_NC = 124,
+    /** VDS. */
+    VDS = 125,
 }

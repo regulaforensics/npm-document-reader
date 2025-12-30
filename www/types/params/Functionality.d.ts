@@ -136,6 +136,12 @@ export declare class Functionality {
      */
     preventScreenRecording?: boolean;
     /**
+     * If it's set to true, system is allowed to hide the visual indicator for returning to the Home Screen in landscape mode.
+     *
+     * @default true
+     */
+    homeIndicatorAutoHide?: boolean;
+    /**
      * Allows you to specify a time interval when the Capture button
      * has to be displayed after the document is detected.
      * Don't forget to set the {@link showCaptureButton} to `true`,
@@ -219,6 +225,7 @@ export declare class Functionality {
      * Android only.
      */
     videoRecordingSizeDownscaleFactor?: number;
+    mdlTimeout?: number;
     /**
      * A list of devices that must not use the camera2 API.
      *

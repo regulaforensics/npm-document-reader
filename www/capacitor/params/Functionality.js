@@ -111,6 +111,12 @@ export class Functionality {
         this._set({ "preventScreenRecording": val });
     }
 
+    get homeIndicatorAutoHide() { return this._homeIndicatorAutoHide; }
+    set homeIndicatorAutoHide(val) {
+        this._homeIndicatorAutoHide = val;
+        this._set({ "homeIndicatorAutoHide": val });
+    }
+
     get showCaptureButtonDelayFromDetect() { return this._showCaptureButtonDelayFromDetect; }
     set showCaptureButtonDelayFromDetect(val) {
         this._showCaptureButtonDelayFromDetect = val;
@@ -189,6 +195,12 @@ export class Functionality {
         this._set({ "videoRecordingSizeDownscaleFactor": val });
     }
 
+    get mdlTimeout() { return this._mdlTimeout; }
+    set mdlTimeout(val) {
+        this._mdlTimeout = val;
+        this._set({ "mdlTimeout": val });
+    }
+
     get excludedCamera2Models() { return this._excludedCamera2Models; }
     set excludedCamera2Models(val) {
         this._excludedCamera2Models = val;
@@ -229,6 +241,7 @@ export class Functionality {
         result._singleResult = jsonObject["singleResult"];
         result._torchTurnedOn = jsonObject["torchTurnedOn"];
         result._preventScreenRecording = jsonObject["preventScreenRecording"];
+        result._homeIndicatorAutoHide = jsonObject["homeIndicatorAutoHide"];
         result._showCaptureButtonDelayFromDetect = jsonObject["showCaptureButtonDelayFromDetect"];
         result._showCaptureButtonDelayFromStart = jsonObject["showCaptureButtonDelayFromStart"];
         result._rfidTimeout = jsonObject["rfidTimeout"];
@@ -242,6 +255,7 @@ export class Functionality {
         result._zoomFactor = jsonObject["zoomFactor"];
         result._exposure = jsonObject["exposure"];
         result._videoRecordingSizeDownscaleFactor = jsonObject["videoRecordingSizeDownscaleFactor"];
+        result._mdlTimeout = jsonObject["mdlTimeout"];
         result._excludedCamera2Models = jsonObject["excludedCamera2Models"];
         result._cameraResolutionAndroid = CameraSize.fromJson(jsonObject["cameraSize"]);
         result._cameraResolutionIOS = jsonObject["videoSessionPreset"];
@@ -269,6 +283,7 @@ export class Functionality {
             "singleResult": this.singleResult,
             "torchTurnedOn": this.torchTurnedOn,
             "preventScreenRecording": this.preventScreenRecording,
+            "homeIndicatorAutoHide": this.homeIndicatorAutoHide,
             "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
             "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
             "rfidTimeout": this.rfidTimeout,
@@ -282,6 +297,7 @@ export class Functionality {
             "zoomFactor": this.zoomFactor,
             "exposure": this.exposure,
             "videoRecordingSizeDownscaleFactor": this.videoRecordingSizeDownscaleFactor,
+            "mdlTimeout": this.mdlTimeout,
             "excludedCamera2Models": this.excludedCamera2Models,
             "cameraSize": this.cameraResolutionAndroid?.toJson(),
             "videoSessionPreset": this.cameraResolutionIOS,

@@ -247,6 +247,12 @@ export class ProcessParams {
         this._set({ "returnTransliteratedFields": val });
     }
 
+    get checkCaptureProcessIntegrity() { return this._checkCaptureProcessIntegrity; }
+    set checkCaptureProcessIntegrity(val) {
+        this._checkCaptureProcessIntegrity = val;
+        this._set({ "checkCaptureProcessIntegrity": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -439,6 +445,12 @@ export class ProcessParams {
         this._set({ "lcidFilter": val });
     }
 
+    get fieldTypesIgnoreFilter() { return this._fieldTypesIgnoreFilter; }
+    set fieldTypesIgnoreFilter(val) {
+        this._fieldTypesIgnoreFilter = val;
+        this._set({ "fieldTypesIgnoreFilter": val });
+    }
+
     _imageQA = new ImageQA();
     get imageQA() { return this._imageQA; }
     set imageQA(val) { (this._imageQA = val)._apply(); }
@@ -515,6 +527,7 @@ export class ProcessParams {
         result._disableAuthResolutionFilter = jsonObject["disableAuthResolutionFilter"];
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
+        result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -547,6 +560,7 @@ export class ProcessParams {
         result._documentGroupFilter = jsonObject["documentGroupFilter"];
         result._lcidIgnoreFilter = jsonObject["lcidIgnoreFilter"];
         result._lcidFilter = jsonObject["lcidFilter"];
+        result._fieldTypesIgnoreFilter = jsonObject["fieldTypesIgnoreFilter"];
         result._imageQA = ImageQA.fromJson(jsonObject["imageQA"]);
         result._rfidParams = RFIDParams.fromJson(jsonObject["rfidParams"]);
         result._faceApiParams = FaceApiParams.fromJson(jsonObject["faceApiParams"]);
@@ -598,6 +612,7 @@ export class ProcessParams {
             "disableAuthResolutionFilter": this.disableAuthResolutionFilter,
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
+            "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -630,6 +645,7 @@ export class ProcessParams {
             "documentGroupFilter": this.documentGroupFilter,
             "lcidIgnoreFilter": this.lcidIgnoreFilter,
             "lcidFilter": this.lcidFilter,
+            "fieldTypesIgnoreFilter": this.fieldTypesIgnoreFilter,
             "imageQA": this.imageQA?.toJson(),
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),

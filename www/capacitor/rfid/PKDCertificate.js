@@ -36,6 +36,9 @@ export const PKDResourceType = {
     DEFL: 5,
     DEVL: 6,
     BL: 7,
+    LDIF_TA: 8,
+    ML_TA: 9,
+    CBOR: 10,
 
     getType(value) {
         switch (value) {

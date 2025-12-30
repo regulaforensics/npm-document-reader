@@ -1307,6 +1307,12 @@ export declare enum FieldType {
   FIRST_ISSUE_DATE_CHECKDIGIT = 698,
   /** First issue date checksum. */
   FIRST_ISSUE_DATE_CHECKSUM = 699,
+  /** Commercial indicator. */
+  COMMERCIAL_INDICATOR = 701,
+  /** Non-domiciled indicator. */
+  NON_DOMICILED_INDICATOR = 702,
+  /** Jurisdiction specific data. */
+  JURISDICTION_SPECIFIC_DATA = 703,
 }
 
 export declare namespace FieldType {
