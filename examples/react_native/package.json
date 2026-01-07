@@ -8,7 +8,7 @@
     "start": "expo start"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.2.512-nightly",
+    "@regulaforensics/document-reader": "9.2.513-nightly",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.1.1281",
     "@regulaforensics/document-reader-btdevice": "8.4.31",
     "react-native": "^0.81.4",
