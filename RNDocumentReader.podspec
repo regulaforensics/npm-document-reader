@@ -5,7 +5,7 @@ source = File.join(__dir__, 'ios')
 
 Pod::Spec.new do |s|
   s.name         = 'RNDocumentReader'
-  s.version      = '9.2.513-nightly'
+  s.version      = '9.2.514-nightly'
   s.summary      = package['description']
   s.license      = package['license']
 
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.source_files = 'ios/**/*.{h,m}'
   s.exclude_files = [ 'ios/CVDDocumentReader.h', 'ios/CVDDocumentReader.m' ]
-  s.dependency 'DocumentReaderNightly', '9.2.5711'
+  s.dependency 'DocumentReaderNightly', '9.2.5712'
   s.dependency 'React'
 end
