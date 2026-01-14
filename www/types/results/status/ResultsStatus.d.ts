@@ -24,7 +24,7 @@ export declare class ResultsStatus {
     /** Summary of all age results. */
     readonly age: CheckResult;
     /** Android only. */
-    readonly captureProcessIntegrity: CheckResult;
+    readonly captureProcessIntegrity: CheckResult | null;
     /** Container for an age related scanning statuses. */
     readonly ageStatus: AgeStatus;
 
