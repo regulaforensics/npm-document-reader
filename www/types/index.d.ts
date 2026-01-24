@@ -401,7 +401,7 @@ export class DocumentReader {
      * 
      * @param engagement - Required for @param withoutUI = `null` or {@link MDLDeviceRetrieval.BLE}. Not needed for {@link MDLDeviceRetrieval.NFC}
      */
-    retrieveData(retrieval: DataRetrieval, options?: {withoutUI: MDLDeviceRetrieval, engagement?: DeviceEngagement}): Promise<[action: DocReaderAction, results: Results | null, error: DocReaderException | null]>;
+    retrieveData(retrieval: DataRetrieval, options?: {withoutUI?: MDLDeviceRetrieval, engagement?: DeviceEngagement}): Promise<[action: DocReaderAction, results: Results | null, error: DocReaderException | null]>;
 }
 
 /**

@@ -433,7 +433,7 @@ class DataRetrieval {
     }
 
     addDocRequest(request) {
-        requests.push(request);
+        this.requests.push(request);
     }
 
     static fromJson(jsonObject) {

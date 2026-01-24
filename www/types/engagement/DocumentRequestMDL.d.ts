@@ -50,8 +50,10 @@ export declare class DocumentRequest18013MDL extends DocumentRequestMDL {
     givenNameNationalCharacter? : MDLIntentToRetain;
     signatureUsualMark? : MDLIntentToRetain;
 
-    disableIntentToRetainValues(): void
-    enableIntentToRetainValues(): void
+    constructor();
+
+    disableIntentToRetainValues(): void;
+    enableIntentToRetainValues(): void;
 
     /**
      * Allows you to deserialize object.
