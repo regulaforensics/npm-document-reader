@@ -36,7 +36,7 @@
         @"runAutoUpdate": ^{ [self runAutoUpdate :args[0] :callback]; },
         @"cancelDBUpdate": ^{ [self cancelDBUpdate :callback]; },
         @"checkDatabaseUpdate": ^{ [self checkDatabaseUpdate :args[0] :callback]; },
-        @"scan": ^{ [self startScanner :args[0]]; },
+        @"scan": ^{ [self scan :args[0]]; },
         @"startScanner": ^{ [self startScanner :args[0]]; },
         @"recognize": ^{ [self recognize :args[0]]; },
         @"startNewPage": ^{ [self startNewPage]; },
@@ -226,8 +226,20 @@ static NSDictionary* headers;
     }];
 }
 
++(void)scan:(NSDictionary*)config {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+        #pragma clang diagnostic pop
+        [RGLDocReader.shared showScannerFromPresenter:RGLWRootViewController() config:[RGLWJSONConstructor scannerConfigFromJson:config] completion:[self completion]];
+    });
+}
+
 +(void)startScanner:(NSDictionary*)config {
     dispatch_async(dispatch_get_main_queue(), ^{
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+        #pragma clang diagnostic pop
         [RGLDocReader.shared startScannerFromPresenter:RGLWRootViewController() config:[RGLWJSONConstructor scannerConfigFromJson:config] completion:[self completion]];
     });
 }
@@ -353,27 +365,21 @@ RGLWCallback savedCallbackForBluetoothResult;
 }
 
 +(void)startReadMDl:(NSNumber*)type :(NSDictionary*)dataRetrieval :(RGLWCallback)callback {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [RGLDocReader.shared startReadMDLFromPresenter:RGLWRootViewController() engagementType:[type integerValue] dataRetrieval:[RGLWJSONConstructor dataRetrievalFromJson:dataRetrieval] completion:^(RGLDocReaderAction action, RGLDocumentReaderResults * _Nullable results, NSError * _Nullable error) {
-            callback([RGLWJSONConstructor generateCompletion:[RGLWConfig generateDocReaderAction: action] :results :error]);
-        }];
-    });
+    [RGLDocReader.shared startReadMDLFromPresenter:RGLWRootViewController() engagementType:[type integerValue] dataRetrieval:[RGLWJSONConstructor dataRetrievalFromJson:dataRetrieval] completion:^(RGLDocReaderAction action, RGLDocumentReaderResults * _Nullable results, NSError * _Nullable error) {
+        callback([RGLWJSONConstructor generateCompletion:[RGLWConfig generateDocReaderAction: action] :results :error]);
+    }];
 }
 
 +(void)startEngageDevice:(NSNumber*)type :(RGLWCallback)callback {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [RGLDocReader.shared startEngageDeviceFromPresenter:RGLWRootViewController() type:[type integerValue] completion:^(RGLDeviceEngagement* deviceEngagement, NSError* error) {
-            callback([RGLWJSONConstructor generateDeviceEngagementCompletion:deviceEngagement :error]);
-        }];
-    });
+    [RGLDocReader.shared startEngageDeviceFromPresenter:RGLWRootViewController() type:[type integerValue] completion:^(RGLDeviceEngagement* deviceEngagement, NSError* error) {
+        callback([RGLWJSONConstructor generateDeviceEngagementCompletion:deviceEngagement :error]);
+    }];
 }
 
 +(void)engageDeviceNFC:(RGLWCallback)callback {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [RGLDocReader.shared engageDeviceNFC:RGLWRootViewController() completion:^(RGLDeviceEngagement * _Nullable deviceEngagement, NSError * _Nullable error) {
-            callback([RGLWJSONConstructor generateDeviceEngagementCompletion:deviceEngagement :error]);
-        }];
-    });
+    [RGLDocReader.shared engageDeviceNFC:RGLWRootViewController() completion:^(RGLDeviceEngagement * _Nullable deviceEngagement, NSError * _Nullable error) {
+        callback([RGLWJSONConstructor generateDeviceEngagementCompletion:deviceEngagement :error]);
+    }];
 }
 
 +(void)engageDeviceData:(NSString*)data :(RGLWCallback)callback {

@@ -1959,7 +1959,7 @@ fun generateDeviceEngagement(input: DeviceEngagement?) = input?.let {
 fun nameSpaceMDLFromJSON(input: JSONObject?) = input?.let {
     val result = NameSpaceMDL(it.getString("name"))
     it.getJSONObject("map").forEach { key, value ->
-        result.addField(key, eMDLIntentToRetain.values()[value.toInt()])
+        result.addField(key, eMDLIntentToRetain.values()[value as Int])
     }
     result
 }
