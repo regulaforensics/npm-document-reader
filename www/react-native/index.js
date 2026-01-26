@@ -134,11 +134,11 @@ import { TAChallenge } from './rfid/TAChallenge';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
 export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
 
-import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './engagement/DataRetrieval';
-import { DeviceEngagement, MDLDeviceEngagement } from './engagement/DeviceEngagement';
-import { NameSpaceMDL, MDLIntentToRetain } from './engagement/NameSpaceMDL';
-import { DocumentRequestMDL, DocumentRequest18013MDL } from './engagement/DocumentRequestMDL';
-import { DeviceRetrievalMethod } from './engagement/DeviceRetrievalMethod';
+import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
+import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';
+import { NameSpaceMDL, MDLIntentToRetain } from './mdl/NameSpaceMDL';
+import { DocumentRequestMDL, DocumentRequest18013MDL } from './mdl/DocumentRequestMDL';
+import { DeviceRetrievalMethod } from './mdl/DeviceRetrievalMethod';
 export { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval, DeviceEngagement, MDLDeviceEngagement, DeviceRetrievalMethod, DocumentRequest18013MDL, MDLIntentToRetain, NameSpaceMDL, DocumentRequestMDL };
 
 export class DocumentReader {

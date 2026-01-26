@@ -400,457 +400,6 @@ class ScannerConfig {
 
 /***/ },
 
-/***/ "./src/engagement/DataRetrieval.js"
-/*!*****************************************!*\
-  !*** ./src/engagement/DataRetrieval.js ***!
-  \*****************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DataRetrieval: () => (/* binding */ DataRetrieval),
-/* harmony export */   MDLDeviceRetrieval: () => (/* binding */ MDLDeviceRetrieval),
-/* harmony export */   MDLDocRequestPreset: () => (/* binding */ MDLDocRequestPreset)
-/* harmony export */ });
-/* harmony import */ var _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NameSpaceMDL */ "./src/engagement/NameSpaceMDL.js");
-/* harmony import */ var _DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DocumentRequestMDL */ "./src/engagement/DocumentRequestMDL.js");
-
-
-
-class DataRetrieval {
-    deviceRetrieval
-    docRequestPreset
-    intentToRetain = _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.FALSE
-    requests = []
-
-    constructor(deviceRetrieval) {
-        this.deviceRetrieval = deviceRetrieval
-    }
-
-    setDocRequestPreset(docRequestPreset, intentToRetain) {
-        this.docRequestPreset = docRequestPreset
-        this.intentToRetain = intentToRetain
-    }
-
-    addDocRequest(request) {
-        this.requests.push(request);
-    }
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null
-        const result = new DataRetrieval(jsonObject["deviceRetrieval"])
-
-        result.docRequestPreset = jsonObject["docRequestPreset"]
-        result.intentToRetain = jsonObject["intentToRetain"]
-        result.requests = (jsonObject["requests"]).map(item => _DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_1__.DocumentRequestMDL.fromJson(item));
-
-        return result
-    }
-
-    toJson() {
-        return {
-            "deviceRetrieval": this.deviceRetrieval,
-            "docRequestPreset": this.docRequestPreset,
-            "intentToRetain": this.intentToRetain,
-            "requests": this.requests.map(item => item.toJson())
-        }
-    }
-}
-
-const MDLDocRequestPreset = {
-    ALL: 0,
-    AGE: 1,
-    STANDARD_ID: 2,
-    TRAVEL: 3,
-    DRIVERS_LICENSE: 4,
-}
-
-const MDLDeviceRetrieval = {
-    NFC: 1,
-    BLE: 2,
-}
-
-
-/***/ },
-
-/***/ "./src/engagement/DeviceEngagement.js"
-/*!********************************************!*\
-  !*** ./src/engagement/DeviceEngagement.js ***!
-  \********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DeviceEngagement: () => (/* binding */ DeviceEngagement),
-/* harmony export */   MDLDeviceEngagement: () => (/* binding */ MDLDeviceEngagement)
-/* harmony export */ });
-/* harmony import */ var _DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeviceRetrievalMethod */ "./src/engagement/DeviceRetrievalMethod.js");
-
-
-class DeviceEngagement {
-    deviceRetrievalMethods = []
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null
-        const result = new DeviceEngagement()
-
-        for (var item of jsonObject["deviceRetrievalMethods"]) {
-            item = _DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_0__.DeviceRetrievalMethod.fromJson(item);
-            if (item != null) {
-                result.deviceRetrievalMethods.push(item);
-            }
-        }
-
-        return result
-    }
-
-    toJson() {
-        return {
-            "deviceRetrievalMethods": this.deviceRetrievalMethods.map(e => e.toJson()),
-        }
-    }
-}
-
-const MDLDeviceEngagement = {
-    QR: 0,
-    NFC: 1,
-}
-
-
-/***/ },
-
-/***/ "./src/engagement/DeviceRetrievalMethod.js"
-/*!*************************************************!*\
-  !*** ./src/engagement/DeviceRetrievalMethod.js ***!
-  \*************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DeviceRetrievalMethod: () => (/* binding */ DeviceRetrievalMethod)
-/* harmony export */ });
-/* harmony import */ var _DataRetrieval__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataRetrieval */ "./src/engagement/DataRetrieval.js");
-
-
-class DeviceRetrievalMethod {
-    type
-    version
-    cmdMaxLength
-    respMaxLength
-    clientModeSupport
-    clientModeUUID
-    serverModeSupport
-    serverModeUUID
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null
-        const result = new DeviceRetrievalMethod()
-
-        result.type = jsonObject["type"]
-        result.version = jsonObject["version"]
-        result.cmdMaxLength = jsonObject["cmdMaxLength"]
-        result.respMaxLength = jsonObject["respMaxLength"]
-        result.clientModeSupport = jsonObject["clientModeSupport"]
-        result.clientModeUUID = jsonObject["clientModeUUID"]
-        result.serverModeSupport = jsonObject["serverModeSupport"]
-        result.serverModeUUID = jsonObject["serverModeUUID"]
-
-        return result
-    }
-
-    toJson() {
-        return {
-            "type": this.type,
-            "version": this.version,
-            "cmdMaxLength": this.cmdMaxLength,
-            "respMaxLength": this.respMaxLength,
-            "clientModeSupport": this.clientModeSupport,
-            "clientModeUUID": this.clientModeUUID,
-            "serverModeSupport": this.serverModeSupport,
-            "serverModeUUID": this.serverModeUUID,
-        }
-    }
-}
-
-
-/***/ },
-
-/***/ "./src/engagement/DocumentRequestMDL.js"
-/*!**********************************************!*\
-  !*** ./src/engagement/DocumentRequestMDL.js ***!
-  \**********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DocumentRequest18013MDL: () => (/* binding */ DocumentRequest18013MDL),
-/* harmony export */   DocumentRequestMDL: () => (/* binding */ DocumentRequestMDL)
-/* harmony export */ });
-/* harmony import */ var _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NameSpaceMDL */ "./src/engagement/NameSpaceMDL.js");
-
-
-class DocumentRequestMDL {
-    docType
-    namespaces = []
-
-    constructor(docType) {
-        this.docType = docType
-    }
-
-    addNameSpace(namespace) {
-        this.namespaces.push(namespace);
-    }
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null;
-        var docType = jsonObject["docType"];
-        if (docType == "org.iso.18013.5.1.mDL") {
-            return DocumentRequest18013MDL.fromJson(jsonObject);
-        }
-        var result = new DocumentRequestMDL(docType);
-
-        result.namespaces = (jsonObject["namespaces"]).map(item => _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.NameSpaceMDL.fromJson(item));
-
-        return result;
-    }
-
-    toJson() {
-        return {
-            "docType": this.docType,
-            "namespaces": this.namespaces.map(item => item.toJson())
-        }
-    }
-}
-
-class DocumentRequest18013MDL extends DocumentRequestMDL {
-    familyName
-    givenName
-    birthDate
-    issueDate
-    expiryDate
-    issuingCountry
-    issuingAuthority
-    documentNumber
-    portrait
-    drivingPrivileges
-    unDistinguishingSign
-    administrativeNumber
-    sex
-    height
-    weight
-    eyeColour
-    hairColour
-    birthPlace
-    residentAddress
-    portraitCaptureDate
-    ageInYears
-    ageBirthYear
-    ageOver18
-    issuingJurisdiction
-    nationality
-    residentCity
-    residentState
-    residentPostalCode
-    residentCountry
-    biometricTemplateFace
-    biometricTemplateIris
-    biometricTemplateFinger
-    biometricTemplateSignatureSign
-    familyNameNationalCharacter
-    givenNameNationalCharacter
-    signatureUsualMark
-
-    constructor() {
-        super("org.iso.18013.5.1.mDL")
-    }
-
-    disableIntentToRetainValues() {
-        this.setAll(_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.FALSE);
-    }
-
-    enableIntentToRetainValues() {
-        this.setAll(_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.TRUE);
-    }
-
-    setAll(value) {
-        this.familyName = value;
-        this.givenName = value;
-        this.birthDate = value;
-        this.issueDate = value;
-        this.expiryDate = value;
-        this.issuingCountry = value;
-        this.issuingAuthority = value;
-        this.documentNumber = value;
-        this.portrait = value;
-        this.drivingPrivileges = value;
-        this.unDistinguishingSign = value;
-        this.administrativeNumber = value;
-        this.sex = value;
-        this.height = value;
-        this.weight = value;
-        this.eyeColour = value;
-        this.hairColour = value;
-        this.birthPlace = value;
-        this.residentAddress = value;
-        this.portraitCaptureDate = value;
-        this.ageInYears = value;
-        this.ageBirthYear = value;
-        this.ageOver18 = value;
-        this.issuingJurisdiction = value;
-        this.nationality = value;
-        this.residentCity = value;
-        this.residentState = value;
-        this.residentPostalCode = value;
-        this.residentCountry = value;
-        this.biometricTemplateFace = value;
-        this.biometricTemplateIris = value;
-        this.biometricTemplateFinger = value;
-        this.biometricTemplateSignatureSign = value;
-        this.familyNameNationalCharacter = value;
-        this.givenNameNationalCharacter = value;
-        this.signatureUsualMark = value;
-    }
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null
-        const result = new DocumentRequest18013MDL()
-
-        result.namespaces = (jsonObject["namespaces"]).map(item => _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.NameSpaceMDL.fromJson(item));
-        result.familyName = jsonObject["familyName"]
-        result.givenName = jsonObject["givenName"]
-        result.birthDate = jsonObject["birthDate"]
-        result.issueDate = jsonObject["issueDate"]
-        result.expiryDate = jsonObject["expiryDate"]
-        result.issuingCountry = jsonObject["issuingCountry"]
-        result.issuingAuthority = jsonObject["issuingAuthority"]
-        result.documentNumber = jsonObject["documentNumber"]
-        result.portrait = jsonObject["portrait"]
-        result.drivingPrivileges = jsonObject["drivingPrivileges"]
-        result.unDistinguishingSign = jsonObject["unDistinguishingSign"]
-        result.administrativeNumber = jsonObject["administrativeNumber"]
-        result.sex = jsonObject["sex"]
-        result.height = jsonObject["height"]
-        result.weight = jsonObject["weight"]
-        result.eyeColour = jsonObject["eyeColour"]
-        result.hairColour = jsonObject["hairColour"]
-        result.birthPlace = jsonObject["birthPlace"]
-        result.residentAddress = jsonObject["residentAddress"]
-        result.portraitCaptureDate = jsonObject["portraitCaptureDate"]
-        result.ageInYears = jsonObject["ageInYears"]
-        result.ageBirthYear = jsonObject["ageBirthYear"]
-        result.ageOver18 = jsonObject["ageOver18"]
-        result.issuingJurisdiction = jsonObject["issuingJurisdiction"]
-        result.nationality = jsonObject["nationality"]
-        result.residentCity = jsonObject["residentCity"]
-        result.residentState = jsonObject["residentState"]
-        result.residentPostalCode = jsonObject["residentPostalCode"]
-        result.residentCountry = jsonObject["residentCountry"]
-        result.biometricTemplateFace = jsonObject["biometricTemplateFace"]
-        result.biometricTemplateIris = jsonObject["biometricTemplateIris"]
-        result.biometricTemplateFinger = jsonObject["biometricTemplateFinger"]
-        result.biometricTemplateSignatureSign = jsonObject["biometricTemplateSignatureSign"]
-        result.familyNameNationalCharacter = jsonObject["familyNameNationalCharacter"]
-        result.givenNameNationalCharacter = jsonObject["givenNameNationalCharacter"]
-        result.signatureUsualMark = jsonObject["signatureUsualMark"]
-
-        return result
-    }
-
-    toJson() {
-        return {
-            "docType": this.docType,
-            "namespaces": this.namespaces.map(item => item.toJson()),
-            "familyName": this.familyName,
-            "givenName": this.givenName,
-            "birthDate": this.birthDate,
-            "issueDate": this.issueDate,
-            "expiryDate": this.expiryDate,
-            "issuingCountry": this.issuingCountry,
-            "issuingAuthority": this.issuingAuthority,
-            "documentNumber": this.documentNumber,
-            "portrait": this.portrait,
-            "drivingPrivileges": this.drivingPrivileges,
-            "unDistinguishingSign": this.unDistinguishingSign,
-            "administrativeNumber": this.administrativeNumber,
-            "sex": this.sex,
-            "height": this.height,
-            "weight": this.weight,
-            "eyeColour": this.eyeColour,
-            "hairColour": this.hairColour,
-            "birthPlace": this.birthPlace,
-            "residentAddress": this.residentAddress,
-            "portraitCaptureDate": this.portraitCaptureDate,
-            "ageInYears": this.ageInYears,
-            "ageBirthYear": this.ageBirthYear,
-            "ageOver18": this.ageOver18,
-            "issuingJurisdiction": this.issuingJurisdiction,
-            "nationality": this.nationality,
-            "residentCity": this.residentCity,
-            "residentState": this.residentState,
-            "residentPostalCode": this.residentPostalCode,
-            "residentCountry": this.residentCountry,
-            "biometricTemplateFace": this.biometricTemplateFace,
-            "biometricTemplateIris": this.biometricTemplateIris,
-            "biometricTemplateFinger": this.biometricTemplateFinger,
-            "biometricTemplateSignatureSign": this.biometricTemplateSignatureSign,
-            "familyNameNationalCharacter": this.familyNameNationalCharacter,
-            "givenNameNationalCharacter": this.givenNameNationalCharacter,
-            "signatureUsualMark": this.signatureUsualMark,
-        }
-    }
-}
-
-
-/***/ },
-
-/***/ "./src/engagement/NameSpaceMDL.js"
-/*!****************************************!*\
-  !*** ./src/engagement/NameSpaceMDL.js ***!
-  \****************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   MDLIntentToRetain: () => (/* binding */ MDLIntentToRetain),
-/* harmony export */   NameSpaceMDL: () => (/* binding */ NameSpaceMDL)
-/* harmony export */ });
-class NameSpaceMDL {
-    name
-    map = {}
-
-    constructor(name) {
-        this.name = name
-    }
-
-    addField(name, intentToRetain) {
-        this.map[name] = intentToRetain;
-      }
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null
-        const result = new NameSpaceMDL(jsonObject["name"])
-
-        result.map = jsonObject["map"]
-
-        return result
-    }
-
-    toJson() {
-        return {
-            "name": this.name,
-            "map": this.map
-        }
-    }
-}
-
-const MDLIntentToRetain = {
-    FALSE: 0,
-    TRUE: 1,
-}
-
-
-/***/ },
-
 /***/ "./src/index.js"
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -895,9 +444,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_88__.CustomizationImages),
 /* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_94__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_59__.DataField),
-/* harmony export */   DataRetrieval: () => (/* reexport safe */ _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.DataRetrieval),
-/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.DeviceEngagement),
-/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _engagement_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_108__.DeviceRetrievalMethod),
+/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.DataRetrieval),
+/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.DeviceEngagement),
+/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_108__.DeviceRetrievalMethod),
 /* harmony export */   DocFeature: () => (/* reexport safe */ _results_visible_digital_seals_DocFeature__WEBPACK_IMPORTED_MODULE_54__.DocFeature),
 /* harmony export */   DocFormat: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_28__.DocFormat),
 /* harmony export */   DocReaderAction: () => (/* binding */ DocReaderAction),
@@ -907,8 +456,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DocReaderScenario: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_11__.DocReaderScenario),
 /* harmony export */   DocReaderVersion: () => (/* reexport safe */ _info_DocReaderVersion__WEBPACK_IMPORTED_MODULE_6__.DocReaderVersion),
 /* harmony export */   DocumentReader: () => (/* binding */ DocumentReader),
-/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _engagement_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__.DocumentRequest18013MDL),
-/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _engagement_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__.DocumentRequestMDL),
+/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__.DocumentRequest18013MDL),
+/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__.DocumentRequestMDL),
 /* harmony export */   DocumentType: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_28__.DocumentType),
 /* harmony export */   DocumentTypeEnum: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_28__.DocType),
 /* harmony export */   DocumentsDatabase: () => (/* reexport safe */ _info_DocumentsDatabase__WEBPACK_IMPORTED_MODULE_9__.DocumentsDatabase),
@@ -944,14 +493,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Lights: () => (/* reexport safe */ _results_visual_results_Lights__WEBPACK_IMPORTED_MODULE_20__.Lights),
 /* harmony export */   LivenessParams: () => (/* reexport safe */ _params_process_params_LivenessParams__WEBPACK_IMPORTED_MODULE_77__.LivenessParams),
 /* harmony export */   LogLevel: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_78__.LogLevel),
-/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement),
-/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval),
-/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDocRequestPreset),
-/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _engagement_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__.MDLIntentToRetain),
+/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement),
+/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval),
+/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDocRequestPreset),
+/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__.MDLIntentToRetain),
 /* harmony export */   MRZFormat: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_78__.MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_78__.MeasureSystem),
 /* harmony export */   MrzDetectionModes: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_78__.MrzDetectionModes),
-/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _engagement_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__.NameSpaceMDL),
+/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__.NameSpaceMDL),
 /* harmony export */   OnlineMode: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineMode),
 /* harmony export */   OnlineProcessingConfig: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineProcessingConfig),
 /* harmony export */   OpticalStatus: () => (/* reexport safe */ _results_status_OpticalStatus__WEBPACK_IMPORTED_MODULE_35__.OpticalStatus),
@@ -1114,11 +663,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
 /* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
 /* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
-/* harmony import */ var _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./engagement/DataRetrieval */ "./src/engagement/DataRetrieval.js");
-/* harmony import */ var _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./engagement/DeviceEngagement */ "./src/engagement/DeviceEngagement.js");
-/* harmony import */ var _engagement_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./engagement/NameSpaceMDL */ "./src/engagement/NameSpaceMDL.js");
-/* harmony import */ var _engagement_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./engagement/DocumentRequestMDL */ "./src/engagement/DocumentRequestMDL.js");
-/* harmony import */ var _engagement_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./engagement/DeviceRetrievalMethod */ "./src/engagement/DeviceRetrievalMethod.js");
+/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
+/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
+/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
+/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
 
 
 
@@ -1516,23 +1065,23 @@ class DocumentReader {
         var response = "";
         if (options?.withoutUI != true) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
-          } else if (type == _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement.NFC) {
+          } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
-          } else if (type == _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement.QR && options?.data != null) {
+          } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceEngagement.QR && options?.data != null) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceData", [options.data]);
           }
 
         var jsonObject = JSON.parse(response);
         return [
-            _engagement_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
+            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_105__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
             _info_DocReaderException__WEBPACK_IMPORTED_MODULE_8__.DocReaderException.fromJson(jsonObject["error"]),
         ]
     }
 
     async retrieveData(retrieval, options) {
         var func = "startRetrieveData";
-        if (options?.withoutUI == _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
-        if (options?.withoutUI == _engagement_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_104__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
         
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(func, [retrieval.toJson(), options?.engagement?.toJson()]);
         var jsonObject = JSON.parse(response);
@@ -2253,6 +1802,457 @@ class NativeEventEmitter {
         _exec(null, ["setEvent", id])
     }
 }
+
+/***/ },
+
+/***/ "./src/mdl/DataRetrieval.js"
+/*!**********************************!*\
+  !*** ./src/mdl/DataRetrieval.js ***!
+  \**********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DataRetrieval: () => (/* binding */ DataRetrieval),
+/* harmony export */   MDLDeviceRetrieval: () => (/* binding */ MDLDeviceRetrieval),
+/* harmony export */   MDLDocRequestPreset: () => (/* binding */ MDLDocRequestPreset)
+/* harmony export */ });
+/* harmony import */ var _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+/* harmony import */ var _DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
+
+
+
+class DataRetrieval {
+    deviceRetrieval
+    docRequestPreset
+    intentToRetain = _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.FALSE
+    requests = []
+
+    constructor(deviceRetrieval) {
+        this.deviceRetrieval = deviceRetrieval
+    }
+
+    setDocRequestPreset(docRequestPreset, intentToRetain) {
+        this.docRequestPreset = docRequestPreset
+        this.intentToRetain = intentToRetain
+    }
+
+    addDocRequest(request) {
+        this.requests.push(request);
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null
+        const result = new DataRetrieval(jsonObject["deviceRetrieval"])
+
+        result.docRequestPreset = jsonObject["docRequestPreset"]
+        result.intentToRetain = jsonObject["intentToRetain"]
+        result.requests = (jsonObject["requests"]).map(item => _DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_1__.DocumentRequestMDL.fromJson(item));
+
+        return result
+    }
+
+    toJson() {
+        return {
+            "deviceRetrieval": this.deviceRetrieval,
+            "docRequestPreset": this.docRequestPreset,
+            "intentToRetain": this.intentToRetain,
+            "requests": this.requests.map(item => item.toJson())
+        }
+    }
+}
+
+const MDLDocRequestPreset = {
+    ALL: 0,
+    AGE: 1,
+    STANDARD_ID: 2,
+    TRAVEL: 3,
+    DRIVERS_LICENSE: 4,
+}
+
+const MDLDeviceRetrieval = {
+    NFC: 1,
+    BLE: 2,
+}
+
+
+/***/ },
+
+/***/ "./src/mdl/DeviceEngagement.js"
+/*!*************************************!*\
+  !*** ./src/mdl/DeviceEngagement.js ***!
+  \*************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DeviceEngagement: () => (/* binding */ DeviceEngagement),
+/* harmony export */   MDLDeviceEngagement: () => (/* binding */ MDLDeviceEngagement)
+/* harmony export */ });
+/* harmony import */ var _DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+
+
+class DeviceEngagement {
+    deviceRetrievalMethods = []
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null
+        const result = new DeviceEngagement()
+
+        for (var item of jsonObject["deviceRetrievalMethods"]) {
+            item = _DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_0__.DeviceRetrievalMethod.fromJson(item);
+            if (item != null) {
+                result.deviceRetrievalMethods.push(item);
+            }
+        }
+
+        return result
+    }
+
+    toJson() {
+        return {
+            "deviceRetrievalMethods": this.deviceRetrievalMethods.map(e => e.toJson()),
+        }
+    }
+}
+
+const MDLDeviceEngagement = {
+    QR: 0,
+    NFC: 1,
+}
+
+
+/***/ },
+
+/***/ "./src/mdl/DeviceRetrievalMethod.js"
+/*!******************************************!*\
+  !*** ./src/mdl/DeviceRetrievalMethod.js ***!
+  \******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DeviceRetrievalMethod: () => (/* binding */ DeviceRetrievalMethod)
+/* harmony export */ });
+/* harmony import */ var _DataRetrieval__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataRetrieval */ "./src/mdl/DataRetrieval.js");
+
+
+class DeviceRetrievalMethod {
+    type
+    version
+    cmdMaxLength
+    respMaxLength
+    clientModeSupport
+    clientModeUUID
+    serverModeSupport
+    serverModeUUID
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null
+        const result = new DeviceRetrievalMethod()
+
+        result.type = jsonObject["type"]
+        result.version = jsonObject["version"]
+        result.cmdMaxLength = jsonObject["cmdMaxLength"]
+        result.respMaxLength = jsonObject["respMaxLength"]
+        result.clientModeSupport = jsonObject["clientModeSupport"]
+        result.clientModeUUID = jsonObject["clientModeUUID"]
+        result.serverModeSupport = jsonObject["serverModeSupport"]
+        result.serverModeUUID = jsonObject["serverModeUUID"]
+
+        return result
+    }
+
+    toJson() {
+        return {
+            "type": this.type,
+            "version": this.version,
+            "cmdMaxLength": this.cmdMaxLength,
+            "respMaxLength": this.respMaxLength,
+            "clientModeSupport": this.clientModeSupport,
+            "clientModeUUID": this.clientModeUUID,
+            "serverModeSupport": this.serverModeSupport,
+            "serverModeUUID": this.serverModeUUID,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/mdl/DocumentRequestMDL.js"
+/*!***************************************!*\
+  !*** ./src/mdl/DocumentRequestMDL.js ***!
+  \***************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DocumentRequest18013MDL: () => (/* binding */ DocumentRequest18013MDL),
+/* harmony export */   DocumentRequestMDL: () => (/* binding */ DocumentRequestMDL)
+/* harmony export */ });
+/* harmony import */ var _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+
+
+class DocumentRequestMDL {
+    docType
+    namespaces = []
+
+    constructor(docType) {
+        this.docType = docType
+    }
+
+    addNameSpace(namespace) {
+        this.namespaces.push(namespace);
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        var docType = jsonObject["docType"];
+        if (docType == "org.iso.18013.5.1.mDL") {
+            return DocumentRequest18013MDL.fromJson(jsonObject);
+        }
+        var result = new DocumentRequestMDL(docType);
+
+        result.namespaces = (jsonObject["namespaces"]).map(item => _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.NameSpaceMDL.fromJson(item));
+
+        return result;
+    }
+
+    toJson() {
+        return {
+            "docType": this.docType,
+            "namespaces": this.namespaces.map(item => item.toJson())
+        }
+    }
+}
+
+class DocumentRequest18013MDL extends DocumentRequestMDL {
+    familyName
+    givenName
+    birthDate
+    issueDate
+    expiryDate
+    issuingCountry
+    issuingAuthority
+    documentNumber
+    portrait
+    drivingPrivileges
+    unDistinguishingSign
+    administrativeNumber
+    sex
+    height
+    weight
+    eyeColour
+    hairColour
+    birthPlace
+    residentAddress
+    portraitCaptureDate
+    ageInYears
+    ageBirthYear
+    ageOver18
+    issuingJurisdiction
+    nationality
+    residentCity
+    residentState
+    residentPostalCode
+    residentCountry
+    biometricTemplateFace
+    biometricTemplateIris
+    biometricTemplateFinger
+    biometricTemplateSignatureSign
+    familyNameNationalCharacter
+    givenNameNationalCharacter
+    signatureUsualMark
+
+    constructor() {
+        super("org.iso.18013.5.1.mDL")
+    }
+
+    disableIntentToRetainValues() {
+        this.setAll(_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.FALSE);
+    }
+
+    enableIntentToRetainValues() {
+        this.setAll(_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.MDLIntentToRetain.TRUE);
+    }
+
+    setAll(value) {
+        this.familyName = value;
+        this.givenName = value;
+        this.birthDate = value;
+        this.issueDate = value;
+        this.expiryDate = value;
+        this.issuingCountry = value;
+        this.issuingAuthority = value;
+        this.documentNumber = value;
+        this.portrait = value;
+        this.drivingPrivileges = value;
+        this.unDistinguishingSign = value;
+        this.administrativeNumber = value;
+        this.sex = value;
+        this.height = value;
+        this.weight = value;
+        this.eyeColour = value;
+        this.hairColour = value;
+        this.birthPlace = value;
+        this.residentAddress = value;
+        this.portraitCaptureDate = value;
+        this.ageInYears = value;
+        this.ageBirthYear = value;
+        this.ageOver18 = value;
+        this.issuingJurisdiction = value;
+        this.nationality = value;
+        this.residentCity = value;
+        this.residentState = value;
+        this.residentPostalCode = value;
+        this.residentCountry = value;
+        this.biometricTemplateFace = value;
+        this.biometricTemplateIris = value;
+        this.biometricTemplateFinger = value;
+        this.biometricTemplateSignatureSign = value;
+        this.familyNameNationalCharacter = value;
+        this.givenNameNationalCharacter = value;
+        this.signatureUsualMark = value;
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null
+        const result = new DocumentRequest18013MDL()
+
+        result.namespaces = (jsonObject["namespaces"]).map(item => _NameSpaceMDL__WEBPACK_IMPORTED_MODULE_0__.NameSpaceMDL.fromJson(item));
+        result.familyName = jsonObject["familyName"]
+        result.givenName = jsonObject["givenName"]
+        result.birthDate = jsonObject["birthDate"]
+        result.issueDate = jsonObject["issueDate"]
+        result.expiryDate = jsonObject["expiryDate"]
+        result.issuingCountry = jsonObject["issuingCountry"]
+        result.issuingAuthority = jsonObject["issuingAuthority"]
+        result.documentNumber = jsonObject["documentNumber"]
+        result.portrait = jsonObject["portrait"]
+        result.drivingPrivileges = jsonObject["drivingPrivileges"]
+        result.unDistinguishingSign = jsonObject["unDistinguishingSign"]
+        result.administrativeNumber = jsonObject["administrativeNumber"]
+        result.sex = jsonObject["sex"]
+        result.height = jsonObject["height"]
+        result.weight = jsonObject["weight"]
+        result.eyeColour = jsonObject["eyeColour"]
+        result.hairColour = jsonObject["hairColour"]
+        result.birthPlace = jsonObject["birthPlace"]
+        result.residentAddress = jsonObject["residentAddress"]
+        result.portraitCaptureDate = jsonObject["portraitCaptureDate"]
+        result.ageInYears = jsonObject["ageInYears"]
+        result.ageBirthYear = jsonObject["ageBirthYear"]
+        result.ageOver18 = jsonObject["ageOver18"]
+        result.issuingJurisdiction = jsonObject["issuingJurisdiction"]
+        result.nationality = jsonObject["nationality"]
+        result.residentCity = jsonObject["residentCity"]
+        result.residentState = jsonObject["residentState"]
+        result.residentPostalCode = jsonObject["residentPostalCode"]
+        result.residentCountry = jsonObject["residentCountry"]
+        result.biometricTemplateFace = jsonObject["biometricTemplateFace"]
+        result.biometricTemplateIris = jsonObject["biometricTemplateIris"]
+        result.biometricTemplateFinger = jsonObject["biometricTemplateFinger"]
+        result.biometricTemplateSignatureSign = jsonObject["biometricTemplateSignatureSign"]
+        result.familyNameNationalCharacter = jsonObject["familyNameNationalCharacter"]
+        result.givenNameNationalCharacter = jsonObject["givenNameNationalCharacter"]
+        result.signatureUsualMark = jsonObject["signatureUsualMark"]
+
+        return result
+    }
+
+    toJson() {
+        return {
+            "docType": this.docType,
+            "namespaces": this.namespaces.map(item => item.toJson()),
+            "familyName": this.familyName,
+            "givenName": this.givenName,
+            "birthDate": this.birthDate,
+            "issueDate": this.issueDate,
+            "expiryDate": this.expiryDate,
+            "issuingCountry": this.issuingCountry,
+            "issuingAuthority": this.issuingAuthority,
+            "documentNumber": this.documentNumber,
+            "portrait": this.portrait,
+            "drivingPrivileges": this.drivingPrivileges,
+            "unDistinguishingSign": this.unDistinguishingSign,
+            "administrativeNumber": this.administrativeNumber,
+            "sex": this.sex,
+            "height": this.height,
+            "weight": this.weight,
+            "eyeColour": this.eyeColour,
+            "hairColour": this.hairColour,
+            "birthPlace": this.birthPlace,
+            "residentAddress": this.residentAddress,
+            "portraitCaptureDate": this.portraitCaptureDate,
+            "ageInYears": this.ageInYears,
+            "ageBirthYear": this.ageBirthYear,
+            "ageOver18": this.ageOver18,
+            "issuingJurisdiction": this.issuingJurisdiction,
+            "nationality": this.nationality,
+            "residentCity": this.residentCity,
+            "residentState": this.residentState,
+            "residentPostalCode": this.residentPostalCode,
+            "residentCountry": this.residentCountry,
+            "biometricTemplateFace": this.biometricTemplateFace,
+            "biometricTemplateIris": this.biometricTemplateIris,
+            "biometricTemplateFinger": this.biometricTemplateFinger,
+            "biometricTemplateSignatureSign": this.biometricTemplateSignatureSign,
+            "familyNameNationalCharacter": this.familyNameNationalCharacter,
+            "givenNameNationalCharacter": this.givenNameNationalCharacter,
+            "signatureUsualMark": this.signatureUsualMark,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/mdl/NameSpaceMDL.js"
+/*!*********************************!*\
+  !*** ./src/mdl/NameSpaceMDL.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MDLIntentToRetain: () => (/* binding */ MDLIntentToRetain),
+/* harmony export */   NameSpaceMDL: () => (/* binding */ NameSpaceMDL)
+/* harmony export */ });
+class NameSpaceMDL {
+    name
+    map = {}
+
+    constructor(name) {
+        this.name = name
+    }
+
+    addField(name, intentToRetain) {
+        this.map[name] = intentToRetain;
+      }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null
+        const result = new NameSpaceMDL(jsonObject["name"])
+
+        result.map = jsonObject["map"]
+
+        return result
+    }
+
+    toJson() {
+        return {
+            "name": this.name,
+            "map": this.map
+        }
+    }
+}
+
+const MDLIntentToRetain = {
+    FALSE: 0,
+    TRUE: 1,
+}
+
 
 /***/ },
 
