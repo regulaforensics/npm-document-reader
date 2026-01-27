@@ -2408,10 +2408,7 @@ static NSMutableArray* weakReferencesHolder;
 +(RGLNameSpaceMDL*)nameSpaceMDLFromJson:(NSDictionary*)input {
     RGLNameSpaceMDL* result = [[RGLNameSpaceMDL alloc] initWithName:input[@"name"]];
     
-    NSDictionary* map = input[@"map"];
-    for (NSString* key in map) {
-        [result addField:key intentToRetain:[map[key] integerValue]];
-    }
+    [result setValue:input[@"map"] forKey:@"jsonDict"];
 
     return result;
     
@@ -2565,8 +2562,8 @@ static NSMutableArray* weakReferencesHolder;
 +(RGLDataRetrieval*)dataRetrievalFromJson:(NSDictionary*)input {
     RGLDataRetrieval* result = [[RGLDataRetrieval alloc] initWithDeviceRetrieval:[input[@"deviceRetrieval"] integerValue]];
     
-    if (input[@"docRequestPreset"])
-        [result setDocRequestPreset:[input[@"docRequestPreset"] integerValue] intentToRetain:[input[@"intentToRetain"] integerValue]];
+    [result setValue:input[@"docRequestPreset"] forKey:@"docRequestPreset"];
+    [result setValue:input[@"intentToRetain"] forKey:@"intentToRetain"];
     
     NSMutableArray<RGLDocumentRequestMDL*>* requests = [NSMutableArray new];
     for(NSDictionary* item in [input valueForKey:@"requests"]){
