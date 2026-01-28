@@ -3,7 +3,8 @@ import { InitConfig } from './config/InitConfig';
 import { RFIDConfig, RFIDCompletion, RFIDProgressCompletion, ChipDetectedCompletion, RetryReadChipCompletion, PaCertificateCompletion, TaCertificateCompletion, PKDCertificateRequest, TaSignatureCompletion, TASignatureRequest } from './config/RFIDConfig';
 import { ScannerConfig } from './config/ScannerConfig';
 import { RecognizeConfig, ImageInputData } from './config/RecognizeConfig';
-export { OnlineProcessingConfig, ImageFormat, OnlineMode, InitConfig, RFIDConfig, RFIDCompletion, RFIDProgressCompletion, ChipDetectedCompletion, RetryReadChipCompletion, PaCertificateCompletion, TaCertificateCompletion, PKDCertificateRequest, TaSignatureCompletion, TASignatureRequest, ScannerConfig, RecognizeConfig, ImageInputData };
+import { FinalizeConfig } from './config/FinalizeConfig';
+export { OnlineProcessingConfig, ImageFormat, OnlineMode, InitConfig, RFIDConfig, RFIDCompletion, RFIDProgressCompletion, ChipDetectedCompletion, RetryReadChipCompletion, PaCertificateCompletion, TaCertificateCompletion, PKDCertificateRequest, TaSignatureCompletion, TASignatureRequest, ScannerConfig, RecognizeConfig, ImageInputData, FinalizeConfig };
 
 import { DocReaderVersion } from './info/DocReaderVersion';
 import { PrepareProgress, DocumentReaderPrepareCompletion } from './info/PrepareProgress';
@@ -375,7 +376,7 @@ export class DocumentReader {
      * 
      * @returns Returns action, info and error.
     */
-    finalizePackage(): Promise<[action: DocReaderAction, info: TransactionInfo | null, error: DocReaderException | null]>;
+    finalizePackage(config?: FinalizeConfig): Promise<[action: DocReaderAction, info: TransactionInfo | null, error: DocReaderException | null]>;
 
     /** It's used to end transaction during backend processing. */
     endBackendTransaction(): void;

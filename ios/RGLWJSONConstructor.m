@@ -1961,6 +1961,7 @@ static NSMutableArray* weakReferencesHolder;
     result[@"stopList"] = @(input.stopList);
     result[@"mDL"] = @(input.mDL);
     result[@"age"] = @(input.age);
+    result[@"captureProcessIntegrity"] = @(input.captureProcessIntegrity);
     result[@"detailsAge"] = [self generateDetailsAge:input.detailsAge];
     
     return result;
@@ -2602,6 +2603,28 @@ static NSMutableArray* weakReferencesHolder;
     return [RGLWJSONConstructor dictToString: result];
 }
 
++(RGLFinalizeConfig*)finalizeConfigFromJson:(NSDictionary*)input {
+    if(input == nil) return nil;
+    RGLFinalizeConfig *result = [RGLFinalizeConfig defaultParams];
+    
+    if (input[@"rawImages"]) result.rawImages = [input[@"rawImages"] boolValue];
+    if (input[@"video"]) result.video = [input[@"video"] boolValue];
+    if (input[@"rfidSession"]) result.rfidSession = [input[@"rfidSession"] boolValue];
+
+    return result;
+}
+
++(NSDictionary*)generateFinalizeConfig:(RGLFinalizeConfig*)input {
+    if(input == nil) return nil;
+    NSMutableDictionary* result = [NSMutableDictionary new];
+    
+    result[@"rawImages"] = @(input.rawImages);
+    result[@"video"] = @(input.video);
+    result[@"rfidSession"] = @(input.rfidSession);
+    
+    return result;
+}
+
 +(RGLDocumentReaderResults*)documentReaderResultsFromJson:(NSDictionary*)input {
     NSMutableArray<RGLDocumentReaderDocumentType*>* documentType = [NSMutableArray new];
     for(NSDictionary* item in [input valueForKey:@"documentType"]){
@@ -2647,6 +2670,7 @@ static NSMutableArray* weakReferencesHolder;
             transactionInfo:[self transactionInfoFromJson:[input valueForKey:@"transactionInfo"]]];
     
     [result setValue:[RGLWJSONConstructor base64Decode:input[@"dtcData"]] forKey:@"dtcData"];
+    [result setValue:input[@"bsiTr03135Results"] forKey:@"bsiTr03135Results"];
     
     return result;
 }
@@ -2696,6 +2720,7 @@ static NSMutableArray* weakReferencesHolder;
     result[@"elapsedTime"] = @(input.elapsedTime);
     result[@"elapsedTimeRFID"] = @(input.elapsedTimeRFID);
     result[@"rawResult"] = input.rawResult;
+    result[@"bsiTr03135Results"] = input.bsiTr03135Results;
     result[@"status"] = [self generateDocumentReaderResultsStatus:input.status];
     result[@"vdsncData"] = [self generateVDSNCData:input.vdsncData];
     result[@"vdsData"] = [self generateVDSData:input.vdsData];

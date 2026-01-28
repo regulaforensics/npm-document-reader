@@ -206,11 +206,8 @@ export declare class ProcessParams {
      * Default: `true`.
      */
     returnTransliteratedFields?: boolean;
-
-    /** 
-     * Android only. 
-     */
     checkCaptureProcessIntegrity?: boolean;
+    bsiTr03135Results?: boolean;
     /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows

@@ -224,6 +224,8 @@ export declare enum CheckDiagnose {
     DOC_LIVENESS_ELECTRONIC_DEVICE_DETECTED = 240,
     /** Invalid barcode background. */
     DOC_LIVENESS_INVALID_BARCODE_BACKGROUND = 241,
+    /**  Virtual camera was detected. */
+    DOC_LIVENESS_VIRTUAL_CAMERA_DETECTED = 242,
     ICAO_IDB_BASE_32_ERROR = 243,
     ICAO_IDB_ZIPPED_ERROR = 244,
     ICAO_IDB_MESSAGE_ZONE_EMPTY = 245,

@@ -71,6 +71,7 @@
         @"getDocReaderVersion": ^{ [self getDocReaderVersion :callback]; },
         @"getDocReaderDocumentsDatabase": ^{ [self getDocReaderDocumentsDatabase :callback]; },
         @"finalizePackage": ^{ [self finalizePackage :callback]; },
+        @"finalizePackageWithFinalizeConfig": ^{ [self finalizePackageWithFinalizeConfig :args[0] :callback]; },
         @"endBackendTransaction": ^{ [self endBackendTransaction]; },
         @"textFieldValueByType": ^{ [self textFieldValueByType :args[0] :args[1] :callback]; },
         @"textFieldValueByTypeLcid": ^{ [self textFieldValueByTypeLcid :args[0] :args[1] :args[2] :callback]; },
@@ -443,6 +444,12 @@ RGLWCallback savedCallbackForBluetoothResult;
 
 +(void)finalizePackage:(RGLWCallback)callback {
     [RGLDocReader.shared finalizePackageWithCompletion:^(RGLDocReaderAction action, RGLTransactionInfo* info, NSError* error) {
+        callback([RGLWJSONConstructor generateFinalizePackageCompletion:[RGLWConfig generateDocReaderAction: action] :info :error]);
+    }];
+}
+
++(void)finalizePackageWithFinalizeConfig:(NSDictionary*)config :(RGLWCallback)callback {
+    [RGLDocReader.shared finalizePackageWithFinalizeConfig:[RGLWJSONConstructor finalizeConfigFromJson:config] completion:^(RGLDocReaderAction action, RGLTransactionInfo* info, NSError* error) {
         callback([RGLWJSONConstructor generateFinalizePackageCompletion:[RGLWConfig generateDocReaderAction: action] :info :error]);
     }];
 }
