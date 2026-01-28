@@ -979,8 +979,8 @@ export var documentRequest18013MDL = {
   "signatureUsualMark": 0,
 };
 export var dataRetrieval = {
+  "docRequestPreset": 0,
+  "intentToRetain": 1,
   "deviceRetrieval": 2,
-  "docRequestPreset": 1,
-  "intentToRetain": 0,
   "requests": [documentRequestMDL, documentRequest18013MDL],
 };
