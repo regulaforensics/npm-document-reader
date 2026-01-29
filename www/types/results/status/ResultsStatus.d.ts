@@ -23,7 +23,6 @@ export declare class ResultsStatus {
     readonly mDL: CheckResult;
     /** Summary of all age results. */
     readonly age: CheckResult;
-    /** Android only. */
     readonly captureProcessIntegrity: CheckResult | null;
     /** Container for an age related scanning statuses. */
     readonly ageStatus: AgeStatus;

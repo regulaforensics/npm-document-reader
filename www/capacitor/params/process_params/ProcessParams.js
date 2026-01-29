@@ -253,6 +253,12 @@ export class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
+    get bsiTr03135Results() { return this._bsiTr03135Results; }
+    set bsiTr03135Results(val) {
+        this._bsiTr03135Results = val;
+        this._set({ "bsiTr03135Results": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -528,6 +534,7 @@ export class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
+        result._bsiTr03135Results = jsonObject["bsiTr03135Results"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -613,6 +620,7 @@ export class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
+            "bsiTr03135Results": this.bsiTr03135Results,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,

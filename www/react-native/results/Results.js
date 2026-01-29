@@ -39,6 +39,7 @@ export class Results {
     elapsedTime
     elapsedTimeRFID
     rawResult
+    bsiTr03135Results
     transactionInfo
 
     async textFieldValueByType(fieldType) {
@@ -202,6 +203,7 @@ export class Results {
         result.graphicResult = GraphicResult.fromJson(jsonObject["graphicResult"]);
         result.textResult = TextResult.fromJson(jsonObject["textResult"]);
         result.rawResult = jsonObject["rawResult"];
+        result.bsiTr03135Results = jsonObject["bsiTr03135Results"];
         result.rfidSessionData = RFIDSessionData.fromJson(jsonObject["rfidSessionData"]);
         result.authenticityResult = AuthenticityResult.fromJson(jsonObject["authenticityResult"]);
         result.barcodeResult = BarcodeResult.fromJson(jsonObject["barcodeResult"]);
@@ -286,6 +288,7 @@ export class Results {
             "elapsedTime": this.elapsedTime,
             "elapsedTimeRFID": this.elapsedTimeRFID,
             "rawResult": this.rawResult,
+            "bsiTr03135Results": this.bsiTr03135Results,
             "transactionInfo": this.transactionInfo?.toJson(),
         }
     }
@@ -336,6 +339,7 @@ export const ResultType = {
     INTERNAL_LICENSE: 50,
     MRZ_POSITION: 61,
     BARCODE_POSITION: 62,
+    RESULT_TYPE_BSI_XML_V2: 73,
     DOCUMENT_POSITION: 85,
     CUSTOM: 100,
     RFID_RAW_DATA: 101,
