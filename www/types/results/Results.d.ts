@@ -66,7 +66,7 @@ export declare class Results {
     /** Raw results, i.e. in their initial view. */
     readonly rawResult: string;
     /** Contains results in accordance with the BSI TR-03135 standard. */
-    readonly bsiTr03135Results: string;
+    readonly bsiTr03135Results: string | null;
     readonly transactionInfo: TransactionInfo | null;
 
     /** Allows you to get a value of a text field. */
