@@ -40,16 +40,12 @@ EXTERNAL SOURCES:
     :path: "../capacitor-cordova-ios-plugins"
 
 SPEC CHECKSUMS:
-  BTDevice: 26c385d7cc3be8767633e12d34a08133b54d637d
   Capacitor: 2b79172ad27f3be2d103cce88b8eb9803fdcc744
   CapacitorApp: 3963a84197280757b84f126afd1520a85ae3b092
   CapacitorCordova: 921bdb690ebe82421b24fce45552fd3dea2ae43a
   CapacitorStatusBar: 312e2e67928dfe9514c4a8916a1fd610552f5f35
   CordovaPlugins: 6645e371cc289abe4e014b6bce96c8a9fe98a118
   CordovaPluginsResources: da93847212bf7b16ba770e4d6c3e7dba820174c7
-  DocumentReaderFullAuthRFID: 400d1dc84190198da2f6845335998ce8a1b14914
-  DocumentReaderStage: 79104210cb3d9d4935682a389aa9d6614ebc1c93
-  RegulaCommonStage: 54fe5548efc9011b7161874d684e6f53debae77c
 
 PODFILE CHECKSUM: e830351ff5b19d0ecdb0c269f8b5444acb151f00
 

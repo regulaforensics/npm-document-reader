@@ -1,12 +1,12 @@
 repositories {
     maven {
-        url "https://maven.regulaforensics.com/RegulaDocumentReader/Stage"
+        url "https://maven.regulaforensics.com/RegulaDocumentReader/Beta"
     }
 }
 
 dependencies {
     //noinspection GradleDependency
-    implementation('com.regula.documentreader:api:9.2.12331'){
+    implementation('com.regula.documentreader:api:9.2.12373'){
         transitive = true
     }
 }

@@ -108,7 +108,9 @@ export var processParams = {
   "strictSecurityChecks": false,
   "returnTransliteratedFields": true,
   "checkCaptureProcessIntegrity": false,
-  "bsiTr03135Results": true,
+  "bsiTr03135": {
+    "generateResult": true
+  },
   "measureSystem": 1,
   "barcodeParserType": 3,
   "perspectiveAngle": 4,
