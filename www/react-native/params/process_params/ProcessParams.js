@@ -253,10 +253,10 @@ export class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
-    get bsiTr03135Results() { return this._bsiTr03135Results; }
-    set bsiTr03135Results(val) {
-        this._bsiTr03135Results = val;
-        this._set({ "bsiTr03135Results": val });
+    get bsiTr03135() { return this._bsiTr03135; }
+    set bsiTr03135(val) {
+        this._bsiTr03135 = val;
+        this._set({ "bsiTr03135": {"generateResult": val?.generateResult} });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -534,7 +534,8 @@ export class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
-        result._bsiTr03135Results = jsonObject["bsiTr03135Results"];
+        if(jsonObject["bsiTr03135"] != null) 
+            result.bsiTr03135 = new Bsi({generateResult: jsonObject["bsiTr03135"]["generateResult"]});
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -620,7 +621,7 @@ export class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
-            "bsiTr03135Results": this.bsiTr03135Results,
+            "bsiTr03135": {"generateResult": this.bsiTr03135?.generateResult},
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -697,3 +698,11 @@ export const MrzDetectionModes = {
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
 };
+
+export class Bsi {
+    generateResult
+
+    constructor(options) {
+        this.generateResult = options?.generateResult;
+    }
+}
