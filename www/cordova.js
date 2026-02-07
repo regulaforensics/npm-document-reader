@@ -468,6 +468,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BarcodeResult: () => (/* reexport safe */ _results_barcode_BarcodeResult__WEBPACK_IMPORTED_MODULE_47__.BarcodeResult),
 /* harmony export */   BarcodeStatus: () => (/* reexport safe */ _results_barcode_BarcodeStatus__WEBPACK_IMPORTED_MODULE_45__.BarcodeStatus),
 /* harmony export */   BarcodeType: () => (/* reexport safe */ _results_barcode_BarcodeType__WEBPACK_IMPORTED_MODULE_46__.BarcodeType),
+/* harmony export */   Bsi: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.Bsi),
 /* harmony export */   BytesData: () => (/* reexport safe */ _results_visible_digital_seals_BytesData__WEBPACK_IMPORTED_MODULE_54__.BytesData),
 /* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CameraMode),
 /* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CameraPosition),
@@ -4295,6 +4296,7 @@ class LivenessParams {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Bsi: () => (/* binding */ Bsi),
 /* harmony export */   LogLevel: () => (/* binding */ LogLevel),
 /* harmony export */   MRZFormat: () => (/* binding */ MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* binding */ MeasureSystem),
@@ -4563,10 +4565,10 @@ class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
-    get bsiTr03135Results() { return this._bsiTr03135Results; }
-    set bsiTr03135Results(val) {
-        this._bsiTr03135Results = val;
-        this._set({ "bsiTr03135Results": val });
+    get bsiTr03135() { return this._bsiTr03135; }
+    set bsiTr03135(val) {
+        this._bsiTr03135 = val;
+        this._set({ "bsiTr03135": {"generateResult": val?.generateResult} });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -4844,7 +4846,8 @@ class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
-        result._bsiTr03135Results = jsonObject["bsiTr03135Results"];
+        if(jsonObject["bsiTr03135"] != null) 
+            result.bsiTr03135 = new Bsi({generateResult: jsonObject["bsiTr03135"]["generateResult"]});
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -4930,7 +4933,7 @@ class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
-            "bsiTr03135Results": this.bsiTr03135Results,
+            "bsiTr03135": {"generateResult": this.bsiTr03135?.generateResult},
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -5007,6 +5010,14 @@ const MrzDetectionModes = {
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
 };
+
+class Bsi {
+    generateResult
+
+    constructor(options) {
+        this.generateResult = options?.generateResult;
+    }
+}
 
 
 /***/ },
