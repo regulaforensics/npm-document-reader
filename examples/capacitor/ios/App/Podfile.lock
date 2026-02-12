@@ -1,12 +1,12 @@
 PODS:
-  - Capacitor (7.0.1):
+  - Capacitor (8.0.2):
     - CapacitorCordova
-  - CapacitorApp (7.0.0):
+  - CapacitorApp (8.0.0):
     - Capacitor
-  - CapacitorCordova (7.0.1)
-  - CapacitorStatusBar (7.0.0):
+  - CapacitorCordova (8.0.2)
+  - CapacitorStatusBar (8.0.0):
     - Capacitor
-  - CordovaPlugins (7.0.1):
+  - CordovaPlugins (8.0.2):
     - CapacitorCordova
   - CordovaPluginsResources (0.0.105)
 
@@ -40,17 +40,13 @@ EXTERNAL SOURCES:
     :path: "../capacitor-cordova-ios-plugins"
 
 SPEC CHECKSUMS:
-  BTDevice: 86105ab20faef7bb66de90739a0f7a4405608b8b
-  Capacitor: de199cba6c8b20995428ad0b7cb0bc6ca625ffd4
-  CapacitorApp: 9cb31064a6c6bb2b1438583733a7bf45557fc1da
-  CapacitorCordova: 63d476958d5022d76f197031e8b7ea3519988c64
-  CapacitorStatusBar: a8c4c83ed2e973bdafb979e80e4b00d027832cb7
-  CordovaPlugins: 5ecabc5bc15ef6940ee1cfee0cb84727e9712ed6
-  CordovaPluginsResources: 0c211f770ed91763a179ebcd9b9346e120b70662
-  DocumentReader: d846f670d5c3fbfaae632575bb061f0715ae9a95
-  DocumentReaderFullAuthRFID: eef3a88905e78359773091b4dc4595b0eec99d1f
-  RegulaCommon: 54f82928f414e73365df1f6ed3473e7a7055b3e7
+  Capacitor: 2b79172ad27f3be2d103cce88b8eb9803fdcc744
+  CapacitorApp: 3963a84197280757b84f126afd1520a85ae3b092
+  CapacitorCordova: 921bdb690ebe82421b24fce45552fd3dea2ae43a
+  CapacitorStatusBar: 312e2e67928dfe9514c4a8916a1fd610552f5f35
+  CordovaPlugins: 6645e371cc289abe4e014b6bce96c8a9fe98a118
+  CordovaPluginsResources: da93847212bf7b16ba770e4d6c3e7dba820174c7
 
-PODFILE CHECKSUM: 915efc40b9c38c1bec7db5b40ae36925d0b1e1e8
+PODFILE CHECKSUM: e830351ff5b19d0ecdb0c269f8b5444acb151f00
 
 COCOAPODS: 1.16.2

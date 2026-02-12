@@ -68,7 +68,7 @@ export declare class Customization {
     /**
      * Allows you to set an offset for the camera frame (portrait orientation).
      *
-     * @default 3
+     * @default 23
      */
     cameraFrameOffsetWidth?: number;
 

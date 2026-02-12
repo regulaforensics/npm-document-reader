@@ -206,11 +206,8 @@ export declare class ProcessParams {
      * Default: `true`.
      */
     returnTransliteratedFields?: boolean;
-
-    /** 
-     * Android only. 
-     */
     checkCaptureProcessIntegrity?: boolean;
+    bsiTr03135?: Bsi;
     /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
@@ -489,3 +486,8 @@ export declare enum MrzDetectionModes {
     RESIZE_BINARIZE_WINDOW = 1,
     BLUR_BEFORE_BINARIZATION = 2,
 }
+
+export interface Bsi {
+    generateResult?: boolean
+}
+

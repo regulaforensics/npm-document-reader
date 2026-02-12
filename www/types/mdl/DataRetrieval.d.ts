@@ -2,7 +2,7 @@ import { DocumentRequestMDL } from "./DocumentRequestMDL";
 import { MDLIntentToRetain } from "./NameSpaceMDL";
 
 export declare class DataRetrieval {
-    constructor(deviceRetrieval: MDLDocRequestPreset);
+    constructor(deviceRetrieval: MDLDeviceRetrieval);
 
     setDocRequestPreset(docRequestPreset: MDLDocRequestPreset, intentToRetain: MDLIntentToRetain): void
     addDocRequest(request: DocumentRequestMDL): void;

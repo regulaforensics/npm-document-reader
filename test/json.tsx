@@ -108,6 +108,9 @@ export var processParams = {
   "strictSecurityChecks": false,
   "returnTransliteratedFields": true,
   "checkCaptureProcessIntegrity": false,
+  "bsiTr03135": {
+    "generateResult": true
+  },
   "measureSystem": 1,
   "barcodeParserType": 3,
   "perspectiveAngle": 4,
@@ -484,6 +487,11 @@ export var scannerConfig = {
   "livePortrait": img1,
   "extPortrait": img2,
   "cameraId": 1,
+};
+export var finalizeConfig = {
+  "rawImages": true,
+  "video": false,
+  "rfidSession": true,
 };
 
 export var documentsDatabase = {
@@ -873,6 +881,7 @@ export var results = {
   "imageQuality": [imageQualityGroup, imageQualityGroup, imageQualityGroup],
   "documentType": [documentType, documentType, documentType],
   "rawResult": "test2",
+  "bsiTr03135Results": "test3",
   "rfidSessionData": rfidSessionData,
   "authenticityResult": authenticityResult,
   "barcodeResult": barcodeResult,
@@ -979,8 +988,8 @@ export var documentRequest18013MDL = {
   "signatureUsualMark": 0,
 };
 export var dataRetrieval = {
+  "docRequestPreset": 0,
+  "intentToRetain": 1,
   "deviceRetrieval": 2,
-  "docRequestPreset": 1,
-  "intentToRetain": 0,
   "requests": [documentRequestMDL, documentRequest18013MDL],
 };

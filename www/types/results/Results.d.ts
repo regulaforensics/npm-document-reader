@@ -65,6 +65,8 @@ export declare class Results {
     readonly elapsedTimeRFID: number;
     /** Raw results, i.e. in their initial view. */
     readonly rawResult: string;
+    /** Contains results in accordance with the BSI TR-03135 standard. */
+    readonly bsiTr03135Results: string | null;
     readonly transactionInfo: TransactionInfo | null;
 
     /** Allows you to get a value of a text field. */
@@ -252,6 +254,8 @@ export declare enum ResultType {
     MRZ_POSITION = 61,
     /** Used for storing barcode position. */
     BARCODE_POSITION = 62,
+    /** Results in accordance with the BSI TR-03135 standard. */
+    RESULT_TYPE_BSI_XML_V2 = 73,
     /** Used for storing document position. */
     DOCUMENT_POSITION = 85,
     /** Not used */

@@ -5,7 +5,8 @@ import { InitConfig } from './config/InitConfig';
 import { RFIDConfig } from './config/RFIDConfig';
 import { ScannerConfig } from './config/ScannerConfig';
 import { RecognizeConfig, ImageInputData } from './config/RecognizeConfig';
-export { OnlineProcessingConfig, ImageFormat, OnlineMode, InitConfig, RFIDConfig, ScannerConfig, RecognizeConfig, ImageInputData };
+import { FinalizeConfig } from './config/FinalizeConfig';
+export { OnlineProcessingConfig, ImageFormat, OnlineMode, InitConfig, RFIDConfig, ScannerConfig, RecognizeConfig, ImageInputData, FinalizeConfig };
 
 import { DocReaderVersion } from './info/DocReaderVersion';
 import { PrepareProgress } from './info/PrepareProgress';
@@ -98,7 +99,7 @@ import { AccessControlProcedureType } from './results/rfid/AccessControlProcedur
 export { SecurityObject, CardProperties, DataField, Attribute, SignerInfo, SecurityObjectCertificates, CertificateChain, Authority, File, RFIDValue, RFIDValidity, RFIDDataFileType, CertificateData, FileData, RFIDCertificateType, RFIDSessionData, Application, RFIDApplicationType, RFIDAccessControlProcedureType, Extension, AccessControlProcedureType };
 
 import { LivenessParams } from './params/process_params/LivenessParams';
-import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
+import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, Bsi } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
 import { RFIDParams } from './params/process_params/RFIDParams';
@@ -106,7 +107,7 @@ import { ImageQA } from './params/process_params/ImageQA';
 import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
+export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, Bsi, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
@@ -134,11 +135,11 @@ import { TAChallenge } from './rfid/TAChallenge';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
 export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
 
-import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './engagement/DataRetrieval';
-import { DeviceEngagement, MDLDeviceEngagement } from './engagement/DeviceEngagement';
-import { NameSpaceMDL, MDLIntentToRetain } from './engagement/NameSpaceMDL';
-import { DocumentRequestMDL, DocumentRequest18013MDL } from './engagement/DocumentRequestMDL';
-import { DeviceRetrievalMethod } from './engagement/DeviceRetrievalMethod';
+import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
+import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';
+import { NameSpaceMDL, MDLIntentToRetain } from './mdl/NameSpaceMDL';
+import { DocumentRequestMDL, DocumentRequest18013MDL } from './mdl/DocumentRequestMDL';
+import { DeviceRetrievalMethod } from './mdl/DeviceRetrievalMethod';
 export { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval, DeviceEngagement, MDLDeviceEngagement, DeviceRetrievalMethod, DocumentRequest18013MDL, MDLIntentToRetain, NameSpaceMDL, DocumentRequestMDL };
 
 export class DocumentReader {
@@ -367,8 +368,10 @@ export class DocumentReader {
         return this._successOrErrorFromJson(response);
     }
 
-    async finalizePackage() {
-        var response = await exec("finalizePackage", []);
+    async finalizePackage(options) {
+        var funcName = "finalizePackage";
+        if (options?.config != null) funcName = "finalizePackageWithFinalizeConfig";
+        var response = await exec(funcName, [options?.config?.toJson()]);
         var jsonObject = JSON.parse(response);
         var action = jsonObject["action"];
         var info = TransactionInfo.fromJson(jsonObject["info"]);
@@ -395,11 +398,11 @@ export class DocumentReader {
         var response = "";
         if (options?.withoutUI != true) {
             response = await exec("startEngageDevice", [type.value]);
-          } else if (type == MDLDeviceEngagement.NFC) {
+        } else if (type == MDLDeviceEngagement.NFC) {
             response = await exec("engageDeviceNFC", []);
-          } else if (type == MDLDeviceEngagement.QR && options?.data != null) {
+        } else if (type == MDLDeviceEngagement.QR && options?.data != null) {
             response = await exec("engageDeviceData", [options.data]);
-          }
+        }
 
         var jsonObject = JSON.parse(response);
         return [
@@ -412,7 +415,7 @@ export class DocumentReader {
         var func = "startRetrieveData";
         if (options?.withoutUI == MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
         if (options?.withoutUI == MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
-        
+
         var response = await exec(func, [retrieval.toJson(), options?.engagement?.toJson()]);
         var jsonObject = JSON.parse(response);
 
