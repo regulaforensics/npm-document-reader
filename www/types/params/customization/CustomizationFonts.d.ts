@@ -10,6 +10,15 @@ export declare class CustomizationFonts {
     rfidEnableNfcDescriptionText?: number;
     /** Android only. */
     rfidEnableNfcButtonText?: number;
+    mdlProcessingScreenHintLabel?: number;
+    mdlProcessingScreenProgressLabel?: number;
+    mdlProcessingScreenResultLabel?: number;
+    /** Android only. */
+    mdlEnableNfcTitleText?: number;
+    /** Android only. */
+    mdlEnableNfcDescriptionText?: number;
+    /** Android only. */
+    mdlEnableNfcButtonText?: number;
 
     /**
      * Allows you to deserialize object.

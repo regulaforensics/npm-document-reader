@@ -13,13 +13,27 @@ export class CustomizationImages {
         this._set({ "rfidEnableNfcImage": val });
     }
 
+    get mdlProcessingScreenFailureImage() { return this._mdlProcessingScreenFailureImage; }
+    set mdlProcessingScreenFailureImage(val) {
+        this._mdlProcessingScreenFailureImage = val;
+        this._set({ "mdlProcessingScreenFailureImage": val });
+    }
+
+    get mdlEnableNfcImage() { return this._mdlEnableNfcImage; }
+    set mdlEnableNfcImage(val) {
+        this._mdlEnableNfcImage = val;
+        this._set({ "mdlEnableNfcImage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-        
+
         const result = new CustomizationImages();
         result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
         result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
-        
+        result._mdlProcessingScreenFailureImage = jsonObject["mdlProcessingScreenFailureImage"];
+        result._mdlEnableNfcImage = jsonObject["mdlEnableNfcImage"];
+
         return result;
     }
 
@@ -34,6 +48,8 @@ export class CustomizationImages {
         return {
             "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
             "rfidEnableNfcImage": this.rfidEnableNfcImage,
+            "mdlProcessingScreenFailureImage": this.mdlProcessingScreenFailureImage,
+            "mdlEnableNfcImage": this.mdlEnableNfcImage,
         }
     }
 }

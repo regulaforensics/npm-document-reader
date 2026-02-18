@@ -468,14 +468,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BarcodeResult: () => (/* reexport safe */ _results_barcode_BarcodeResult__WEBPACK_IMPORTED_MODULE_47__.BarcodeResult),
 /* harmony export */   BarcodeStatus: () => (/* reexport safe */ _results_barcode_BarcodeStatus__WEBPACK_IMPORTED_MODULE_45__.BarcodeStatus),
 /* harmony export */   BarcodeType: () => (/* reexport safe */ _results_barcode_BarcodeType__WEBPACK_IMPORTED_MODULE_46__.BarcodeType),
-/* harmony export */   Bsi: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.Bsi),
+/* harmony export */   Bsi: () => (/* reexport safe */ _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_86__.Bsi),
 /* harmony export */   BytesData: () => (/* reexport safe */ _results_visible_digital_seals_BytesData__WEBPACK_IMPORTED_MODULE_54__.BytesData),
-/* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CameraMode),
-/* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CameraPosition),
-/* harmony export */   CameraSize: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CameraSize),
-/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.Cap),
-/* harmony export */   CaptureMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CaptureMode),
-/* harmony export */   CaptureSessionPreset: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.CaptureSessionPreset),
+/* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraMode),
+/* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraPosition),
+/* harmony export */   CameraSize: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraSize),
+/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Cap),
+/* harmony export */   CaptureMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CaptureMode),
+/* harmony export */   CaptureSessionPreset: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CaptureSessionPreset),
 /* harmony export */   CardProperties: () => (/* reexport safe */ _results_rfid_CardProperties__WEBPACK_IMPORTED_MODULE_59__.CardProperties),
 /* harmony export */   CertificateChain: () => (/* reexport safe */ _results_rfid_CertificateChain__WEBPACK_IMPORTED_MODULE_64__.CertificateChain),
 /* harmony export */   CertificateData: () => (/* reexport safe */ _results_rfid_CertificateData__WEBPACK_IMPORTED_MODULE_70__.CertificateData),
@@ -483,45 +483,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CheckResult: () => (/* reexport safe */ _results_status_CheckResult__WEBPACK_IMPORTED_MODULE_35__.CheckResult),
 /* harmony export */   Comparison: () => (/* reexport safe */ _results_visual_results_Comparison__WEBPACK_IMPORTED_MODULE_19__.Comparison),
 /* harmony export */   Coordinate: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Coordinate),
-/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.CustomButtonTag),
-/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.Customization),
-/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_92__.CustomizationColors),
-/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_88__.CustomizationFonts),
-/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_89__.CustomizationImages),
-/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_95__.DTCDataGroup),
+/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.CustomButtonTag),
+/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization),
+/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_93__.CustomizationColors),
+/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_89__.CustomizationFonts),
+/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_90__.CustomizationImages),
+/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_96__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_60__.DataField),
-/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__.DataRetrieval),
-/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__.DeviceEngagement),
-/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_109__.DeviceRetrievalMethod),
+/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.DataRetrieval),
+/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.DeviceEngagement),
+/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_110__.DeviceRetrievalMethod),
 /* harmony export */   DocFeature: () => (/* reexport safe */ _results_visible_digital_seals_DocFeature__WEBPACK_IMPORTED_MODULE_55__.DocFeature),
 /* harmony export */   DocFormat: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocFormat),
 /* harmony export */   DocReaderAction: () => (/* binding */ DocReaderAction),
 /* harmony export */   DocReaderException: () => (/* reexport safe */ _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.DocReaderException),
-/* harmony export */   DocReaderFrame: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.DocReaderFrame),
+/* harmony export */   DocReaderFrame: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.DocReaderFrame),
 /* harmony export */   DocReaderOrientation: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_12__.DocReaderOrientation),
 /* harmony export */   DocReaderScenario: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_12__.DocReaderScenario),
 /* harmony export */   DocReaderVersion: () => (/* reexport safe */ _info_DocReaderVersion__WEBPACK_IMPORTED_MODULE_7__.DocReaderVersion),
 /* harmony export */   DocumentReader: () => (/* binding */ DocumentReader),
-/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_108__.DocumentRequest18013MDL),
-/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_108__.DocumentRequestMDL),
+/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__.DocumentRequest18013MDL),
+/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__.DocumentRequestMDL),
 /* harmony export */   DocumentType: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocumentType),
 /* harmony export */   DocumentTypeEnum: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocType),
 /* harmony export */   DocumentsDatabase: () => (/* reexport safe */ _info_DocumentsDatabase__WEBPACK_IMPORTED_MODULE_10__.DocumentsDatabase),
-/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_97__.EDLDataGroups),
-/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_94__.EIDDataGroups),
-/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_93__.EPassportDataGroups),
+/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_98__.EDLDataGroups),
+/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_95__.EIDDataGroups),
+/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_94__.EPassportDataGroups),
 /* harmony export */   ErrorCodes: () => (/* reexport safe */ _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.ErrorCodes),
 /* harmony export */   Extension: () => (/* reexport safe */ _results_rfid_Extension__WEBPACK_IMPORTED_MODULE_76__.Extension),
 /* harmony export */   FaceApiParams: () => (/* reexport safe */ _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_81__.FaceApiParams),
-/* harmony export */   FaceApiSearchParams: () => (/* reexport safe */ _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_86__.FaceApiSearchParams),
+/* harmony export */   FaceApiSearchParams: () => (/* reexport safe */ _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_87__.FaceApiSearchParams),
 /* harmony export */   FieldType: () => (/* reexport safe */ _results_visual_results_FieldType__WEBPACK_IMPORTED_MODULE_23__.FieldType),
 /* harmony export */   File: () => (/* reexport safe */ _results_rfid_File__WEBPACK_IMPORTED_MODULE_66__.File),
 /* harmony export */   FileData: () => (/* reexport safe */ _results_rfid_FileData__WEBPACK_IMPORTED_MODULE_71__.FileData),
 /* harmony export */   FinalizeConfig: () => (/* reexport safe */ _config_FinalizeConfig__WEBPACK_IMPORTED_MODULE_6__.FinalizeConfig),
-/* harmony export */   Font: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_90__.Font),
-/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_90__.FontStyle),
-/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.FrameShapeType),
-/* harmony export */   Functionality: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.Functionality),
+/* harmony export */   Font: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__.Font),
+/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__.FontStyle),
+/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.FrameShapeType),
+/* harmony export */   Functionality: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality),
 /* harmony export */   GlaresCheckParams: () => (/* reexport safe */ _params_process_params_GlaresCheckParams__WEBPACK_IMPORTED_MODULE_80__.GlaresCheckParams),
 /* harmony export */   GraphicField: () => (/* reexport safe */ _results_visual_results_GraphicField__WEBPACK_IMPORTED_MODULE_24__.GraphicField),
 /* harmony export */   GraphicFieldType: () => (/* reexport safe */ _results_visual_results_GraphicFieldType__WEBPACK_IMPORTED_MODULE_15__.GraphicFieldType),
@@ -540,45 +540,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Lights: () => (/* reexport safe */ _results_visual_results_Lights__WEBPACK_IMPORTED_MODULE_21__.Lights),
 /* harmony export */   LivenessParams: () => (/* reexport safe */ _params_process_params_LivenessParams__WEBPACK_IMPORTED_MODULE_78__.LivenessParams),
 /* harmony export */   LogLevel: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.LogLevel),
-/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceEngagement),
-/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceRetrieval),
-/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__.MDLDocRequestPreset),
-/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_107__.MDLIntentToRetain),
+/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement),
+/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval),
+/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDocRequestPreset),
+/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__.MDLIntentToRetain),
 /* harmony export */   MRZFormat: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MeasureSystem),
 /* harmony export */   MrzDetectionModes: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MrzDetectionModes),
-/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_107__.NameSpaceMDL),
+/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__.NameSpaceMDL),
 /* harmony export */   OnlineMode: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineMode),
 /* harmony export */   OnlineProcessingConfig: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineProcessingConfig),
 /* harmony export */   OpticalStatus: () => (/* reexport safe */ _results_status_OpticalStatus__WEBPACK_IMPORTED_MODULE_36__.OpticalStatus),
-/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_102__.PAAttribute),
-/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_98__.PAResourcesIssuer),
+/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_103__.PAAttribute),
+/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_99__.PAResourcesIssuer),
 /* harmony export */   PDF417Info: () => (/* reexport safe */ _results_barcode_PDF417Info__WEBPACK_IMPORTED_MODULE_44__.PDF417Info),
-/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_104__.PKDCertificate),
-/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_104__.PKDResourceType),
+/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__.PKDCertificate),
+/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__.PKDResourceType),
 /* harmony export */   Position: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Position),
 /* harmony export */   PrepareProgress: () => (/* reexport safe */ _info_PrepareProgress__WEBPACK_IMPORTED_MODULE_8__.PrepareProgress),
 /* harmony export */   ProcessParams: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.ProcessParams),
 /* harmony export */   ProcessingFinishedStatus: () => (/* reexport safe */ _results_Results__WEBPACK_IMPORTED_MODULE_30__.ProcessingFinishedStatus),
 /* harmony export */   RFIDAccessControlProcedureType: () => (/* reexport safe */ _results_rfid_RFIDAccessControlProcedureType__WEBPACK_IMPORTED_MODULE_75__.RFIDAccessControlProcedureType),
 /* harmony export */   RFIDApplicationType: () => (/* reexport safe */ _results_rfid_Application__WEBPACK_IMPORTED_MODULE_74__.RFIDApplicationType),
-/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDAuthenticationProcedureType),
+/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDAuthenticationProcedureType),
 /* harmony export */   RFIDCertificateType: () => (/* reexport safe */ _results_rfid_RFIDCertificateType__WEBPACK_IMPORTED_MODULE_72__.RFIDCertificateType),
 /* harmony export */   RFIDConfig: () => (/* reexport safe */ _config_RFIDConfig__WEBPACK_IMPORTED_MODULE_3__.RFIDConfig),
 /* harmony export */   RFIDDataFileType: () => (/* reexport safe */ _results_rfid_RFIDDataFileType__WEBPACK_IMPORTED_MODULE_69__.RFIDDataFileType),
-/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_99__.RFIDErrorCodes),
+/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_100__.RFIDErrorCodes),
 /* harmony export */   RFIDException: () => (/* reexport safe */ _info_RFIDException__WEBPACK_IMPORTED_MODULE_13__.RFIDException),
-/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_101__.RFIDNotification),
-/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_101__.RFIDNotificationCodes),
+/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__.RFIDNotification),
+/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__.RFIDNotificationCodes),
 /* harmony export */   RFIDOrigin: () => (/* reexport safe */ _results_visual_results_RFIDOrigin__WEBPACK_IMPORTED_MODULE_25__.RFIDOrigin),
 /* harmony export */   RFIDParams: () => (/* reexport safe */ _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_82__.RFIDParams),
-/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDPasswordType),
-/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDReadingBufferSize),
-/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDSDKProfilerType),
-/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDScenario),
+/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDPasswordType),
+/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDReadingBufferSize),
+/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDSDKProfilerType),
+/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario),
 /* harmony export */   RFIDSessionData: () => (/* reexport safe */ _results_rfid_RFIDSessionData__WEBPACK_IMPORTED_MODULE_73__.RFIDSessionData),
 /* harmony export */   RFIDStatus: () => (/* reexport safe */ _results_status_RFIDStatus__WEBPACK_IMPORTED_MODULE_33__.RFIDStatus),
-/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDTerminalType),
+/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDTerminalType),
 /* harmony export */   RFIDValidity: () => (/* reexport safe */ _results_rfid_RFIDValidity__WEBPACK_IMPORTED_MODULE_68__.RFIDValidity),
 /* harmony export */   RFIDValue: () => (/* reexport safe */ _results_rfid_RFIDValue__WEBPACK_IMPORTED_MODULE_67__.RFIDValue),
 /* harmony export */   RecognizeConfig: () => (/* reexport safe */ _config_RecognizeConfig__WEBPACK_IMPORTED_MODULE_5__.RecognizeConfig),
@@ -591,11 +591,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SecurityFeatureType: () => (/* reexport safe */ _results_authenticity_SecurityFeatureType__WEBPACK_IMPORTED_MODULE_42__.SecurityFeatureType),
 /* harmony export */   SecurityObject: () => (/* reexport safe */ _results_rfid_SecurityObject__WEBPACK_IMPORTED_MODULE_58__.SecurityObject),
 /* harmony export */   SecurityObjectCertificates: () => (/* reexport safe */ _results_rfid_SecurityObjectCertificates__WEBPACK_IMPORTED_MODULE_63__.SecurityObjectCertificates),
-/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.SignManagementAction),
+/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.SignManagementAction),
 /* harmony export */   SignerInfo: () => (/* reexport safe */ _results_rfid_SignerInfo__WEBPACK_IMPORTED_MODULE_62__.SignerInfo),
 /* harmony export */   Symbol: () => (/* reexport safe */ _results_visual_results_Symbol__WEBPACK_IMPORTED_MODULE_18__.Symbol),
-/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_103__.TAChallenge),
-/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_100__.TccParams),
+/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_104__.TAChallenge),
+/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_101__.TccParams),
 /* harmony export */   TextField: () => (/* reexport safe */ _results_visual_results_TextField__WEBPACK_IMPORTED_MODULE_20__.TextField),
 /* harmony export */   TextResult: () => (/* reexport safe */ _results_visual_results_TextResult__WEBPACK_IMPORTED_MODULE_26__.TextResult),
 /* harmony export */   TextSource: () => (/* reexport safe */ _results_visual_results_TextSource__WEBPACK_IMPORTED_MODULE_27__.TextSource),
@@ -604,7 +604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VDSNCData: () => (/* reexport safe */ _results_visible_digital_seals_VDSNCData__WEBPACK_IMPORTED_MODULE_53__.VDSNCData),
 /* harmony export */   Validity: () => (/* reexport safe */ _results_visual_results_Validity__WEBPACK_IMPORTED_MODULE_22__.Validity),
 /* harmony export */   Value: () => (/* reexport safe */ _results_visual_results_Value__WEBPACK_IMPORTED_MODULE_16__.Value),
-/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.ViewContentMode)
+/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.ViewContentMode)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/OnlineProcessingConfig */ "./src/config/OnlineProcessingConfig.js");
@@ -692,30 +692,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./params/process_params/ImageQA */ "./src/params/process_params/ImageQA.js");
 /* harmony import */ var _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./params/process_params/AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
 /* harmony import */ var _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./params/process_params/BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
-/* harmony import */ var _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./params/process_params/FaceApiSearchParams */ "./src/params/process_params/FaceApiSearchParams.js");
-/* harmony import */ var _params_Functionality__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./params/Functionality */ "./src/params/Functionality.js");
-/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
-/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
-/* harmony import */ var _params_customization_Font__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/customization/Font */ "./src/params/customization/Font.js");
-/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
-/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
-/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
-/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
-/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
-/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
-/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
-/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
-/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
-/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
-/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
-/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
-/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
-/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
-/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
-/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
-/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+/* harmony import */ var _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./params/process_params/Bsi */ "./src/params/process_params/Bsi.js");
+/* harmony import */ var _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./params/process_params/FaceApiSearchParams */ "./src/params/process_params/FaceApiSearchParams.js");
+/* harmony import */ var _params_Functionality__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/Functionality */ "./src/params/Functionality.js");
+/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
+/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
+/* harmony import */ var _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/Font */ "./src/params/customization/Font.js");
+/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
+/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
+/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
+/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
+/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
+/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
+/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
+/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
+/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
+/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
+/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
+/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
+/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
+/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
+/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
+/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+
 
 
 
@@ -930,7 +932,7 @@ class DocumentReader {
     }
 
     get functionality() { return this._functionality }
-    _functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.Functionality()
+    _functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality()
     set functionality(val) {
         this._functionality = val;
         this._functionality._apply();
@@ -944,14 +946,14 @@ class DocumentReader {
     }
 
     get customization() { return this._customization }
-    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.Customization()
+    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization()
     set customization(val) {
         this._customization = val;
         this._customization._apply();
     }
 
     get rfidScenario() { return this._rfidScenario }
-    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDScenario()
+    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario()
     set rfidScenario(val) {
         this._rfidScenario = val;
         this._rfidScenario._apply();
@@ -967,10 +969,10 @@ class DocumentReader {
 
     resetConfiguration() {
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("resetConfiguration", []);
-        this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.Functionality();
+        this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality();
         this._processParams = new _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.ProcessParams();
-        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.Customization();
-        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDScenario();
+        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization();
+        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario();
     }
 
     set onCustomButtonTapped(completion) {
@@ -1116,23 +1118,23 @@ class DocumentReader {
         var response = "";
         if (options?.withoutUI != true) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceEngagement.NFC) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceEngagement.QR && options?.data != null) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement.QR && options?.data != null) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceData", [options.data]);
         }
 
         var jsonObject = JSON.parse(response);
         return [
-            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_106__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
+            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
             _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.DocReaderException.fromJson(jsonObject["error"]),
         ]
     }
 
     async retrieveData(retrieval, options) {
         var func = "startRetrieveData";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_105__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
 
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(func, [retrieval.toJson(), options?.engagement?.toJson()]);
         var jsonObject = JSON.parse(response);
@@ -1173,17 +1175,17 @@ class DocumentReader {
 
     async _getFunctionality() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getFunctionality", []);
-        return _params_Functionality__WEBPACK_IMPORTED_MODULE_87__.Functionality.fromJson(JSON.parse(response));
+        return _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality.fromJson(JSON.parse(response));
     }
 
     async _getCustomization() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getCustomization", []);
-        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_91__.Customization.fromJson(JSON.parse(response));
+        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization.fromJson(JSON.parse(response));
     }
 
     async _getRfidScenario() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getRfidScenario", []);
-        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_96__.RFIDScenario.fromJson(JSON.parse(response));
+        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario.fromJson(JSON.parse(response));
     }
 
     async _getLicense() {
@@ -3460,6 +3462,66 @@ class CustomizationColors {
         this._set({ "rfidEnableNfcButtonBackground": val });
     }
 
+    get mdlProcessingScreenBackground() { return this._mdlProcessingScreenBackground; }
+    set mdlProcessingScreenBackground(val) {
+        this._mdlProcessingScreenBackground = val;
+        this._set({ "mdlProcessingScreenBackground": val });
+    }
+
+    get mdlProcessingScreenHintLabelText() { return this._mdlProcessingScreenHintLabelText; }
+    set mdlProcessingScreenHintLabelText(val) {
+        this._mdlProcessingScreenHintLabelText = val;
+        this._set({ "mdlProcessingScreenHintLabelText": val });
+    }
+
+    get mdlProcessingScreenHintLabelBackground() { return this._mdlProcessingScreenHintLabelBackground; }
+    set mdlProcessingScreenHintLabelBackground(val) {
+        this._mdlProcessingScreenHintLabelBackground = val;
+        this._set({ "mdlProcessingScreenHintLabelBackground": val });
+    }
+
+    get mdlProcessingScreenProgressLabelText() { return this._mdlProcessingScreenProgressLabelText; }
+    set mdlProcessingScreenProgressLabelText(val) {
+        this._mdlProcessingScreenProgressLabelText = val;
+        this._set({ "mdlProcessingScreenProgressLabelText": val });
+    }
+
+    get mdlProcessingScreenResultLabelText() { return this._mdlProcessingScreenResultLabelText; }
+    set mdlProcessingScreenResultLabelText(val) {
+        this._mdlProcessingScreenResultLabelText = val;
+        this._set({ "mdlProcessingScreenResultLabelText": val });
+    }
+
+    get mdlProcessingScreenLoadingBar() { return this._mdlProcessingScreenLoadingBar; }
+    set mdlProcessingScreenLoadingBar(val) {
+        this._mdlProcessingScreenLoadingBar = val;
+        this._set({ "mdlProcessingScreenLoadingBar": val });
+    }
+
+    get mdlEnableNfcTitleText() { return this._mdlEnableNfcTitleText; }
+    set mdlEnableNfcTitleText(val) {
+        this._mdlEnableNfcTitleText = val;
+        this._set({ "mdlEnableNfcTitleText": val });
+    }
+
+    get mdlEnableNfcDescriptionText() { return this._mdlEnableNfcDescriptionText; }
+    set mdlEnableNfcDescriptionText(val) {
+        this._mdlEnableNfcDescriptionText = val;
+        this._set({ "mdlEnableNfcDescriptionText": val });
+    }
+
+    get mdlEnableNfcButtonText() { return this._mdlEnableNfcButtonText; }
+    set mdlEnableNfcButtonText(val) {
+        this._mdlEnableNfcButtonText = val;
+        this._set({ "mdlEnableNfcButtonText": val });
+    }
+
+    get mdlEnableNfcButtonBackground() { return this._mdlEnableNfcButtonBackground; }
+    set mdlEnableNfcButtonBackground(val) {
+        this._mdlEnableNfcButtonBackground = val;
+        this._set({ "mdlEnableNfcButtonBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
 
@@ -3476,6 +3538,16 @@ class CustomizationColors {
         result._rfidEnableNfcDescriptionText = jsonObject["rfidEnableNfcDescriptionText"];
         result._rfidEnableNfcButtonText = jsonObject["rfidEnableNfcButtonText"];
         result._rfidEnableNfcButtonBackground = jsonObject["rfidEnableNfcButtonBackground"];
+        result._mdlProcessingScreenBackground = jsonObject["mdlProcessingScreenBackground"];
+        result._mdlProcessingScreenHintLabelText = jsonObject["mdlProcessingScreenHintLabelText"];
+        result._mdlProcessingScreenHintLabelBackground = jsonObject["mdlProcessingScreenHintLabelBackground"];
+        result._mdlProcessingScreenProgressLabelText = jsonObject["mdlProcessingScreenProgressLabelText"];
+        result._mdlProcessingScreenResultLabelText = jsonObject["mdlProcessingScreenResultLabelText"];
+        result._mdlProcessingScreenLoadingBar = jsonObject["mdlProcessingScreenLoadingBar"];
+        result._mdlEnableNfcTitleText = jsonObject["mdlEnableNfcTitleText"];
+        result._mdlEnableNfcDescriptionText = jsonObject["mdlEnableNfcDescriptionText"];
+        result._mdlEnableNfcButtonText = jsonObject["mdlEnableNfcButtonText"];
+        result._mdlEnableNfcButtonBackground = jsonObject["mdlEnableNfcButtonBackground"];
 
         return result;
     }
@@ -3501,6 +3573,16 @@ class CustomizationColors {
             "rfidEnableNfcDescriptionText": this.rfidEnableNfcDescriptionText,
             "rfidEnableNfcButtonText": this.rfidEnableNfcButtonText,
             "rfidEnableNfcButtonBackground": this.rfidEnableNfcButtonBackground,
+            "mdlProcessingScreenBackground": this.mdlProcessingScreenBackground,
+            "mdlProcessingScreenHintLabelText": this.mdlProcessingScreenHintLabelText,
+            "mdlProcessingScreenHintLabelBackground": this.mdlProcessingScreenHintLabelBackground,
+            "mdlProcessingScreenProgressLabelText": this.mdlProcessingScreenProgressLabelText,
+            "mdlProcessingScreenResultLabelText": this.mdlProcessingScreenResultLabelText,
+            "mdlProcessingScreenLoadingBar": this.mdlProcessingScreenLoadingBar,
+            "mdlEnableNfcTitleText": this.mdlEnableNfcTitleText,
+            "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText,
+            "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText,
+            "mdlEnableNfcButtonBackground": this.mdlEnableNfcButtonBackground,
         }
     }
 }
@@ -3560,9 +3642,45 @@ class CustomizationFonts {
         this._set({ "rfidEnableNfcButtonText": val });
     }
 
+    get mdlProcessingScreenHintLabel() { return this._mdlProcessingScreenHintLabel; }
+    set mdlProcessingScreenHintLabel(val) {
+        this._mdlProcessingScreenHintLabel = val;
+        this._set({ "mdlProcessingScreenHintLabel": val });
+    }
+
+    get mdlProcessingScreenProgressLabel() { return this._mdlProcessingScreenProgressLabel; }
+    set mdlProcessingScreenProgressLabel(val) {
+        this._mdlProcessingScreenProgressLabel = val;
+        this._set({ "mdlProcessingScreenProgressLabel": val });
+    }
+
+    get mdlProcessingScreenResultLabel() { return this._mdlProcessingScreenResultLabel; }
+    set mdlProcessingScreenResultLabel(val) {
+        this._mdlProcessingScreenResultLabel = val;
+        this._set({ "mdlProcessingScreenResultLabel": val });
+    }
+
+    get mdlEnableNfcTitleText() { return this._mdlEnableNfcTitleText; }
+    set mdlEnableNfcTitleText(val) {
+        this._mdlEnableNfcTitleText = val;
+        this._set({ "mdlEnableNfcTitleText": val });
+    }
+
+    get mdlEnableNfcDescriptionText() { return this._mdlEnableNfcDescriptionText; }
+    set mdlEnableNfcDescriptionText(val) {
+        this._mdlEnableNfcDescriptionText = val;
+        this._set({ "mdlEnableNfcDescriptionText": val });
+    }
+
+    get mdlEnableNfcButtonText() { return this._mdlEnableNfcButtonText; }
+    set mdlEnableNfcButtonText(val) {
+        this._mdlEnableNfcButtonText = val;
+        this._set({ "mdlEnableNfcButtonText": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-        
+
         const result = new CustomizationFonts();
         result._rfidProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenHintLabel"]);
         result._rfidProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenProgressLabel"]);
@@ -3570,7 +3688,13 @@ class CustomizationFonts {
         result._rfidEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcTitleText"]);
         result._rfidEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcDescriptionText"]);
         result._rfidEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcButtonText"]);
-        
+        result._mdlProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenHintLabel"]);
+        result._mdlProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenProgressLabel"]);
+        result._mdlProcessingScreenResultLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenResultLabel"]);
+        result._mdlEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcTitleText"]);
+        result._mdlEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcDescriptionText"]);
+        result._mdlEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcButtonText"]);
+
         return result;
     }
 
@@ -3589,6 +3713,12 @@ class CustomizationFonts {
             "rfidEnableNfcTitleText": this.rfidEnableNfcTitleText?.toJson(),
             "rfidEnableNfcDescriptionText": this.rfidEnableNfcDescriptionText?.toJson(),
             "rfidEnableNfcButtonText": this.rfidEnableNfcButtonText?.toJson(),
+            "mdlProcessingScreenHintLabel": this.mdlProcessingScreenHintLabel?.toJson(),
+            "mdlProcessingScreenProgressLabel": this.mdlProcessingScreenProgressLabel?.toJson(),
+            "mdlProcessingScreenResultLabel": this.mdlProcessingScreenResultLabel?.toJson(),
+            "mdlEnableNfcTitleText": this.mdlEnableNfcTitleText?.toJson(),
+            "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText?.toJson(),
+            "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText?.toJson(),
         }
     }
 }
@@ -3622,13 +3752,27 @@ class CustomizationImages {
         this._set({ "rfidEnableNfcImage": val });
     }
 
+    get mdlProcessingScreenFailureImage() { return this._mdlProcessingScreenFailureImage; }
+    set mdlProcessingScreenFailureImage(val) {
+        this._mdlProcessingScreenFailureImage = val;
+        this._set({ "mdlProcessingScreenFailureImage": val });
+    }
+
+    get mdlEnableNfcImage() { return this._mdlEnableNfcImage; }
+    set mdlEnableNfcImage(val) {
+        this._mdlEnableNfcImage = val;
+        this._set({ "mdlEnableNfcImage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-        
+
         const result = new CustomizationImages();
         result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
         result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
-        
+        result._mdlProcessingScreenFailureImage = jsonObject["mdlProcessingScreenFailureImage"];
+        result._mdlEnableNfcImage = jsonObject["mdlEnableNfcImage"];
+
         return result;
     }
 
@@ -3643,6 +3787,8 @@ class CustomizationImages {
         return {
             "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
             "rfidEnableNfcImage": this.rfidEnableNfcImage,
+            "mdlProcessingScreenFailureImage": this.mdlProcessingScreenFailureImage,
+            "mdlEnableNfcImage": this.mdlEnableNfcImage,
         }
     }
 }
@@ -3909,6 +4055,43 @@ class BackendProcessingConfig {
             "rfidServerSideChipVerification": this.rfidServerSideChipVerification,
             "httpHeaders": this.httpHeaders,
             "timeoutConnection": this.timeoutConnection,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/params/process_params/Bsi.js"
+/*!******************************************!*\
+  !*** ./src/params/process_params/Bsi.js ***!
+  \******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Bsi: () => (/* binding */ Bsi)
+/* harmony export */ });
+class Bsi {
+    generateResult
+
+    constructor(params) {
+        this.generateResult = params?.generateResult;
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        
+        const result = new Bsi();
+        
+        result.generateResult = jsonObject["generateResult"];
+        
+        return result;
+    }
+
+    toJson() {
+        return {
+            "generateResult": this.generateResult,
         }
     }
 }
@@ -4296,7 +4479,6 @@ class LivenessParams {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Bsi: () => (/* binding */ Bsi),
 /* harmony export */   LogLevel: () => (/* binding */ LogLevel),
 /* harmony export */   MRZFormat: () => (/* binding */ MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* binding */ MeasureSystem),
@@ -4309,7 +4491,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RFIDParams__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RFIDParams */ "./src/params/process_params/RFIDParams.js");
 /* harmony import */ var _FaceApiParams__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FaceApiParams */ "./src/params/process_params/FaceApiParams.js");
 /* harmony import */ var _BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
-/* harmony import */ var _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
+/* harmony import */ var _Bsi__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Bsi */ "./src/params/process_params/Bsi.js");
+/* harmony import */ var _AuthenticityParams__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
+
 
 
 
@@ -4565,12 +4749,6 @@ class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
-    get bsiTr03135() { return this._bsiTr03135; }
-    set bsiTr03135(val) {
-        this._bsiTr03135 = val;
-        this._set({ "bsiTr03135": {"generateResult": val?.generateResult} });
-    }
-
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -4791,7 +4969,13 @@ class ProcessParams {
         this._set({ "backendProcessingConfig": val });
     }
 
-    _authenticityParams = new _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__.AuthenticityParams();
+    get bsiTr03135() { return this._bsiTr03135; }
+    set bsiTr03135(val) {
+        this._bsiTr03135 = val;
+        this._set({ "bsiTr03135": val });
+    }
+
+    _authenticityParams = new _AuthenticityParams__WEBPACK_IMPORTED_MODULE_7__.AuthenticityParams();
     get authenticityParams() { return this._authenticityParams; }
     set authenticityParams(val) { (this._authenticityParams = val)._apply(); }
 
@@ -4846,8 +5030,6 @@ class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
-        if(jsonObject["bsiTr03135"] != null) 
-            result.bsiTr03135 = new Bsi({generateResult: jsonObject["bsiTr03135"]["generateResult"]});
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -4885,7 +5067,8 @@ class ProcessParams {
         result._rfidParams = _RFIDParams__WEBPACK_IMPORTED_MODULE_3__.RFIDParams.fromJson(jsonObject["rfidParams"]);
         result._faceApiParams = _FaceApiParams__WEBPACK_IMPORTED_MODULE_4__.FaceApiParams.fromJson(jsonObject["faceApiParams"]);
         result._backendProcessingConfig = _BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_5__.BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
-        result._authenticityParams = _AuthenticityParams__WEBPACK_IMPORTED_MODULE_6__.AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
+        result._bsiTr03135 = _Bsi__WEBPACK_IMPORTED_MODULE_6__.Bsi.fromJson(jsonObject["bsiTr03135"]);
+        result._authenticityParams = _AuthenticityParams__WEBPACK_IMPORTED_MODULE_7__.AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
 
         return result;
@@ -4933,7 +5116,6 @@ class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
-            "bsiTr03135": {"generateResult": this.bsiTr03135?.generateResult},
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -4971,6 +5153,7 @@ class ProcessParams {
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
+            "bsiTr03135": this.bsiTr03135?.toJson(),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
         }
@@ -5010,14 +5193,6 @@ const MrzDetectionModes = {
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
 };
-
-class Bsi {
-    generateResult
-
-    constructor(options) {
-        this.generateResult = options?.generateResult;
-    }
-}
 
 
 /***/ },
