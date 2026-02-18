@@ -3462,6 +3462,66 @@ class CustomizationColors {
         this._set({ "rfidEnableNfcButtonBackground": val });
     }
 
+    get mdlProcessingScreenBackground() { return this._mdlProcessingScreenBackground; }
+    set mdlProcessingScreenBackground(val) {
+        this._mdlProcessingScreenBackground = val;
+        this._set({ "mdlProcessingScreenBackground": val });
+    }
+
+    get mdlProcessingScreenHintLabelText() { return this._mdlProcessingScreenHintLabelText; }
+    set mdlProcessingScreenHintLabelText(val) {
+        this._mdlProcessingScreenHintLabelText = val;
+        this._set({ "mdlProcessingScreenHintLabelText": val });
+    }
+
+    get mdlProcessingScreenHintLabelBackground() { return this._mdlProcessingScreenHintLabelBackground; }
+    set mdlProcessingScreenHintLabelBackground(val) {
+        this._mdlProcessingScreenHintLabelBackground = val;
+        this._set({ "mdlProcessingScreenHintLabelBackground": val });
+    }
+
+    get mdlProcessingScreenProgressLabelText() { return this._mdlProcessingScreenProgressLabelText; }
+    set mdlProcessingScreenProgressLabelText(val) {
+        this._mdlProcessingScreenProgressLabelText = val;
+        this._set({ "mdlProcessingScreenProgressLabelText": val });
+    }
+
+    get mdlProcessingScreenResultLabelText() { return this._mdlProcessingScreenResultLabelText; }
+    set mdlProcessingScreenResultLabelText(val) {
+        this._mdlProcessingScreenResultLabelText = val;
+        this._set({ "mdlProcessingScreenResultLabelText": val });
+    }
+
+    get mdlProcessingScreenLoadingBar() { return this._mdlProcessingScreenLoadingBar; }
+    set mdlProcessingScreenLoadingBar(val) {
+        this._mdlProcessingScreenLoadingBar = val;
+        this._set({ "mdlProcessingScreenLoadingBar": val });
+    }
+
+    get mdlEnableNfcTitleText() { return this._mdlEnableNfcTitleText; }
+    set mdlEnableNfcTitleText(val) {
+        this._mdlEnableNfcTitleText = val;
+        this._set({ "mdlEnableNfcTitleText": val });
+    }
+
+    get mdlEnableNfcDescriptionText() { return this._mdlEnableNfcDescriptionText; }
+    set mdlEnableNfcDescriptionText(val) {
+        this._mdlEnableNfcDescriptionText = val;
+        this._set({ "mdlEnableNfcDescriptionText": val });
+    }
+
+    get mdlEnableNfcButtonText() { return this._mdlEnableNfcButtonText; }
+    set mdlEnableNfcButtonText(val) {
+        this._mdlEnableNfcButtonText = val;
+        this._set({ "mdlEnableNfcButtonText": val });
+    }
+
+    get mdlEnableNfcButtonBackground() { return this._mdlEnableNfcButtonBackground; }
+    set mdlEnableNfcButtonBackground(val) {
+        this._mdlEnableNfcButtonBackground = val;
+        this._set({ "mdlEnableNfcButtonBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
 
@@ -3478,6 +3538,16 @@ class CustomizationColors {
         result._rfidEnableNfcDescriptionText = jsonObject["rfidEnableNfcDescriptionText"];
         result._rfidEnableNfcButtonText = jsonObject["rfidEnableNfcButtonText"];
         result._rfidEnableNfcButtonBackground = jsonObject["rfidEnableNfcButtonBackground"];
+        result._mdlProcessingScreenBackground = jsonObject["mdlProcessingScreenBackground"];
+        result._mdlProcessingScreenHintLabelText = jsonObject["mdlProcessingScreenHintLabelText"];
+        result._mdlProcessingScreenHintLabelBackground = jsonObject["mdlProcessingScreenHintLabelBackground"];
+        result._mdlProcessingScreenProgressLabelText = jsonObject["mdlProcessingScreenProgressLabelText"];
+        result._mdlProcessingScreenResultLabelText = jsonObject["mdlProcessingScreenResultLabelText"];
+        result._mdlProcessingScreenLoadingBar = jsonObject["mdlProcessingScreenLoadingBar"];
+        result._mdlEnableNfcTitleText = jsonObject["mdlEnableNfcTitleText"];
+        result._mdlEnableNfcDescriptionText = jsonObject["mdlEnableNfcDescriptionText"];
+        result._mdlEnableNfcButtonText = jsonObject["mdlEnableNfcButtonText"];
+        result._mdlEnableNfcButtonBackground = jsonObject["mdlEnableNfcButtonBackground"];
 
         return result;
     }
@@ -3503,6 +3573,16 @@ class CustomizationColors {
             "rfidEnableNfcDescriptionText": this.rfidEnableNfcDescriptionText,
             "rfidEnableNfcButtonText": this.rfidEnableNfcButtonText,
             "rfidEnableNfcButtonBackground": this.rfidEnableNfcButtonBackground,
+            "mdlProcessingScreenBackground": this.mdlProcessingScreenBackground,
+            "mdlProcessingScreenHintLabelText": this.mdlProcessingScreenHintLabelText,
+            "mdlProcessingScreenHintLabelBackground": this.mdlProcessingScreenHintLabelBackground,
+            "mdlProcessingScreenProgressLabelText": this.mdlProcessingScreenProgressLabelText,
+            "mdlProcessingScreenResultLabelText": this.mdlProcessingScreenResultLabelText,
+            "mdlProcessingScreenLoadingBar": this.mdlProcessingScreenLoadingBar,
+            "mdlEnableNfcTitleText": this.mdlEnableNfcTitleText,
+            "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText,
+            "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText,
+            "mdlEnableNfcButtonBackground": this.mdlEnableNfcButtonBackground,
         }
     }
 }
@@ -3562,9 +3642,45 @@ class CustomizationFonts {
         this._set({ "rfidEnableNfcButtonText": val });
     }
 
+    get mdlProcessingScreenHintLabel() { return this._mdlProcessingScreenHintLabel; }
+    set mdlProcessingScreenHintLabel(val) {
+        this._mdlProcessingScreenHintLabel = val;
+        this._set({ "mdlProcessingScreenHintLabel": val });
+    }
+
+    get mdlProcessingScreenProgressLabel() { return this._mdlProcessingScreenProgressLabel; }
+    set mdlProcessingScreenProgressLabel(val) {
+        this._mdlProcessingScreenProgressLabel = val;
+        this._set({ "mdlProcessingScreenProgressLabel": val });
+    }
+
+    get mdlProcessingScreenResultLabel() { return this._mdlProcessingScreenResultLabel; }
+    set mdlProcessingScreenResultLabel(val) {
+        this._mdlProcessingScreenResultLabel = val;
+        this._set({ "mdlProcessingScreenResultLabel": val });
+    }
+
+    get mdlEnableNfcTitleText() { return this._mdlEnableNfcTitleText; }
+    set mdlEnableNfcTitleText(val) {
+        this._mdlEnableNfcTitleText = val;
+        this._set({ "mdlEnableNfcTitleText": val });
+    }
+
+    get mdlEnableNfcDescriptionText() { return this._mdlEnableNfcDescriptionText; }
+    set mdlEnableNfcDescriptionText(val) {
+        this._mdlEnableNfcDescriptionText = val;
+        this._set({ "mdlEnableNfcDescriptionText": val });
+    }
+
+    get mdlEnableNfcButtonText() { return this._mdlEnableNfcButtonText; }
+    set mdlEnableNfcButtonText(val) {
+        this._mdlEnableNfcButtonText = val;
+        this._set({ "mdlEnableNfcButtonText": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-        
+
         const result = new CustomizationFonts();
         result._rfidProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenHintLabel"]);
         result._rfidProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenProgressLabel"]);
@@ -3572,7 +3688,13 @@ class CustomizationFonts {
         result._rfidEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcTitleText"]);
         result._rfidEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcDescriptionText"]);
         result._rfidEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcButtonText"]);
-        
+        result._mdlProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenHintLabel"]);
+        result._mdlProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenProgressLabel"]);
+        result._mdlProcessingScreenResultLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenResultLabel"]);
+        result._mdlEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcTitleText"]);
+        result._mdlEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcDescriptionText"]);
+        result._mdlEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcButtonText"]);
+
         return result;
     }
 
@@ -3591,6 +3713,12 @@ class CustomizationFonts {
             "rfidEnableNfcTitleText": this.rfidEnableNfcTitleText?.toJson(),
             "rfidEnableNfcDescriptionText": this.rfidEnableNfcDescriptionText?.toJson(),
             "rfidEnableNfcButtonText": this.rfidEnableNfcButtonText?.toJson(),
+            "mdlProcessingScreenHintLabel": this.mdlProcessingScreenHintLabel?.toJson(),
+            "mdlProcessingScreenProgressLabel": this.mdlProcessingScreenProgressLabel?.toJson(),
+            "mdlProcessingScreenResultLabel": this.mdlProcessingScreenResultLabel?.toJson(),
+            "mdlEnableNfcTitleText": this.mdlEnableNfcTitleText?.toJson(),
+            "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText?.toJson(),
+            "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText?.toJson(),
         }
     }
 }
@@ -3624,13 +3752,27 @@ class CustomizationImages {
         this._set({ "rfidEnableNfcImage": val });
     }
 
+    get mdlProcessingScreenFailureImage() { return this._mdlProcessingScreenFailureImage; }
+    set mdlProcessingScreenFailureImage(val) {
+        this._mdlProcessingScreenFailureImage = val;
+        this._set({ "mdlProcessingScreenFailureImage": val });
+    }
+
+    get mdlEnableNfcImage() { return this._mdlEnableNfcImage; }
+    set mdlEnableNfcImage(val) {
+        this._mdlEnableNfcImage = val;
+        this._set({ "mdlEnableNfcImage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-        
+
         const result = new CustomizationImages();
         result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
         result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
-        
+        result._mdlProcessingScreenFailureImage = jsonObject["mdlProcessingScreenFailureImage"];
+        result._mdlEnableNfcImage = jsonObject["mdlEnableNfcImage"];
+
         return result;
     }
 
@@ -3645,6 +3787,8 @@ class CustomizationImages {
         return {
             "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
             "rfidEnableNfcImage": this.rfidEnableNfcImage,
+            "mdlProcessingScreenFailureImage": this.mdlProcessingScreenFailureImage,
+            "mdlEnableNfcImage": this.mdlEnableNfcImage,
         }
     }
 }

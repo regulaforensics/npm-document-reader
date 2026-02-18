@@ -15,6 +15,20 @@ export declare class CustomizationColors {
     rfidEnableNfcButtonText?: number;
     /** Android only. */
     rfidEnableNfcButtonBackground?: number;
+    mdlProcessingScreenBackground?: number;
+    mdlProcessingScreenHintLabelText?: number;
+    mdlProcessingScreenHintLabelBackground?: number;
+    mdlProcessingScreenProgressLabelText?: number;
+    mdlProcessingScreenResultLabelText?: number;
+    mdlProcessingScreenLoadingBar?: number;
+    /** Android only. */
+    mdlEnableNfcTitleText?: number;
+    /** Android only. */
+    mdlEnableNfcDescriptionText?: number;
+    /** Android only. */
+    mdlEnableNfcButtonText?: number;
+    /** Android only. */
+    mdlEnableNfcButtonBackground?: number;
 
     /**
      * Allows you to deserialize object.

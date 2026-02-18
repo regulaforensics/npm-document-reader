@@ -167,6 +167,16 @@ export var customizationColors = {
   "rfidEnableNfcDescriptionText": 0xff000009,
   "rfidEnableNfcButtonText": 0xff000010,
   "rfidEnableNfcButtonBackground": 0xff000011,
+  "mdlProcessingScreenBackground": 0xff000012,
+  "mdlProcessingScreenHintLabelText": 0xff000013,
+  "mdlProcessingScreenHintLabelBackground": 0xff000014,
+  "mdlProcessingScreenProgressLabelText": 0xff000015,
+  "mdlProcessingScreenResultLabelText": 0xff000016,
+  "mdlProcessingScreenLoadingBar": 0xff000017,
+  "mdlEnableNfcTitleText": 0xff000018,
+  "mdlEnableNfcDescriptionText": 0xff000019,
+  "mdlEnableNfcButtonText": 0xff000020,
+  "mdlEnableNfcButtonBackground": 0xff000021,
 };
 export var customizationFonts = {
   "rfidProcessingScreenHintLabel": font1,
@@ -175,10 +185,18 @@ export var customizationFonts = {
   "rfidEnableNfcTitleText": font2,
   "rfidEnableNfcDescriptionText": font1,
   "rfidEnableNfcButtonText": font2,
+  "mdlProcessingScreenHintLabel": font1,
+  "mdlProcessingScreenProgressLabel": font2,
+  "mdlProcessingScreenResultLabel": font1,
+  "mdlEnableNfcTitleText": font2,
+  "mdlEnableNfcDescriptionText": font1,
+  "mdlEnableNfcButtonText": font2,
 };
 export var customizationImages = {
   "rfidProcessingScreenFailureImage": img1,
   "rfidEnableNfcImage": img2,
+  "mdlProcessingScreenFailureImage": img1,
+  "mdlEnableNfcImage": img2,
 };
 export var customization = {
   "showStatusMessages": true,
