@@ -1,5 +1,6 @@
 import { AuthenticityParams } from "./AuthenticityParams";
 import { BackendProcessingConfig } from "./BackendProcessingConfig";
+import { Bsi } from "./Bsi";
 import { FaceApiParams } from "./FaceApiParams";
 import { ImageQA } from "./ImageQA";
 import { RFIDParams } from "./RFIDParams";
@@ -207,7 +208,6 @@ export declare class ProcessParams {
      */
     returnTransliteratedFields?: boolean;
     checkCaptureProcessIntegrity?: boolean;
-    bsiTr03135?: Bsi;
     /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
@@ -422,6 +422,7 @@ export declare class ProcessParams {
      * Set up the backend processing service parameters.
      */
     backendProcessingConfig?: BackendProcessingConfig;
+    bsiTr03135?: Bsi;
     authenticityParams: AuthenticityParams;
     /**
      * Takes JSON with parameters that are not presented in the DocumentReader.
@@ -486,8 +487,3 @@ export declare enum MrzDetectionModes {
     RESIZE_BINARIZE_WINDOW = 1,
     BLUR_BEFORE_BINARIZATION = 2,
 }
-
-export interface Bsi {
-    generateResult?: boolean
-}
-
