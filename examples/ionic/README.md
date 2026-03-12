@@ -19,4 +19,4 @@ In order to connect to an external scanning device, change the `useBtDevice` con
 
 ### RFID self hosted UI
 
-This app also demonstraits how you can implement you own UI for the RFID reading process. To enable it, change the `useRfidSelfHostedUI` constant to true in `src/extra/custom_rfid`. Run the app and initiate RFID reading.
+This app also demonstraits how you can implement your own UI for the RFID reading process. To enable it, change the `useRfidSelfHostedUI` constant to true in `src/extra/custom_rfid`. Run the app and initiate RFID reading.

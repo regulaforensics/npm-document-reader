@@ -5,20 +5,20 @@ export declare class CustomizationFonts {
     rfidProcessingScreenProgressLabel?: Font;
     rfidProcessingScreenResultLabel?: Font;
     /** Android only. */
-    rfidEnableNfcTitleText?: number;
+    rfidEnableNfcTitleText?: Font;
     /** Android only. */
-    rfidEnableNfcDescriptionText?: number;
+    rfidEnableNfcDescriptionText?: Font;
     /** Android only. */
-    rfidEnableNfcButtonText?: number;
-    mdlProcessingScreenHintLabel?: number;
-    mdlProcessingScreenProgressLabel?: number;
-    mdlProcessingScreenResultLabel?: number;
+    rfidEnableNfcButtonText?: Font;
+    mdlProcessingScreenHintLabel?: Font;
+    mdlProcessingScreenProgressLabel?: Font;
+    mdlProcessingScreenResultLabel?: Font;
     /** Android only. */
-    mdlEnableNfcTitleText?: number;
+    mdlEnableNfcTitleText?: Font;
     /** Android only. */
-    mdlEnableNfcDescriptionText?: number;
+    mdlEnableNfcDescriptionText?: Font;
     /** Android only. */
-    mdlEnableNfcButtonText?: number;
+    mdlEnableNfcButtonText?: Font;
 
     /**
      * Allows you to deserialize object.
