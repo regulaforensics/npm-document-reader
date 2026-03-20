@@ -16,11 +16,13 @@ class FinalizeConfig {
     rawImages
     video
     rfidSession
+    mdlSession
 
     constructor(options) {
         this.rawImages = options?.rawImages
         this.video = options?.video
         this.rfidSession = options?.rfidSession
+        this.mdlSession = options?.mdlSession
     }
 
     static fromJson(jsonObject) {
@@ -30,6 +32,7 @@ class FinalizeConfig {
         result.rawImages = jsonObject["rawImages"];
         result.video = jsonObject["video"];
         result.rfidSession = jsonObject["rfidSession"];
+        result.mdlSession = jsonObject["mdlSession"];
 
         return result;
     }
@@ -40,6 +43,7 @@ class FinalizeConfig {
             "rawImages": this.rawImages,
             "video": this.video,
             "rfidSession": this.rfidSession,
+            "mdlSession": this.mdlSession,
         }
     }
 }
@@ -473,7 +477,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraMode),
 /* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraPosition),
 /* harmony export */   CameraSize: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CameraSize),
-/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Cap),
+/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Cap),
 /* harmony export */   CaptureMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CaptureMode),
 /* harmony export */   CaptureSessionPreset: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.CaptureSessionPreset),
 /* harmony export */   CardProperties: () => (/* reexport safe */ _results_rfid_CardProperties__WEBPACK_IMPORTED_MODULE_59__.CardProperties),
@@ -483,16 +487,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CheckResult: () => (/* reexport safe */ _results_status_CheckResult__WEBPACK_IMPORTED_MODULE_35__.CheckResult),
 /* harmony export */   Comparison: () => (/* reexport safe */ _results_visual_results_Comparison__WEBPACK_IMPORTED_MODULE_19__.Comparison),
 /* harmony export */   Coordinate: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Coordinate),
-/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.CustomButtonTag),
-/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization),
-/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_93__.CustomizationColors),
-/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_89__.CustomizationFonts),
-/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_90__.CustomizationImages),
-/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_96__.DTCDataGroup),
+/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.CustomButtonTag),
+/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Customization),
+/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_89__.CustomizationColors),
+/* harmony export */   CustomizationContentModes: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_94__.CustomizationContentModes),
+/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__.CustomizationFonts),
+/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_91__.CustomizationImages),
+/* harmony export */   CustomizationMatrices: () => (/* reexport safe */ _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_93__.CustomizationMatrices),
+/* harmony export */   CustomizationTimings: () => (/* reexport safe */ _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_92__.CustomizationTimings),
+/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_98__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_60__.DataField),
-/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.DataRetrieval),
-/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.DeviceEngagement),
-/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_110__.DeviceRetrievalMethod),
+/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__.DataRetrieval),
+/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__.DeviceEngagement),
+/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_112__.DeviceRetrievalMethod),
 /* harmony export */   DocFeature: () => (/* reexport safe */ _results_visible_digital_seals_DocFeature__WEBPACK_IMPORTED_MODULE_55__.DocFeature),
 /* harmony export */   DocFormat: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocFormat),
 /* harmony export */   DocReaderAction: () => (/* binding */ DocReaderAction),
@@ -502,14 +509,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   DocReaderScenario: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_12__.DocReaderScenario),
 /* harmony export */   DocReaderVersion: () => (/* reexport safe */ _info_DocReaderVersion__WEBPACK_IMPORTED_MODULE_7__.DocReaderVersion),
 /* harmony export */   DocumentReader: () => (/* binding */ DocumentReader),
-/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__.DocumentRequest18013MDL),
-/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__.DocumentRequestMDL),
+/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_111__.DocumentRequest18013MDL),
+/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_111__.DocumentRequestMDL),
 /* harmony export */   DocumentType: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocumentType),
 /* harmony export */   DocumentTypeEnum: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocType),
 /* harmony export */   DocumentsDatabase: () => (/* reexport safe */ _info_DocumentsDatabase__WEBPACK_IMPORTED_MODULE_10__.DocumentsDatabase),
-/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_98__.EDLDataGroups),
-/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_95__.EIDDataGroups),
-/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_94__.EPassportDataGroups),
+/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_100__.EDLDataGroups),
+/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_97__.EIDDataGroups),
+/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_96__.EPassportDataGroups),
 /* harmony export */   ErrorCodes: () => (/* reexport safe */ _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.ErrorCodes),
 /* harmony export */   Extension: () => (/* reexport safe */ _results_rfid_Extension__WEBPACK_IMPORTED_MODULE_76__.Extension),
 /* harmony export */   FaceApiParams: () => (/* reexport safe */ _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_81__.FaceApiParams),
@@ -518,9 +525,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   File: () => (/* reexport safe */ _results_rfid_File__WEBPACK_IMPORTED_MODULE_66__.File),
 /* harmony export */   FileData: () => (/* reexport safe */ _results_rfid_FileData__WEBPACK_IMPORTED_MODULE_71__.FileData),
 /* harmony export */   FinalizeConfig: () => (/* reexport safe */ _config_FinalizeConfig__WEBPACK_IMPORTED_MODULE_6__.FinalizeConfig),
-/* harmony export */   Font: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__.Font),
-/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__.FontStyle),
-/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.FrameShapeType),
+/* harmony export */   Font: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__.Font),
+/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__.FontStyle),
+/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.FrameShapeType),
 /* harmony export */   Functionality: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality),
 /* harmony export */   GlaresCheckParams: () => (/* reexport safe */ _params_process_params_GlaresCheckParams__WEBPACK_IMPORTED_MODULE_80__.GlaresCheckParams),
 /* harmony export */   GraphicField: () => (/* reexport safe */ _results_visual_results_GraphicField__WEBPACK_IMPORTED_MODULE_24__.GraphicField),
@@ -540,45 +547,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Lights: () => (/* reexport safe */ _results_visual_results_Lights__WEBPACK_IMPORTED_MODULE_21__.Lights),
 /* harmony export */   LivenessParams: () => (/* reexport safe */ _params_process_params_LivenessParams__WEBPACK_IMPORTED_MODULE_78__.LivenessParams),
 /* harmony export */   LogLevel: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.LogLevel),
-/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement),
-/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval),
-/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDocRequestPreset),
-/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__.MDLIntentToRetain),
+/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__.MDLDeviceEngagement),
+/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__.MDLDeviceRetrieval),
+/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__.MDLDocRequestPreset),
+/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_110__.MDLIntentToRetain),
 /* harmony export */   MRZFormat: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MeasureSystem),
 /* harmony export */   MrzDetectionModes: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.MrzDetectionModes),
-/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__.NameSpaceMDL),
+/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_110__.NameSpaceMDL),
 /* harmony export */   OnlineMode: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineMode),
 /* harmony export */   OnlineProcessingConfig: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineProcessingConfig),
 /* harmony export */   OpticalStatus: () => (/* reexport safe */ _results_status_OpticalStatus__WEBPACK_IMPORTED_MODULE_36__.OpticalStatus),
-/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_103__.PAAttribute),
-/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_99__.PAResourcesIssuer),
+/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_105__.PAAttribute),
+/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_101__.PAResourcesIssuer),
 /* harmony export */   PDF417Info: () => (/* reexport safe */ _results_barcode_PDF417Info__WEBPACK_IMPORTED_MODULE_44__.PDF417Info),
-/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__.PKDCertificate),
-/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__.PKDResourceType),
+/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_107__.PKDCertificate),
+/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_107__.PKDResourceType),
 /* harmony export */   Position: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Position),
 /* harmony export */   PrepareProgress: () => (/* reexport safe */ _info_PrepareProgress__WEBPACK_IMPORTED_MODULE_8__.PrepareProgress),
 /* harmony export */   ProcessParams: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.ProcessParams),
 /* harmony export */   ProcessingFinishedStatus: () => (/* reexport safe */ _results_Results__WEBPACK_IMPORTED_MODULE_30__.ProcessingFinishedStatus),
 /* harmony export */   RFIDAccessControlProcedureType: () => (/* reexport safe */ _results_rfid_RFIDAccessControlProcedureType__WEBPACK_IMPORTED_MODULE_75__.RFIDAccessControlProcedureType),
 /* harmony export */   RFIDApplicationType: () => (/* reexport safe */ _results_rfid_Application__WEBPACK_IMPORTED_MODULE_74__.RFIDApplicationType),
-/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDAuthenticationProcedureType),
+/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDAuthenticationProcedureType),
 /* harmony export */   RFIDCertificateType: () => (/* reexport safe */ _results_rfid_RFIDCertificateType__WEBPACK_IMPORTED_MODULE_72__.RFIDCertificateType),
 /* harmony export */   RFIDConfig: () => (/* reexport safe */ _config_RFIDConfig__WEBPACK_IMPORTED_MODULE_3__.RFIDConfig),
 /* harmony export */   RFIDDataFileType: () => (/* reexport safe */ _results_rfid_RFIDDataFileType__WEBPACK_IMPORTED_MODULE_69__.RFIDDataFileType),
-/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_100__.RFIDErrorCodes),
+/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_102__.RFIDErrorCodes),
 /* harmony export */   RFIDException: () => (/* reexport safe */ _info_RFIDException__WEBPACK_IMPORTED_MODULE_13__.RFIDException),
-/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__.RFIDNotification),
-/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__.RFIDNotificationCodes),
+/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_104__.RFIDNotification),
+/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_104__.RFIDNotificationCodes),
 /* harmony export */   RFIDOrigin: () => (/* reexport safe */ _results_visual_results_RFIDOrigin__WEBPACK_IMPORTED_MODULE_25__.RFIDOrigin),
 /* harmony export */   RFIDParams: () => (/* reexport safe */ _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_82__.RFIDParams),
-/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDPasswordType),
-/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDReadingBufferSize),
-/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDSDKProfilerType),
-/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario),
+/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDPasswordType),
+/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDReadingBufferSize),
+/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDSDKProfilerType),
+/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDScenario),
 /* harmony export */   RFIDSessionData: () => (/* reexport safe */ _results_rfid_RFIDSessionData__WEBPACK_IMPORTED_MODULE_73__.RFIDSessionData),
 /* harmony export */   RFIDStatus: () => (/* reexport safe */ _results_status_RFIDStatus__WEBPACK_IMPORTED_MODULE_33__.RFIDStatus),
-/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDTerminalType),
+/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDTerminalType),
 /* harmony export */   RFIDValidity: () => (/* reexport safe */ _results_rfid_RFIDValidity__WEBPACK_IMPORTED_MODULE_68__.RFIDValidity),
 /* harmony export */   RFIDValue: () => (/* reexport safe */ _results_rfid_RFIDValue__WEBPACK_IMPORTED_MODULE_67__.RFIDValue),
 /* harmony export */   RecognizeConfig: () => (/* reexport safe */ _config_RecognizeConfig__WEBPACK_IMPORTED_MODULE_5__.RecognizeConfig),
@@ -591,11 +598,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SecurityFeatureType: () => (/* reexport safe */ _results_authenticity_SecurityFeatureType__WEBPACK_IMPORTED_MODULE_42__.SecurityFeatureType),
 /* harmony export */   SecurityObject: () => (/* reexport safe */ _results_rfid_SecurityObject__WEBPACK_IMPORTED_MODULE_58__.SecurityObject),
 /* harmony export */   SecurityObjectCertificates: () => (/* reexport safe */ _results_rfid_SecurityObjectCertificates__WEBPACK_IMPORTED_MODULE_63__.SecurityObjectCertificates),
-/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.SignManagementAction),
+/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.SignManagementAction),
 /* harmony export */   SignerInfo: () => (/* reexport safe */ _results_rfid_SignerInfo__WEBPACK_IMPORTED_MODULE_62__.SignerInfo),
 /* harmony export */   Symbol: () => (/* reexport safe */ _results_visual_results_Symbol__WEBPACK_IMPORTED_MODULE_18__.Symbol),
-/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_104__.TAChallenge),
-/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_101__.TccParams),
+/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_106__.TAChallenge),
+/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_103__.TccParams),
 /* harmony export */   TextField: () => (/* reexport safe */ _results_visual_results_TextField__WEBPACK_IMPORTED_MODULE_20__.TextField),
 /* harmony export */   TextResult: () => (/* reexport safe */ _results_visual_results_TextResult__WEBPACK_IMPORTED_MODULE_26__.TextResult),
 /* harmony export */   TextSource: () => (/* reexport safe */ _results_visual_results_TextSource__WEBPACK_IMPORTED_MODULE_27__.TextSource),
@@ -604,7 +611,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VDSNCData: () => (/* reexport safe */ _results_visible_digital_seals_VDSNCData__WEBPACK_IMPORTED_MODULE_53__.VDSNCData),
 /* harmony export */   Validity: () => (/* reexport safe */ _results_visual_results_Validity__WEBPACK_IMPORTED_MODULE_22__.Validity),
 /* harmony export */   Value: () => (/* reexport safe */ _results_visual_results_Value__WEBPACK_IMPORTED_MODULE_16__.Value),
-/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.ViewContentMode)
+/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_94__.ViewContentMode)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/OnlineProcessingConfig */ "./src/config/OnlineProcessingConfig.js");
@@ -695,28 +702,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./params/process_params/Bsi */ "./src/params/process_params/Bsi.js");
 /* harmony import */ var _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./params/process_params/FaceApiSearchParams */ "./src/params/process_params/FaceApiSearchParams.js");
 /* harmony import */ var _params_Functionality__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/Functionality */ "./src/params/Functionality.js");
-/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
-/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
-/* harmony import */ var _params_customization_Font__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/Font */ "./src/params/customization/Font.js");
-/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
-/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
-/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
-/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
-/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
-/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
-/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
-/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
-/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
-/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
-/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
-/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
-/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
-/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
-/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
-/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
-/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
+/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
+/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
+/* harmony import */ var _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/CustomizationTimings */ "./src/params/customization/CustomizationTimings.js");
+/* harmony import */ var _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/customization/CustomizationMatrices */ "./src/params/customization/CustomizationMatrices.js");
+/* harmony import */ var _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/customization/CustomizationContentModes */ "./src/params/customization/CustomizationContentModes.js");
+/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
+/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
+/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
+/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
+/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
+/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
+/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
+/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
+/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
+/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
+/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
+/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
+/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
+/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
+/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+
+
 
 
 
@@ -946,14 +957,14 @@ class DocumentReader {
     }
 
     get customization() { return this._customization }
-    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization()
+    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Customization()
     set customization(val) {
         this._customization = val;
         this._customization._apply();
     }
 
     get rfidScenario() { return this._rfidScenario }
-    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario()
+    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDScenario()
     set rfidScenario(val) {
         this._rfidScenario = val;
         this._rfidScenario._apply();
@@ -971,8 +982,8 @@ class DocumentReader {
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("resetConfiguration", []);
         this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality();
         this._processParams = new _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.ProcessParams();
-        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization();
-        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario();
+        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Customization();
+        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDScenario();
     }
 
     set onCustomButtonTapped(completion) {
@@ -1118,23 +1129,23 @@ class DocumentReader {
         var response = "";
         if (options?.withoutUI != true) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement.NFC) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.MDLDeviceEngagement.QR && options?.data != null) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__.MDLDeviceEngagement.QR && options?.data != null) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceData", [options.data]);
         }
 
         var jsonObject = JSON.parse(response);
         return [
-            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_107__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
+            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_109__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
             _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.DocReaderException.fromJson(jsonObject["error"]),
         ]
     }
 
     async retrieveData(retrieval, options) {
         var func = "startRetrieveData";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_106__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_108__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
 
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(func, [retrieval.toJson(), options?.engagement?.toJson()]);
         var jsonObject = JSON.parse(response);
@@ -1180,12 +1191,12 @@ class DocumentReader {
 
     async _getCustomization() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getCustomization", []);
-        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_92__.Customization.fromJson(JSON.parse(response));
+        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Customization.fromJson(JSON.parse(response));
     }
 
     async _getRfidScenario() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getRfidScenario", []);
-        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_97__.RFIDScenario.fromJson(JSON.parse(response));
+        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_99__.RFIDScenario.fromJson(JSON.parse(response));
     }
 
     async _getLicense() {
@@ -2722,15 +2733,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Cap: () => (/* binding */ Cap),
 /* harmony export */   CustomButtonTag: () => (/* binding */ CustomButtonTag),
 /* harmony export */   Customization: () => (/* binding */ Customization),
-/* harmony export */   FrameShapeType: () => (/* binding */ FrameShapeType),
-/* harmony export */   ViewContentMode: () => (/* binding */ ViewContentMode)
+/* harmony export */   FrameShapeType: () => (/* binding */ FrameShapeType)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../index */ "./src/index.js");
 /* harmony import */ var _CustomizationColors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CustomizationColors */ "./src/params/customization/CustomizationColors.js");
 /* harmony import */ var _CustomizationFonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
 /* harmony import */ var _CustomizationImages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CustomizationImages */ "./src/params/customization/CustomizationImages.js");
-/* harmony import */ var _Font__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Font */ "./src/params/customization/Font.js");
+/* harmony import */ var _CustomizationTimings__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CustomizationTimings */ "./src/params/customization/CustomizationTimings.js");
+/* harmony import */ var _CustomizationContentModes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CustomizationContentModes */ "./src/params/customization/CustomizationContentModes.js");
+/* harmony import */ var _CustomizationMatrices__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CustomizationMatrices */ "./src/params/customization/CustomizationMatrices.js");
+
+
 
 
 
@@ -3171,6 +3185,24 @@ class Customization {
         val._apply(this);
     }
 
+    get timings() { return this._timings; }
+    set timings(val) {
+        this._timings = val;
+        val._apply(this);
+    }
+
+    get contentModes() { return this._contentModes; }
+    set contentModes(val) {
+        this._contentModes = val;
+        val._apply(this);
+    }
+
+    get matrices() { return this._matrices; }
+    set matrices(val) {
+        this._matrices = val;
+        val._apply(this);
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
 
@@ -3232,9 +3264,9 @@ class Customization {
         result._customLabelStatus = jsonObject["customLabelStatus"];
         result._cameraFrameLineCap = jsonObject["cameraFrameLineCap"];
         result._uiCustomizationLayer = jsonObject["uiCustomizationLayer"];
-        result._statusTextFont = _Font__WEBPACK_IMPORTED_MODULE_5__.Font.fromJson(jsonObject["statusTextFont"]);
-        result._resultStatusTextFont = _Font__WEBPACK_IMPORTED_MODULE_5__.Font.fromJson(jsonObject["resultStatusTextFont"]);
-        result._multipageButtonTextFont = _Font__WEBPACK_IMPORTED_MODULE_5__.Font.fromJson(jsonObject["multipageButtonTextFont"]);
+        result._statusTextFont = _CustomizationFonts__WEBPACK_IMPORTED_MODULE_3__.Font.fromJson(jsonObject["statusTextFont"]);
+        result._resultStatusTextFont = _CustomizationFonts__WEBPACK_IMPORTED_MODULE_3__.Font.fromJson(jsonObject["resultStatusTextFont"]);
+        result._multipageButtonTextFont = _CustomizationFonts__WEBPACK_IMPORTED_MODULE_3__.Font.fromJson(jsonObject["multipageButtonTextFont"]);
         result._helpAnimationImageTransformsIOS = jsonObject["helpAnimationImageContentMode"];
         result._multipageAnimationFrontImageTransformsIOS = jsonObject["multipageAnimationFrontImageContentMode"];
         result._multipageAnimationBackImageTransformsIOS = jsonObject["multipageAnimationBackImageContentMode"];
@@ -3249,6 +3281,9 @@ class Customization {
         result._colors = _CustomizationColors__WEBPACK_IMPORTED_MODULE_2__.CustomizationColors.fromJson(jsonObject["colors"]);
         result._fonts = _CustomizationFonts__WEBPACK_IMPORTED_MODULE_3__.CustomizationFonts.fromJson(jsonObject["fonts"]);
         result._images = _CustomizationImages__WEBPACK_IMPORTED_MODULE_4__.CustomizationImages.fromJson(jsonObject["images"]);
+        result._timings = _CustomizationTimings__WEBPACK_IMPORTED_MODULE_5__.CustomizationTimings.fromJson(jsonObject["timings"]);
+        result._contentModes = _CustomizationContentModes__WEBPACK_IMPORTED_MODULE_6__.CustomizationContentModes.fromJson(jsonObject["contentModes"]);
+        result._matrices = _CustomizationMatrices__WEBPACK_IMPORTED_MODULE_7__.CustomizationMatrices.fromJson(jsonObject["matrices"]);
 
         return result;
     }
@@ -3327,6 +3362,9 @@ class Customization {
             "colors": this.colors?.toJson(),
             "fonts": this.fonts?.toJson(),
             "images": this.images?.toJson(),
+            "timings": this.timings?.toJson(),
+            "contentModes": this.contentModes?.toJson(),
+            "matrices": this.matrices?.toJson(),
         }
     }
 
@@ -3346,22 +3384,6 @@ const Cap = {
 const FrameShapeType = {
     LINE: 0,
     CORNER: 1
-};
-
-const ViewContentMode = {
-    SCALE_TO_FILL: 0,
-    SCALE_ASPECT_FIT: 1,
-    SCALE_ASPECT_FILL: 2,
-    REDRAW: 3,
-    CENTER: 4,
-    TOP: 5,
-    BOTTOM: 6,
-    LEFT: 7,
-    RIGHT: 8,
-    TOP_LEFT: 9,
-    TOP_RIGHT: 10,
-    BOTTOM_LEFT: 11,
-    BOTTOM_RIGHT: 12
 };
 
 const CustomButtonTag = {
@@ -3522,10 +3544,34 @@ class CustomizationColors {
         this._set({ "mdlEnableNfcButtonBackground": val });
     }
 
+    get nextPageIdCardFront() { return this._nextPageIdCardFront; }
+    set nextPageIdCardFront(val) {
+        this._nextPageIdCardFront = val;
+        this._set({ "nextPageIdCardFront": val });
+    }
+
+    get nextPageIdCardBack() { return this._nextPageIdCardBack; }
+    set nextPageIdCardBack(val) {
+        this._nextPageIdCardBack = val;
+        this._set({ "nextPageIdCardBack": val });
+    }
+
+    get nextPagePassportShift() { return this._nextPagePassportShift; }
+    set nextPagePassportShift(val) {
+        this._nextPagePassportShift = val;
+        this._set({ "nextPagePassportShift": val });
+    }
+
+    get nextPagePassportFlip() { return this._nextPagePassportFlip; }
+    set nextPagePassportFlip(val) {
+        this._nextPagePassportFlip = val;
+        this._set({ "nextPagePassportFlip": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-
         const result = new CustomizationColors();
+
         result._rfidProcessingScreenBackground = jsonObject["rfidProcessingScreenBackground"];
         result._rfidProcessingScreenHintLabelText = jsonObject["rfidProcessingScreenHintLabelText"];
         result._rfidProcessingScreenHintLabelBackground = jsonObject["rfidProcessingScreenHintLabelBackground"];
@@ -3548,6 +3594,10 @@ class CustomizationColors {
         result._mdlEnableNfcDescriptionText = jsonObject["mdlEnableNfcDescriptionText"];
         result._mdlEnableNfcButtonText = jsonObject["mdlEnableNfcButtonText"];
         result._mdlEnableNfcButtonBackground = jsonObject["mdlEnableNfcButtonBackground"];
+        result._nextPageIdCardFront = jsonObject["nextPageIdCardFront"];
+        result._nextPageIdCardBack = jsonObject["nextPageIdCardBack"];
+        result._nextPagePassportShift = jsonObject["nextPagePassportShift"];
+        result._nextPagePassportFlip = jsonObject["nextPagePassportFlip"];
 
         return result;
     }
@@ -3583,9 +3633,84 @@ class CustomizationColors {
             "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText,
             "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText,
             "mdlEnableNfcButtonBackground": this.mdlEnableNfcButtonBackground,
+            "nextPageIdCardFront": this.nextPageIdCardFront,
+            "nextPageIdCardBack": this.nextPageIdCardBack,
+            "nextPagePassportShift": this.nextPagePassportShift,
+            "nextPagePassportFlip": this.nextPagePassportFlip,
         }
     }
 }
+
+
+/***/ },
+
+/***/ "./src/params/customization/CustomizationContentModes.js"
+/*!***************************************************************!*\
+  !*** ./src/params/customization/CustomizationContentModes.js ***!
+  \***************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CustomizationContentModes: () => (/* binding */ CustomizationContentModes),
+/* harmony export */   ViewContentMode: () => (/* binding */ ViewContentMode)
+/* harmony export */ });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
+
+
+class CustomizationContentModes {
+    get nextPageIdCardFront() { return this._nextPageIdCardFront; }
+    set nextPageIdCardFront(val) {
+        this._nextPageIdCardFront = val;
+        this._set({ "nextPageIdCardFront": val });
+    }
+
+    get nextPageIdCardBack() { return this._nextPageIdCardBack; }
+    set nextPageIdCardBack(val) {
+        this._nextPageIdCardBack = val;
+        this._set({ "nextPageIdCardBack": val });
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        const result = new CustomizationContentModes();
+
+        result._nextPageIdCardFront = jsonObject["nextPageIdCardFront"];
+        result._nextPageIdCardBack = jsonObject["nextPageIdCardBack"];
+
+        return result;
+    }
+
+    _apply() { this._set(this); }
+    _set(json) {
+        const parentJson = { "contentModes": json };
+        var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
+        if (this === parent.contentModes) parent._set(parentJson);
+    }
+
+    toJson() {
+        return {
+            "nextPageIdCardFront": this.nextPageIdCardFront,
+            "nextPageIdCardBack": this.nextPageIdCardBack,
+        }
+    }
+}
+
+const ViewContentMode = {
+    SCALE_TO_FILL: 0,
+    SCALE_ASPECT_FIT: 1,
+    SCALE_ASPECT_FILL: 2,
+    REDRAW: 3,
+    CENTER: 4,
+    TOP: 5,
+    BOTTOM: 6,
+    LEFT: 7,
+    RIGHT: 8,
+    TOP_LEFT: 9,
+    TOP_RIGHT: 10,
+    BOTTOM_LEFT: 11,
+    BOTTOM_RIGHT: 12
+};
 
 
 /***/ },
@@ -3598,11 +3723,11 @@ class CustomizationColors {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CustomizationFonts: () => (/* binding */ CustomizationFonts)
+/* harmony export */   CustomizationFonts: () => (/* binding */ CustomizationFonts),
+/* harmony export */   Font: () => (/* binding */ Font),
+/* harmony export */   FontStyle: () => (/* binding */ FontStyle)
 /* harmony export */ });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
-/* harmony import */ var _Font__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Font */ "./src/params/customization/Font.js");
-
 
 
 class CustomizationFonts {
@@ -3680,20 +3805,20 @@ class CustomizationFonts {
 
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-
         const result = new CustomizationFonts();
-        result._rfidProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenHintLabel"]);
-        result._rfidProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenProgressLabel"]);
-        result._rfidProcessingScreenResultLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidProcessingScreenResultLabel"]);
-        result._rfidEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcTitleText"]);
-        result._rfidEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcDescriptionText"]);
-        result._rfidEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["rfidEnableNfcButtonText"]);
-        result._mdlProcessingScreenHintLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenHintLabel"]);
-        result._mdlProcessingScreenProgressLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenProgressLabel"]);
-        result._mdlProcessingScreenResultLabel = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlProcessingScreenResultLabel"]);
-        result._mdlEnableNfcTitleText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcTitleText"]);
-        result._mdlEnableNfcDescriptionText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcDescriptionText"]);
-        result._mdlEnableNfcButtonText = _Font__WEBPACK_IMPORTED_MODULE_1__.Font.fromJson(jsonObject["mdlEnableNfcButtonText"]);
+
+        result._rfidProcessingScreenHintLabel = Font.fromJson(jsonObject["rfidProcessingScreenHintLabel"]);
+        result._rfidProcessingScreenProgressLabel = Font.fromJson(jsonObject["rfidProcessingScreenProgressLabel"]);
+        result._rfidProcessingScreenResultLabel = Font.fromJson(jsonObject["rfidProcessingScreenResultLabel"]);
+        result._rfidEnableNfcTitleText = Font.fromJson(jsonObject["rfidEnableNfcTitleText"]);
+        result._rfidEnableNfcDescriptionText = Font.fromJson(jsonObject["rfidEnableNfcDescriptionText"]);
+        result._rfidEnableNfcButtonText = Font.fromJson(jsonObject["rfidEnableNfcButtonText"]);
+        result._mdlProcessingScreenHintLabel = Font.fromJson(jsonObject["mdlProcessingScreenHintLabel"]);
+        result._mdlProcessingScreenProgressLabel = Font.fromJson(jsonObject["mdlProcessingScreenProgressLabel"]);
+        result._mdlProcessingScreenResultLabel = Font.fromJson(jsonObject["mdlProcessingScreenResultLabel"]);
+        result._mdlEnableNfcTitleText = Font.fromJson(jsonObject["mdlEnableNfcTitleText"]);
+        result._mdlEnableNfcDescriptionText = Font.fromJson(jsonObject["mdlEnableNfcDescriptionText"]);
+        result._mdlEnableNfcButtonText = Font.fromJson(jsonObject["mdlEnableNfcButtonText"]);
 
         return result;
     }
@@ -3723,90 +3848,6 @@ class CustomizationFonts {
     }
 }
 
-
-/***/ },
-
-/***/ "./src/params/customization/CustomizationImages.js"
-/*!*********************************************************!*\
-  !*** ./src/params/customization/CustomizationImages.js ***!
-  \*********************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CustomizationImages: () => (/* binding */ CustomizationImages)
-/* harmony export */ });
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
-
-
-class CustomizationImages {
-    get rfidProcessingScreenFailureImage() { return this._rfidProcessingScreenFailureImage; }
-    set rfidProcessingScreenFailureImage(val) {
-        this._rfidProcessingScreenFailureImage = val;
-        this._set({ "rfidProcessingScreenFailureImage": val });
-    }
-
-    get rfidEnableNfcImage() { return this._rfidEnableNfcImage; }
-    set rfidEnableNfcImage(val) {
-        this._rfidEnableNfcImage = val;
-        this._set({ "rfidEnableNfcImage": val });
-    }
-
-    get mdlProcessingScreenFailureImage() { return this._mdlProcessingScreenFailureImage; }
-    set mdlProcessingScreenFailureImage(val) {
-        this._mdlProcessingScreenFailureImage = val;
-        this._set({ "mdlProcessingScreenFailureImage": val });
-    }
-
-    get mdlEnableNfcImage() { return this._mdlEnableNfcImage; }
-    set mdlEnableNfcImage(val) {
-        this._mdlEnableNfcImage = val;
-        this._set({ "mdlEnableNfcImage": val });
-    }
-
-    static fromJson(jsonObject) {
-        if (jsonObject == null) return null;
-
-        const result = new CustomizationImages();
-        result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
-        result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
-        result._mdlProcessingScreenFailureImage = jsonObject["mdlProcessingScreenFailureImage"];
-        result._mdlEnableNfcImage = jsonObject["mdlEnableNfcImage"];
-
-        return result;
-    }
-
-    _apply() { this._set(this); }
-    _set(json) {
-        const parentJson = { "images": json };
-        var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
-        if (this === parent.images) parent._set(parentJson);
-    }
-
-    toJson() {
-        return {
-            "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
-            "rfidEnableNfcImage": this.rfidEnableNfcImage,
-            "mdlProcessingScreenFailureImage": this.mdlProcessingScreenFailureImage,
-            "mdlEnableNfcImage": this.mdlEnableNfcImage,
-        }
-    }
-}
-
-
-/***/ },
-
-/***/ "./src/params/customization/Font.js"
-/*!******************************************!*\
-  !*** ./src/params/customization/Font.js ***!
-  \******************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Font: () => (/* binding */ Font),
-/* harmony export */   FontStyle: () => (/* binding */ FontStyle)
-/* harmony export */ });
 class Font {
     name
     size
@@ -3843,6 +3884,360 @@ const FontStyle = {
     ITALIC: 2,
     BOLD_ITALIC: 3
 };
+
+
+/***/ },
+
+/***/ "./src/params/customization/CustomizationImages.js"
+/*!*********************************************************!*\
+  !*** ./src/params/customization/CustomizationImages.js ***!
+  \*********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CustomizationImages: () => (/* binding */ CustomizationImages)
+/* harmony export */ });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
+
+
+class CustomizationImages {
+    get helpAnimation() { return this._helpAnimation; }
+    set helpAnimation(val) {
+        this._helpAnimation = val;
+        this._set({ "helpAnimation": val });
+    }
+    
+    get livenessAnimation() { return this._livenessAnimation; }
+    set livenessAnimation(val) {
+        this._livenessAnimation = val;
+        this._set({ "livenessAnimation": val });
+    }
+    
+    get borderBackground() { return this._borderBackground; }
+    set borderBackground(val) {
+        this._borderBackground = val;
+        this._set({ "borderBackground": val });
+    }
+    
+    get torchButtonOn() { return this._torchButtonOn; }
+    set torchButtonOn(val) {
+        this._torchButtonOn = val;
+        this._set({ "torchButtonOn": val });
+    }
+    
+    get torchButtonOff() { return this._torchButtonOff; }
+    set torchButtonOff(val) {
+        this._torchButtonOff = val;
+        this._set({ "torchButtonOff": val });
+    }
+    
+    get captureButton() { return this._captureButton; }
+    set captureButton(val) {
+        this._captureButton = val;
+        this._set({ "captureButton": val });
+    }
+    
+    get switchButton() { return this._switchButton; }
+    set switchButton(val) {
+        this._switchButton = val;
+        this._set({ "switchButton": val });
+    }
+    
+    get closeButton() { return this._closeButton; }
+    set closeButton(val) {
+        this._closeButton = val;
+        this._set({ "closeButton": val });
+    }
+    
+    get multipageButton() { return this._multipageButton; }
+    set multipageButton(val) {
+        this._multipageButton = val;
+        this._set({ "multipageButton": val });
+    }
+    
+    get rfidProcessingScreenFailureImage() { return this._rfidProcessingScreenFailureImage; }
+    set rfidProcessingScreenFailureImage(val) {
+        this._rfidProcessingScreenFailureImage = val;
+        this._set({ "rfidProcessingScreenFailureImage": val });
+    }
+
+    get rfidEnableNfcImage() { return this._rfidEnableNfcImage; }
+    set rfidEnableNfcImage(val) {
+        this._rfidEnableNfcImage = val;
+        this._set({ "rfidEnableNfcImage": val });
+    }
+
+    get rfidDisableNfcImage() { return this._rfidDisableNfcImage; }
+    set rfidDisableNfcImage(val) {
+        this._rfidDisableNfcImage = val;
+        this._set({ "rfidDisableNfcImage": val });
+    }
+
+    get mdlProcessingScreenFailureImage() { return this._mdlProcessingScreenFailureImage; }
+    set mdlProcessingScreenFailureImage(val) {
+        this._mdlProcessingScreenFailureImage = val;
+        this._set({ "mdlProcessingScreenFailureImage": val });
+    }
+
+    get mdlEnableNfcImage() { return this._mdlEnableNfcImage; }
+    set mdlEnableNfcImage(val) {
+        this._mdlEnableNfcImage = val;
+        this._set({ "mdlEnableNfcImage": val });
+    }
+
+    get mdlDisableNfcImage() { return this._mdlDisableNfcImage; }
+    set mdlDisableNfcImage(val) {
+        this._mdlDisableNfcImage = val;
+        this._set({ "mdlDisableNfcImage": val });
+    }
+    
+    get nextPageIdCardFront() { return this._nextPageIdCardFront; }
+    set nextPageIdCardFront(val) {
+        this._nextPageIdCardFront = val;
+        this._set({ "nextPageIdCardFront": val });
+    }
+    
+    get nextPageIdCardBack() { return this._nextPageIdCardBack; }
+    set nextPageIdCardBack(val) {
+        this._nextPageIdCardBack = val;
+        this._set({ "nextPageIdCardBack": val });
+    }
+    
+    get nextPagePassportShift() { return this._nextPagePassportShift; }
+    set nextPagePassportShift(val) {
+        this._nextPagePassportShift = val;
+        this._set({ "nextPagePassportShift": val });
+    }
+    
+    get nextPagePassportFlipStart() { return this._nextPagePassportFlipStart; }
+    set nextPagePassportFlipStart(val) {
+        this._nextPagePassportFlipStart = val;
+        this._set({ "nextPagePassportFlipStart": val });
+    }
+    
+    get nextPagePassportFlipClean() { return this._nextPagePassportFlipClean; }
+    set nextPagePassportFlipClean(val) {
+        this._nextPagePassportFlipClean = val;
+        this._set({ "nextPagePassportFlipClean": val });
+    }
+    
+    get nextPagePassportFlipTop() { return this._nextPagePassportFlipTop; }
+    set nextPagePassportFlipTop(val) {
+        this._nextPagePassportFlipTop = val;
+        this._set({ "nextPagePassportFlipTop": val });
+    }
+    
+    get nextPagePassportFlipBottom() { return this._nextPagePassportFlipBottom; }
+    set nextPagePassportFlipBottom(val) {
+        this._nextPagePassportFlipBottom = val;
+        this._set({ "nextPagePassportFlipBottom": val });
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        const result = new CustomizationImages();
+
+        result._helpAnimation = jsonObject["helpAnimation"];
+        result._livenessAnimation = jsonObject["livenessAnimation"];
+        result._borderBackground = jsonObject["borderBackground"];
+        result._torchButtonOn = jsonObject["torchButtonOn"];
+        result._torchButtonOff = jsonObject["torchButtonOff"];
+        result._captureButton = jsonObject["captureButton"];
+        result._switchButton = jsonObject["switchButton"];
+        result._closeButton = jsonObject["closeButton"];
+        result._multipageButton = jsonObject["multipageButton"];
+        result._rfidProcessingScreenFailureImage = jsonObject["rfidProcessingScreenFailureImage"];
+        result._rfidEnableNfcImage = jsonObject["rfidEnableNfcImage"];
+        result._rfidDisableNfcImage = jsonObject["rfidDisableNfcImage"];
+        result._mdlProcessingScreenFailureImage = jsonObject["mdlProcessingScreenFailureImage"];
+        result._mdlEnableNfcImage = jsonObject["mdlEnableNfcImage"];
+        result._mdlDisableNfcImage = jsonObject["mdlDisableNfcImage"];
+        result._nextPageIdCardFront = jsonObject["nextPageIdCardFront"];
+        result._nextPageIdCardBack = jsonObject["nextPageIdCardBack"];
+        result._nextPagePassportShift = jsonObject["nextPagePassportShift"];
+        result._nextPagePassportFlipStart = jsonObject["nextPagePassportFlipStart"];
+        result._nextPagePassportFlipClean = jsonObject["nextPagePassportFlipClean"];
+        result._nextPagePassportFlipTop = jsonObject["nextPagePassportFlipTop"];
+        result._nextPagePassportFlipBottom = jsonObject["nextPagePassportFlipBottom"];
+
+        return result;
+    }
+
+    _apply() { this._set(this); }
+    _set(json) {
+        const parentJson = { "images": json };
+        var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
+        if (this === parent.images) parent._set(parentJson);
+    }
+
+    toJson() {
+        return {
+            "helpAnimation": this.helpAnimation,
+            "livenessAnimation": this.livenessAnimation,
+            "borderBackground": this.borderBackground,
+            "torchButtonOn": this.torchButtonOn,
+            "torchButtonOff": this.torchButtonOff,
+            "captureButton": this.captureButton,
+            "switchButton": this.switchButton,
+            "closeButton": this.closeButton,
+            "multipageButton": this.multipageButton,
+            "rfidProcessingScreenFailureImage": this.rfidProcessingScreenFailureImage,
+            "rfidEnableNfcImage": this.rfidEnableNfcImage,
+            "rfidDisableNfcImage": this.rfidDisableNfcImage,
+            "mdlProcessingScreenFailureImage": this.mdlProcessingScreenFailureImage,
+            "mdlEnableNfcImage": this.mdlEnableNfcImage,
+            "mdlDisableNfcImage": this.mdlDisableNfcImage,
+            "nextPageIdCardFront": this.nextPageIdCardFront,
+            "nextPageIdCardBack": this.nextPageIdCardBack,
+            "nextPagePassportShift": this.nextPagePassportShift,
+            "nextPagePassportFlipStart": this.nextPagePassportFlipStart,
+            "nextPagePassportFlipClean": this.nextPagePassportFlipClean,
+            "nextPagePassportFlipTop": this.nextPagePassportFlipTop,
+            "nextPagePassportFlipBottom": this.nextPagePassportFlipBottom,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/params/customization/CustomizationMatrices.js"
+/*!***********************************************************!*\
+  !*** ./src/params/customization/CustomizationMatrices.js ***!
+  \***********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CustomizationMatrices: () => (/* binding */ CustomizationMatrices)
+/* harmony export */ });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
+
+
+class CustomizationMatrices {
+    get nextPageIdCardFront() { return this._nextPageIdCardFront; }
+    set nextPageIdCardFront(val) {
+        this._nextPageIdCardFront = val;
+        this._set({ "nextPageIdCardFront": val });
+    }
+
+    get nextPageIdCardBack() { return this._nextPageIdCardBack; }
+    set nextPageIdCardBack(val) {
+        this._nextPageIdCardBack = val;
+        this._set({ "nextPageIdCardBack": val });
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        const result = new CustomizationMatrices();
+
+        result._nextPageIdCardFront = jsonObject["nextPageIdCardFront"];
+        result._nextPageIdCardBack = jsonObject["nextPageIdCardBack"];
+
+        return result;
+    }
+
+    _apply() { this._set(this); }
+    _set(json) {
+        const parentJson = { "matrices": json };
+        var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
+        if (this === parent.matrices) parent._set(parentJson);
+    }
+
+    toJson() {
+        return {
+            "nextPageIdCardFront": this.nextPageIdCardFront,
+            "nextPageIdCardBack": this.nextPageIdCardBack,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/params/customization/CustomizationTimings.js"
+/*!**********************************************************!*\
+  !*** ./src/params/customization/CustomizationTimings.js ***!
+  \**********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CustomizationTimings: () => (/* binding */ CustomizationTimings)
+/* harmony export */ });
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
+
+
+class CustomizationTimings {
+    get nextPageIdCardStartDelay() { return this._nextPageIdCardStartDelay; }
+    set nextPageIdCardStartDelay(val) {
+        this._nextPageIdCardStartDelay = val;
+        this._set({ "nextPageIdCardStartDelay": val });
+    }
+
+    get nextPageIdCardEndDelay() { return this._nextPageIdCardEndDelay; }
+    set nextPageIdCardEndDelay(val) {
+        this._nextPageIdCardEndDelay = val;
+        this._set({ "nextPageIdCardEndDelay": val });
+    }
+
+    get nextPagePassportShiftStartDelay() { return this._nextPagePassportShiftStartDelay; }
+    set nextPagePassportShiftStartDelay(val) {
+        this._nextPagePassportShiftStartDelay = val;
+        this._set({ "nextPagePassportShiftStartDelay": val });
+    }
+
+    get nextPagePassportShiftEndDelay() { return this._nextPagePassportShiftEndDelay; }
+    set nextPagePassportShiftEndDelay(val) {
+        this._nextPagePassportShiftEndDelay = val;
+        this._set({ "nextPagePassportShiftEndDelay": val });
+    }
+
+    get nextPagePassportFlipStartDelay() { return this._nextPagePassportFlipStartDelay; }
+    set nextPagePassportFlipStartDelay(val) {
+        this._nextPagePassportFlipStartDelay = val;
+        this._set({ "nextPagePassportFlipStartDelay": val });
+    }
+
+    get nextPagePassportFlipEndDelay() { return this._nextPagePassportFlipEndDelay; }
+    set nextPagePassportFlipEndDelay(val) {
+        this._nextPagePassportFlipEndDelay = val;
+        this._set({ "nextPagePassportFlipEndDelay": val });
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        const result = new CustomizationTimings();
+
+        result._nextPageIdCardStartDelay = jsonObject["nextPageIdCardStartDelay"];
+        result._nextPageIdCardEndDelay = jsonObject["nextPageIdCardEndDelay"];
+        result._nextPagePassportShiftStartDelay = jsonObject["nextPagePassportShiftStartDelay"];
+        result._nextPagePassportShiftEndDelay = jsonObject["nextPagePassportShiftEndDelay"];
+        result._nextPagePassportFlipStartDelay = jsonObject["nextPagePassportFlipStartDelay"];
+        result._nextPagePassportFlipEndDelay = jsonObject["nextPagePassportFlipEndDelay"];
+
+        return result;
+    }
+
+    _apply() { this._set(this); }
+    _set(json) {
+        const parentJson = { "timings": json };
+        var parent = _index__WEBPACK_IMPORTED_MODULE_0__.DocumentReader.instance.customization;
+        if (this === parent.timings) parent._set(parentJson);
+    }
+
+    toJson() {
+        return {
+            "nextPageIdCardStartDelay": this.nextPageIdCardStartDelay,
+            "nextPageIdCardEndDelay": this.nextPageIdCardEndDelay,
+            "nextPagePassportShiftStartDelay": this.nextPagePassportShiftStartDelay,
+            "nextPagePassportShiftEndDelay": this.nextPagePassportShiftEndDelay,
+            "nextPagePassportFlipStartDelay": this.nextPagePassportFlipStartDelay,
+            "nextPagePassportFlipEndDelay": this.nextPagePassportFlipEndDelay,
+        }
+    }
+}
 
 
 /***/ },
@@ -4028,11 +4423,13 @@ class BackendProcessingConfig {
     url
     httpHeaders
     rfidServerSideChipVerification
+    mdlVerification
     timeoutConnection
 
     constructor(url, options) {
         this.url = url;
         this.rfidServerSideChipVerification = options?.rfidServerSideChipVerification;
+        this.mdlVerification = options?.mdlVerification;
         this.httpHeaders = options?.httpHeaders;
         this.timeoutConnection = options?.timeoutConnection;
     }
@@ -4043,6 +4440,7 @@ class BackendProcessingConfig {
         const result = new BackendProcessingConfig(jsonObject["url"]);
         
         result.rfidServerSideChipVerification = jsonObject["rfidServerSideChipVerification"];
+        result.mdlVerification = jsonObject["mdlVerification"];
         result.httpHeaders = jsonObject["httpHeaders"];
         result.timeoutConnection = jsonObject["timeoutConnection"];
         
@@ -4053,6 +4451,7 @@ class BackendProcessingConfig {
         return {
             "url": this.url,
             "rfidServerSideChipVerification": this.rfidServerSideChipVerification,
+            "mdlVerification": this.mdlVerification,
             "httpHeaders": this.httpHeaders,
             "timeoutConnection": this.timeoutConnection,
         }
@@ -4749,6 +5148,24 @@ class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
+    get strictExpiryDate() { return this._strictExpiryDate; }
+    set strictExpiryDate(val) {
+        this._strictExpiryDate = val;
+        this._set({ "strictExpiryDate": val });
+    }
+
+    get debugSaveBinarySession() { return this._debugSaveBinarySession; }
+    set debugSaveBinarySession(val) {
+        this._debugSaveBinarySession = val;
+        this._set({ "debugSaveBinarySession": val });
+    }
+
+    get checkVDS() { return this._checkVDS; }
+    set checkVDS(val) {
+        this._checkVDS = val;
+        this._set({ "checkVDS": val });
+    }
+
     get barcodeParserType() { return this._barcodeParserType; }
     set barcodeParserType(val) {
         this._barcodeParserType = val;
@@ -5030,6 +5447,9 @@ class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
+        result._strictExpiryDate = jsonObject["strictExpiryDate"];
+        result._debugSaveBinarySession = jsonObject["debugSaveBinarySession"];
+        result._checkVDS = jsonObject["checkVDS"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -5116,6 +5536,9 @@ class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
+            "strictExpiryDate": this.strictExpiryDate,
+            "debugSaveBinarySession": this.debugSaveBinarySession,
+            "checkVDS": this.checkVDS,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -10782,9 +11205,11 @@ const FieldType = {
   NATIONALITY_CODE_ALPHA_2: 697,
   FIRST_ISSUE_DATE_CHECKDIGIT: 698,
   FIRST_ISSUE_DATE_CHECKSUM: 699,
+  EXPIRY_TIMESTAMP: 700,
   COMMERCIAL_INDICATOR: 701,
   NON_DOMICILED_INDICATOR: 702,
   JURISDICTION_SPECIFIC_DATA: 703,
+  DATA_DATE_OF_EXPIRY: 704,
 }
 
 FieldType.getTranslation = async function (value) {
@@ -11977,7 +12402,10 @@ const RFIDNotificationCodes = {
     PCSC_UPDATING_DATAGROUP: 786432,
     AUXILIARY_DATA_VALIDATION: 851968,
     RI_SECTOR_ID: 917504,
-    BIOMETRICS_EMPTY_PLACEHOLDER: 983040
+    BIOMETRICS_EMPTY_PLACEHOLDER: 983040,
+    SESSION_FILE_DATA_UPDATED: 1048576,
+    TCC_TA_RESOURCES: 1114112,
+    TCC_TA_SIGNATURE: 1114113,
 }
 
 

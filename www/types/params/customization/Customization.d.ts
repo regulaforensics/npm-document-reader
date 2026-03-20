@@ -1,7 +1,9 @@
 import { CustomizationColors } from "./CustomizationColors";
-import { CustomizationFonts } from "./CustomizationFonts";
+import { CustomizationFonts, Font } from "./CustomizationFonts";
 import { CustomizationImages } from "./CustomizationImages";
-import { Font } from "./Font";
+import { CustomizationTimings } from "./CustomizationTimings";
+import { CustomizationContentModes, ViewContentMode } from "./CustomizationContentModes";
+import { CustomizationMatrices } from "./CustomizationMatrices";
 
 /**
  * Params that relate to the camera view controller customization and etc.
@@ -239,6 +241,8 @@ export declare class Customization {
     livenessAnimationPositionMultiplier?: number;
 
     /**
+     * @deprecated Use `timings.nextPageIdCardStartDelay` instead.
+     * 
      * Animation delay before flip.
      *
      * @default 0
@@ -246,6 +250,8 @@ export declare class Customization {
     nextPageAnimationStartDelay?: number;
 
     /**
+     * @deprecated Use `timings.nextPageIdCardEndDelay` instead.
+     * 
      * Animation delay after flip.
      *
      * @default 0
@@ -288,6 +294,8 @@ export declare class Customization {
     multipageAnimationBackImage?: string;
 
     /**
+     * @deprecated Use `images.borderBackground` instead.
+     * 
      * Allows you to set any image within the camera frame. Base64 string.
      */
     borderBackgroundImage?: string;
@@ -298,27 +306,37 @@ export declare class Customization {
     helpAnimationImage?: string;
 
     /**
+     * @deprecated Use `images.closeButton` instead.
+     * 
      * Allows you to set any image for the close button. Base64 string.
      */
     closeButtonImage?: string;
 
     /**
+     * @deprecated Use `images.captureButton` instead.
+     * 
      * Allows you to set any image for the capture button. Base64 string.
      */
     captureButtonImage?: string;
 
     /**
+     * @deprecated Use `images.switchButton` instead.
+     * 
      * Allows you to set any image for the button that allows
      * changing positions of the capture device. Base64 string.
      */
     cameraSwitchButtonImage?: string;
 
     /**
+     * @deprecated Use `images.torchButtonOn` instead.
+     * 
      * Allows you to set any image for the torch button when its state is ON. Base64 string.
      */
     torchButtonOnImage?: string;
 
     /**
+     * @deprecated Use `images.torchButtonOff` instead.
+     * 
      * Allows you to set any image for the torch button when its state is OFF. Base64 string.
      */
     torchButtonOffImage?: string;
@@ -338,6 +356,8 @@ export declare class Customization {
     changeFrameButtonCollapseImage?: string;
 
     /**
+     * @deprecated Use `images.livenessAnimation` instead.
+     * 
      * Allows you to set any image for the liveness animation.
      *
      * When set to `null` the default image will be used.
@@ -348,6 +368,8 @@ export declare class Customization {
     livenessAnimationImage?: string;
 
     /**
+     * @deprecated Use `images.multipageButton` instead.
+     * 
      * Allows you to set any UIImage for the "Skip next page" button.
      */
     multipageButtonImage?: string;
@@ -387,6 +409,8 @@ export declare class Customization {
     uiCustomizationLayer?: Record<string, any>;
 
     /**
+     * @deprecated Use `images.helpAnimation` instead.
+     * 
      * Allows you to specify how a view of the help animation adjusts
      * its content when its size changes.
      *
@@ -397,6 +421,8 @@ export declare class Customization {
     helpAnimationImageTransformsIOS?: ViewContentMode;
 
     /**
+     * @deprecated Use `contentModes.nextPageIdCardFront` instead.
+     * 
      * Allows you to specify how a view of the multipage animation (front side)
      * adjusts its content when its size changes.
      *
@@ -407,6 +433,8 @@ export declare class Customization {
     multipageAnimationFrontImageTransformsIOS?: ViewContentMode;
 
     /**
+     * @deprecated Use `contentModes.nextPageIdCardBack` instead.
+     * 
      * Allows you to specify how a view of the multipage animation (back side)
      * adjusts its content when its size changes.
      *
@@ -449,6 +477,8 @@ export declare class Customization {
     helpAnimationImageTransformsAndroid?: number[];
 
     /**
+     * @deprecated Use `matrices.nextPageIdCardFront` instead.
+     * 
      * Matrix used to scale multipage animation (front side).
      *
      * Android class `android.graphics.Matrix`.
@@ -461,6 +491,8 @@ export declare class Customization {
     multipageAnimationFrontImageTransformsAndroid?: number[];
 
     /**
+     * @deprecated Use `matrices.nextPageIdCardBack` instead.
+     * 
      * Matrix used to scale multipage animation (back side).
      *
      * Android class `android.graphics.Matrix`.
@@ -499,6 +531,9 @@ export declare class Customization {
     colors: CustomizationColors;
     fonts: CustomizationFonts;
     images: CustomizationImages;
+    timings: CustomizationTimings;
+    contentModes: CustomizationContentModes;
+    matrices: CustomizationMatrices;
 
     /**
      * Allows you to deserialize object.
@@ -522,37 +557,6 @@ export declare enum FrameShapeType {
      * Camera frame only consists of corners of the rectangle.
      */
     CORNER = 1,
-}
-
-/**
- * Clone of iOS native enum `UIViewContentMode`
- */
-export declare enum ViewContentMode {
-    SCALE_TO_FILL = 0,
-    /**
-     * Contents scaled to fit with fixed aspect. remainder is transparent.
-     */
-    SCALE_ASPECT_FIT = 1,
-    /**
-     * Contents scaled to fill with fixed aspect. some portion of content may be clipped.
-     */
-    SCALE_ASPECT_FILL = 2,
-    /**
-     * redraw on bounds change (calls -setNeedsDisplay).
-     */
-    REDRAW = 3,
-    /**
-     * contents remain same size. positioned adjusted.
-     */
-    CENTER = 4,
-    TOP = 5,
-    BOTTOM = 6,
-    LEFT = 7,
-    RIGHT = 8,
-    TOP_LEFT = 9,
-    TOP_RIGHT = 10,
-    BOTTOM_LEFT = 11,
-    BOTTOM_RIGHT = 12,
 }
 
 /**
