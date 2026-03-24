@@ -1,4 +1,4 @@
-import { exec } from '../../internal/bridge';
+import { exec, serializeInterface } from '../../internal/bridge';
 import { DocumentReader } from '../../index';
 import { ImageQA } from './ImageQA';
 import { RFIDParams } from './RFIDParams';
@@ -495,7 +495,7 @@ export class ProcessParams {
     get bsiTr03135() { return this._bsiTr03135; }
     set bsiTr03135(val) {
         this._bsiTr03135 = val;
-        this._set({ "bsiTr03135": val });
+        this._set({ "bsiTr03135": serializeInterface(val, Bsi) });
     }
 
     _authenticityParams = new AuthenticityParams();
@@ -682,7 +682,7 @@ export class ProcessParams {
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
-            "bsiTr03135": this.bsiTr03135?.toJson(),
+            "bsiTr03135": serializeInterface(this.bsiTr03135, Bsi),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
         }

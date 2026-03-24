@@ -1099,10 +1099,12 @@ class DocumentReader {
         return this._successOrErrorFromJson(response);
     }
 
-    async finalizePackage(options) {
-        var funcName = "finalizePackage";
-        if (options?.config != null) funcName = "finalizePackageWithFinalizeConfig";
-        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(funcName, [options?.config?.toJson()]);
+    async finalizePackage(config) {
+        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(
+            config == null ? "finalizePackage" :
+                "finalizePackageWithFinalizeConfig",
+            [(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.serializeInterface)(config, _config_FinalizeConfig__WEBPACK_IMPORTED_MODULE_6__.FinalizeConfig)]
+        );
         var jsonObject = JSON.parse(response);
         var action = jsonObject["action"];
         var info = _results_TransactionInfo__WEBPACK_IMPORTED_MODULE_31__.TransactionInfo.fromJson(jsonObject["info"]);
@@ -1726,7 +1728,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   _setTaCertificateCompletion: () => (/* binding */ _setTaCertificateCompletion),
 /* harmony export */   _setTaSignatureCompletion: () => (/* binding */ _setTaSignatureCompletion),
 /* harmony export */   _setVideoEncoderCompletion: () => (/* binding */ _setVideoEncoderCompletion),
-/* harmony export */   exec: () => (/* binding */ exec)
+/* harmony export */   exec: () => (/* binding */ exec),
+/* harmony export */   serializeInterface: () => (/* binding */ serializeInterface)
 /* harmony export */ });
 /* harmony import */ var _cordova__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cordova */ "./src/internal/cordova.js");
 /* harmony import */ var _results_Results__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../results/Results */ "./src/results/Results.js");
@@ -1751,6 +1754,12 @@ var eventManager = new _cordova__WEBPACK_IMPORTED_MODULE_0__.NativeEventEmitter(
 
 async function exec(name, params) {
     return RNDocumentReader.exec(name, params)
+}
+
+function serializeInterface(value, ctor) {
+    if (value == null) return null
+    if (value instanceof ctor) return value.toJson()
+    return (new ctor(value)).toJson()
 }
 
 function _setEvent(id, completion, fromJson) {
@@ -5389,7 +5398,7 @@ class ProcessParams {
     get bsiTr03135() { return this._bsiTr03135; }
     set bsiTr03135(val) {
         this._bsiTr03135 = val;
-        this._set({ "bsiTr03135": val });
+        this._set({ "bsiTr03135": (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.serializeInterface)(val, _Bsi__WEBPACK_IMPORTED_MODULE_6__.Bsi) });
     }
 
     _authenticityParams = new _AuthenticityParams__WEBPACK_IMPORTED_MODULE_7__.AuthenticityParams();
@@ -5576,7 +5585,7 @@ class ProcessParams {
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
-            "bsiTr03135": this.bsiTr03135?.toJson(),
+            "bsiTr03135": (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.serializeInterface)(this.bsiTr03135, _Bsi__WEBPACK_IMPORTED_MODULE_6__.Bsi),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
         }

@@ -1,4 +1,4 @@
-import { exec, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
+import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
@@ -371,10 +371,12 @@ export class DocumentReader {
         return this._successOrErrorFromJson(response);
     }
 
-    async finalizePackage(options) {
-        var funcName = "finalizePackage";
-        if (options?.config != null) funcName = "finalizePackageWithFinalizeConfig";
-        var response = await exec(funcName, [options?.config?.toJson()]);
+    async finalizePackage(config) {
+        var response = await exec(
+            config == null ? "finalizePackage" :
+                "finalizePackageWithFinalizeConfig",
+            [serializeInterface(config, FinalizeConfig)]
+        );
         var jsonObject = JSON.parse(response);
         var action = jsonObject["action"];
         var info = TransactionInfo.fromJson(jsonObject["info"]);
