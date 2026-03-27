@@ -1,9 +1,10 @@
-import { exec } from '../../internal/bridge';
+import { exec, serializeInterface } from '../../internal/bridge';
 import { DocumentReader } from '../../index';
 import { ImageQA } from './ImageQA';
 import { RFIDParams } from './RFIDParams';
 import { FaceApiParams } from './FaceApiParams';
 import { BackendProcessingConfig } from './BackendProcessingConfig';
+import { Bsi } from './Bsi';
 import { AuthenticityParams } from './AuthenticityParams';
 
 export class ProcessParams {
@@ -253,10 +254,22 @@ export class ProcessParams {
         this._set({ "checkCaptureProcessIntegrity": val });
     }
 
-    get bsiTr03135() { return this._bsiTr03135; }
-    set bsiTr03135(val) {
-        this._bsiTr03135 = val;
-        this._set({ "bsiTr03135": {"generateResult": val?.generateResult} });
+    get strictExpiryDate() { return this._strictExpiryDate; }
+    set strictExpiryDate(val) {
+        this._strictExpiryDate = val;
+        this._set({ "strictExpiryDate": val });
+    }
+
+    get debugSaveBinarySession() { return this._debugSaveBinarySession; }
+    set debugSaveBinarySession(val) {
+        this._debugSaveBinarySession = val;
+        this._set({ "debugSaveBinarySession": val });
+    }
+
+    get checkVDS() { return this._checkVDS; }
+    set checkVDS(val) {
+        this._checkVDS = val;
+        this._set({ "checkVDS": val });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -479,6 +492,12 @@ export class ProcessParams {
         this._set({ "backendProcessingConfig": val });
     }
 
+    get bsiTr03135() { return this._bsiTr03135; }
+    set bsiTr03135(val) {
+        this._bsiTr03135 = val;
+        this._set({ "bsiTr03135": serializeInterface(val, Bsi) });
+    }
+
     _authenticityParams = new AuthenticityParams();
     get authenticityParams() { return this._authenticityParams; }
     set authenticityParams(val) { (this._authenticityParams = val)._apply(); }
@@ -534,8 +553,9 @@ export class ProcessParams {
         result._strictSecurityChecks = jsonObject["strictSecurityChecks"];
         result._returnTransliteratedFields = jsonObject["returnTransliteratedFields"];
         result._checkCaptureProcessIntegrity = jsonObject["checkCaptureProcessIntegrity"];
-        if(jsonObject["bsiTr03135"] != null) 
-            result.bsiTr03135 = new Bsi({generateResult: jsonObject["bsiTr03135"]["generateResult"]});
+        result._strictExpiryDate = jsonObject["strictExpiryDate"];
+        result._debugSaveBinarySession = jsonObject["debugSaveBinarySession"];
+        result._checkVDS = jsonObject["checkVDS"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -573,6 +593,7 @@ export class ProcessParams {
         result._rfidParams = RFIDParams.fromJson(jsonObject["rfidParams"]);
         result._faceApiParams = FaceApiParams.fromJson(jsonObject["faceApiParams"]);
         result._backendProcessingConfig = BackendProcessingConfig.fromJson(jsonObject["backendProcessingConfig"]);
+        result._bsiTr03135 = Bsi.fromJson(jsonObject["bsiTr03135"]);
         result._authenticityParams = AuthenticityParams.fromJson(jsonObject["authenticityParams"]);
         result._customParams = jsonObject["customParams"];
 
@@ -621,7 +642,9 @@ export class ProcessParams {
             "strictSecurityChecks": this.strictSecurityChecks,
             "returnTransliteratedFields": this.returnTransliteratedFields,
             "checkCaptureProcessIntegrity": this.checkCaptureProcessIntegrity,
-            "bsiTr03135": {"generateResult": this.bsiTr03135?.generateResult},
+            "strictExpiryDate": this.strictExpiryDate,
+            "debugSaveBinarySession": this.debugSaveBinarySession,
+            "checkVDS": this.checkVDS,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -659,6 +682,7 @@ export class ProcessParams {
             "rfidParams": this.rfidParams?.toJson(),
             "faceApiParams": this.faceApiParams?.toJson(),
             "backendProcessingConfig": this.backendProcessingConfig?.toJson(),
+            "bsiTr03135": serializeInterface(this.bsiTr03135, Bsi),
             "authenticityParams": this.authenticityParams?.toJson(),
             "customParams": this.customParams,
         }
@@ -698,11 +722,3 @@ export const MrzDetectionModes = {
     RESIZE_BINARIZE_WINDOW: 1,
     BLUR_BEFORE_BINARIZATION: 2
 };
-
-export class Bsi {
-    generateResult
-
-    constructor(options) {
-        this.generateResult = options?.generateResult;
-    }
-}

@@ -2,6 +2,7 @@ export declare class BackendProcessingConfig {
     readonly url: string;
     readonly httpHeaders?: Record<string, string>;
     readonly rfidServerSideChipVerification?: boolean;
+    readonly mdlVerification?: boolean;
 
     /**
      * Timeout in seconds that can be configured for backend transaction creation and package finalization.
@@ -12,6 +13,7 @@ export declare class BackendProcessingConfig {
         url: string,
         options?: {
             rfidServerSideChipVerification?: boolean,
+            mdlVerification?: boolean,
             httpHeaders?: Record<string, string>,
             timeoutConnection?: number,
         }

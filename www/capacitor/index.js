@@ -1,4 +1,4 @@
-import { exec, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
+import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
@@ -99,25 +99,28 @@ import { AccessControlProcedureType } from './results/rfid/AccessControlProcedur
 export { SecurityObject, CardProperties, DataField, Attribute, SignerInfo, SecurityObjectCertificates, CertificateChain, Authority, File, RFIDValue, RFIDValidity, RFIDDataFileType, CertificateData, FileData, RFIDCertificateType, RFIDSessionData, Application, RFIDApplicationType, RFIDAccessControlProcedureType, Extension, AccessControlProcedureType };
 
 import { LivenessParams } from './params/process_params/LivenessParams';
-import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, Bsi } from './params/process_params/ProcessParams';
+import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
 import { RFIDParams } from './params/process_params/RFIDParams';
 import { ImageQA } from './params/process_params/ImageQA';
 import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
+import { Bsi } from './params/process_params/Bsi';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, Bsi, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, FaceApiSearchParams };
+export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, Bsi, FaceApiSearchParams };
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
 
-import { CustomizationFonts } from './params/customization/CustomizationFonts';
-import { CustomizationImages } from './params/customization/CustomizationImages';
-import { Font, FontStyle } from './params/customization/Font';
-import { Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag } from './params/customization/Customization';
 import { CustomizationColors } from './params/customization/CustomizationColors';
-export { CustomizationFonts, CustomizationImages, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
+import { CustomizationFonts, Font, FontStyle } from './params/customization/CustomizationFonts';
+import { CustomizationImages } from './params/customization/CustomizationImages';
+import { CustomizationTimings } from './params/customization/CustomizationTimings';
+import { CustomizationMatrices } from './params/customization/CustomizationMatrices';
+import { CustomizationContentModes, ViewContentMode } from './params/customization/CustomizationContentModes';
+import { Customization, Cap, FrameShapeType, CustomButtonTag } from './params/customization/Customization';
+export { CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
@@ -368,10 +371,12 @@ export class DocumentReader {
         return this._successOrErrorFromJson(response);
     }
 
-    async finalizePackage(options) {
-        var funcName = "finalizePackage";
-        if (options?.config != null) funcName = "finalizePackageWithFinalizeConfig";
-        var response = await exec(funcName, [options?.config?.toJson()]);
+    async finalizePackage(config) {
+        var response = await exec(
+            config == null ? "finalizePackage" :
+                "finalizePackageWithFinalizeConfig",
+            [serializeInterface(config, FinalizeConfig)]
+        );
         var jsonObject = JSON.parse(response);
         var action = jsonObject["action"];
         var info = TransactionInfo.fromJson(jsonObject["info"]);

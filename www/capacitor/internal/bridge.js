@@ -15,6 +15,12 @@ export async function exec(name, params) {
     return RNDocumentReader.exec(name, params)
 }
 
+export function serializeInterface(value, ctor) {
+    if (value == null) return null
+    if (value instanceof ctor) return value.toJson()
+    return (new ctor(value)).toJson()
+}
+
 function _setEvent(id, completion, fromJson) {
     eventManager.removeAllListeners(id)
     if (completion == null) return
