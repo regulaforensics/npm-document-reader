@@ -5,6 +5,8 @@ import { RFIDNotification } from "../rfid/RFIDNotification";
 import { PAResourcesIssuer } from "../rfid/PAResourcesIssuer";
 import { PKDCertificate } from "../rfid/PKDCertificate";
 import { TAChallenge } from "../rfid/TAChallenge";
+import { PACEProtocol } from "../rfid/PACEProtocol";
+import { CAProtocol } from "../rfid/CAProtocol";
 
 export class RFIDConfig {
     _completion
@@ -16,6 +18,8 @@ export class RFIDConfig {
     onRequestPACertificates
     onRequestTACertificates
     onRequestTASignature
+    onRequestPACEProtocol
+    onRequestCAProtocol
 
     constructor(completion) {
         this._completion = completion
@@ -27,5 +31,15 @@ export class RFIDConfig {
         result._rfidCompletion = completion
         result._disableUI = true
         return result
+    }
+
+    toJson() {
+        return {
+            "paCertificates": this.onRequestPACertificates != null,
+            "taCertificates": this.onRequestTACertificates != null,
+            "taSignature": this.onRequestTASignature != null,
+            "paceProtocol": this.onRequestPACEProtocol != null,
+            "caProtocol": this.onRequestCAProtocol != null,
+        }
     }
 }

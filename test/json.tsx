@@ -980,6 +980,17 @@ export var taChallenge = {
   "hashPK": "test3",
   "idPICC": "test4",
 };
+export var paceProtocol = {
+  "version": "123",
+  "stdDomainParams": "test2",
+  "keyAlgorithm": "test3",
+};
+export var caProtocol = {
+  "version": "123",
+  "scheme": "test2",
+  "keyAlgorithm": "test3",
+  "chipIndividual": true,
+};
 export var tccParams = {
   "serviceUrlTA": "test1",
   "serviceUrlPA": "test2",

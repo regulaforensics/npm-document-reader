@@ -7,6 +7,8 @@ import { PrepareProgress } from '../info/PrepareProgress'
 import { RFIDNotification } from '../rfid/RFIDNotification'
 import { PAResourcesIssuer } from '../rfid/PAResourcesIssuer'
 import { TAChallenge } from '../rfid/TAChallenge'
+import { PACEProtocol } from '../rfid/PACEProtocol'
+import { CAProtocol } from '../rfid/CAProtocol'
 
 const { RNDocumentReader } = NativeModules
 var eventManager = new NativeEventEmitter(RNDocumentReader)
@@ -97,8 +99,24 @@ export function _setTaCertificateCompletion(completion) {
 
 export function _setTaSignatureCompletion(completion) {
     _setEvent("ta_signature_completion", completion, json => {
-        return [TAChallenge.fromJson(json.decode(msg)), async signature => {
+        return [TAChallenge.fromJson(JSON.parse(json)), async signature => {
             await exec("provideTASignature", [signature])
+        }]
+    })
+}
+
+export function _setPACEProtocolCompletion(completion) {
+    _setEvent("paceProtocolCompletionEvent", completion, json => {
+        return [JSON.parse(json).map(item => PACEProtocol.fromJson(item)), async protocol => {
+            await exec("selectPACEProtocol", [protocol])
+        }]
+    })
+}
+
+export function _setCAProtocolCompletion(completion) {
+    _setEvent("caProtocolCompletionEvent", completion, json => {
+        return [JSON.parse(json).map(item => CAProtocol.fromJson(item)), async protocol => {
+            await exec("selectCAProtocol", [protocol])
         }]
     })
 }
