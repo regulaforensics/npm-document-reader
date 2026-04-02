@@ -2,11 +2,13 @@ export class FinalizeConfig {
     rawImages
     video
     rfidSession
+    mdlSession
 
     constructor(options) {
         this.rawImages = options?.rawImages
         this.video = options?.video
         this.rfidSession = options?.rfidSession
+        this.mdlSession = options?.mdlSession
     }
 
     static fromJson(jsonObject) {
@@ -16,6 +18,7 @@ export class FinalizeConfig {
         result.rawImages = jsonObject["rawImages"];
         result.video = jsonObject["video"];
         result.rfidSession = jsonObject["rfidSession"];
+        result.mdlSession = jsonObject["mdlSession"];
 
         return result;
     }
@@ -26,6 +29,7 @@ export class FinalizeConfig {
             "rawImages": this.rawImages,
             "video": this.video,
             "rfidSession": this.rfidSession,
+            "mdlSession": this.mdlSession,
         }
     }
 }

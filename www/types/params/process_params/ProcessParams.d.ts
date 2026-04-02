@@ -209,6 +209,15 @@ export declare class ProcessParams {
     returnTransliteratedFields?: boolean;
     checkCaptureProcessIntegrity?: boolean;
     /**
+     * When disabled, date of expiry doesn't affect the mrz and text statuses.
+     */
+    strictExpiryDate?: boolean;
+    debugSaveBinarySession?: boolean;
+    /**
+     * This parameter is used to enable Visible Digital Seal check.
+     */
+    checkVDS?: boolean;
+    /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
      * setting the barcode parser type which should be used during recognition.

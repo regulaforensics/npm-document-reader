@@ -1,4 +1,4 @@
-import { exec, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
+import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
@@ -113,12 +113,14 @@ export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzD
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
 
-import { CustomizationFonts } from './params/customization/CustomizationFonts';
-import { CustomizationImages } from './params/customization/CustomizationImages';
-import { Font, FontStyle } from './params/customization/Font';
-import { Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag } from './params/customization/Customization';
 import { CustomizationColors } from './params/customization/CustomizationColors';
-export { CustomizationFonts, CustomizationImages, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
+import { CustomizationFonts, Font, FontStyle } from './params/customization/CustomizationFonts';
+import { CustomizationImages } from './params/customization/CustomizationImages';
+import { CustomizationTimings } from './params/customization/CustomizationTimings';
+import { CustomizationMatrices } from './params/customization/CustomizationMatrices';
+import { CustomizationContentModes, ViewContentMode } from './params/customization/CustomizationContentModes';
+import { Customization, Cap, FrameShapeType, CustomButtonTag } from './params/customization/Customization';
+export { CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
@@ -133,8 +135,10 @@ import { TccParams } from './rfid/TccParams';
 import { RFIDNotification, RFIDNotificationCodes } from './rfid/RFIDNotification';
 import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
+import { PACEProtocol } from './rfid/PACEProtocol';
+import { CAProtocol } from './rfid/CAProtocol';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
-export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PACEProtocol, CAProtocol, PKDCertificate, PKDResourceType };
 
 import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
 import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';
@@ -337,15 +341,15 @@ export class DocumentReader {
         _setRFIDProgressCompletion(config.onProgress);
         _setChipDetectedCompletion(config.onChipDetected);
         _setRetryReadChipCompletion(config.onRetryReadChip);
+
         _setPaCertificateCompletion(config.onRequestPACertificates);
         _setTaCertificateCompletion(config.onRequestTACertificates);
         _setTaSignatureCompletion(config.onRequestTASignature);
 
-        exec(config._disableUI ? "readRFID" : "startRFIDReader", [
-            config.onRequestPACertificates != null,
-            config.onRequestTACertificates != null,
-            config.onRequestTASignature != null,
-        ]);
+        _setPACEProtocolCompletion(config.onRequestPACEProtocol);
+        _setCAProtocolCompletion(config.onRequestCAProtocol);
+
+        exec(config._disableUI ? "readRFID" : "startRFIDReader", [config.toJson()]);
     }
 
     stopScanner() {
@@ -369,10 +373,12 @@ export class DocumentReader {
         return this._successOrErrorFromJson(response);
     }
 
-    async finalizePackage(options) {
-        var funcName = "finalizePackage";
-        if (options?.config != null) funcName = "finalizePackageWithFinalizeConfig";
-        var response = await exec(funcName, [options?.config?.toJson()]);
+    async finalizePackage(config) {
+        var response = await exec(
+            config == null ? "finalizePackage" :
+                "finalizePackageWithFinalizeConfig",
+            [serializeInterface(config, FinalizeConfig)]
+        );
         var jsonObject = JSON.parse(response);
         var action = jsonObject["action"];
         var info = TransactionInfo.fromJson(jsonObject["info"]);

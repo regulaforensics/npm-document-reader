@@ -1,5 +1,4 @@
 import { DocumentReader } from '../../index';
-import { Font } from './Font';
 
 export class CustomizationFonts {
     get rfidProcessingScreenHintLabel() { return this._rfidProcessingScreenHintLabel; }
@@ -76,8 +75,8 @@ export class CustomizationFonts {
 
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-
         const result = new CustomizationFonts();
+
         result._rfidProcessingScreenHintLabel = Font.fromJson(jsonObject["rfidProcessingScreenHintLabel"]);
         result._rfidProcessingScreenProgressLabel = Font.fromJson(jsonObject["rfidProcessingScreenProgressLabel"]);
         result._rfidProcessingScreenResultLabel = Font.fromJson(jsonObject["rfidProcessingScreenResultLabel"]);
@@ -118,3 +117,40 @@ export class CustomizationFonts {
         }
     }
 }
+
+export class Font {
+    name
+    size
+    style
+
+    constructor(name, options) {
+        this.name = name;
+        this.size = options?.size;
+        this.style = options?.style;
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+
+        const result = new Font(jsonObject["name"]);
+        result.size = jsonObject["size"];
+        result.style = jsonObject["style"];
+
+        return result;
+    }
+
+    toJson() {
+        return {
+            "name": this.name,
+            "size": this.size,
+            "style": this.style,
+        }
+    }
+}
+
+export const FontStyle = {
+    NORMAL: 0,
+    BOLD: 1,
+    ITALIC: 2,
+    BOLD_ITALIC: 3
+};

@@ -1,9 +1,11 @@
 import { exec } from '../../internal/bridge';
 import { DocumentReader } from '../../index';
 import { CustomizationColors } from './CustomizationColors';
-import { CustomizationFonts } from './CustomizationFonts';
+import { CustomizationFonts, Font } from './CustomizationFonts';
 import { CustomizationImages } from './CustomizationImages';
-import { Font } from './Font';
+import { CustomizationTimings } from './CustomizationTimings';
+import { CustomizationContentModes, ViewContentMode } from './CustomizationContentModes';
+import { CustomizationMatrices } from './CustomizationMatrices';
 
 export class Customization {
     get showStatusMessages() { return this._showStatusMessages; }
@@ -438,6 +440,24 @@ export class Customization {
         val._apply(this);
     }
 
+    get timings() { return this._timings; }
+    set timings(val) {
+        this._timings = val;
+        val._apply(this);
+    }
+
+    get contentModes() { return this._contentModes; }
+    set contentModes(val) {
+        this._contentModes = val;
+        val._apply(this);
+    }
+
+    get matrices() { return this._matrices; }
+    set matrices(val) {
+        this._matrices = val;
+        val._apply(this);
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
 
@@ -516,6 +536,9 @@ export class Customization {
         result._colors = CustomizationColors.fromJson(jsonObject["colors"]);
         result._fonts = CustomizationFonts.fromJson(jsonObject["fonts"]);
         result._images = CustomizationImages.fromJson(jsonObject["images"]);
+        result._timings = CustomizationTimings.fromJson(jsonObject["timings"]);
+        result._contentModes = CustomizationContentModes.fromJson(jsonObject["contentModes"]);
+        result._matrices = CustomizationMatrices.fromJson(jsonObject["matrices"]);
 
         return result;
     }
@@ -594,6 +617,9 @@ export class Customization {
             "colors": this.colors?.toJson(),
             "fonts": this.fonts?.toJson(),
             "images": this.images?.toJson(),
+            "timings": this.timings?.toJson(),
+            "contentModes": this.contentModes?.toJson(),
+            "matrices": this.matrices?.toJson(),
         }
     }
 
@@ -613,22 +639,6 @@ export const Cap = {
 export const FrameShapeType = {
     LINE: 0,
     CORNER: 1
-};
-
-export const ViewContentMode = {
-    SCALE_TO_FILL: 0,
-    SCALE_ASPECT_FIT: 1,
-    SCALE_ASPECT_FILL: 2,
-    REDRAW: 3,
-    CENTER: 4,
-    TOP: 5,
-    BOTTOM: 6,
-    LEFT: 7,
-    RIGHT: 8,
-    TOP_LEFT: 9,
-    TOP_RIGHT: 10,
-    BOTTOM_LEFT: 11,
-    BOTTOM_RIGHT: 12
 };
 
 export const CustomButtonTag = {

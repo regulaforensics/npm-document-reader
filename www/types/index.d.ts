@@ -111,12 +111,14 @@ export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzD
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
 export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
 
-import { CustomizationFonts } from './params/customization/CustomizationFonts';
-import { CustomizationImages } from './params/customization/CustomizationImages';
-import { Font, FontStyle } from './params/customization/Font';
-import { Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag } from './params/customization/Customization';
 import { CustomizationColors } from './params/customization/CustomizationColors';
-export { CustomizationFonts, CustomizationImages, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
+import { CustomizationFonts, Font, FontStyle } from './params/customization/CustomizationFonts';
+import { CustomizationImages } from './params/customization/CustomizationImages';
+import { CustomizationTimings } from './params/customization/CustomizationTimings';
+import { CustomizationMatrices } from './params/customization/CustomizationMatrices';
+import { CustomizationContentModes, ViewContentMode } from './params/customization/CustomizationContentModes';
+import { Customization, Cap, FrameShapeType, CustomButtonTag } from './params/customization/Customization';
+export { CustomizationColors, CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag };
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
@@ -131,8 +133,10 @@ import { TccParams } from './rfid/TccParams';
 import { RFIDNotification, RFIDNotificationCodes } from './rfid/RFIDNotification';
 import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
+import { PACEProtocol } from './rfid/PACEProtocol';
+import { CAProtocol } from './rfid/CAProtocol';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
-export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PACEProtocol, CAProtocol, PKDCertificate, PKDResourceType };
 
 import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
 import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';

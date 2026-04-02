@@ -29,6 +29,10 @@ export declare class CustomizationColors {
     mdlEnableNfcButtonText?: number;
     /** Android only. */
     mdlEnableNfcButtonBackground?: number;
+    nextPageIdCardFront?: number;
+    nextPageIdCardBack?: number;
+    nextPagePassportShift?: number;
+    nextPagePassportFlip?: number;
 
     /**
      * Allows you to deserialize object.

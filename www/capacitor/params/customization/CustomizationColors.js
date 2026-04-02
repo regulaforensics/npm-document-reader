@@ -133,10 +133,34 @@ export class CustomizationColors {
         this._set({ "mdlEnableNfcButtonBackground": val });
     }
 
+    get nextPageIdCardFront() { return this._nextPageIdCardFront; }
+    set nextPageIdCardFront(val) {
+        this._nextPageIdCardFront = val;
+        this._set({ "nextPageIdCardFront": val });
+    }
+
+    get nextPageIdCardBack() { return this._nextPageIdCardBack; }
+    set nextPageIdCardBack(val) {
+        this._nextPageIdCardBack = val;
+        this._set({ "nextPageIdCardBack": val });
+    }
+
+    get nextPagePassportShift() { return this._nextPagePassportShift; }
+    set nextPagePassportShift(val) {
+        this._nextPagePassportShift = val;
+        this._set({ "nextPagePassportShift": val });
+    }
+
+    get nextPagePassportFlip() { return this._nextPagePassportFlip; }
+    set nextPagePassportFlip(val) {
+        this._nextPagePassportFlip = val;
+        this._set({ "nextPagePassportFlip": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return null;
-
         const result = new CustomizationColors();
+
         result._rfidProcessingScreenBackground = jsonObject["rfidProcessingScreenBackground"];
         result._rfidProcessingScreenHintLabelText = jsonObject["rfidProcessingScreenHintLabelText"];
         result._rfidProcessingScreenHintLabelBackground = jsonObject["rfidProcessingScreenHintLabelBackground"];
@@ -159,6 +183,10 @@ export class CustomizationColors {
         result._mdlEnableNfcDescriptionText = jsonObject["mdlEnableNfcDescriptionText"];
         result._mdlEnableNfcButtonText = jsonObject["mdlEnableNfcButtonText"];
         result._mdlEnableNfcButtonBackground = jsonObject["mdlEnableNfcButtonBackground"];
+        result._nextPageIdCardFront = jsonObject["nextPageIdCardFront"];
+        result._nextPageIdCardBack = jsonObject["nextPageIdCardBack"];
+        result._nextPagePassportShift = jsonObject["nextPagePassportShift"];
+        result._nextPagePassportFlip = jsonObject["nextPagePassportFlip"];
 
         return result;
     }
@@ -194,6 +222,10 @@ export class CustomizationColors {
             "mdlEnableNfcDescriptionText": this.mdlEnableNfcDescriptionText,
             "mdlEnableNfcButtonText": this.mdlEnableNfcButtonText,
             "mdlEnableNfcButtonBackground": this.mdlEnableNfcButtonBackground,
+            "nextPageIdCardFront": this.nextPageIdCardFront,
+            "nextPageIdCardBack": this.nextPageIdCardBack,
+            "nextPagePassportShift": this.nextPagePassportShift,
+            "nextPagePassportFlip": this.nextPagePassportFlip,
         }
     }
 }
