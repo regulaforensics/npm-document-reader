@@ -1094,8 +1094,8 @@ class DocumentReader {
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setTaCertificateCompletion)(config.onRequestTACertificates);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setTaSignatureCompletion)(config.onRequestTASignature);
 
-        _setPACEProtocolCompletion(config.onRequestPACEProtocol);
-        _setCAProtocolCompletion(config.onRequestCAProtocol);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setPACEProtocolCompletion)(config.onRequestPACEProtocol);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setCAProtocolCompletion)(config.onRequestCAProtocol);
 
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(config._disableUI ? "readRFID" : "startRFIDReader", [config.toJson()]);
     }

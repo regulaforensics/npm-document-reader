@@ -1,4 +1,4 @@
-import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
+import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion, _setPACEProtocolCompletion, _setCAProtocolCompletion } from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
