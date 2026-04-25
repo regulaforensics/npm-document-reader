@@ -1,4 +1,4 @@
-import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion } from './internal/bridge'
+import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion, _setPACEProtocolCompletion, _setCAProtocolCompletion } from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
@@ -135,8 +135,10 @@ import { TccParams } from './rfid/TccParams';
 import { RFIDNotification, RFIDNotificationCodes } from './rfid/RFIDNotification';
 import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
+import { PACEProtocol } from './rfid/PACEProtocol';
+import { CAProtocol } from './rfid/CAProtocol';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
-export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PACEProtocol, CAProtocol, PKDCertificate, PKDResourceType };
 
 import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
 import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';
@@ -339,15 +341,15 @@ export class DocumentReader {
         _setRFIDProgressCompletion(config.onProgress);
         _setChipDetectedCompletion(config.onChipDetected);
         _setRetryReadChipCompletion(config.onRetryReadChip);
+
         _setPaCertificateCompletion(config.onRequestPACertificates);
         _setTaCertificateCompletion(config.onRequestTACertificates);
         _setTaSignatureCompletion(config.onRequestTASignature);
 
-        exec(config._disableUI ? "readRFID" : "startRFIDReader", [
-            config.onRequestPACertificates != null,
-            config.onRequestTACertificates != null,
-            config.onRequestTASignature != null,
-        ]);
+        _setPACEProtocolCompletion(config.onRequestPACEProtocol);
+        _setCAProtocolCompletion(config.onRequestCAProtocol);
+
+        exec(config._disableUI ? "readRFID" : "startRFIDReader", [config.toJson()]);
     }
 
     stopScanner() {
