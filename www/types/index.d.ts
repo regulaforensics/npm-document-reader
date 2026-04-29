@@ -133,8 +133,10 @@ import { TccParams } from './rfid/TccParams';
 import { RFIDNotification, RFIDNotificationCodes } from './rfid/RFIDNotification';
 import { PAAttribute } from './rfid/PAAttribute';
 import { TAChallenge } from './rfid/TAChallenge';
+import { PACEProtocol } from './rfid/PACEProtocol';
+import { CAProtocol } from './rfid/CAProtocol';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
-export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PKDCertificate, PKDResourceType };
+export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PACEProtocol, CAProtocol, PKDCertificate, PKDResourceType };
 
 import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
 import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';

@@ -18,8 +18,8 @@
     "@ionic/cordova-builders": "^12.3.0",
     "@awesome-cordova-plugins/camera": "^8.1.0",
     "@awesome-cordova-plugins/file": "^8.1.0",
-    "@regulaforensics/document-reader": "9.3.738",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.3.1817",
+    "@regulaforensics/document-reader": "9.4.758",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.4.2038",
     "@regulaforensics/document-reader-btdevice": "9.1.35",
     "cordova-android": "^14.0.1",
     "cordova-ios": "^7.1.1",
@@ -31,7 +31,11 @@
     "ajv": "^8.18.0",
     "serialize-javascript": "^7.0.4",
     "@angular/compiler": "^21.2.4",
-    "undici": "^7.24.0"
+    "undici": "^7.24.0",
+    "picomatch": "^4.0.4",
+    "postcss": "^8.5.10",
+    "uuid": "^14.0.0",
+    "vite": "^7.3.2"
   },
   "cordova": {
     "plugins": {

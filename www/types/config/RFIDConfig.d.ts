@@ -5,6 +5,8 @@ import { RFIDNotification } from "../rfid/RFIDNotification";
 import { PAResourcesIssuer } from "../rfid/PAResourcesIssuer";
 import { PKDCertificate } from "../rfid/PKDCertificate";
 import { TAChallenge } from "../rfid/TAChallenge";
+import { PACEProtocol } from "../rfid/PACEProtocol";
+import { CAProtocol } from "../rfid/CAProtocol";
 
 /**
  * A configuration file for the RFID chip processing.
@@ -48,6 +50,16 @@ export declare class RFIDConfig {
      * Callback for receiving RFID request data
      */
     onRequestTASignature?: TaSignatureCompletion;
+
+    /**
+     * Callback for receiving RFID request data
+     */
+    onRequestPACEProtocol?: PACEProtocolCompletion;
+
+    /**
+     * Callback for receiving RFID request data
+     */
+    onRequestCAProtocol?: CAProtocolCompletion;
 
     /**
      * Regular RFID chip reading.
@@ -106,12 +118,12 @@ export type ChipDetectedCompletion = () => void;
 export type RetryReadChipCompletion = (error: RFIDException) => void;
 
 /**
- * Callback for receiving RFID request data
+ * Callback for receiving RFID request data.
  */
 export type PaCertificateCompletion = (serialNumber: string, issuer: PAResourcesIssuer | null, request: PKDCertificateRequest) => void;
 
 /**
- * Callback for receiving RFID request data
+ * Callback for receiving RFID request data.
  */
 export type TaCertificateCompletion = (keyCAR: string | null, request: PKDCertificateRequest) => void;
 
@@ -121,7 +133,7 @@ export type TaCertificateCompletion = (keyCAR: string | null, request: PKDCertif
 export type PKDCertificateRequest = (certificates?: PKDCertificate[]) => Promise<void>;
 
 /**
- * Callback for receiving RFID request data
+ * Callback for receiving RFID request data.
  */
 export type TaSignatureCompletion = (challenge: TAChallenge | null, request: TASignatureRequest) => void;
 
@@ -129,3 +141,23 @@ export type TaSignatureCompletion = (challenge: TAChallenge | null, request: TAS
  * Provided to a user for passing TASignature to the native part of DocumentReader. Base64 string.
  */
 export type TASignatureRequest = (signature?: string) => Promise<void>; 
+
+/**
+ * Callback for receiving RFID request data.
+ */
+export type PACEProtocolCompletion = (protocols: PACEProtocol[], request: PACEProtocolRequest) => void;
+
+/**
+ * Provided to a user for choosing PACEProtocol.
+ */
+export type PACEProtocolRequest = (protocol: PACEProtocol) => Promise<void>;
+
+/**
+ * Callback for receiving RFID request data.
+ */
+export type CAProtocolCompletion = (protocols: CAProtocol[], request: CAProtocolRequest) => void;
+
+/**
+ * Provided to a user for choosing CAProtocol.
+ */
+export type CAProtocolRequest = (protocol: CAProtocol) => Promise<void>;
