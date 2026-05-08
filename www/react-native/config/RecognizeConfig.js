@@ -8,6 +8,7 @@ export class RecognizeConfig {
     image
     images
     data
+    dataList
     imageInputData
     dtc
     livePortrait
@@ -24,6 +25,7 @@ export class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -38,6 +40,7 @@ export class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -62,6 +65,14 @@ export class RecognizeConfig {
             }
         }
         result.data = jsonObject["data"]
+        if (jsonObject["dataList"] != null) {
+            result.dataList = []
+            for (const item of jsonObject["dataList"]) {
+                if (item != null) {
+                    result.dataList.push(item)
+                }
+            }
+        }
         if (jsonObject["imageInputData"] != null) {
             result.imageInputData = []
             for (const item of jsonObject["imageInputData"]) {
@@ -86,6 +97,7 @@ export class RecognizeConfig {
             "image": this.image,
             "images": this.images,
             "data": this.data,
+            "dataList": this.dataList,
             "imageInputData": this.imageInputData?.map(e => e.toJson()),
             "dtc": this.dtc,
             "livePortrait": this.livePortrait,

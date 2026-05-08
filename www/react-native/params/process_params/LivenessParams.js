@@ -43,6 +43,12 @@ export class LivenessParams {
         this._set({ "checkGeometry": val });
     }
 
+    get checkBarcodeBackground() { return this._checkBarcodeBackground; }
+    set checkBarcodeBackground(val) {
+        this._checkBarcodeBackground = val;
+        this._set({ "checkBarcodeBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new LivenessParams();
 
@@ -54,6 +60,7 @@ export class LivenessParams {
         result._checkBlackAndWhiteCopy = jsonObject["checkBlackAndWhiteCopy"];
         result._checkDynaprint = jsonObject["checkDynaprint"];
         result._checkGeometry = jsonObject["checkGeometry"];
+        result._checkBarcodeBackground = jsonObject["checkBarcodeBackground"];
 
         return result;
     }
@@ -74,6 +81,7 @@ export class LivenessParams {
             "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
             "checkDynaprint": this.checkDynaprint,
             "checkGeometry": this.checkGeometry,
+            "checkBarcodeBackground": this.checkBarcodeBackground,
         }
     }
 }
