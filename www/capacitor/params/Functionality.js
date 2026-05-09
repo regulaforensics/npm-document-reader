@@ -117,6 +117,12 @@ export class Functionality {
         this._set({ "homeIndicatorAutoHide": val });
     }
 
+    get hideStatusBar() { return this._hideStatusBar; }
+    set hideStatusBar(val) {
+        this._hideStatusBar = val;
+        this._set({ "hideStatusBar": val });
+    }
+
     get showCaptureButtonDelayFromDetect() { return this._showCaptureButtonDelayFromDetect; }
     set showCaptureButtonDelayFromDetect(val) {
         this._showCaptureButtonDelayFromDetect = val;
@@ -242,6 +248,7 @@ export class Functionality {
         result._torchTurnedOn = jsonObject["torchTurnedOn"];
         result._preventScreenRecording = jsonObject["preventScreenRecording"];
         result._homeIndicatorAutoHide = jsonObject["homeIndicatorAutoHide"];
+        result._hideStatusBar = jsonObject["hideStatusBar"];
         result._showCaptureButtonDelayFromDetect = jsonObject["showCaptureButtonDelayFromDetect"];
         result._showCaptureButtonDelayFromStart = jsonObject["showCaptureButtonDelayFromStart"];
         result._rfidTimeout = jsonObject["rfidTimeout"];
@@ -284,6 +291,7 @@ export class Functionality {
             "torchTurnedOn": this.torchTurnedOn,
             "preventScreenRecording": this.preventScreenRecording,
             "homeIndicatorAutoHide": this.homeIndicatorAutoHide,
+            "hideStatusBar": this.hideStatusBar,
             "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
             "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
             "rfidTimeout": this.rfidTimeout,

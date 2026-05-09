@@ -282,6 +282,7 @@ class RecognizeConfig {
     image
     images
     data
+    dataList
     imageInputData
     dtc
     livePortrait
@@ -298,6 +299,7 @@ class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -312,6 +314,7 @@ class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -336,6 +339,14 @@ class RecognizeConfig {
             }
         }
         result.data = jsonObject["data"]
+        if (jsonObject["dataList"] != null) {
+            result.dataList = []
+            for (const item of jsonObject["dataList"]) {
+                if (item != null) {
+                    result.dataList.push(item)
+                }
+            }
+        }
         if (jsonObject["imageInputData"] != null) {
             result.imageInputData = []
             for (const item of jsonObject["imageInputData"]) {
@@ -360,6 +371,7 @@ class RecognizeConfig {
             "image": this.image,
             "images": this.images,
             "data": this.data,
+            "dataList": this.dataList,
             "imageInputData": this.imageInputData?.map(e => e.toJson()),
             "dtc": this.dtc,
             "livePortrait": this.livePortrait,
@@ -2511,6 +2523,12 @@ class Functionality {
         this._set({ "homeIndicatorAutoHide": val });
     }
 
+    get hideStatusBar() { return this._hideStatusBar; }
+    set hideStatusBar(val) {
+        this._hideStatusBar = val;
+        this._set({ "hideStatusBar": val });
+    }
+
     get showCaptureButtonDelayFromDetect() { return this._showCaptureButtonDelayFromDetect; }
     set showCaptureButtonDelayFromDetect(val) {
         this._showCaptureButtonDelayFromDetect = val;
@@ -2636,6 +2654,7 @@ class Functionality {
         result._torchTurnedOn = jsonObject["torchTurnedOn"];
         result._preventScreenRecording = jsonObject["preventScreenRecording"];
         result._homeIndicatorAutoHide = jsonObject["homeIndicatorAutoHide"];
+        result._hideStatusBar = jsonObject["hideStatusBar"];
         result._showCaptureButtonDelayFromDetect = jsonObject["showCaptureButtonDelayFromDetect"];
         result._showCaptureButtonDelayFromStart = jsonObject["showCaptureButtonDelayFromStart"];
         result._rfidTimeout = jsonObject["rfidTimeout"];
@@ -2678,6 +2697,7 @@ class Functionality {
             "torchTurnedOn": this.torchTurnedOn,
             "preventScreenRecording": this.preventScreenRecording,
             "homeIndicatorAutoHide": this.homeIndicatorAutoHide,
+            "hideStatusBar": this.hideStatusBar,
             "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
             "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
             "rfidTimeout": this.rfidTimeout,
@@ -4885,6 +4905,12 @@ class LivenessParams {
         this._set({ "checkGeometry": val });
     }
 
+    get checkBarcodeBackground() { return this._checkBarcodeBackground; }
+    set checkBarcodeBackground(val) {
+        this._checkBarcodeBackground = val;
+        this._set({ "checkBarcodeBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new LivenessParams();
 
@@ -4896,6 +4922,7 @@ class LivenessParams {
         result._checkBlackAndWhiteCopy = jsonObject["checkBlackAndWhiteCopy"];
         result._checkDynaprint = jsonObject["checkDynaprint"];
         result._checkGeometry = jsonObject["checkGeometry"];
+        result._checkBarcodeBackground = jsonObject["checkBarcodeBackground"];
 
         return result;
     }
@@ -4916,6 +4943,7 @@ class LivenessParams {
             "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
             "checkDynaprint": this.checkDynaprint,
             "checkGeometry": this.checkGeometry,
+            "checkBarcodeBackground": this.checkBarcodeBackground,
         }
     }
 }
@@ -5081,12 +5109,6 @@ class ProcessParams {
         this._set({ "multiDocOnImage": val });
     }
 
-    get forceReadMrzBeforeLocate() { return this._forceReadMrzBeforeLocate; }
-    set forceReadMrzBeforeLocate(val) {
-        this._forceReadMrzBeforeLocate = val;
-        this._set({ "forceReadMrzBeforeLocate": val });
-    }
-
     get parseBarcodes() { return this._parseBarcodes; }
     set parseBarcodes(val) {
         this._parseBarcodes = val;
@@ -5217,6 +5239,12 @@ class ProcessParams {
     set checkVDS(val) {
         this._checkVDS = val;
         this._set({ "checkVDS": val });
+    }
+
+    get strictAgeCheck() { return this._strictAgeCheck; }
+    set strictAgeCheck(val) {
+        this._strictAgeCheck = val;
+        this._set({ "strictAgeCheck": val });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -5480,7 +5508,6 @@ class ProcessParams {
         result._updateOCRValidityByGlare = jsonObject["updateOCRValidityByGlare"];
         result._noGraphics = jsonObject["noGraphics"];
         result._multiDocOnImage = jsonObject["multiDocOnImage"];
-        result._forceReadMrzBeforeLocate = jsonObject["forceReadMrzBeforeLocate"];
         result._parseBarcodes = jsonObject["parseBarcodes"];
         result._shouldReturnPackageForReprocess = jsonObject["shouldReturnPackageForReprocess"];
         result._disablePerforationOCR = jsonObject["disablePerforationOCR"];
@@ -5503,6 +5530,7 @@ class ProcessParams {
         result._strictExpiryDate = jsonObject["strictExpiryDate"];
         result._debugSaveBinarySession = jsonObject["debugSaveBinarySession"];
         result._checkVDS = jsonObject["checkVDS"];
+        result._strictAgeCheck = jsonObject["strictAgeCheck"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -5569,7 +5597,6 @@ class ProcessParams {
             "updateOCRValidityByGlare": this.updateOCRValidityByGlare,
             "noGraphics": this.noGraphics,
             "multiDocOnImage": this.multiDocOnImage,
-            "forceReadMrzBeforeLocate": this.forceReadMrzBeforeLocate,
             "parseBarcodes": this.parseBarcodes,
             "shouldReturnPackageForReprocess": this.shouldReturnPackageForReprocess,
             "disablePerforationOCR": this.disablePerforationOCR,
@@ -5592,6 +5619,7 @@ class ProcessParams {
             "strictExpiryDate": this.strictExpiryDate,
             "debugSaveBinarySession": this.debugSaveBinarySession,
             "checkVDS": this.checkVDS,
+            "strictAgeCheck": this.strictAgeCheck,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
