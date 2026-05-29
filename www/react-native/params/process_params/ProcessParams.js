@@ -134,12 +134,6 @@ export class ProcessParams {
         this._set({ "multiDocOnImage": val });
     }
 
-    get forceReadMrzBeforeLocate() { return this._forceReadMrzBeforeLocate; }
-    set forceReadMrzBeforeLocate(val) {
-        this._forceReadMrzBeforeLocate = val;
-        this._set({ "forceReadMrzBeforeLocate": val });
-    }
-
     get parseBarcodes() { return this._parseBarcodes; }
     set parseBarcodes(val) {
         this._parseBarcodes = val;
@@ -270,6 +264,12 @@ export class ProcessParams {
     set checkVDS(val) {
         this._checkVDS = val;
         this._set({ "checkVDS": val });
+    }
+
+    get strictAgeCheck() { return this._strictAgeCheck; }
+    set strictAgeCheck(val) {
+        this._strictAgeCheck = val;
+        this._set({ "strictAgeCheck": val });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -533,7 +533,6 @@ export class ProcessParams {
         result._updateOCRValidityByGlare = jsonObject["updateOCRValidityByGlare"];
         result._noGraphics = jsonObject["noGraphics"];
         result._multiDocOnImage = jsonObject["multiDocOnImage"];
-        result._forceReadMrzBeforeLocate = jsonObject["forceReadMrzBeforeLocate"];
         result._parseBarcodes = jsonObject["parseBarcodes"];
         result._shouldReturnPackageForReprocess = jsonObject["shouldReturnPackageForReprocess"];
         result._disablePerforationOCR = jsonObject["disablePerforationOCR"];
@@ -556,6 +555,7 @@ export class ProcessParams {
         result._strictExpiryDate = jsonObject["strictExpiryDate"];
         result._debugSaveBinarySession = jsonObject["debugSaveBinarySession"];
         result._checkVDS = jsonObject["checkVDS"];
+        result._strictAgeCheck = jsonObject["strictAgeCheck"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -622,7 +622,6 @@ export class ProcessParams {
             "updateOCRValidityByGlare": this.updateOCRValidityByGlare,
             "noGraphics": this.noGraphics,
             "multiDocOnImage": this.multiDocOnImage,
-            "forceReadMrzBeforeLocate": this.forceReadMrzBeforeLocate,
             "parseBarcodes": this.parseBarcodes,
             "shouldReturnPackageForReprocess": this.shouldReturnPackageForReprocess,
             "disablePerforationOCR": this.disablePerforationOCR,
@@ -645,6 +644,7 @@ export class ProcessParams {
             "strictExpiryDate": this.strictExpiryDate,
             "debugSaveBinarySession": this.debugSaveBinarySession,
             "checkVDS": this.checkVDS,
+            "strictAgeCheck": this.strictAgeCheck,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,

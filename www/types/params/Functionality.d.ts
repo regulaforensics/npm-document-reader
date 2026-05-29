@@ -142,6 +142,10 @@ export declare class Functionality {
      */
     homeIndicatorAutoHide?: boolean;
     /**
+     * Android only.
+     */
+    hideStatusBar?: boolean;
+    /**
      * Allows you to specify a time interval when the Capture button
      * has to be displayed after the document is detected.
      * Don't forget to set the {@link showCaptureButton} to `true`,

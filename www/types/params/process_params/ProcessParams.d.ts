@@ -119,13 +119,6 @@ export declare class ProcessParams {
      */
     multiDocOnImage?: boolean;
     /**
-     * This option can be set to `true` to make sure that in series processing
-     * MRZ is located fully inside the result document image, if present
-     * on the document. Enabling this option may add extra processing time,
-     * by disabling optimizations, but allows more stability in output image quality.
-     */
-    forceReadMrzBeforeLocate?: boolean;
-    /**
      * When set to `false`, the Barcode code parsing will be skipped
      * and the raw information from the code will be returned instead.
      */
@@ -217,6 +210,10 @@ export declare class ProcessParams {
      * This parameter is used to enable Visible Digital Seal check.
      */
     checkVDS?: boolean;
+    /**
+     * When enabled, the age check status affects the overall status.
+     */
+    strictAgeCheck?: boolean;
     /**
      * There are documents that contain barcodes which data can be parsed only
      * if document type verification is performed. The following property allows
