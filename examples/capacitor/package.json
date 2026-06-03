@@ -6,8 +6,8 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.6.820-nightly",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.5.2352",
+    "@regulaforensics/document-reader": "9.6.824-nightly",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.5.2382",
     "@regulaforensics/document-reader-btdevice": "9.4.46",
     "@awesome-cordova-plugins/file": "^8.1.0",
     "@awesome-cordova-plugins/camera": "^8.1.0",
