@@ -5,7 +5,7 @@ source = File.join(__dir__, 'ios')
 
 Pod::Spec.new do |s|
   s.name         = 'RNDocumentReader'
-  s.version      = '9.6.839-rc'
+  s.version      = '9.6.840-rc'
   s.summary      = package['description']
   s.license      = package['license']
 
