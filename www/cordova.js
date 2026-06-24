@@ -282,6 +282,7 @@ class RecognizeConfig {
     image
     images
     data
+    dataList
     imageInputData
     dtc
     livePortrait
@@ -298,6 +299,7 @@ class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -312,6 +314,7 @@ class RecognizeConfig {
         result.image = options?.image
         result.images = options?.images
         result.data = options?.data
+        result.dataList = options?.dataList
         result.imageInputData = options?.imageInputData
         result.dtc = options?.dtc
         result.livePortrait = options?.livePortrait
@@ -336,6 +339,14 @@ class RecognizeConfig {
             }
         }
         result.data = jsonObject["data"]
+        if (jsonObject["dataList"] != null) {
+            result.dataList = []
+            for (const item of jsonObject["dataList"]) {
+                if (item != null) {
+                    result.dataList.push(item)
+                }
+            }
+        }
         if (jsonObject["imageInputData"] != null) {
             result.imageInputData = []
             for (const item of jsonObject["imageInputData"]) {
@@ -360,6 +371,7 @@ class RecognizeConfig {
             "image": this.image,
             "images": this.images,
             "data": this.data,
+            "dataList": this.dataList,
             "imageInputData": this.imageInputData?.map(e => e.toJson()),
             "dtc": this.dtc,
             "livePortrait": this.livePortrait,
@@ -511,6 +523,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__.CustomizationFonts),
 /* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_91__.CustomizationImages),
 /* harmony export */   CustomizationMatrices: () => (/* reexport safe */ _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_93__.CustomizationMatrices),
+/* harmony export */   CustomizationTheme: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.CustomizationTheme),
 /* harmony export */   CustomizationTimings: () => (/* reexport safe */ _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_92__.CustomizationTimings),
 /* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_98__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_60__.DataField),
@@ -2511,6 +2524,12 @@ class Functionality {
         this._set({ "homeIndicatorAutoHide": val });
     }
 
+    get hideStatusBar() { return this._hideStatusBar; }
+    set hideStatusBar(val) {
+        this._hideStatusBar = val;
+        this._set({ "hideStatusBar": val });
+    }
+
     get showCaptureButtonDelayFromDetect() { return this._showCaptureButtonDelayFromDetect; }
     set showCaptureButtonDelayFromDetect(val) {
         this._showCaptureButtonDelayFromDetect = val;
@@ -2636,6 +2655,7 @@ class Functionality {
         result._torchTurnedOn = jsonObject["torchTurnedOn"];
         result._preventScreenRecording = jsonObject["preventScreenRecording"];
         result._homeIndicatorAutoHide = jsonObject["homeIndicatorAutoHide"];
+        result._hideStatusBar = jsonObject["hideStatusBar"];
         result._showCaptureButtonDelayFromDetect = jsonObject["showCaptureButtonDelayFromDetect"];
         result._showCaptureButtonDelayFromStart = jsonObject["showCaptureButtonDelayFromStart"];
         result._rfidTimeout = jsonObject["rfidTimeout"];
@@ -2678,6 +2698,7 @@ class Functionality {
             "torchTurnedOn": this.torchTurnedOn,
             "preventScreenRecording": this.preventScreenRecording,
             "homeIndicatorAutoHide": this.homeIndicatorAutoHide,
+            "hideStatusBar": this.hideStatusBar,
             "showCaptureButtonDelayFromDetect": this.showCaptureButtonDelayFromDetect,
             "showCaptureButtonDelayFromStart": this.showCaptureButtonDelayFromStart,
             "rfidTimeout": this.rfidTimeout,
@@ -2786,6 +2807,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Cap: () => (/* binding */ Cap),
 /* harmony export */   CustomButtonTag: () => (/* binding */ CustomButtonTag),
 /* harmony export */   Customization: () => (/* binding */ Customization),
+/* harmony export */   CustomizationTheme: () => (/* binding */ CustomizationTheme),
 /* harmony export */   FrameShapeType: () => (/* binding */ FrameShapeType)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../internal/bridge */ "./src/internal/bridge.js");
@@ -2806,6 +2828,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Customization {
+    get theme() { return this._theme; }
+    set theme(val) {
+        this._theme = val;
+        this._set({ "theme": val });
+    }
+
     get showStatusMessages() { return this._showStatusMessages; }
     set showStatusMessages(val) {
         this._showStatusMessages = val;
@@ -3261,6 +3289,7 @@ class Customization {
 
         const result = new Customization();
 
+        result._theme = jsonObject["theme"];
         result._showStatusMessages = jsonObject["showStatusMessages"];
         result._showResultStatusMessages = jsonObject["showResultStatusMessages"];
         result._showHelpAnimation = jsonObject["showHelpAnimation"];
@@ -3343,6 +3372,7 @@ class Customization {
 
     toJson() {
         return {
+            "theme": this.theme,
             "showStatusMessages": this.showStatusMessages,
             "showResultStatusMessages": this.showResultStatusMessages,
             "showHelpAnimation": this.showHelpAnimation,
@@ -3446,6 +3476,11 @@ const CustomButtonTag = {
     CHANGE_FRAME: 1004,
     SKIP: 1005,
     CAMERA_SWITCH: 1006
+};
+
+const CustomizationTheme = {
+    CLEAR: 0,
+    LIQUID_GLASS: 1
 };
 
 
@@ -4885,6 +4920,12 @@ class LivenessParams {
         this._set({ "checkGeometry": val });
     }
 
+    get checkBarcodeBackground() { return this._checkBarcodeBackground; }
+    set checkBarcodeBackground(val) {
+        this._checkBarcodeBackground = val;
+        this._set({ "checkBarcodeBackground": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new LivenessParams();
 
@@ -4896,6 +4937,7 @@ class LivenessParams {
         result._checkBlackAndWhiteCopy = jsonObject["checkBlackAndWhiteCopy"];
         result._checkDynaprint = jsonObject["checkDynaprint"];
         result._checkGeometry = jsonObject["checkGeometry"];
+        result._checkBarcodeBackground = jsonObject["checkBarcodeBackground"];
 
         return result;
     }
@@ -4916,6 +4958,7 @@ class LivenessParams {
             "checkBlackAndWhiteCopy": this.checkBlackAndWhiteCopy,
             "checkDynaprint": this.checkDynaprint,
             "checkGeometry": this.checkGeometry,
+            "checkBarcodeBackground": this.checkBarcodeBackground,
         }
     }
 }
@@ -5081,12 +5124,6 @@ class ProcessParams {
         this._set({ "multiDocOnImage": val });
     }
 
-    get forceReadMrzBeforeLocate() { return this._forceReadMrzBeforeLocate; }
-    set forceReadMrzBeforeLocate(val) {
-        this._forceReadMrzBeforeLocate = val;
-        this._set({ "forceReadMrzBeforeLocate": val });
-    }
-
     get parseBarcodes() { return this._parseBarcodes; }
     set parseBarcodes(val) {
         this._parseBarcodes = val;
@@ -5217,6 +5254,12 @@ class ProcessParams {
     set checkVDS(val) {
         this._checkVDS = val;
         this._set({ "checkVDS": val });
+    }
+
+    get strictAgeCheck() { return this._strictAgeCheck; }
+    set strictAgeCheck(val) {
+        this._strictAgeCheck = val;
+        this._set({ "strictAgeCheck": val });
     }
 
     get barcodeParserType() { return this._barcodeParserType; }
@@ -5480,7 +5523,6 @@ class ProcessParams {
         result._updateOCRValidityByGlare = jsonObject["updateOCRValidityByGlare"];
         result._noGraphics = jsonObject["noGraphics"];
         result._multiDocOnImage = jsonObject["multiDocOnImage"];
-        result._forceReadMrzBeforeLocate = jsonObject["forceReadMrzBeforeLocate"];
         result._parseBarcodes = jsonObject["parseBarcodes"];
         result._shouldReturnPackageForReprocess = jsonObject["shouldReturnPackageForReprocess"];
         result._disablePerforationOCR = jsonObject["disablePerforationOCR"];
@@ -5503,6 +5545,7 @@ class ProcessParams {
         result._strictExpiryDate = jsonObject["strictExpiryDate"];
         result._debugSaveBinarySession = jsonObject["debugSaveBinarySession"];
         result._checkVDS = jsonObject["checkVDS"];
+        result._strictAgeCheck = jsonObject["strictAgeCheck"];
         result._barcodeParserType = jsonObject["barcodeParserType"];
         result._perspectiveAngle = jsonObject["perspectiveAngle"];
         result._minDPI = jsonObject["minDPI"];
@@ -5569,7 +5612,6 @@ class ProcessParams {
             "updateOCRValidityByGlare": this.updateOCRValidityByGlare,
             "noGraphics": this.noGraphics,
             "multiDocOnImage": this.multiDocOnImage,
-            "forceReadMrzBeforeLocate": this.forceReadMrzBeforeLocate,
             "parseBarcodes": this.parseBarcodes,
             "shouldReturnPackageForReprocess": this.shouldReturnPackageForReprocess,
             "disablePerforationOCR": this.disablePerforationOCR,
@@ -5592,6 +5634,7 @@ class ProcessParams {
             "strictExpiryDate": this.strictExpiryDate,
             "debugSaveBinarySession": this.debugSaveBinarySession,
             "checkVDS": this.checkVDS,
+            "strictAgeCheck": this.strictAgeCheck,
             "measureSystem": this.measureSystem,
             "barcodeParserType": this.barcodeParserType,
             "perspectiveAngle": this.perspectiveAngle,
@@ -9164,7 +9207,8 @@ const RFIDCertificateType = {
   BLS: 7,
   LDS2: 8,
   BCS: 9,
-  BCSNC: 10
+  BCSNC: 10,
+  MDLS: 13
 };
 
 
@@ -9234,6 +9278,7 @@ const RFIDDataFileType = {
   ID_DG19: 119,
   ID_DG20: 120,
   ID_DG21: 121,
+  ID_DG22: 122,
   DL_COM: 150,
   DL_DG1: 151,
   DL_DG2: 152,
@@ -9269,6 +9314,13 @@ const RFIDDataFileType = {
   SESSION: 701,
   LOGDATA: 702,
   CHIP_PROPERTIES: 703,
+  ID_DG22: 122,
+  POST_CA_RESPONSE: 710,
+  POST_CA_PUBLIC_KEY: 711,
+  POST_CA_INFO: 712,
+  POST_CA_DPARAMS: 713,
+  POST_CA_CHECK_PK: 714,
+  POST_CA_CHECK_SK: 715,
   SAM_DATA: 800,
   SAM_DATA_MAX: 832,
   VDS: 900,
@@ -10131,7 +10183,9 @@ const LDSParsingErrorCodes = {
     VDS_NC_MISSING_OR_INCORRECT_SIGNATURE: 0x81000307,
     VDS_NC_MISSING_OR_INCORRECT_SIG_ALGORITHM: 0x81000308,
     VDS_NC_MISSING_OR_INCORRECT_CERTIFICATE: 0x81000309,
-    VDS_NC_MISSING_OR_INCORRECT_SIG_VALUE: 0x8100030A
+    VDS_NC_MISSING_OR_INCORRECT_SIG_VALUE: 0x8100030A,
+    PACE_CAM_DATA_USAGE_INCORRECT: 0x8100012B,
+    PACE_IM_MAPPING_DATA_INCORRECT: 0x8100012F,
 };
 
 LDSParsingErrorCodes.getTranslation = async function (value) {
@@ -10363,6 +10417,8 @@ const LDSParsingNotificationCodes = {
     SI_STORAGE_PRIVILEGED_TI_INCORRECT_USAGE: 0x9100010E,
     SI_STORAGE_RI_DOMAIN_PARAMS_MULTIPLE_ENTRIES: 0x9100010F,
     SI_STORAGE_PACE_INFOS_NON_CONSISTANT: 0x91000110,
+    SI_STORAGE_CS_NONCONSISTANT: 0x91000111,
+    SI_STORAGE_CS_PACE_CAM_KEY_MISSING: 0x91000112,
     CV_CERTIFICATE_PROFILE_INCORRECT_VERSION: 0x91000201,
     CV_CERTIFICATE_VALIDITY: 0x91000202,
     CV_CERTIFICATE_NON_CV_CA_DOMAIN_PARAMETERS: 0x91000203,
@@ -10378,7 +10434,12 @@ const LDSParsingNotificationCodes = {
     NTF_LDS_MRZ_COUNTRYCODE_VISUALMRZ_NON_MATCHING: 0x00022019,
     NTF_LDS_ICAO_CERTIFICATE_MRZ_COUNTRY_NON_MATCHING: 0x90000252,
     NTF_LDS_ICAO_CERTIFICATE_ISSUER_COUNTRY_NON_UPPER_CASE: 0x90000253,
-    NTF_LDS_ICAO_CERTIFICATE_SUBJECT_COUNTRY_NON_UPPER_CASE: 0x90000254
+    NTF_LDS_ICAO_CERTIFICATE_SUBJECT_COUNTRY_NON_UPPER_CASE: 0x90000254,
+    ASN_CERTIFICATE_NONMATCHINGDSROLE: 0x90000011,
+    MDL_CERTIFICATE_CHAIN_SOP_NONMATCHING: 0x90000400,
+    MDL_CERTIFICATE_UNSUPPORTEDPUBLICKEYALGORITHM: 0x90000401,
+    MDL_CERTIFICATE_UNSUPPORTEDSIGNATUREALGORITHM: 0x90000402,
+    MDL_CERTIFICATE_UNSUPPORTEDPUBLICKEYPARAMS: 0x90000403,
 };
 
 LDSParsingNotificationCodes.getTranslation = async function (value) {
@@ -11263,6 +11324,8 @@ const FieldType = {
   NON_DOMICILED_INDICATOR: 702,
   JURISDICTION_SPECIFIC_DATA: 703,
   DATA_DATE_OF_EXPIRY: 704,
+  CONSUL: 705,
+  CANTON_REFERENCE: 706,
 }
 
 FieldType.getTranslation = async function (value) {
@@ -12377,7 +12440,7 @@ const RFIDErrorCodes = {
     LAYER6_GENERAL_AUTH_FAILURE: -2046819319,
     LAYER6_FILE_NOT_FOUND: -2147456638,
     LAYER6_FILE_EOF1: -2147458142,
-    LAYER6_FILE_EOF2: -2147456256,
+    LAYER6_WRONG_PARAMS: -2147456256,
     LAYER6_INCORRECT_PARAMS: -2147456640,
     LAYER6_NO_REFERENCE_DATA: -2147456632,
     LAYER6_PWD_SUSPEND: -2147458143,

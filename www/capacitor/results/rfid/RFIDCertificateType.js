@@ -9,5 +9,6 @@ export const RFIDCertificateType = {
   BLS: 7,
   LDS2: 8,
   BCS: 9,
-  BCSNC: 10
+  BCSNC: 10,
+  MDLS: 13
 };

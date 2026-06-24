@@ -34,6 +34,11 @@ export declare class RecognizeConfig {
     data?: string;
 
     /**
+     * Binaries for processing. Array of base64 strings.
+     */
+    dataList?: string[];
+
+    /**
      * Images(with input data) for processing.
      */
     imageInputData?: ImageInputData[];
@@ -74,6 +79,7 @@ export declare class RecognizeConfig {
             image?: string,
             images?: string[],
             data?: string,
+            dataList?: string[],
             imageInputData?: ImageInputData[],
             dtc?: string,
             livePortrait?: string,
@@ -88,6 +94,7 @@ export declare class RecognizeConfig {
             image?: string,
             images?: string[],
             data?: string,
+            dataList?: string[],
             imageInputData?: ImageInputData[],
             dtc?: string,
             livePortrait?: string,

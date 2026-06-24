@@ -25,6 +25,7 @@ export var livenessParams = {
   "checkBlackAndWhiteCopy": true,
   "checkDynaprint": false,
   "checkGeometry": true,
+  "checkBarcodeBackground": false,
 };
 export var authenticityParams = {
   "useLivenessCheck": true,
@@ -92,7 +93,6 @@ export var processParams = {
   "updateOCRValidityByGlare": false,
   "noGraphics": true,
   "multiDocOnImage": false,
-  "forceReadMrzBeforeLocate": true,
   "parseBarcodes": false,
   "shouldReturnPackageForReprocess": true,
   "disablePerforationOCR": false,
@@ -115,6 +115,7 @@ export var processParams = {
   "strictExpiryDate": true,
   "debugSaveBinarySession": false,
   "checkVDS": true,
+  "strictAgeCheck": false,
   "bsiTr03135": bsi,
   "measureSystem": 1,
   "barcodeParserType": 3,
@@ -241,6 +242,7 @@ export var customizationMatrices = {
   "nextPageIdCardBack": [2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9],
 };
 export var customization = {
+  "theme": 1,
   "showStatusMessages": true,
   "showResultStatusMessages": false,
   "showHelpAnimation": true,
@@ -358,6 +360,7 @@ export var functionality = {
   "torchTurnedOn": false,
   "preventScreenRecording": true,
   "homeIndicatorAutoHide": false,
+  "hideStatusBar": true,
   "showCaptureButtonDelayFromDetect": 0,
   "showCaptureButtonDelayFromStart": 1,
   "rfidTimeout": 2,
@@ -533,6 +536,7 @@ export var recognizeConfig = {
   "image": img3,
   "data": img1,
   "images": [img1, img2, img3],
+  "dataList": [img3, img2, img1],
   "imageInputData": [imageInputData, imageInputData, imageInputData],
 };
 export var recognizeConfig2 = {

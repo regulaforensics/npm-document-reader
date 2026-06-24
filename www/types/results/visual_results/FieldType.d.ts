@@ -1315,6 +1315,8 @@ export declare enum FieldType {
   /** Jurisdiction specific data. */
   JURISDICTION_SPECIFIC_DATA = 703,
   DATA_DATE_OF_EXPIRY = 704,
+  CONSUL = 705,
+  CANTON_REFERENCE = 706,
 }
 
 export declare namespace FieldType {

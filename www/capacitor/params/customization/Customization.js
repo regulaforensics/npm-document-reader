@@ -8,6 +8,12 @@ import { CustomizationContentModes, ViewContentMode } from './CustomizationConte
 import { CustomizationMatrices } from './CustomizationMatrices';
 
 export class Customization {
+    get theme() { return this._theme; }
+    set theme(val) {
+        this._theme = val;
+        this._set({ "theme": val });
+    }
+
     get showStatusMessages() { return this._showStatusMessages; }
     set showStatusMessages(val) {
         this._showStatusMessages = val;
@@ -463,6 +469,7 @@ export class Customization {
 
         const result = new Customization();
 
+        result._theme = jsonObject["theme"];
         result._showStatusMessages = jsonObject["showStatusMessages"];
         result._showResultStatusMessages = jsonObject["showResultStatusMessages"];
         result._showHelpAnimation = jsonObject["showHelpAnimation"];
@@ -545,6 +552,7 @@ export class Customization {
 
     toJson() {
         return {
+            "theme": this.theme,
             "showStatusMessages": this.showStatusMessages,
             "showResultStatusMessages": this.showResultStatusMessages,
             "showHelpAnimation": this.showHelpAnimation,
@@ -648,4 +656,9 @@ export const CustomButtonTag = {
     CHANGE_FRAME: 1004,
     SKIP: 1005,
     CAMERA_SWITCH: 1006
+};
+
+export const CustomizationTheme = {
+    CLEAR: 0,
+    LIQUID_GLASS: 1
 };
