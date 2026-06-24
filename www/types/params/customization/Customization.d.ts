@@ -10,6 +10,15 @@ import { CustomizationMatrices } from "./CustomizationMatrices";
  */
 export declare class Customization {
     /**
+     * Allows you to set a visual theme for buttons controls.
+     *
+     * @default @default {@link CustomizationTheme.CLEAR}
+     * 
+     * IOS only.
+     */
+    theme?: CustomizationTheme;
+
+    /**
      * If it's set to `true`, status messages during the document processing
      * will be shown.
      *
@@ -549,18 +558,14 @@ export declare enum Cap {
 }
 
 export declare enum FrameShapeType {
-    /**
-     * Camera frame is rectangle.
-     */
+    /** Camera frame is rectangle. */
     LINE = 0,
-    /**
-     * Camera frame only consists of corners of the rectangle.
-     */
+    /** Camera frame only consists of corners of the rectangle. */
     CORNER = 1,
 }
 
 /**
- *  Button tags for UI customization.
+ * Button tags for UI customization.
  */
 export declare enum CustomButtonTag {
     CLOSE = 1001,
@@ -569,4 +574,11 @@ export declare enum CustomButtonTag {
     CHANGE_FRAME = 1004,
     SKIP = 1005,
     CAMERA_SWITCH = 1006,
+}
+
+export declare enum CustomizationTheme {
+    /** Increased opacity and more contrast. */
+    CLEAR = 0,
+    /** Transparent, revealing the content beneath. */
+    LIQUID_GLASS = 1,
 }

@@ -242,6 +242,7 @@ export var customizationMatrices = {
   "nextPageIdCardBack": [2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9],
 };
 export var customization = {
+  "theme": 1,
   "showStatusMessages": true,
   "showResultStatusMessages": false,
   "showHelpAnimation": true,

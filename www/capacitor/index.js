@@ -119,8 +119,8 @@ import { CustomizationImages } from './params/customization/CustomizationImages'
 import { CustomizationTimings } from './params/customization/CustomizationTimings';
 import { CustomizationMatrices } from './params/customization/CustomizationMatrices';
 import { CustomizationContentModes, ViewContentMode } from './params/customization/CustomizationContentModes';
-import { Customization, Cap, FrameShapeType, CustomButtonTag } from './params/customization/Customization';
-export { CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors };
+import { Customization, Cap, FrameShapeType, CustomButtonTag, CustomizationTheme } from './params/customization/Customization';
+export { CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors, CustomizationTheme };
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
