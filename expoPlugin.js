@@ -1,4 +1,4 @@
-const { withPodfile } = require('@expo/config-plugins');
+const { withPodfile } = getConfigPlugins();
 
 const SOURCES = [
   'https://github.com/CocoaPods/Specs.git',
@@ -37,3 +37,15 @@ module.exports = function withRegulaPodSources(config) {
     return config;
   });
 };
+
+function getConfigPlugins() {
+  try {
+    return require('@expo/config-plugins');
+  } catch {
+    return require(
+      require.resolve('@expo/config-plugins', {
+        paths: [process.cwd()]
+      })
+    );
+  }
+}
