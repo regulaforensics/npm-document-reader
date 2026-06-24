@@ -1,4 +1,5 @@
-const { withPodfile } = require(require.resolve('@expo/config-plugins', { paths: [__dirname, process.cwd()] }));
+const { createRequire } = require('module'); // passing vulnerability checks
+const { withPodfile } = createRequire(process.cwd() + '/package.json')('@expo/config-plugins');
 
 const SOURCES = [
   'https://github.com/CocoaPods/Specs.git',
