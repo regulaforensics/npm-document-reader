@@ -6,8 +6,8 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.5.823",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.5.2382",
+    "@regulaforensics/document-reader": "9.6.876",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.6.2444",
     "@regulaforensics/document-reader-btdevice": "9.4.46",
     "@awesome-cordova-plugins/file": "^8.1.0",
     "@awesome-cordova-plugins/camera": "^8.1.0",
@@ -23,5 +23,8 @@
     "@vitejs/plugin-react": "^5.1.2",
     "vite-plugin-static-copy": "^3.2.0",
     "@types/react-router-dom": "^5.3.3"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
   }
 }

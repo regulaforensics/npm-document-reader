@@ -523,6 +523,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_90__.CustomizationFonts),
 /* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_91__.CustomizationImages),
 /* harmony export */   CustomizationMatrices: () => (/* reexport safe */ _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_93__.CustomizationMatrices),
+/* harmony export */   CustomizationTheme: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.CustomizationTheme),
 /* harmony export */   CustomizationTimings: () => (/* reexport safe */ _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_92__.CustomizationTimings),
 /* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_98__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_60__.DataField),
@@ -2806,6 +2807,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Cap: () => (/* binding */ Cap),
 /* harmony export */   CustomButtonTag: () => (/* binding */ CustomButtonTag),
 /* harmony export */   Customization: () => (/* binding */ Customization),
+/* harmony export */   CustomizationTheme: () => (/* binding */ CustomizationTheme),
 /* harmony export */   FrameShapeType: () => (/* binding */ FrameShapeType)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../internal/bridge */ "./src/internal/bridge.js");
@@ -2826,6 +2828,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Customization {
+    get theme() { return this._theme; }
+    set theme(val) {
+        this._theme = val;
+        this._set({ "theme": val });
+    }
+
     get showStatusMessages() { return this._showStatusMessages; }
     set showStatusMessages(val) {
         this._showStatusMessages = val;
@@ -3281,6 +3289,7 @@ class Customization {
 
         const result = new Customization();
 
+        result._theme = jsonObject["theme"];
         result._showStatusMessages = jsonObject["showStatusMessages"];
         result._showResultStatusMessages = jsonObject["showResultStatusMessages"];
         result._showHelpAnimation = jsonObject["showHelpAnimation"];
@@ -3363,6 +3372,7 @@ class Customization {
 
     toJson() {
         return {
+            "theme": this.theme,
             "showStatusMessages": this.showStatusMessages,
             "showResultStatusMessages": this.showResultStatusMessages,
             "showHelpAnimation": this.showHelpAnimation,
@@ -3466,6 +3476,11 @@ const CustomButtonTag = {
     CHANGE_FRAME: 1004,
     SKIP: 1005,
     CAMERA_SWITCH: 1006
+};
+
+const CustomizationTheme = {
+    CLEAR: 0,
+    LIQUID_GLASS: 1
 };
 
 
@@ -11310,6 +11325,7 @@ const FieldType = {
   JURISDICTION_SPECIFIC_DATA: 703,
   DATA_DATE_OF_EXPIRY: 704,
   CONSUL: 705,
+  CANTON_REFERENCE: 706,
 }
 
 FieldType.getTranslation = async function (value) {
@@ -12424,7 +12440,7 @@ const RFIDErrorCodes = {
     LAYER6_GENERAL_AUTH_FAILURE: -2046819319,
     LAYER6_FILE_NOT_FOUND: -2147456638,
     LAYER6_FILE_EOF1: -2147458142,
-    LAYER6_FILE_EOF2: -2147456256,
+    LAYER6_WRONG_PARAMS: -2147456256,
     LAYER6_INCORRECT_PARAMS: -2147456640,
     LAYER6_NO_REFERENCE_DATA: -2147456632,
     LAYER6_PWD_SUSPEND: -2147458143,
@@ -12688,17 +12704,17 @@ class TccParams {
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	const __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
 /******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
@@ -12707,7 +12723,7 @@ class TccParams {
 /******/ 		// Execute the module function
 /******/ 		if (!(moduleId in __webpack_modules__)) {
 /******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
@@ -12720,11 +12736,26 @@ class TccParams {
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
+/******/ 		// define getter/value functions for harmony exports
 /******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
 /******/ 				}
 /******/ 			}
 /******/ 		};
@@ -12739,7 +12770,7 @@ class TccParams {
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
 /******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			if(Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
@@ -12751,8 +12782,8 @@ class TccParams {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	var __webpack_export_target__ = exports;
+/******/ 	let __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	const __webpack_export_target__ = exports;
 /******/ 	for(var __webpack_i__ in __webpack_exports__) __webpack_export_target__[__webpack_i__] = __webpack_exports__[__webpack_i__];
 /******/ 	if(__webpack_exports__.__esModule) Object.defineProperty(__webpack_export_target__, "__esModule", { value: true });
 /******/ 	

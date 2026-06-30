@@ -36,6 +36,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     edgeToEdgeEnabled: true
   },
   plugins: [
+    '@regulaforensics/document-reader',
     ['expo-custom-assets', { assetsPaths: ['./assets'] }],
     ['expo-build-properties', {
       android: {
