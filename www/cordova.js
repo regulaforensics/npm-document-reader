@@ -1014,7 +1014,7 @@ class DocumentReader {
     }
 
     resetConfiguration() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("resetConfiguration", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("resetConfiguration", []);
         this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_88__.Functionality();
         this._processParams = new _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_79__.ProcessParams();
         this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_95__.Customization();
@@ -1022,11 +1022,11 @@ class DocumentReader {
     }
 
     set onCustomButtonTapped(completion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setCustomButtonTappedCompletion)(completion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setCustomButtonTappedCompletion)(completion);
     }
 
     set videoEncoderCompletion(completion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setVideoEncoderCompletion)(completion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setVideoEncoderCompletion)(completion);
     }
 
     async initialize(config) {
@@ -1041,17 +1041,17 @@ class DocumentReader {
     }
 
     deinitializeReader() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("deinitializeReader", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("deinitializeReader", []);
     }
 
     async prepareDatabase(databaseID, prepareCompletion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderPrepareCompletion)(prepareCompletion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderPrepareCompletion)(prepareCompletion);
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("prepareDatabase", [databaseID]);
         return this._successOrErrorFromJson(response);
     }
 
     async runAutoUpdate(databaseID, prepareCompletion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderPrepareCompletion)(prepareCompletion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderPrepareCompletion)(prepareCompletion);
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("runAutoUpdate", [databaseID]);
         return this._successOrErrorFromJson(response);
     }
@@ -1070,25 +1070,25 @@ class DocumentReader {
     }
 
     startNewPage() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewPage", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewPage", []);
     }
 
     startNewSession() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewSession", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startNewSession", []);
     }
 
     scan(config, completion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("scan", [config]);
     }
 
     startScanner(config, completion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startScanner", [config]);
     }
 
     recognize(config, completion) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("recognize", [config]);
     }
 
@@ -1099,7 +1099,7 @@ class DocumentReader {
             (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(config._completion);
         }
 
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setRFIDProgressCompletion)(config.onProgress);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setRFIDProgressCompletion)(config.onProgress);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setChipDetectedCompletion)(config.onChipDetected);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setRetryReadChipCompletion)(config.onRetryReadChip);
 
@@ -1114,19 +1114,19 @@ class DocumentReader {
     }
 
     stopScanner() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopScanner", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopScanner", []);
     }
 
     stopRFIDReader() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopRFIDReader", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("stopRFIDReader", []);
     }
 
     addPKDCertificates(certificates) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
     }
 
     clearPKDCertificates() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("clearPKDCertificates", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("clearPKDCertificates", []);
     }
 
     async setTCCParams(params) {
@@ -1149,7 +1149,7 @@ class DocumentReader {
     }
 
     endBackendTransaction() {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("endBackendTransaction", []);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("endBackendTransaction", []);
     }
 
     async readMDL(type, retrieval) {
@@ -1260,7 +1260,7 @@ class DocumentReader {
     }
 
     _setRfidSessionStatus(status) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setRfidSessionStatus", [status]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setRfidSessionStatus", [status]);
     }
 
     async _getTag() {
@@ -1268,7 +1268,7 @@ class DocumentReader {
     }
 
     _setTag(tag) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTag", [tag]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTag", [tag]);
     }
 
     async _getTenant() {
@@ -1276,7 +1276,7 @@ class DocumentReader {
     }
 
     _setTenant(tenant) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTenant", [tenant]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTenant", [tenant]);
     }
 
     async _getEnv() {
@@ -1284,7 +1284,7 @@ class DocumentReader {
     }
 
     _setEnv(env) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setEnv", [env]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setEnv", [env]);
     }
 
     async _getLocale() {
@@ -1292,11 +1292,11 @@ class DocumentReader {
     }
 
     _setLocale(locale) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setLocale", [locale]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setLocale", [locale]);
     }
 
     _setLocalizationDictionary(dictionary) {
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setLocalizationDictionary", [dictionary]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setLocalizationDictionary", [dictionary]);
     }
 }
 
