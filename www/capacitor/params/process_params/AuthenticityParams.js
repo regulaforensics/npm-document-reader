@@ -1,5 +1,6 @@
 import { DocumentReader } from '../../index';
 import { LivenessParams } from './LivenessParams';
+import { AuthenticityPropertiesParams } from './AuthenticityPropertiesParams';
 
 export class AuthenticityParams {
     get useLivenessCheck() { return this._useLivenessCheck; }
@@ -96,6 +97,16 @@ export class AuthenticityParams {
         this._set({ "checkSecurityText": val });
     }
 
+    get checkProperties() { return this._checkProperties; }
+    set checkProperties(val) {
+        this._checkProperties = val;
+        this._set({ "checkProperties": val });
+    }
+
+    _propertiesParams = new AuthenticityPropertiesParams();
+    get propertiesParams() { return this._propertiesParams; }
+    set propertiesParams(val) { (this._propertiesParams = val)._apply(); }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new AuthenticityParams();
 
@@ -117,6 +128,8 @@ export class AuthenticityParams {
         result._checkPhotoComparison = jsonObject["checkPhotoComparison"];
         result._checkLetterScreen = jsonObject["checkLetterScreen"];
         result._checkSecurityText = jsonObject["checkSecurityText"];
+        result._checkProperties = jsonObject["checkProperties"];
+        result._propertiesParams = AuthenticityPropertiesParams.fromJson(jsonObject["propertiesParams"]);
 
         return result;
     }
@@ -146,6 +159,8 @@ export class AuthenticityParams {
             "checkPhotoComparison": this.checkPhotoComparison,
             "checkLetterScreen": this.checkLetterScreen,
             "checkSecurityText": this.checkSecurityText,
+            "checkProperties": this.checkProperties,
+            "propertiesParams": this.propertiesParams?.toJson(),
         }
     }
 }
