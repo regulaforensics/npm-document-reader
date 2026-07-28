@@ -1,4 +1,20 @@
-import { exec, serializeInterface, _setDocumentReaderCompletion, _setRFIDCompletion, _setDocumentReaderPrepareCompletion, _setCustomButtonTappedCompletion, _setVideoEncoderCompletion, _setRFIDProgressCompletion, _setChipDetectedCompletion, _setRetryReadChipCompletion, _setPaCertificateCompletion, _setTaCertificateCompletion, _setTaSignatureCompletion, _setPACEProtocolCompletion, _setCAProtocolCompletion } from './internal/bridge'
+import {
+    exec,
+    serializeInterface,
+    _setDocumentReaderCompletion,
+    _setRFIDCompletion,
+    _setDocumentReaderPrepareCompletion,
+    _setCustomButtonTappedCompletion,
+    _setVideoEncoderCompletion,
+    _setRFIDProgressCompletion,
+    _setChipDetectedCompletion,
+    _setRetryReadChipCompletion,
+    _setPaCertificateCompletion,
+    _setTaCertificateCompletion,
+    _setTaSignatureCompletion,
+    _setPACEProtocolCompletion,
+    _setCAProtocolCompletion,
+} from './internal/bridge'
 
 import { OnlineProcessingConfig, ImageFormat, OnlineMode } from './config/OnlineProcessingConfig';
 import { InitConfig } from './config/InitConfig';
@@ -6,7 +22,17 @@ import { RFIDConfig } from './config/RFIDConfig';
 import { ScannerConfig } from './config/ScannerConfig';
 import { RecognizeConfig, ImageInputData } from './config/RecognizeConfig';
 import { FinalizeConfig } from './config/FinalizeConfig';
-export { OnlineProcessingConfig, ImageFormat, OnlineMode, InitConfig, RFIDConfig, ScannerConfig, RecognizeConfig, ImageInputData, FinalizeConfig };
+export {
+    OnlineProcessingConfig,
+    ImageFormat,
+    OnlineMode,
+    InitConfig,
+    RFIDConfig,
+    ScannerConfig,
+    RecognizeConfig,
+    ImageInputData,
+    FinalizeConfig,
+};
 
 import { DocReaderVersion } from './info/DocReaderVersion';
 import { PrepareProgress } from './info/PrepareProgress';
@@ -15,7 +41,18 @@ import { DocumentsDatabase } from './info/DocumentsDatabase';
 import { License } from './info/License';
 import { DocReaderScenario, Scenario, DocReaderOrientation } from './info/DocReaderScenario';
 import { RFIDException } from './info/RFIDException';
-export { DocReaderVersion, PrepareProgress, DocReaderException, ErrorCodes, DocumentsDatabase, License, DocReaderScenario, Scenario, DocReaderOrientation, RFIDException };
+export {
+    DocReaderVersion,
+    PrepareProgress,
+    DocReaderException,
+    ErrorCodes,
+    DocumentsDatabase,
+    License,
+    DocReaderScenario,
+    Scenario,
+    DocReaderOrientation,
+    RFIDException,
+};
 
 import { LCID } from './results/visual_results/LCID';
 import { GraphicFieldType } from './results/visual_results/GraphicFieldType';
@@ -32,13 +69,38 @@ import { RFIDOrigin } from './results/visual_results/RFIDOrigin';
 import { TextResult } from './results/visual_results/TextResult';
 import { TextSource } from './results/visual_results/TextSource';
 import { GraphicResult } from './results/visual_results/GraphicResult';
-export { LCID, GraphicFieldType, Value, Rect, Symbol, Comparison, TextField, Lights, Validity, FieldType, GraphicField, RFIDOrigin, TextResult, TextSource, GraphicResult };
+export {
+    LCID,
+    GraphicFieldType,
+    Value,
+    Rect,
+    Symbol,
+    Comparison,
+    TextField,
+    Lights,
+    Validity,
+    FieldType,
+    GraphicField,
+    RFIDOrigin,
+    TextResult,
+    TextSource,
+    GraphicResult,
+};
 
 import { DocumentType, DocFormat, DocType as DocumentTypeEnum } from './results/DocumentType';
 import { Results, ResultType } from './results/Results';
 import { TransactionInfo } from './results/TransactionInfo';
 import { Position, Coordinate } from './results/Position';
-export { DocumentType, DocFormat, DocumentTypeEnum, Results, ResultType, TransactionInfo, Position, Coordinate };
+export {
+    DocumentType,
+    DocFormat,
+    DocumentTypeEnum,
+    Results,
+    ResultType,
+    TransactionInfo,
+    Position,
+    Coordinate,
+};
 
 import { RFIDStatus } from './results/status/RFIDStatus';
 import { ResultsStatus } from './results/status/ResultsStatus';
@@ -46,7 +108,14 @@ import { CheckResult } from './results/status/CheckResult';
 import { OpticalStatus } from './results/status/OpticalStatus';
 import { AgeStatus } from './results/status/AgeStatus';
 import { ProcessingFinishedStatus } from './results/Results';
-export { RFIDStatus, ResultsStatus, CheckResult, OpticalStatus, AgeStatus, ProcessingFinishedStatus };
+export {
+    RFIDStatus,
+    ResultsStatus,
+    CheckResult,
+    OpticalStatus,
+    AgeStatus,
+    ProcessingFinishedStatus,
+};
 
 import { CheckDiagnose } from './results/authenticity/CheckDiagnose';
 import { AuthenticityElement } from './results/authenticity/AuthenticityElement';
@@ -54,19 +123,36 @@ import { AuthenticityResult } from './results/authenticity/AuthenticityResult';
 import { AuthenticityCheck } from './results/authenticity/AuthenticityCheck';
 import { SecurityFeatureType } from './results/authenticity/SecurityFeatureType';
 import { Authenticity } from './results/authenticity/Authenticity';
-export { CheckDiagnose, AuthenticityElement, AuthenticityResult, AuthenticityCheck, SecurityFeatureType, Authenticity };
+export {
+    CheckDiagnose,
+    AuthenticityElement,
+    AuthenticityResult,
+    AuthenticityCheck,
+    SecurityFeatureType,
+    Authenticity,
+};
 
 import { PDF417Info } from './results/barcode/PDF417Info';
 import { BarcodeStatus } from './results/barcode/BarcodeStatus';
 import { BarcodeType } from './results/barcode/BarcodeType';
 import { BarcodeResult } from './results/barcode/BarcodeResult';
 import { BarcodeField } from './results/barcode/BarcodeField';
-export { PDF417Info, BarcodeStatus, BarcodeType, BarcodeResult, BarcodeField };
+export {
+    PDF417Info,
+    BarcodeStatus,
+    BarcodeType,
+    BarcodeResult,
+    BarcodeField,
+};
 
 import { ImageQuality } from './results/image_quality/ImageQuality';
 import { ImageQualityGroup } from './results/image_quality/ImageQualityGroup';
 import { ImageQualityCheckType } from './results/image_quality/ImageQualityCheckType';
-export { ImageQuality, ImageQualityGroup, ImageQualityCheckType };
+export {
+    ImageQuality,
+    ImageQualityGroup,
+    ImageQualityCheckType,
+};
 
 import { LDSParsingErrorCodes } from './results/visible_digital_seals/LDSParsingErrorCodes';
 import { VDSNCData } from './results/visible_digital_seals/VDSNCData';
@@ -74,7 +160,14 @@ import { BytesData } from './results/visible_digital_seals/BytesData';
 import { DocFeature } from './results/visible_digital_seals/DocFeature';
 import { VDSData } from './results/visible_digital_seals/VDSData';
 import { LDSParsingNotificationCodes } from './results/visible_digital_seals/LDSParsingNotificationCodes';
-export { LDSParsingErrorCodes, VDSNCData, BytesData, DocFeature, VDSData, LDSParsingNotificationCodes };
+export {
+    LDSParsingErrorCodes,
+    VDSNCData,
+    BytesData,
+    DocFeature,
+    VDSData,
+    LDSParsingNotificationCodes,
+};
 
 import { SecurityObject } from './results/rfid/SecurityObject';
 import { CardProperties } from './results/rfid/CardProperties';
@@ -96,9 +189,32 @@ import { Application, RFIDApplicationType } from './results/rfid/Application';
 import { RFIDAccessControlProcedureType } from './results/rfid/RFIDAccessControlProcedureType';
 import { Extension } from './results/rfid/Extension';
 import { AccessControlProcedureType } from './results/rfid/AccessControlProcedureType';
-export { SecurityObject, CardProperties, DataField, Attribute, SignerInfo, SecurityObjectCertificates, CertificateChain, Authority, File, RFIDValue, RFIDValidity, RFIDDataFileType, CertificateData, FileData, RFIDCertificateType, RFIDSessionData, Application, RFIDApplicationType, RFIDAccessControlProcedureType, Extension, AccessControlProcedureType };
+export {
+    SecurityObject,
+    CardProperties,
+    DataField,
+    Attribute,
+    SignerInfo,
+    SecurityObjectCertificates,
+    CertificateChain,
+    Authority,
+    File,
+    RFIDValue,
+    RFIDValidity,
+    RFIDDataFileType,
+    CertificateData,
+    FileData,
+    RFIDCertificateType,
+    RFIDSessionData,
+    Application,
+    RFIDApplicationType,
+    RFIDAccessControlProcedureType,
+    Extension,
+    AccessControlProcedureType,
+};
 
 import { LivenessParams } from './params/process_params/LivenessParams';
+import { AuthenticityPropertiesParams } from './params/process_params/AuthenticityPropertiesParams';
 import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
@@ -108,10 +224,34 @@ import { AuthenticityParams } from './params/process_params/AuthenticityParams';
 import { BackendProcessingConfig } from './params/process_params/BackendProcessingConfig';
 import { Bsi } from './params/process_params/Bsi';
 import { FaceApiSearchParams } from './params/process_params/FaceApiSearchParams';
-export { LivenessParams, ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes, GlaresCheckParams, FaceApiParams, RFIDParams, ImageQA, AuthenticityParams, BackendProcessingConfig, Bsi, FaceApiSearchParams };
+export {
+    LivenessParams,
+    AuthenticityPropertiesParams,
+    ProcessParams,
+    MeasureSystem,
+    MRZFormat,
+    LogLevel,
+    MrzDetectionModes,
+    GlaresCheckParams,
+    FaceApiParams,
+    RFIDParams,
+    ImageQA,
+    AuthenticityParams,
+    BackendProcessingConfig,
+    Bsi,
+    FaceApiSearchParams,
+};
 
 import { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize } from './params/Functionality';
-export { Functionality, CameraPosition, CaptureMode, CameraMode, CaptureSessionPreset, DocReaderFrame, CameraSize };
+export {
+    Functionality,
+    CameraPosition,
+    CaptureMode,
+    CameraMode,
+    CaptureSessionPreset,
+    DocReaderFrame,
+    CameraSize,
+};
 
 import { CustomizationColors } from './params/customization/CustomizationColors';
 import { CustomizationFonts, Font, FontStyle } from './params/customization/CustomizationFonts';
@@ -120,14 +260,41 @@ import { CustomizationTimings } from './params/customization/CustomizationTiming
 import { CustomizationMatrices } from './params/customization/CustomizationMatrices';
 import { CustomizationContentModes, ViewContentMode } from './params/customization/CustomizationContentModes';
 import { Customization, Cap, FrameShapeType, CustomButtonTag, CustomizationTheme } from './params/customization/Customization';
-export { CustomizationFonts, CustomizationImages, CustomizationTimings, CustomizationMatrices, CustomizationContentModes, Font, FontStyle, Customization, Cap, FrameShapeType, ViewContentMode, CustomButtonTag, CustomizationColors, CustomizationTheme };
+export {
+    CustomizationFonts,
+    CustomizationImages,
+    CustomizationTimings,
+    CustomizationMatrices,
+    CustomizationContentModes,
+    Font,
+    FontStyle,
+    Customization,
+    Cap,
+    FrameShapeType,
+    ViewContentMode,
+    CustomButtonTag,
+    CustomizationColors,
+    CustomizationTheme,
+};
 
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
 import { DTCDataGroup } from './params/rfid_scenario/DTCDataGroup';
 import { RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize } from './params/rfid_scenario/RFIDScenario';
 import { EDLDataGroups } from './params/rfid_scenario/EDLDataGroups';
-export { EPassportDataGroups, EIDDataGroups, DTCDataGroup, RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize, EDLDataGroups };
+export {
+    EPassportDataGroups,
+    EIDDataGroups,
+    DTCDataGroup,
+    RFIDScenario,
+    RFIDAuthenticationProcedureType,
+    RFIDPasswordType,
+    RFIDSDKProfilerType,
+    RFIDTerminalType,
+    SignManagementAction,
+    RFIDReadingBufferSize,
+    EDLDataGroups,
+};
 
 import { PAResourcesIssuer } from './rfid/PAResourcesIssuer';
 import { RFIDErrorCodes } from './rfid/RFIDErrorCodes';
@@ -138,14 +305,37 @@ import { TAChallenge } from './rfid/TAChallenge';
 import { PACEProtocol } from './rfid/PACEProtocol';
 import { CAProtocol } from './rfid/CAProtocol';
 import { PKDCertificate, PKDResourceType } from './rfid/PKDCertificate';
-export { PAResourcesIssuer, RFIDErrorCodes, TccParams, RFIDNotification, RFIDNotificationCodes, PAAttribute, TAChallenge, PACEProtocol, CAProtocol, PKDCertificate, PKDResourceType };
+export {
+    PAResourcesIssuer,
+    RFIDErrorCodes,
+    TccParams,
+    RFIDNotification,
+    RFIDNotificationCodes,
+    PAAttribute,
+    TAChallenge,
+    PACEProtocol,
+    CAProtocol,
+    PKDCertificate,
+    PKDResourceType,
+};
 
 import { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval } from './mdl/DataRetrieval';
 import { DeviceEngagement, MDLDeviceEngagement } from './mdl/DeviceEngagement';
 import { NameSpaceMDL, MDLIntentToRetain } from './mdl/NameSpaceMDL';
 import { DocumentRequestMDL, DocumentRequest18013MDL } from './mdl/DocumentRequestMDL';
 import { DeviceRetrievalMethod } from './mdl/DeviceRetrievalMethod';
-export { DataRetrieval, MDLDocRequestPreset, MDLDeviceRetrieval, DeviceEngagement, MDLDeviceEngagement, DeviceRetrievalMethod, DocumentRequest18013MDL, MDLIntentToRetain, NameSpaceMDL, DocumentRequestMDL };
+export {
+    DataRetrieval,
+    MDLDocRequestPreset,
+    MDLDeviceRetrieval,
+    DeviceEngagement,
+    MDLDeviceEngagement,
+    DeviceRetrievalMethod,
+    DocumentRequest18013MDL,
+    MDLIntentToRetain,
+    NameSpaceMDL,
+    DocumentRequestMDL,
+};
 
 export class DocumentReader {
     static get instance() { return DocumentReader._instance }

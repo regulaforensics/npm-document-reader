@@ -659,7 +659,9 @@ export const FieldType = {
   JURISDICTION_SPECIFIC_DATA: 703,
   DATA_DATE_OF_EXPIRY: 704,
   CONSUL: 705,
-  CANTON_REFERENCE: 706,
+  DLCLASSCODE_B3_FROM: 706,
+  DLCLASSCODE_B3_TO: 707,
+  DLCLASSCODE_B3_NOTES: 708,
 }
 
 FieldType.getTranslation = async function (value) {
