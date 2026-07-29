@@ -377,9 +377,10 @@ export declare class ProcessParams {
      */
     resultTypeOutput?: ResultType[];
     /**
-     * This option allows limiting MRZ formats to be recognized by specifying
-     * them in array.
+     * This option allows limiting MRZ formats to be recognized by specifying them in array.
      *
+     * If left empty, all MRZ formats will be recognized, except for 2x30, which is disabled by default.
+     * 
      * Unmodifiable property. Use setter instead of editing.
      */
     mrzFormatsFilter?: MRZFormat[];

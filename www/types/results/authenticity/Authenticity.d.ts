@@ -62,6 +62,7 @@ export declare enum Authenticity {
      * absence of signs that the image was edited.
      */
     MRZ = 8388608,
+    PROPERTY = 33554432,
     /** Status only. */
     STATUS_ONLY = 2147483648,
 }
