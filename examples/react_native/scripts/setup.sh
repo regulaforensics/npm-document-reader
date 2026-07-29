@@ -7,4 +7,4 @@ expo prebuild
 mkdir -p android/app/src/main/assets/Regula
 mv android/app/src/main/res/raw/db.dat android/app/src/main/assets/Regula/
 
-exit 0
+exit
