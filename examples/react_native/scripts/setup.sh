@@ -2,18 +2,10 @@
 set -e
 
 npm install
-
-if expo prebuild; then
-    rc=0
-else
-    rc=$?
-fi
-
-printf 'expo prebuild exit code: %d\n' "$rc"
-
-if (( rc != 0 )); then
-    exit "$rc"
-fi
+npx expo prebuild --no-install
+cd ios
+pod install || pod update || exit
+cd ../
 
 mkdir -p android/app/src/main/assets/Regula
 mv android/app/src/main/res/raw/db.dat android/app/src/main/assets/Regula/
