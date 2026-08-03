@@ -12,7 +12,7 @@ import { main } from './src/main'
 
 export async function loadAsset(path: string): Promise<string> {
     var dir = await File.resolveDirectoryUrl(File.applicationDirectory + "www/assets")
-    var fileEntry = await File.getFile(dir, path, null)
+    var fileEntry = await File.getFile(dir, path, {})
     var result = await new Promise<string>((resolve, _) => {
         fileEntry.file(file => {
             var reader = new FileReader()

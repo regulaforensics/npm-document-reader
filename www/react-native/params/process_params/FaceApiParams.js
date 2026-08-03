@@ -9,6 +9,7 @@ export class FaceApiParams {
     proxy
     proxyPassword
     proxyType
+    livenessTransactionId
 
     constructor(options) {
         this.url = options?.url ?? "https://faceapi.regulaforensics.com";
@@ -19,6 +20,7 @@ export class FaceApiParams {
         this.proxy = options?.proxy;
         this.proxyPassword = options?.proxyPassword;
         this.proxyType = options?.proxyType;
+        this.livenessTransactionId = options?.livenessTransactionId;
     }
 
     static fromJson(jsonObject) {
@@ -32,7 +34,8 @@ export class FaceApiParams {
             serviceTimeout: jsonObject["serviceTimeout"],
             proxy: jsonObject["proxy"],
             proxyPassword: jsonObject["proxyPassword"],
-            proxyType: jsonObject["proxyType"]
+            proxyType: jsonObject["proxyType"],
+            livenessTransactionId: jsonObject["livenessTransactionId"],
         });
     }
 
@@ -46,6 +49,7 @@ export class FaceApiParams {
             "proxy": this.proxy,
             "proxyPassword": this.proxyPassword,
             "proxyType": this.proxyType,
+            "livenessTransactionId": this.livenessTransactionId,
         }
     }
 }

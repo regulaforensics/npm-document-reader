@@ -47,6 +47,9 @@ export declare class FaceApiParams {
      */
     readonly proxyType?: number;
 
+    /** This parameter allows you to use a liveness transaction id instead of a selfie photo. */
+    readonly livenessTransactionId?: string;
+
     constructor(
         options?: {
             url?: string,
@@ -57,6 +60,7 @@ export declare class FaceApiParams {
             proxy?: string,
             proxyPassword?: string,
             proxyType?: number,
+            livenessTransactionId?: string,
         }
     );
 

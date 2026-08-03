@@ -19,5 +19,6 @@ export const Authenticity = {
     LIVENESS: 2097152,
     OCR: 4194304,
     MRZ: 8388608,
-    STATUS_ONLY: 2147483648
+    PROPERT: 33554432,
+    STATUS_ONLY: 2147483648,
 }

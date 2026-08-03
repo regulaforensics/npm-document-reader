@@ -15,6 +15,7 @@ export var faceApiParams = {
   "proxy": "test3",
   "proxyPassword": "test4",
   "proxyType": 3,
+  "livenessTransactionId": "test5",
   "searchParams": faceApiSearchParams,
 };
 export var livenessParams = {
@@ -26,6 +27,9 @@ export var livenessParams = {
   "checkDynaprint": false,
   "checkGeometry": true,
   "checkBarcodeBackground": false,
+};
+export var propertiesParams = {
+  "checkHoldersSignature": true,
 };
 export var authenticityParams = {
   "useLivenessCheck": true,
@@ -43,7 +47,9 @@ export var authenticityParams = {
   "checkPhotoComparison": true,
   "checkLetterScreen": false,
   "checkSecurityText": true,
+  "checkProperties": false,
   "livenessParams": livenessParams,
+  "propertiesParams": propertiesParams,
 };
 export var glaresCheckParams = {"imgMarginPart": 0.5, "maxGlaringPart": 1.5};
 export var imageQA = {
