@@ -492,24 +492,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Authenticity: () => (/* reexport safe */ _results_authenticity_Authenticity__WEBPACK_IMPORTED_MODULE_43__.Authenticity),
 /* harmony export */   AuthenticityCheck: () => (/* reexport safe */ _results_authenticity_AuthenticityCheck__WEBPACK_IMPORTED_MODULE_41__.AuthenticityCheck),
 /* harmony export */   AuthenticityElement: () => (/* reexport safe */ _results_authenticity_AuthenticityElement__WEBPACK_IMPORTED_MODULE_39__.AuthenticityElement),
-/* harmony export */   AuthenticityParams: () => (/* reexport safe */ _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_85__.AuthenticityParams),
+/* harmony export */   AuthenticityParams: () => (/* reexport safe */ _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_86__.AuthenticityParams),
 /* harmony export */   AuthenticityPropertiesParams: () => (/* reexport safe */ _params_process_params_AuthenticityPropertiesParams__WEBPACK_IMPORTED_MODULE_79__.AuthenticityPropertiesParams),
 /* harmony export */   AuthenticityResult: () => (/* reexport safe */ _results_authenticity_AuthenticityResult__WEBPACK_IMPORTED_MODULE_40__.AuthenticityResult),
 /* harmony export */   Authority: () => (/* reexport safe */ _results_rfid_Authority__WEBPACK_IMPORTED_MODULE_65__.Authority),
-/* harmony export */   BackendProcessingConfig: () => (/* reexport safe */ _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_86__.BackendProcessingConfig),
+/* harmony export */   BackendProcessingConfig: () => (/* reexport safe */ _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_87__.BackendProcessingConfig),
 /* harmony export */   BarcodeField: () => (/* reexport safe */ _results_barcode_BarcodeField__WEBPACK_IMPORTED_MODULE_48__.BarcodeField),
 /* harmony export */   BarcodeResult: () => (/* reexport safe */ _results_barcode_BarcodeResult__WEBPACK_IMPORTED_MODULE_47__.BarcodeResult),
 /* harmony export */   BarcodeStatus: () => (/* reexport safe */ _results_barcode_BarcodeStatus__WEBPACK_IMPORTED_MODULE_45__.BarcodeStatus),
 /* harmony export */   BarcodeType: () => (/* reexport safe */ _results_barcode_BarcodeType__WEBPACK_IMPORTED_MODULE_46__.BarcodeType),
-/* harmony export */   Bsi: () => (/* reexport safe */ _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_87__.Bsi),
+/* harmony export */   Bsi: () => (/* reexport safe */ _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_88__.Bsi),
 /* harmony export */   BytesData: () => (/* reexport safe */ _results_visible_digital_seals_BytesData__WEBPACK_IMPORTED_MODULE_54__.BytesData),
-/* harmony export */   CAProtocol: () => (/* reexport safe */ _rfid_CAProtocol__WEBPACK_IMPORTED_MODULE_109__.CAProtocol),
-/* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.CameraMode),
-/* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.CameraPosition),
-/* harmony export */   CameraSize: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.CameraSize),
-/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.Cap),
-/* harmony export */   CaptureMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.CaptureMode),
-/* harmony export */   CaptureSessionPreset: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.CaptureSessionPreset),
+/* harmony export */   CAProtocol: () => (/* reexport safe */ _rfid_CAProtocol__WEBPACK_IMPORTED_MODULE_110__.CAProtocol),
+/* harmony export */   CameraMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.CameraMode),
+/* harmony export */   CameraPosition: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.CameraPosition),
+/* harmony export */   CameraSize: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.CameraSize),
+/* harmony export */   Cap: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.Cap),
+/* harmony export */   CaptureMode: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.CaptureMode),
+/* harmony export */   CaptureSessionPreset: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.CaptureSessionPreset),
 /* harmony export */   CardProperties: () => (/* reexport safe */ _results_rfid_CardProperties__WEBPACK_IMPORTED_MODULE_59__.CardProperties),
 /* harmony export */   CertificateChain: () => (/* reexport safe */ _results_rfid_CertificateChain__WEBPACK_IMPORTED_MODULE_64__.CertificateChain),
 /* harmony export */   CertificateData: () => (/* reexport safe */ _results_rfid_CertificateData__WEBPACK_IMPORTED_MODULE_70__.CertificateData),
@@ -517,56 +517,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CheckResult: () => (/* reexport safe */ _results_status_CheckResult__WEBPACK_IMPORTED_MODULE_35__.CheckResult),
 /* harmony export */   Comparison: () => (/* reexport safe */ _results_visual_results_Comparison__WEBPACK_IMPORTED_MODULE_19__.Comparison),
 /* harmony export */   Coordinate: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Coordinate),
-/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.CustomButtonTag),
-/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.Customization),
-/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_90__.CustomizationColors),
-/* harmony export */   CustomizationContentModes: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_95__.CustomizationContentModes),
-/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_91__.CustomizationFonts),
-/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_92__.CustomizationImages),
-/* harmony export */   CustomizationMatrices: () => (/* reexport safe */ _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_94__.CustomizationMatrices),
-/* harmony export */   CustomizationTheme: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.CustomizationTheme),
-/* harmony export */   CustomizationTimings: () => (/* reexport safe */ _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_93__.CustomizationTimings),
-/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_99__.DTCDataGroup),
+/* harmony export */   CustomButtonTag: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.CustomButtonTag),
+/* harmony export */   Customization: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.Customization),
+/* harmony export */   CustomizationColors: () => (/* reexport safe */ _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_91__.CustomizationColors),
+/* harmony export */   CustomizationContentModes: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_96__.CustomizationContentModes),
+/* harmony export */   CustomizationFonts: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_92__.CustomizationFonts),
+/* harmony export */   CustomizationImages: () => (/* reexport safe */ _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_93__.CustomizationImages),
+/* harmony export */   CustomizationMatrices: () => (/* reexport safe */ _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_95__.CustomizationMatrices),
+/* harmony export */   CustomizationTheme: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.CustomizationTheme),
+/* harmony export */   CustomizationTimings: () => (/* reexport safe */ _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_94__.CustomizationTimings),
+/* harmony export */   DTCDataGroup: () => (/* reexport safe */ _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_100__.DTCDataGroup),
 /* harmony export */   DataField: () => (/* reexport safe */ _results_rfid_DataField__WEBPACK_IMPORTED_MODULE_60__.DataField),
-/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__.DataRetrieval),
-/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__.DeviceEngagement),
-/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_115__.DeviceRetrievalMethod),
+/* harmony export */   DataRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__.DataRetrieval),
+/* harmony export */   DeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.DeviceEngagement),
+/* harmony export */   DeviceRetrievalMethod: () => (/* reexport safe */ _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_116__.DeviceRetrievalMethod),
 /* harmony export */   DocFeature: () => (/* reexport safe */ _results_visible_digital_seals_DocFeature__WEBPACK_IMPORTED_MODULE_55__.DocFeature),
 /* harmony export */   DocFormat: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocFormat),
 /* harmony export */   DocReaderAction: () => (/* binding */ DocReaderAction),
 /* harmony export */   DocReaderException: () => (/* reexport safe */ _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.DocReaderException),
-/* harmony export */   DocReaderFrame: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.DocReaderFrame),
+/* harmony export */   DocReaderFrame: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.DocReaderFrame),
 /* harmony export */   DocReaderOrientation: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_12__.DocReaderOrientation),
 /* harmony export */   DocReaderScenario: () => (/* reexport safe */ _info_DocReaderScenario__WEBPACK_IMPORTED_MODULE_12__.DocReaderScenario),
 /* harmony export */   DocReaderVersion: () => (/* reexport safe */ _info_DocReaderVersion__WEBPACK_IMPORTED_MODULE_7__.DocReaderVersion),
 /* harmony export */   DocumentReader: () => (/* binding */ DocumentReader),
-/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_114__.DocumentRequest18013MDL),
-/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_114__.DocumentRequestMDL),
+/* harmony export */   DocumentRequest18013MDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_115__.DocumentRequest18013MDL),
+/* harmony export */   DocumentRequestMDL: () => (/* reexport safe */ _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_115__.DocumentRequestMDL),
 /* harmony export */   DocumentType: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocumentType),
 /* harmony export */   DocumentTypeEnum: () => (/* reexport safe */ _results_DocumentType__WEBPACK_IMPORTED_MODULE_29__.DocType),
 /* harmony export */   DocumentsDatabase: () => (/* reexport safe */ _info_DocumentsDatabase__WEBPACK_IMPORTED_MODULE_10__.DocumentsDatabase),
-/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_101__.EDLDataGroups),
-/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_98__.EIDDataGroups),
-/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_97__.EPassportDataGroups),
+/* harmony export */   EDLDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_102__.EDLDataGroups),
+/* harmony export */   EIDDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_99__.EIDDataGroups),
+/* harmony export */   EPassportDataGroups: () => (/* reexport safe */ _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_98__.EPassportDataGroups),
 /* harmony export */   ErrorCodes: () => (/* reexport safe */ _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.ErrorCodes),
 /* harmony export */   Extension: () => (/* reexport safe */ _results_rfid_Extension__WEBPACK_IMPORTED_MODULE_76__.Extension),
-/* harmony export */   FaceApiParams: () => (/* reexport safe */ _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_82__.FaceApiParams),
-/* harmony export */   FaceApiSearchParams: () => (/* reexport safe */ _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_88__.FaceApiSearchParams),
+/* harmony export */   FaceApiParams: () => (/* reexport safe */ _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_83__.FaceApiParams),
+/* harmony export */   FaceApiSearchParams: () => (/* reexport safe */ _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_89__.FaceApiSearchParams),
 /* harmony export */   FieldType: () => (/* reexport safe */ _results_visual_results_FieldType__WEBPACK_IMPORTED_MODULE_23__.FieldType),
 /* harmony export */   File: () => (/* reexport safe */ _results_rfid_File__WEBPACK_IMPORTED_MODULE_66__.File),
 /* harmony export */   FileData: () => (/* reexport safe */ _results_rfid_FileData__WEBPACK_IMPORTED_MODULE_71__.FileData),
 /* harmony export */   FinalizeConfig: () => (/* reexport safe */ _config_FinalizeConfig__WEBPACK_IMPORTED_MODULE_6__.FinalizeConfig),
-/* harmony export */   Font: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_91__.Font),
-/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_91__.FontStyle),
-/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.FrameShapeType),
-/* harmony export */   Functionality: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.Functionality),
+/* harmony export */   Font: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_92__.Font),
+/* harmony export */   FontStyle: () => (/* reexport safe */ _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_92__.FontStyle),
+/* harmony export */   FrameShapeType: () => (/* reexport safe */ _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.FrameShapeType),
+/* harmony export */   Functionality: () => (/* reexport safe */ _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.Functionality),
 /* harmony export */   GlaresCheckParams: () => (/* reexport safe */ _params_process_params_GlaresCheckParams__WEBPACK_IMPORTED_MODULE_81__.GlaresCheckParams),
 /* harmony export */   GraphicField: () => (/* reexport safe */ _results_visual_results_GraphicField__WEBPACK_IMPORTED_MODULE_24__.GraphicField),
 /* harmony export */   GraphicFieldType: () => (/* reexport safe */ _results_visual_results_GraphicFieldType__WEBPACK_IMPORTED_MODULE_15__.GraphicFieldType),
 /* harmony export */   GraphicResult: () => (/* reexport safe */ _results_visual_results_GraphicResult__WEBPACK_IMPORTED_MODULE_28__.GraphicResult),
 /* harmony export */   ImageFormat: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.ImageFormat),
 /* harmony export */   ImageInputData: () => (/* reexport safe */ _config_RecognizeConfig__WEBPACK_IMPORTED_MODULE_5__.ImageInputData),
-/* harmony export */   ImageQA: () => (/* reexport safe */ _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_84__.ImageQA),
+/* harmony export */   ImageQA: () => (/* reexport safe */ _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_85__.ImageQA),
 /* harmony export */   ImageQuality: () => (/* reexport safe */ _results_image_quality_ImageQuality__WEBPACK_IMPORTED_MODULE_49__.ImageQuality),
 /* harmony export */   ImageQualityCheckType: () => (/* reexport safe */ _results_image_quality_ImageQualityCheckType__WEBPACK_IMPORTED_MODULE_51__.ImageQualityCheckType),
 /* harmony export */   ImageQualityGroup: () => (/* reexport safe */ _results_image_quality_ImageQualityGroup__WEBPACK_IMPORTED_MODULE_50__.ImageQualityGroup),
@@ -578,46 +578,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Lights: () => (/* reexport safe */ _results_visual_results_Lights__WEBPACK_IMPORTED_MODULE_21__.Lights),
 /* harmony export */   LivenessParams: () => (/* reexport safe */ _params_process_params_LivenessParams__WEBPACK_IMPORTED_MODULE_78__.LivenessParams),
 /* harmony export */   LogLevel: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.LogLevel),
-/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceEngagement),
-/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__.MDLDeviceRetrieval),
-/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__.MDLDocRequestPreset),
-/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_113__.MDLIntentToRetain),
+/* harmony export */   MDLDeviceEngagement: () => (/* reexport safe */ _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement),
+/* harmony export */   MDLDeviceRetrieval: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceRetrieval),
+/* harmony export */   MDLDocRequestPreset: () => (/* reexport safe */ _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__.MDLDocRequestPreset),
+/* harmony export */   MDLIntentToRetain: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_114__.MDLIntentToRetain),
 /* harmony export */   MRZFormat: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.MRZFormat),
 /* harmony export */   MeasureSystem: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.MeasureSystem),
 /* harmony export */   MrzDetectionModes: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.MrzDetectionModes),
-/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_113__.NameSpaceMDL),
+/* harmony export */   NameSpaceMDL: () => (/* reexport safe */ _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_114__.NameSpaceMDL),
+/* harmony export */   OcclusionCheckParams: () => (/* reexport safe */ _params_process_params_OcclusionCheckParams__WEBPACK_IMPORTED_MODULE_82__.OcclusionCheckParams),
 /* harmony export */   OnlineMode: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineMode),
 /* harmony export */   OnlineProcessingConfig: () => (/* reexport safe */ _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__.OnlineProcessingConfig),
 /* harmony export */   OpticalStatus: () => (/* reexport safe */ _results_status_OpticalStatus__WEBPACK_IMPORTED_MODULE_36__.OpticalStatus),
-/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_106__.PAAttribute),
-/* harmony export */   PACEProtocol: () => (/* reexport safe */ _rfid_PACEProtocol__WEBPACK_IMPORTED_MODULE_108__.PACEProtocol),
-/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_102__.PAResourcesIssuer),
+/* harmony export */   PAAttribute: () => (/* reexport safe */ _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_107__.PAAttribute),
+/* harmony export */   PACEProtocol: () => (/* reexport safe */ _rfid_PACEProtocol__WEBPACK_IMPORTED_MODULE_109__.PACEProtocol),
+/* harmony export */   PAResourcesIssuer: () => (/* reexport safe */ _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_103__.PAResourcesIssuer),
 /* harmony export */   PDF417Info: () => (/* reexport safe */ _results_barcode_PDF417Info__WEBPACK_IMPORTED_MODULE_44__.PDF417Info),
-/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_110__.PKDCertificate),
-/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_110__.PKDResourceType),
+/* harmony export */   PKDCertificate: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_111__.PKDCertificate),
+/* harmony export */   PKDResourceType: () => (/* reexport safe */ _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_111__.PKDResourceType),
 /* harmony export */   Position: () => (/* reexport safe */ _results_Position__WEBPACK_IMPORTED_MODULE_32__.Position),
 /* harmony export */   PrepareProgress: () => (/* reexport safe */ _info_PrepareProgress__WEBPACK_IMPORTED_MODULE_8__.PrepareProgress),
 /* harmony export */   ProcessParams: () => (/* reexport safe */ _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.ProcessParams),
 /* harmony export */   ProcessingFinishedStatus: () => (/* reexport safe */ _results_Results__WEBPACK_IMPORTED_MODULE_30__.ProcessingFinishedStatus),
+/* harmony export */   RFIDAccessControl: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDAccessControl),
 /* harmony export */   RFIDAccessControlProcedureType: () => (/* reexport safe */ _results_rfid_RFIDAccessControlProcedureType__WEBPACK_IMPORTED_MODULE_75__.RFIDAccessControlProcedureType),
 /* harmony export */   RFIDApplicationType: () => (/* reexport safe */ _results_rfid_Application__WEBPACK_IMPORTED_MODULE_74__.RFIDApplicationType),
-/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDAuthenticationProcedureType),
+/* harmony export */   RFIDAuthenticationProcedureType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDAuthenticationProcedureType),
 /* harmony export */   RFIDCertificateType: () => (/* reexport safe */ _results_rfid_RFIDCertificateType__WEBPACK_IMPORTED_MODULE_72__.RFIDCertificateType),
 /* harmony export */   RFIDConfig: () => (/* reexport safe */ _config_RFIDConfig__WEBPACK_IMPORTED_MODULE_3__.RFIDConfig),
 /* harmony export */   RFIDDataFileType: () => (/* reexport safe */ _results_rfid_RFIDDataFileType__WEBPACK_IMPORTED_MODULE_69__.RFIDDataFileType),
-/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_103__.RFIDErrorCodes),
+/* harmony export */   RFIDErrorCodes: () => (/* reexport safe */ _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_104__.RFIDErrorCodes),
 /* harmony export */   RFIDException: () => (/* reexport safe */ _info_RFIDException__WEBPACK_IMPORTED_MODULE_13__.RFIDException),
-/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_105__.RFIDNotification),
-/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_105__.RFIDNotificationCodes),
+/* harmony export */   RFIDNotification: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_106__.RFIDNotification),
+/* harmony export */   RFIDNotificationCodes: () => (/* reexport safe */ _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_106__.RFIDNotificationCodes),
 /* harmony export */   RFIDOrigin: () => (/* reexport safe */ _results_visual_results_RFIDOrigin__WEBPACK_IMPORTED_MODULE_25__.RFIDOrigin),
-/* harmony export */   RFIDParams: () => (/* reexport safe */ _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_83__.RFIDParams),
-/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDPasswordType),
-/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDReadingBufferSize),
-/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDSDKProfilerType),
-/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDScenario),
+/* harmony export */   RFIDParams: () => (/* reexport safe */ _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_84__.RFIDParams),
+/* harmony export */   RFIDPasswordType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDPasswordType),
+/* harmony export */   RFIDReadingBufferSize: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDReadingBufferSize),
+/* harmony export */   RFIDSDKProfilerType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDSDKProfilerType),
+/* harmony export */   RFIDScenario: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDScenario),
 /* harmony export */   RFIDSessionData: () => (/* reexport safe */ _results_rfid_RFIDSessionData__WEBPACK_IMPORTED_MODULE_73__.RFIDSessionData),
 /* harmony export */   RFIDStatus: () => (/* reexport safe */ _results_status_RFIDStatus__WEBPACK_IMPORTED_MODULE_33__.RFIDStatus),
-/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDTerminalType),
+/* harmony export */   RFIDTerminalType: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDTerminalType),
 /* harmony export */   RFIDValidity: () => (/* reexport safe */ _results_rfid_RFIDValidity__WEBPACK_IMPORTED_MODULE_68__.RFIDValidity),
 /* harmony export */   RFIDValue: () => (/* reexport safe */ _results_rfid_RFIDValue__WEBPACK_IMPORTED_MODULE_67__.RFIDValue),
 /* harmony export */   RecognizeConfig: () => (/* reexport safe */ _config_RecognizeConfig__WEBPACK_IMPORTED_MODULE_5__.RecognizeConfig),
@@ -630,11 +632,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   SecurityFeatureType: () => (/* reexport safe */ _results_authenticity_SecurityFeatureType__WEBPACK_IMPORTED_MODULE_42__.SecurityFeatureType),
 /* harmony export */   SecurityObject: () => (/* reexport safe */ _results_rfid_SecurityObject__WEBPACK_IMPORTED_MODULE_58__.SecurityObject),
 /* harmony export */   SecurityObjectCertificates: () => (/* reexport safe */ _results_rfid_SecurityObjectCertificates__WEBPACK_IMPORTED_MODULE_63__.SecurityObjectCertificates),
-/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.SignManagementAction),
+/* harmony export */   SignManagementAction: () => (/* reexport safe */ _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.SignManagementAction),
 /* harmony export */   SignerInfo: () => (/* reexport safe */ _results_rfid_SignerInfo__WEBPACK_IMPORTED_MODULE_62__.SignerInfo),
 /* harmony export */   Symbol: () => (/* reexport safe */ _results_visual_results_Symbol__WEBPACK_IMPORTED_MODULE_18__.Symbol),
-/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_107__.TAChallenge),
-/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_104__.TccParams),
+/* harmony export */   TAChallenge: () => (/* reexport safe */ _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_108__.TAChallenge),
+/* harmony export */   TccParams: () => (/* reexport safe */ _rfid_TccParams__WEBPACK_IMPORTED_MODULE_105__.TccParams),
 /* harmony export */   TextField: () => (/* reexport safe */ _results_visual_results_TextField__WEBPACK_IMPORTED_MODULE_20__.TextField),
 /* harmony export */   TextResult: () => (/* reexport safe */ _results_visual_results_TextResult__WEBPACK_IMPORTED_MODULE_26__.TextResult),
 /* harmony export */   TextSource: () => (/* reexport safe */ _results_visual_results_TextSource__WEBPACK_IMPORTED_MODULE_27__.TextSource),
@@ -643,7 +645,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   VDSNCData: () => (/* reexport safe */ _results_visible_digital_seals_VDSNCData__WEBPACK_IMPORTED_MODULE_53__.VDSNCData),
 /* harmony export */   Validity: () => (/* reexport safe */ _results_visual_results_Validity__WEBPACK_IMPORTED_MODULE_22__.Validity),
 /* harmony export */   Value: () => (/* reexport safe */ _results_visual_results_Value__WEBPACK_IMPORTED_MODULE_16__.Value),
-/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_95__.ViewContentMode)
+/* harmony export */   ViewContentMode: () => (/* reexport safe */ _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_96__.ViewContentMode)
 /* harmony export */ });
 /* harmony import */ var _internal_bridge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./internal/bridge */ "./src/internal/bridge.js");
 /* harmony import */ var _config_OnlineProcessingConfig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/OnlineProcessingConfig */ "./src/config/OnlineProcessingConfig.js");
@@ -727,40 +729,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _params_process_params_AuthenticityPropertiesParams__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./params/process_params/AuthenticityPropertiesParams */ "./src/params/process_params/AuthenticityPropertiesParams.js");
 /* harmony import */ var _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./params/process_params/ProcessParams */ "./src/params/process_params/ProcessParams.js");
 /* harmony import */ var _params_process_params_GlaresCheckParams__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./params/process_params/GlaresCheckParams */ "./src/params/process_params/GlaresCheckParams.js");
-/* harmony import */ var _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./params/process_params/FaceApiParams */ "./src/params/process_params/FaceApiParams.js");
-/* harmony import */ var _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./params/process_params/RFIDParams */ "./src/params/process_params/RFIDParams.js");
-/* harmony import */ var _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./params/process_params/ImageQA */ "./src/params/process_params/ImageQA.js");
-/* harmony import */ var _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./params/process_params/AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
-/* harmony import */ var _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./params/process_params/BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
-/* harmony import */ var _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./params/process_params/Bsi */ "./src/params/process_params/Bsi.js");
-/* harmony import */ var _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/process_params/FaceApiSearchParams */ "./src/params/process_params/FaceApiSearchParams.js");
-/* harmony import */ var _params_Functionality__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/Functionality */ "./src/params/Functionality.js");
-/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
-/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
-/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
-/* harmony import */ var _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/customization/CustomizationTimings */ "./src/params/customization/CustomizationTimings.js");
-/* harmony import */ var _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/customization/CustomizationMatrices */ "./src/params/customization/CustomizationMatrices.js");
-/* harmony import */ var _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/customization/CustomizationContentModes */ "./src/params/customization/CustomizationContentModes.js");
-/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
-/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
-/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
-/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
-/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
-/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
-/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
-/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
-/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
-/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
-/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
-/* harmony import */ var _rfid_PACEProtocol__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./rfid/PACEProtocol */ "./src/rfid/PACEProtocol.js");
-/* harmony import */ var _rfid_CAProtocol__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./rfid/CAProtocol */ "./src/rfid/CAProtocol.js");
-/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
-/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
-/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
-/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
-/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
-/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+/* harmony import */ var _params_process_params_OcclusionCheckParams__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./params/process_params/OcclusionCheckParams */ "./src/params/process_params/OcclusionCheckParams.js");
+/* harmony import */ var _params_process_params_FaceApiParams__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./params/process_params/FaceApiParams */ "./src/params/process_params/FaceApiParams.js");
+/* harmony import */ var _params_process_params_RFIDParams__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./params/process_params/RFIDParams */ "./src/params/process_params/RFIDParams.js");
+/* harmony import */ var _params_process_params_ImageQA__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./params/process_params/ImageQA */ "./src/params/process_params/ImageQA.js");
+/* harmony import */ var _params_process_params_AuthenticityParams__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./params/process_params/AuthenticityParams */ "./src/params/process_params/AuthenticityParams.js");
+/* harmony import */ var _params_process_params_BackendProcessingConfig__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./params/process_params/BackendProcessingConfig */ "./src/params/process_params/BackendProcessingConfig.js");
+/* harmony import */ var _params_process_params_Bsi__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./params/process_params/Bsi */ "./src/params/process_params/Bsi.js");
+/* harmony import */ var _params_process_params_FaceApiSearchParams__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./params/process_params/FaceApiSearchParams */ "./src/params/process_params/FaceApiSearchParams.js");
+/* harmony import */ var _params_Functionality__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./params/Functionality */ "./src/params/Functionality.js");
+/* harmony import */ var _params_customization_CustomizationColors__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./params/customization/CustomizationColors */ "./src/params/customization/CustomizationColors.js");
+/* harmony import */ var _params_customization_CustomizationFonts__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./params/customization/CustomizationFonts */ "./src/params/customization/CustomizationFonts.js");
+/* harmony import */ var _params_customization_CustomizationImages__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./params/customization/CustomizationImages */ "./src/params/customization/CustomizationImages.js");
+/* harmony import */ var _params_customization_CustomizationTimings__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./params/customization/CustomizationTimings */ "./src/params/customization/CustomizationTimings.js");
+/* harmony import */ var _params_customization_CustomizationMatrices__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./params/customization/CustomizationMatrices */ "./src/params/customization/CustomizationMatrices.js");
+/* harmony import */ var _params_customization_CustomizationContentModes__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./params/customization/CustomizationContentModes */ "./src/params/customization/CustomizationContentModes.js");
+/* harmony import */ var _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./params/customization/Customization */ "./src/params/customization/Customization.js");
+/* harmony import */ var _params_rfid_scenario_EPassportDataGroups__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./params/rfid_scenario/EPassportDataGroups */ "./src/params/rfid_scenario/EPassportDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_EIDDataGroups__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./params/rfid_scenario/EIDDataGroups */ "./src/params/rfid_scenario/EIDDataGroups.js");
+/* harmony import */ var _params_rfid_scenario_DTCDataGroup__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./params/rfid_scenario/DTCDataGroup */ "./src/params/rfid_scenario/DTCDataGroup.js");
+/* harmony import */ var _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./params/rfid_scenario/RFIDScenario */ "./src/params/rfid_scenario/RFIDScenario.js");
+/* harmony import */ var _params_rfid_scenario_EDLDataGroups__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./params/rfid_scenario/EDLDataGroups */ "./src/params/rfid_scenario/EDLDataGroups.js");
+/* harmony import */ var _rfid_PAResourcesIssuer__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./rfid/PAResourcesIssuer */ "./src/rfid/PAResourcesIssuer.js");
+/* harmony import */ var _rfid_RFIDErrorCodes__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./rfid/RFIDErrorCodes */ "./src/rfid/RFIDErrorCodes.js");
+/* harmony import */ var _rfid_TccParams__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./rfid/TccParams */ "./src/rfid/TccParams.js");
+/* harmony import */ var _rfid_RFIDNotification__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./rfid/RFIDNotification */ "./src/rfid/RFIDNotification.js");
+/* harmony import */ var _rfid_PAAttribute__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./rfid/PAAttribute */ "./src/rfid/PAAttribute.js");
+/* harmony import */ var _rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./rfid/TAChallenge */ "./src/rfid/TAChallenge.js");
+/* harmony import */ var _rfid_PACEProtocol__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./rfid/PACEProtocol */ "./src/rfid/PACEProtocol.js");
+/* harmony import */ var _rfid_CAProtocol__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./rfid/CAProtocol */ "./src/rfid/CAProtocol.js");
+/* harmony import */ var _rfid_PKDCertificate__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./rfid/PKDCertificate */ "./src/rfid/PKDCertificate.js");
+/* harmony import */ var _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./mdl/DataRetrieval */ "./src/mdl/DataRetrieval.js");
+/* harmony import */ var _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./mdl/DeviceEngagement */ "./src/mdl/DeviceEngagement.js");
+/* harmony import */ var _mdl_NameSpaceMDL__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./mdl/NameSpaceMDL */ "./src/mdl/NameSpaceMDL.js");
+/* harmony import */ var _mdl_DocumentRequestMDL__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./mdl/DocumentRequestMDL */ "./src/mdl/DocumentRequestMDL.js");
+/* harmony import */ var _mdl_DeviceRetrievalMethod__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./mdl/DeviceRetrievalMethod */ "./src/mdl/DeviceRetrievalMethod.js");
+
 
 
 
@@ -981,7 +985,7 @@ class DocumentReader {
     }
 
     get functionality() { return this._functionality }
-    _functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.Functionality()
+    _functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.Functionality()
     set functionality(val) {
         this._functionality = val;
         this._functionality._apply();
@@ -995,14 +999,14 @@ class DocumentReader {
     }
 
     get customization() { return this._customization }
-    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.Customization()
+    _customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.Customization()
     set customization(val) {
         this._customization = val;
         this._customization._apply();
     }
 
     get rfidScenario() { return this._rfidScenario }
-    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDScenario()
+    _rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDScenario()
     set rfidScenario(val) {
         this._rfidScenario = val;
         this._rfidScenario._apply();
@@ -1018,10 +1022,10 @@ class DocumentReader {
 
     resetConfiguration() {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("resetConfiguration", []);
-        this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.Functionality();
+        this._functionality = new _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.Functionality();
         this._processParams = new _params_process_params_ProcessParams__WEBPACK_IMPORTED_MODULE_80__.ProcessParams();
-        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.Customization();
-        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDScenario();
+        this._customization = new _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.Customization();
+        this._rfidScenario = new _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDScenario();
     }
 
     set onCustomButtonTapped(completion) {
@@ -1169,23 +1173,23 @@ class DocumentReader {
         var response = "";
         if (options?.withoutUI != true) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceEngagement.NFC) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
-        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceEngagement.QR && options?.data != null) {
+        } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.QR && options?.data != null) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceData", [options.data]);
         }
 
         var jsonObject = JSON.parse(response);
         return [
-            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_112__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
+            _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.DeviceEngagement.fromJson(jsonObject["deviceEngagement"]),
             _info_DocReaderException__WEBPACK_IMPORTED_MODULE_9__.DocReaderException.fromJson(jsonObject["error"]),
         ]
     }
 
     async retrieveData(retrieval, options) {
         var func = "startRetrieveData";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
-        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_111__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceRetrieval.NFC) func = "engageDeviceNFC";
+        if (options?.withoutUI == _mdl_DataRetrieval__WEBPACK_IMPORTED_MODULE_112__.MDLDeviceRetrieval.BLE) func = "engageDeviceBLE";
 
         var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)(func, [retrieval.toJson(), options?.engagement?.toJson()]);
         var jsonObject = JSON.parse(response);
@@ -1226,17 +1230,17 @@ class DocumentReader {
 
     async _getFunctionality() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getFunctionality", []);
-        return _params_Functionality__WEBPACK_IMPORTED_MODULE_89__.Functionality.fromJson(JSON.parse(response));
+        return _params_Functionality__WEBPACK_IMPORTED_MODULE_90__.Functionality.fromJson(JSON.parse(response));
     }
 
     async _getCustomization() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getCustomization", []);
-        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_96__.Customization.fromJson(JSON.parse(response));
+        return _params_customization_Customization__WEBPACK_IMPORTED_MODULE_97__.Customization.fromJson(JSON.parse(response));
     }
 
     async _getRfidScenario() {
         const response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("getRfidScenario", []);
-        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_100__.RFIDScenario.fromJson(JSON.parse(response));
+        return _params_rfid_scenario_RFIDScenario__WEBPACK_IMPORTED_MODULE_101__.RFIDScenario.fromJson(JSON.parse(response));
     }
 
     async _getLicense() {
@@ -4815,7 +4819,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./src/index.js");
 /* harmony import */ var _GlaresCheckParams__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GlaresCheckParams */ "./src/params/process_params/GlaresCheckParams.js");
-/* harmony import */ var _results_image_quality_ImageQualityCheckType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../results/image_quality/ImageQualityCheckType */ "./src/results/image_quality/ImageQualityCheckType.js");
+/* harmony import */ var _OcclusionCheckParams__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OcclusionCheckParams */ "./src/params/process_params/OcclusionCheckParams.js");
+/* harmony import */ var _results_image_quality_ImageQualityCheckType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../results/image_quality/ImageQualityCheckType */ "./src/results/image_quality/ImageQualityCheckType.js");
+
 
 
 
@@ -4849,6 +4855,12 @@ class ImageQA {
     set glaresCheckParams(val) {
         this._glaresCheckParams = val;
         this._set({ "glaresCheckParams": val });
+    }
+
+    get occlusionCheckParams() { return this._occlusionCheckParams; }
+    set occlusionCheckParams(val) {
+        this._occlusionCheckParams = val;
+        this._set({ "occlusionCheckParams": val });
     }
 
     get colornessCheck() { return this._colornessCheck; }
@@ -4899,6 +4911,7 @@ class ImageQA {
         result._screenCapture = jsonObject["screenCapture"];
         result._expectedPass = jsonObject["expectedPass"];
         result._glaresCheckParams = _GlaresCheckParams__WEBPACK_IMPORTED_MODULE_1__.GlaresCheckParams.fromJson(jsonObject["glaresCheckParams"]);
+        result._occlusionCheckParams = _OcclusionCheckParams__WEBPACK_IMPORTED_MODULE_2__.OcclusionCheckParams.fromJson(jsonObject["occlusionCheckParams"]);
         result._documentPositionIndent = jsonObject["documentPositionIndent"];
         result._brightnessThreshold = jsonObject["brightnessThreshold"];
         result._occlusionCheck = jsonObject["occlusionCheck"];
@@ -4924,6 +4937,7 @@ class ImageQA {
             "screenCapture": this.screenCapture,
             "expectedPass": this.expectedPass,
             "glaresCheckParams": this.glaresCheckParams?.toJson(),
+            "occlusionCheckParams": this.occlusionCheckParams?.toJson(),
             "brightnessThreshold": this.brightnessThreshold,
             "occlusionCheck": this.occlusionCheck,
         }
@@ -5028,6 +5042,41 @@ class LivenessParams {
             "checkDynaprint": this.checkDynaprint,
             "checkGeometry": this.checkGeometry,
             "checkBarcodeBackground": this.checkBarcodeBackground,
+        }
+    }
+}
+
+
+/***/ },
+
+/***/ "./src/params/process_params/OcclusionCheckParams.js"
+/*!***********************************************************!*\
+  !*** ./src/params/process_params/OcclusionCheckParams.js ***!
+  \***********************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OcclusionCheckParams: () => (/* binding */ OcclusionCheckParams)
+/* harmony export */ });
+class OcclusionCheckParams {
+    maxOcclusionPart
+
+    constructor(options) {
+        this.maxOcclusionPart = options?.maxOcclusionPart;
+    }
+
+    static fromJson(jsonObject) {
+        if (jsonObject == null) return null;
+        
+        return new OcclusionCheckParams({
+            maxOcclusionPart: jsonObject["maxOcclusionPart"],
+        });
+    }
+
+    toJson() {
+        return {
+            "maxOcclusionPart": this.maxOcclusionPart,
         }
     }
 }
@@ -6428,6 +6477,7 @@ class EPassportDataGroups {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RFIDAccessControl: () => (/* binding */ RFIDAccessControl),
 /* harmony export */   RFIDAuthenticationProcedureType: () => (/* binding */ RFIDAuthenticationProcedureType),
 /* harmony export */   RFIDPasswordType: () => (/* binding */ RFIDPasswordType),
 /* harmony export */   RFIDReadingBufferSize: () => (/* binding */ RFIDReadingBufferSize),
@@ -6971,7 +7021,8 @@ const RFIDPasswordType = {
     PUK: 4,
     PIN_ESIGN: 5,
     SAI: 6,
-    MRZ_HASH: 7
+    MRZ_HASH: 7,
+    PIN_LOCAL: 8,
 };
 
 const RFIDSDKProfilerType = {
@@ -7002,6 +7053,13 @@ const SignManagementAction = {
 const RFIDReadingBufferSize = {
     STANDARD_LENGTH: 0,
     EXTENDED_LENGTH: -1
+};
+
+const RFIDAccessControl = {
+    DEFAULT: 0,
+    CHIP_ACCESS_BAC: 1,
+    CHIP_ACCESS_PACE: 2,
+    LOCAL_PIN: 3,
 };
 
 
@@ -8754,6 +8812,8 @@ class Application {
 }
 
 const RFIDApplicationType = {
+    UNSPECIFIED: 0,
+    ROOT_FILES: 0,
     E_PASSPORT: 1,
     E_ID: 2,
     E_SIGN: 3,
@@ -8761,7 +8821,9 @@ const RFIDApplicationType = {
     LDS2_TRAVEL_RECORDS: 5,
     LDS2_VISA_RECORDS: 6,
     LDS2_ADD_BIOMETRICS: 7,
-    E_DTC_PC: 8
+    E_DTC_PC: 8,
+    APPLET_ROOT: 50,
+    USER_DEFINED: 100,
 }
 
 
