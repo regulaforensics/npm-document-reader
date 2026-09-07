@@ -217,6 +217,7 @@ import { LivenessParams } from './params/process_params/LivenessParams';
 import { AuthenticityPropertiesParams } from './params/process_params/AuthenticityPropertiesParams';
 import { ProcessParams, MeasureSystem, MRZFormat, LogLevel, MrzDetectionModes } from './params/process_params/ProcessParams';
 import { GlaresCheckParams } from './params/process_params/GlaresCheckParams';
+import { OcclusionCheckParams } from './params/process_params/OcclusionCheckParams';
 import { FaceApiParams } from './params/process_params/FaceApiParams';
 import { RFIDParams } from './params/process_params/RFIDParams';
 import { ImageQA } from './params/process_params/ImageQA';
@@ -233,6 +234,7 @@ export {
     LogLevel,
     MrzDetectionModes,
     GlaresCheckParams,
+    OcclusionCheckParams,
     FaceApiParams,
     RFIDParams,
     ImageQA,
@@ -280,7 +282,7 @@ export {
 import { EPassportDataGroups } from './params/rfid_scenario/EPassportDataGroups';
 import { EIDDataGroups } from './params/rfid_scenario/EIDDataGroups';
 import { DTCDataGroup } from './params/rfid_scenario/DTCDataGroup';
-import { RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize } from './params/rfid_scenario/RFIDScenario';
+import { RFIDScenario, RFIDAuthenticationProcedureType, RFIDPasswordType, RFIDAccessControl, RFIDSDKProfilerType, RFIDTerminalType, SignManagementAction, RFIDReadingBufferSize } from './params/rfid_scenario/RFIDScenario';
 import { EDLDataGroups } from './params/rfid_scenario/EDLDataGroups';
 export {
     EPassportDataGroups,
@@ -289,6 +291,7 @@ export {
     RFIDScenario,
     RFIDAuthenticationProcedureType,
     RFIDPasswordType,
+    RFIDAccessControl,
     RFIDSDKProfilerType,
     RFIDTerminalType,
     SignManagementAction,

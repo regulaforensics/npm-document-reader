@@ -1,4 +1,5 @@
 import { GlaresCheckParams } from "./GlaresCheckParams";
+import { OcclusionCheckParams } from "./OcclusionCheckParams";
 import { ImageQualityCheckType } from "../../results/image_quality/ImageQualityCheckType";
 
 /**
@@ -33,6 +34,11 @@ export declare class ImageQA {
      * Parameters for glares image quality validation.
      */
     glaresCheckParams?: GlaresCheckParams;
+
+    /**
+     * Parameters for occlusion image quality validation.
+     */
+    occlusionCheckParams?: OcclusionCheckParams;
 
     /**
      * This option disabled colorness check during performing image quality validation.

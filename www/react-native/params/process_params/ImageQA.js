@@ -1,5 +1,6 @@
 import { DocumentReader } from '../../index';
 import { GlaresCheckParams } from './GlaresCheckParams';
+import { OcclusionCheckParams } from "./OcclusionCheckParams";
 import { ImageQualityCheckType } from '../../results/image_quality/ImageQualityCheckType';
 
 export class ImageQA {
@@ -31,6 +32,12 @@ export class ImageQA {
     set glaresCheckParams(val) {
         this._glaresCheckParams = val;
         this._set({ "glaresCheckParams": val });
+    }
+
+    get occlusionCheckParams() { return this._occlusionCheckParams; }
+    set occlusionCheckParams(val) {
+        this._occlusionCheckParams = val;
+        this._set({ "occlusionCheckParams": val });
     }
 
     get colornessCheck() { return this._colornessCheck; }
@@ -81,6 +88,7 @@ export class ImageQA {
         result._screenCapture = jsonObject["screenCapture"];
         result._expectedPass = jsonObject["expectedPass"];
         result._glaresCheckParams = GlaresCheckParams.fromJson(jsonObject["glaresCheckParams"]);
+        result._occlusionCheckParams = OcclusionCheckParams.fromJson(jsonObject["occlusionCheckParams"]);
         result._documentPositionIndent = jsonObject["documentPositionIndent"];
         result._brightnessThreshold = jsonObject["brightnessThreshold"];
         result._occlusionCheck = jsonObject["occlusionCheck"];
@@ -106,6 +114,7 @@ export class ImageQA {
             "screenCapture": this.screenCapture,
             "expectedPass": this.expectedPass,
             "glaresCheckParams": this.glaresCheckParams?.toJson(),
+            "occlusionCheckParams": this.occlusionCheckParams?.toJson(),
             "brightnessThreshold": this.brightnessThreshold,
             "occlusionCheck": this.occlusionCheck,
         }
