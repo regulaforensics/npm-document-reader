@@ -1037,7 +1037,7 @@ class DocumentReader {
     }
 
     async initialize(config) {
-        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("initialize", [config])
+        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("initialize", [config.toJson()])
         var [success, error] = this._successOrErrorFromJson(response)
         if (success) await this._onInit()
         return [success, error]
@@ -1086,17 +1086,17 @@ class DocumentReader {
 
     scan(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("scan", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("scan", [config.toJson()]);
     }
 
     startScanner(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startScanner", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startScanner", [config.toJson()]);
     }
 
     recognize(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("recognize", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("recognize", [config.toJson()]);
     }
 
     rfid(config) {
@@ -1129,7 +1129,7 @@ class DocumentReader {
     }
 
     addPKDCertificates(certificates) {
-        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates.map(item => item.toJson())]);
     }
 
     clearPKDCertificates() {
@@ -1137,7 +1137,7 @@ class DocumentReader {
     }
 
     async setTCCParams(params) {
-        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTCCParams", [params]);
+        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTCCParams", [params.toJson()]);
         return this._successOrErrorFromJson(response);
     }
 
@@ -1172,7 +1172,7 @@ class DocumentReader {
     async engageDevice(type, options) {
         var response = "";
         if (options?.withoutUI != true) {
-            response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
+            response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type]);
         } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
         } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.QR && options?.data != null) {
@@ -1805,7 +1805,8 @@ async function exec(name, params) {
 }
 
 function serializeInterface(value, ctor) {
-    if (value == null) return null
+    if (value === undefined) return undefined
+    if (value === null) return null
     if (value instanceof ctor) return value.toJson()
     return (new ctor(value)).toJson()
 }

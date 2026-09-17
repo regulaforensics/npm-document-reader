@@ -462,7 +462,7 @@ export class DocumentReader {
     }
 
     async initialize(config) {
-        var response = await exec("initialize", [config])
+        var response = await exec("initialize", [config.toJson()])
         var [success, error] = this._successOrErrorFromJson(response)
         if (success) await this._onInit()
         return [success, error]
@@ -511,17 +511,17 @@ export class DocumentReader {
 
     scan(config, completion) {
         _setDocumentReaderCompletion(completion);
-        exec("scan", [config]);
+        exec("scan", [config.toJson()]);
     }
 
     startScanner(config, completion) {
         _setDocumentReaderCompletion(completion);
-        exec("startScanner", [config]);
+        exec("startScanner", [config.toJson()]);
     }
 
     recognize(config, completion) {
         _setDocumentReaderCompletion(completion);
-        exec("recognize", [config]);
+        exec("recognize", [config.toJson()]);
     }
 
     rfid(config) {
@@ -554,7 +554,7 @@ export class DocumentReader {
     }
 
     addPKDCertificates(certificates) {
-        exec("addPKDCertificates", [certificates]);
+        exec("addPKDCertificates", [certificates.map(item => item.toJson())]);
     }
 
     clearPKDCertificates() {
@@ -562,7 +562,7 @@ export class DocumentReader {
     }
 
     async setTCCParams(params) {
-        var response = await exec("setTCCParams", [params]);
+        var response = await exec("setTCCParams", [params.toJson()]);
         return this._successOrErrorFromJson(response);
     }
 
@@ -597,7 +597,7 @@ export class DocumentReader {
     async engageDevice(type, options) {
         var response = "";
         if (options?.withoutUI != true) {
-            response = await exec("startEngageDevice", [type.value]);
+            response = await exec("startEngageDevice", [type]);
         } else if (type == MDLDeviceEngagement.NFC) {
             response = await exec("engageDeviceNFC", []);
         } else if (type == MDLDeviceEngagement.QR && options?.data != null) {
