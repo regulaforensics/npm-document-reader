@@ -526,7 +526,8 @@ export const RFIDPasswordType = {
     PUK: 4,
     PIN_ESIGN: 5,
     SAI: 6,
-    MRZ_HASH: 7
+    MRZ_HASH: 7,
+    PIN_LOCAL: 8,
 };
 
 export const RFIDSDKProfilerType = {
@@ -557,4 +558,11 @@ export const SignManagementAction = {
 export const RFIDReadingBufferSize = {
     STANDARD_LENGTH: 0,
     EXTENDED_LENGTH: -1
+};
+
+export const RFIDAccessControl = {
+    DEFAULT: 0,
+    CHIP_ACCESS_BAC: 1,
+    CHIP_ACCESS_PACE: 2,
+    LOCAL_PIN: 3,
 };

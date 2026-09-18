@@ -48,6 +48,8 @@ export class Application {
 }
 
 export const RFIDApplicationType = {
+    UNSPECIFIED: 0,
+    ROOT_FILES: 0,
     E_PASSPORT: 1,
     E_ID: 2,
     E_SIGN: 3,
@@ -55,5 +57,7 @@ export const RFIDApplicationType = {
     LDS2_TRAVEL_RECORDS: 5,
     LDS2_VISA_RECORDS: 6,
     LDS2_ADD_BIOMETRICS: 7,
-    E_DTC_PC: 8
+    E_DTC_PC: 8,
+    APPLET_ROOT: 50,
+    USER_DEFINED: 100,
 }

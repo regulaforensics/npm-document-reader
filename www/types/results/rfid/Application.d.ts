@@ -28,6 +28,8 @@ export declare class Application {
 
 /** Type of application of electronic document. */
 export declare enum RFIDApplicationType {
+    UNSPECIFIED = 0,
+    ROOT_FILES = 0,
     /** ePassport. */
     E_PASSPORT = 1,
     E_ID = 2,
@@ -40,5 +42,7 @@ export declare enum RFIDApplicationType {
     /** Add Biometrics. */
     LDS2_ADD_BIOMETRICS = 7,
     /** eDTC PC. */
-    E_DTC_PC = 8
+    E_DTC_PC = 8,
+    APPLET_ROOT = 50,
+    USER_DEFINED = 100,
 }

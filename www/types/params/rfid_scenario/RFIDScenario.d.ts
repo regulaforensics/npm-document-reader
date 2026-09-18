@@ -116,6 +116,8 @@ export declare enum RFIDPasswordType {
     SAI = 6,
     /** MRZHash. */
     MRZ_HASH = 7,
+    /** PinLocal. */
+    PIN_LOCAL = 8,
 }
 
 export declare enum RFIDSDKProfilerType {
@@ -164,4 +166,11 @@ export declare enum RFIDReadingBufferSize {
     STANDARD_LENGTH = 0,
     /** Extended length. */
     EXTENDED_LENGTH = -1,
+}
+
+export declare enum RFIDAccessControl {
+    DEFAULT = 0,
+    CHIP_ACCESS_BAC = 1,
+    CHIP_ACCESS_PACE = 2,
+    LOCAL_PIN = 3,
 }

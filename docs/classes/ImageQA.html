@@ -14,7 +14,7 @@
 <div class="tsd-comment tsd-typography"><p>Class contains properties to configure image quality.</p>
 </div></section><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:7</li></ul></aside>
+<li>Defined in params/process_params/ImageQA.d.ts:8</li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
@@ -36,6 +36,7 @@
 <a href="#glarescheck" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check?</span></a>
 <a href="#glarescheckparams" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check<wbr/>Params?</span></a>
 <a href="#occlusioncheck" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>occlusion<wbr/>Check?</span></a>
+<a href="#occlusioncheckparams" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>occlusion<wbr/>Check<wbr/>Params?</span></a>
 <a href="#screencapture" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>screen<wbr/>Capture?</span></a>
 </div></section>
 <section class="tsd-index-section">
@@ -63,21 +64,21 @@ document perspective angle in degrees. If actual document perspective
 angle is above this threshold, check will fail.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:20</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:21</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="brightnessthreshold"><code class="tsd-tag">Optional</code><span>brightness<wbr/>Threshold</span><a href="#brightnessthreshold" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">brightnessThreshold</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
 <div class="tsd-comment tsd-typography"><p>Set the threshold for an actual document brightness below which the check fails.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:67</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:73</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="colornesscheck"><code class="tsd-tag">Optional</code><span>colorness<wbr/>Check</span><a href="#colornesscheck" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">colornessCheck</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>This option disabled colorness check during performing image quality validation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:40</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:46</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="documentpositionindent"><code class="tsd-tag">Optional</code><span>document<wbr/>Position<wbr/>Indent</span><a href="#documentpositionindent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">documentPositionIndent</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
@@ -88,7 +89,7 @@ of the document are closer than the specified value, the status will contain
 an error in the <code>DocumentReaderResults.imageQuality.imageQualityList.result</code> field.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:62</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:68</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="dpithreshold"><code class="tsd-tag">Optional</code><span>dpi<wbr/>Threshold</span><a href="#dpithreshold" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dpiThreshold</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
@@ -97,7 +98,7 @@ document physical dpi. If actual document dpi is below this threshold,
 check will fail.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:13</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:14</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="expectedpass"><code class="tsd-tag">Optional</code><span>expected<wbr/>Pass</span><a href="#expectedpass" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">expectedPass</span><span class="tsd-signature-symbol">?:</span> <a href="../enums/ImageQualityCheckType.html" class="tsd-signature-type tsd-kind-enum">ImageQualityCheckType</a><span class="tsd-signature-symbol">[]</span></div>
@@ -106,42 +107,49 @@ in order to be considered a valid input during the scanning process.</p>
 <p>Unmodifiable property. Use setter instead of editing.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:53</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:59</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="focuscheck"><code class="tsd-tag">Optional</code><span>focus<wbr/>Check</span><a href="#focuscheck" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">focusCheck</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>This option disabled focus check during performing image quality validation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:25</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:26</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="glarescheck"><code class="tsd-tag">Optional</code><span>glares<wbr/>Check</span><a href="#glarescheck" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">glaresCheck</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>This option disabled glares check during performing image quality validation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:30</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:31</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="glarescheckparams"><code class="tsd-tag">Optional</code><span>glares<wbr/>Check<wbr/>Params</span><a href="#glarescheckparams" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">glaresCheckParams</span><span class="tsd-signature-symbol">?:</span> <a href="GlaresCheckParams.html" class="tsd-signature-type tsd-kind-class">GlaresCheckParams</a></div>
 <div class="tsd-comment tsd-typography"><p>Parameters for glares image quality validation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:35</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:36</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="occlusioncheck"><code class="tsd-tag">Optional</code><span>occlusion<wbr/>Check</span><a href="#occlusioncheck" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">occlusionCheck</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>This option checks document image occlusion.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:72</li></ul></aside></section>
+<li>Defined in params/process_params/ImageQA.d.ts:78</li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="occlusioncheckparams"><code class="tsd-tag">Optional</code><span>occlusion<wbr/>Check<wbr/>Params</span><a href="#occlusioncheckparams" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">occlusionCheckParams</span><span class="tsd-signature-symbol">?:</span> <a href="OcclusionCheckParams.html" class="tsd-signature-type tsd-kind-class">OcclusionCheckParams</a></div>
+<div class="tsd-comment tsd-typography"><p>Parameters for occlusion image quality validation.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in params/process_params/ImageQA.d.ts:41</li></ul></aside></section>
 <section class="tsd-panel tsd-member">
 <h3 class="tsd-anchor-link" id="screencapture"><code class="tsd-tag">Optional</code><span>screen<wbr/>Capture</span><a href="#screencapture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">screenCapture</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>This option disabled moire patterns check during performing image quality validation.</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:45</li></ul></aside></section></section></details>
+<li>Defined in params/process_params/ImageQA.d.ts:51</li></ul></aside></section></section></details>
 <details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
 <h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
 <section>
@@ -159,7 +167,7 @@ in order to be considered a valid input during the scanning process.</p>
 <li><span><span class="tsd-kind-parameter">jsonObject</span>: <span class="tsd-signature-type">any</span></span></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">ImageQA</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in params/process_params/ImageQA.d.ts:78</li></ul></aside></div></li></ul></section></section></details></div>
+<li>Defined in params/process_params/ImageQA.d.ts:84</li></ul></aside></div></li></ul></section></section></details></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -178,7 +186,7 @@ in order to be considered a valid input during the scanning process.</p>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
 <div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
-<div><a href="#anglethreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>angle<wbr/>Threshold</span></a><a href="#brightnessthreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>brightness<wbr/>Threshold</span></a><a href="#colornesscheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>colorness<wbr/>Check</span></a><a href="#documentpositionindent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>document<wbr/>Position<wbr/>Indent</span></a><a href="#dpithreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>dpi<wbr/>Threshold</span></a><a href="#expectedpass"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>expected<wbr/>Pass</span></a><a href="#focuscheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>focus<wbr/>Check</span></a><a href="#glarescheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check</span></a><a href="#glarescheckparams"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check<wbr/>Params</span></a><a href="#occlusioncheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>occlusion<wbr/>Check</span></a><a href="#screencapture"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>screen<wbr/>Capture</span></a></div></details>
+<div><a href="#anglethreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>angle<wbr/>Threshold</span></a><a href="#brightnessthreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>brightness<wbr/>Threshold</span></a><a href="#colornesscheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>colorness<wbr/>Check</span></a><a href="#documentpositionindent"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>document<wbr/>Position<wbr/>Indent</span></a><a href="#dpithreshold"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>dpi<wbr/>Threshold</span></a><a href="#expectedpass"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>expected<wbr/>Pass</span></a><a href="#focuscheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>focus<wbr/>Check</span></a><a href="#glarescheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check</span></a><a href="#glarescheckparams"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>glares<wbr/>Check<wbr/>Params</span></a><a href="#occlusioncheck"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>occlusion<wbr/>Check</span></a><a href="#occlusioncheckparams"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>occlusion<wbr/>Check<wbr/>Params</span></a><a href="#screencapture"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>screen<wbr/>Capture</span></a></div></details>
 <details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
 <div><a href="#fromjson"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>from<wbr/>Json</span></a></div></details></div></details></div>
 <div class="site-menu">

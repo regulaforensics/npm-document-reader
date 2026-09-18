@@ -42,6 +42,7 @@ import {
     FileData,
     Functionality,
     GlaresCheckParams,
+    OcclusionCheckParams,
     RFIDParams,
     GraphicField,
     GraphicResult,
@@ -144,6 +145,7 @@ import {
     fileData,
     functionality,
     glaresCheckParams,
+    occlusionCheckParams,
     rfidParams,
     graphicField,
     graphicResult,
@@ -220,6 +222,7 @@ compare('livenessParams', livenessParams, LivenessParams.fromJson)
 compare('propertiesParams', propertiesParams, AuthenticityPropertiesParams.fromJson);
 compare('authenticityParams', authenticityParams, AuthenticityParams.fromJson)
 compare('glaresCheckParams', glaresCheckParams, GlaresCheckParams.fromJson)
+compare('occlusionCheckParams', occlusionCheckParams, OcclusionCheckParams.fromJson)
 compare('rfidParams', rfidParams, RFIDParams.fromJson)
 compare('imageQA', imageQA, ImageQA.fromJson)
 compare('backendProcessingConfig', backendProcessingConfig, BackendProcessingConfig.fromJson)
