@@ -8,7 +8,7 @@
     "start": "expo start"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.9.1116-beta",
+    "@regulaforensics/document-reader": "9.9.1117-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.8.2974",
     "@regulaforensics/document-reader-btdevice": "9.8.68",
     "react-native": "0.88.0-rc.0",
@@ -22,14 +22,12 @@
     "expo-custom-assets": "^1.5.0",
     "expo-build-properties": "~58.0.3",
     "typescript": "7.0.2",
-    "image-size": "file:vendor/image-size-metro-compat"
   },
   "overrides": {
     "postcss": "^8.5.10",
     "uuid": "^14.0.0",
     "js-yaml": "^4.1.1",
     "brace-expansion": "5.0.9",
-    "image-size": "$image-size",
     "glob@7.2.3": {
       "minimatch": "10.2.6"
     }
