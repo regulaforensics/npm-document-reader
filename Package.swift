@@ -20,8 +20,9 @@ let package = Package(
                 .product(name: "Cordova", package: "cordova-ios"),
                 .product(name: "DocumentReader", package: "DocumentReader-Swift-Package")
             ],
-            path: "Sources/document-reader",
-            cSettings: [.headerSearchPath("include/document-reader")]
+            path: "ios",
+            exclude: ["RNDocumentReader.h", "RNDocumentReader.m"],
+            publicHeadersPath: "."
         )
     ]
 )

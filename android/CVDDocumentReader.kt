@@ -1,4 +1,4 @@
-package com.regula.plugin.documentreader
+package com.regula.plugin.document.reader
 
 import android.app.Activity
 import android.content.Context
@@ -66,8 +66,9 @@ class CVDDocumentReader : CordovaPlugin() {
         if (method == "setEvent") eventCallbackIds[args(0)] = callbackContext.callbackId
         try {
             methodCall(method) { data: Any? -> sendEvent(callbackContext.callbackId, data) }
-        } catch (error: Exception) {
-            Log.e("REGULA", "Caught exception in \"$method\" function:", error)
+        } catch (error: Throwable) {
+            Log.e("REGULA", "Caught an exception in \"$method\" function:", error)
+            sendEvent(callbackContext.callbackId, "Unexpected error, check logs for details")
         }
         return true
     }

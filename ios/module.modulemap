@@ -1,0 +1,7 @@
+module _regulaforensics_document_reader {
+    header "CVDDocumentReader.h"
+    header "RGLWMain.h"
+    header "RGLWJSONConstructor.h"
+    header "RGLWConfig.h"
+    export *
+}
