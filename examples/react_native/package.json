@@ -5,10 +5,10 @@
     "setup": "scripts/setup.sh",
     "ios": "scripts/ios.sh",
     "android": "scripts/android.sh",
-    "start": "expo start --port 8081"
+    "start": "expo start --port \"$npm_package_config_metroPort\""
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.9.1165-beta",
+    "@regulaforensics/document-reader": "9.9.1166-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3183-beta",
     "@regulaforensics/document-reader-btdevice": "9.9.112-beta",
     "react-native-fs": "^2.20.0",
@@ -29,5 +29,8 @@
     "expo-custom-assets": {
       "expo": "$expo"
     }
+  },
+  "config": {
+    "metroPort": 8081
   }
 }

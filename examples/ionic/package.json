@@ -19,7 +19,7 @@
     "@ionic/cordova-builders": "^13.0.0",
     "@awesome-cordova-plugins/camera": "^9.6.0",
     "@awesome-cordova-plugins/file": "^9.6.0",
-    "@regulaforensics/document-reader": "9.9.1165-beta",
+    "@regulaforensics/document-reader": "9.9.1166-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3183-beta",
     "@regulaforensics/document-reader-btdevice": "9.9.112-beta",
     "cordova-android": "^15.1.0",
