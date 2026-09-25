@@ -22,7 +22,7 @@ let package = Package(
             ],
             path: "ios",
             exclude: ["RNDocumentReader.h", "RNDocumentReader.m"],
-            publicHeadersPath: "."
+            publicHeadersPath: "spm"
         )
     ]
 )

@@ -5,12 +5,12 @@
     "setup": "scripts/setup.sh",
     "ios": "scripts/ios.sh",
     "android": "scripts/android.sh",
-    "start": "expo start"
+    "start": "expo start --port 8081"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.9.1155-beta",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.8.2852-beta",
-    "@regulaforensics/document-reader-btdevice": "9.9.90-beta",
+    "@regulaforensics/document-reader": "9.9.1165-beta",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3183-beta",
+    "@regulaforensics/document-reader-btdevice": "9.9.112-beta",
     "react-native-fs": "^2.20.0",
     "react-native-image-picker": "^8.2.1",
     "react-native-webview": "^14.0.1",

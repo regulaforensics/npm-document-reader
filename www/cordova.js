@@ -1923,11 +1923,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   NativeEventEmitter: () => (/* binding */ NativeEventEmitter),
 /* harmony export */   NativeModules: () => (/* binding */ NativeModules)
 /* harmony export */ });
-var _exec = (completion, params) => cordova.exec(completion, null, "DocumentReader", "exec", params)
+var _exec = (completion, params, errorCallback = null) => cordova.exec(completion, errorCallback, "DocumentReader", "exec", params)
 
 const NativeModules = {
     RNDocumentReader: {
-        exec: async (name, params) => new Promise((resolve, _) => _exec(data => resolve(data), [name, ...params]))
+        exec: async (name, params) => new Promise((resolve, reject) => _exec(resolve, [name, ...params], error => reject(new Error(error))))
     }
 }
 

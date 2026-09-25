@@ -3,10 +3,10 @@ set -e
 
 if [[ " $* " == *" --open "* ]] || [[ " $* " == *" -o "* ]]; then
     open ios/Document.xcworkspace
-    # check if metro is already running
-    if [[ -z $(pgrep -f 'expo start') ]]; then
+    # Check Metro for this product on port 8081.
+    if [[ "$(curl --silent --max-time 2 http://localhost:8081/status)" != "packager-status:running" ]]; then
         npm start
     fi
 else
-    npx expo run:ios  --device
+    npx expo run:ios --device --port 8081
 fi
