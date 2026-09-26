@@ -8,7 +8,7 @@
     "start": "expo start --port \"$npm_package_config_metroPort\""
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.8.1167-rc",
+    "@regulaforensics/document-reader": "9.9.1168-rc",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.8.2974",
     "@regulaforensics/document-reader-btdevice": "9.8.68",
     "react-native-fs": "^2.20.0",
