@@ -1,39 +1,31 @@
-import '@ionic/react/css/core.css'
 import '/src/main.css'
-import { setupIonicReact } from '@ionic/react'
-import { StatusBar, Style } from '@capacitor/status-bar'
-import { File } from '@awesome-cordova-plugins/file'
-import { Camera, DestinationType, MediaType, PictureSourceType } from '@awesome-cordova-plugins/camera'
+import mainHtml from './src/main.html?raw'
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera'
 import { main } from './src/main'
 
 document.addEventListener('deviceready', async () => {
-    document.getElementById("content").innerHTML = await fetch("main.html").then(r => r.text())
+    document.getElementById("content").innerHTML = mainHtml
     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))
     document.dispatchEvent(new Event('ready'))
 })
 
 export async function loadAsset(path: string): Promise<string> {
-    var dir = await File.resolveDirectoryUrl(File.applicationDirectory + "public/assets")
-    var fileEntry = await File.getFile(dir, path, {})
-    var result = await new Promise<string>((resolve, _) => {
-        fileEntry.file(file => {
-            var reader = new FileReader()
-            reader.onloadend = (_) => resolve(reader.result as string)
-            reader.readAsDataURL(file)
-        })
+    var response = await fetch(`assets/${path}`)
+    if (!response.ok) throw new Error(`Failed to load ${path}: ${response.status}`)
+    var blob = await response.blob()
+    return new Promise((resolve, reject) => {
+        var reader = new FileReader()
+        reader.onload = () => resolve(reader.result as string)
+        reader.onerror = () => reject(reader.error)
+        reader.readAsDataURL(blob)
     })
-    return result
 }
 
 export async function pickImage(): Promise<string | null> {
-    return await Camera.getPicture({
-        destinationType: DestinationType.DATA_URL,
-        mediaType: MediaType.PICTURE,
-        sourceType: PictureSourceType.PHOTOLIBRARY
-    })
+    return (await Camera.getPhoto({
+        resultType: CameraResultType.Base64,
+        source: CameraSource.Photos
+    })).base64String ?? null
 }
 
 document.addEventListener('ready', main)
-
-setupIonicReact()
-StatusBar.setStyle({ style: Style.Light })

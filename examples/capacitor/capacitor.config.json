@@ -1,0 +1,15 @@
+{
+  "appId": "com.regula.example.dr.capacitor",
+  "appName": "Document",
+  "webDir": "www",
+  "cordova": {
+    "preferences": {
+      "GradlePluginKotlinVersion": "2.4.20"
+    }
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "disable"
+    }
+  }
+}

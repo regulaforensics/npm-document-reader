@@ -56,6 +56,7 @@ export declare class RFIDScenario {
      */
     loadCRLFromRemote?: boolean;
     independentSODStatus?: boolean;
+    readUser?: boolean;
     readingBuffer?: RFIDReadingBufferSize;
     onlineTAToSignDataType?: number;
     defaultReadingBufferSize: number;
@@ -76,6 +77,7 @@ export declare class RFIDScenario {
     documentNumber?: string;
     dateOfBirth?: string;
     dateOfExpiry?: string;
+    defaultUserPIN?: string;
     eDLDataGroups: EDLDataGroups;
     ePassportDataGroups: EPassportDataGroups;
     eIDDataGroups: EIDDataGroups;

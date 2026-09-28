@@ -32,8 +32,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     package: 'com.regula.example.dr.react',
     permissions: [
       'android.permission.BLUETOOTH_CONNECT',
-      'android.permission.NFC'],
-    edgeToEdgeEnabled: true
+      'android.permission.NFC']
   },
   plugins: [
     '@regulaforensics/document-reader',
