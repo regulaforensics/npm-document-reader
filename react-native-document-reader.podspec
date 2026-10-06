@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'react-native-document-reader'
-  s.version      = '9.9.1198-rc'
+  s.version      = '9.9.1201-rc'
   s.summary      = 'Regula React Native plugin.'
   s.license      = 'commercial'
   s.authors      = { 'RegulaForensics' => 'support@regulaforensics.com' }
