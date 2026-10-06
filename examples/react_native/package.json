@@ -8,9 +8,9 @@
     "start": "expo start --port \"$npm_package_config_metroPort\""
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.9.1193-nightly",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.8.2974",
-    "@regulaforensics/document-reader-btdevice": "9.8.68",
+    "@regulaforensics/document-reader": "9.9.1200-nightly",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3302-nightly",
+    "@regulaforensics/document-reader-btdevice": "9.9.136-nightly",
     "react-native-fs": "^2.20.0",
     "react-native-image-picker": "^8.2.1",
     "react-native-webview": "^14.0.1",
