@@ -1037,7 +1037,7 @@ class DocumentReader {
     }
 
     async initialize(config) {
-        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("initialize", [config])
+        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("initialize", [config.toJson()])
         var [success, error] = this._successOrErrorFromJson(response)
         if (success) await this._onInit()
         return [success, error]
@@ -1086,17 +1086,17 @@ class DocumentReader {
 
     scan(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("scan", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("scan", [config.toJson()]);
     }
 
     startScanner(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startScanner", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startScanner", [config.toJson()]);
     }
 
     recognize(config, completion) {
         ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setDocumentReaderCompletion)(completion);
-        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("recognize", [config]);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("recognize", [config.toJson()]);
     }
 
     rfid(config) {
@@ -1129,7 +1129,7 @@ class DocumentReader {
     }
 
     addPKDCertificates(certificates) {
-        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates]);
+        ;(0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("addPKDCertificates", [certificates.map(item => item.toJson())]);
     }
 
     clearPKDCertificates() {
@@ -1137,7 +1137,7 @@ class DocumentReader {
     }
 
     async setTCCParams(params) {
-        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTCCParams", [params]);
+        var response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("setTCCParams", [params.toJson()]);
         return this._successOrErrorFromJson(response);
     }
 
@@ -1172,7 +1172,7 @@ class DocumentReader {
     async engageDevice(type, options) {
         var response = "";
         if (options?.withoutUI != true) {
-            response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type.value]);
+            response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("startEngageDevice", [type]);
         } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.NFC) {
             response = await (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__.exec)("engageDeviceNFC", []);
         } else if (type == _mdl_DeviceEngagement__WEBPACK_IMPORTED_MODULE_113__.MDLDeviceEngagement.QR && options?.data != null) {
@@ -1805,7 +1805,8 @@ async function exec(name, params) {
 }
 
 function serializeInterface(value, ctor) {
-    if (value == null) return null
+    if (value === undefined) return undefined
+    if (value === null) return null
     if (value instanceof ctor) return value.toJson()
     return (new ctor(value)).toJson()
 }
@@ -1922,11 +1923,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   NativeEventEmitter: () => (/* binding */ NativeEventEmitter),
 /* harmony export */   NativeModules: () => (/* binding */ NativeModules)
 /* harmony export */ });
-var _exec = (completion, params) => cordova.exec(completion, null, "DocumentReader", "exec", params)
+var _exec = (completion, params, errorCallback = null) => cordova.exec(completion, errorCallback, "DocumentReader", "exec", params)
 
 const NativeModules = {
     RNDocumentReader: {
-        exec: async (name, params) => new Promise((resolve, _) => _exec(data => resolve(data), [name, ...params]))
+        exec: async (name, params) => new Promise((resolve, reject) => _exec(resolve, [name, ...params], error => reject(new Error(error))))
     }
 }
 
@@ -6730,6 +6731,12 @@ class RFIDScenario {
         this._set({ "independentSODStatus": val });
     }
 
+    get readUser() { return this._readUser; }
+    set readUser(val) {
+        this._readUser = val;
+        this._set({ "readUser": val });
+    }
+
     get readingBuffer() { return this._readingBuffer; }
     set readingBuffer(val) {
         this._readingBuffer = val;
@@ -6850,6 +6857,12 @@ class RFIDScenario {
         this._set({ "dateOfExpiry": val });
     }
 
+    get defaultUserPIN() { return this._defaultUserPIN; }
+    set defaultUserPIN(val) {
+        this._defaultUserPIN = val;
+        this._set({ "defaultUserPIN": val });
+    }
+
     get eDLDataGroups() { return this._eDLDataGroups; }
     set eDLDataGroups(val) { (this._eDLDataGroups = val)._apply(); }
 
@@ -6904,6 +6917,7 @@ class RFIDScenario {
         result._mrzStrictCheck = jsonObject["mrzStrictCheck"];
         result._loadCRLFromRemote = jsonObject["loadCRLFromRemote"];
         result._independentSODStatus = jsonObject["independentSODStatus"];
+        result._readUser = jsonObject["readUser"];
         result._readingBuffer = jsonObject["readingBuffer"];
         result._onlineTAToSignDataType = jsonObject["onlineTAToSignDataType"];
         result._defaultReadingBufferSize = jsonObject["defaultReadingBufferSize"];
@@ -6924,6 +6938,7 @@ class RFIDScenario {
         result._documentNumber = jsonObject["documentNumber"];
         result._dateOfBirth = jsonObject["dateOfBirth"];
         result._dateOfExpiry = jsonObject["dateOfExpiry"];
+        result._defaultUserPIN = jsonObject["defaultUserPIN"];
         result._eDLDataGroups = _EDLDataGroups__WEBPACK_IMPORTED_MODULE_3__.EDLDataGroups.fromJson(jsonObject["eDLDataGroups"]);
         result._ePassportDataGroups = _EPassportDataGroups__WEBPACK_IMPORTED_MODULE_5__.EPassportDataGroups.fromJson(jsonObject["ePassportDataGroups"]);
         result._eIDDataGroups = _EIDDataGroups__WEBPACK_IMPORTED_MODULE_4__.EIDDataGroups.fromJson(jsonObject["eIDDataGroups"]);
@@ -6972,6 +6987,7 @@ class RFIDScenario {
             "mrzStrictCheck": this.mrzStrictCheck,
             "loadCRLFromRemote": this.loadCRLFromRemote,
             "independentSODStatus": this.independentSODStatus,
+            "readUser": this.readUser,
             "readingBuffer": this.readingBuffer,
             "onlineTAToSignDataType": this.onlineTAToSignDataType,
             "defaultReadingBufferSize": this.defaultReadingBufferSize,
@@ -6992,6 +7008,7 @@ class RFIDScenario {
             "documentNumber": this.documentNumber,
             "dateOfBirth": this.dateOfBirth,
             "dateOfExpiry": this.dateOfExpiry,
+            "defaultUserPIN": this.defaultUserPIN,
             "eDLDataGroups": this.eDLDataGroups?.toJson(),
             "ePassportDataGroups": this.ePassportDataGroups?.toJson(),
             "eIDDataGroups": this.eIDDataGroups?.toJson(),

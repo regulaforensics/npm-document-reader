@@ -1,8 +1,9 @@
 import 'zone.js';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { BrowserModule } from '@angular/platform-browser'
-import { IonicModule, Platform } from '@ionic/angular'
-import { NgModule } from '@angular/core'
+import { IonicModule } from '@ionic/angular/lazy'
+import { Platform } from '@ionic/angular'
+import { NgModule, provideZoneChangeDetection } from '@angular/core'
 
 import { Component } from '@angular/core'
 import { File } from '@awesome-cordova-plugins/file'
@@ -34,6 +35,7 @@ export async function pickImage(): Promise<string | null> {
 var cameraInstance: Camera
 @Component({
     selector: 'app-root',
+    standalone: false,
     templateUrl: 'src/main.html',
     styleUrl: 'src/main.css'
 })
@@ -50,9 +52,12 @@ class Main {
 
 @NgModule({
     bootstrap: [Main],
+    declarations: [Main],
     providers: [Platform, Camera],
     imports: [BrowserModule, IonicModule.forRoot()]
 })
 class MainModule { }
 
-platformBrowserDynamic().bootstrapModule(MainModule)
+platformBrowserDynamic().bootstrapModule(MainModule, {
+    applicationProviders: [provideZoneChangeDetection()]
+})
