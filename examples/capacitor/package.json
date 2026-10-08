@@ -7,9 +7,9 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.9.1202-beta",
-    "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3304-beta",
-    "@regulaforensics/document-reader-btdevice": "9.9.138-beta",
+    "@regulaforensics/document-reader": "9.9.1205-beta",
+    "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3305",
+    "@regulaforensics/document-reader-btdevice": "9.9.140",
     "@capacitor/cli": "^8.5.2",
     "@capacitor/core": "^8.5.2",
     "@capacitor/ios": "^8.5.2",
