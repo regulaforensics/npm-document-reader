@@ -10,7 +10,7 @@ let package = Package(
         .package(url: "https://github.com/apache/cordova-ios.git", branch: "master"),
         .package(
             url: "https://github.com/regulaforensics/DocumentReader-Swift-Package",
-            exact: "9.10.7141-rc"
+            exact: "9.10.7145-rc"
         )
     ],
     targets: [
