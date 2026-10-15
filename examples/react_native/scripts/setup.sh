@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-# Kill Metro instance at app's port.
-lsof -tiTCP:${npm_package_config_metroPort} -sTCP:LISTEN | xargs kill 2>/dev/null || true
-
 npm install
 # Run CocoaPods separately because Expo prebuild can return success even when pod installation fails.
 npx expo prebuild --no-install

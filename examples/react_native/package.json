@@ -4,11 +4,10 @@
   "scripts": {
     "setup": "scripts/setup.sh",
     "ios": "scripts/ios.sh",
-    "android": "scripts/android.sh",
-    "start": "expo start --port \"$npm_package_config_metroPort\""
+    "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.10.1232-beta",
+    "@regulaforensics/document-reader": "9.10.1235-beta",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3305",
     "@regulaforensics/document-reader-btdevice": "9.9.140",
     "react-native-fs": "^2.20.0",
@@ -18,7 +17,6 @@
     "react": "19.3.1",
     "@types/react": "19.3.0",
     "expo": "~58.0.10",
-    "expo-dev-client": "~58.0.13",
     "@expo/config-plugins": "~58.0.9",
     "expo-build-properties": "~58.0.10",
     "expo-custom-assets": "^1.5.0",
@@ -28,8 +26,5 @@
     "xcode": {
       "uuid": "^11.1.1"
     }
-  },
-  "config": {
-    "metroPort": 8081
   }
 }
