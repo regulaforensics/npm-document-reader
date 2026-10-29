@@ -7,7 +7,7 @@
     "android": "scripts/android.sh"
   },
   "dependencies": {
-    "@regulaforensics/document-reader": "9.10.1267-rc",
+    "@regulaforensics/document-reader": "9.10.1272-rc",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3305",
     "@regulaforensics/document-reader-btdevice": "9.9.140",
     "react-native-fs": "^2.20.0",
