@@ -18,6 +18,7 @@ static NSMutableArray<RCTResponseSenderBlock>* _firedCallbacks = nil;
              paCertificateCompletionEvent,
              taCertificateCompletionEvent,
              taSignatureCompletionEvent,
+             aaChallengeCompletionEvent,
              paceProtocolCompletionEvent,
              caProtocolCompletionEvent,
              drVideoEncoderCompletionEvent,
