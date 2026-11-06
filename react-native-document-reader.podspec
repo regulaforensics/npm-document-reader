@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name         = 'react-native-document-reader'
-  s.version      = '9.10.1235-beta'
+  s.version      = '9.10.1300-beta'
   s.summary      = 'Regula React Native plugin.'
   s.license      = 'commercial'
   s.authors      = { 'RegulaForensics' => 'support@regulaforensics.com' }
   s.homepage     = 'https://regulaforensics.com'
   s.source       = { :path => '.' }
-  s.ios.deployment_target = '15.0'
+  s.ios.deployment_target = '16.0'
   s.source_files = 'ios/*.{h,m}'
   s.exclude_files = [ 'ios/CVDDocumentReader.h', 'ios/CVDDocumentReader.m' ]
-  s.dependency 'DocumentReader', '9.9.7126'
+  s.dependency 'DocumentReaderStage', '9.10.7321'
   s.dependency 'React'
 end

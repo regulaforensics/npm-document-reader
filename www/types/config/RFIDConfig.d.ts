@@ -54,6 +54,11 @@ export declare class RFIDConfig {
     /**
      * Callback for receiving RFID request data
      */
+    onRequestAAChallenge?: AAChallengeCompletion;
+
+    /**
+     * Callback for receiving RFID request data
+     */
     onRequestPACEProtocol?: PACEProtocolCompletion;
 
     /**
@@ -141,6 +146,16 @@ export type TaSignatureCompletion = (challenge: TAChallenge | null, request: TAS
  * Provided to a user for passing TASignature to the native part of DocumentReader. Base64 string.
  */
 export type TASignatureRequest = (signature?: string) => Promise<void>; 
+
+/**
+ * Callback for receiving RFID request data.
+ */
+export type AAChallengeCompletion = (challenge: string | null, request: AAChallengeRequest) => void;
+
+/**
+ * Provided to a user for passing AAChallenge to the native part of DocumentReader.
+ */
+export type AAChallengeRequest = (challenge?: string | null) => Promise<void>; 
 
 /**
  * Callback for receiving RFID request data.

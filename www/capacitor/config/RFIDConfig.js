@@ -18,6 +18,7 @@ export class RFIDConfig {
     onRequestPACertificates
     onRequestTACertificates
     onRequestTASignature
+    onRequestAAChallenge
     onRequestPACEProtocol
     onRequestCAProtocol
 
@@ -38,6 +39,7 @@ export class RFIDConfig {
             "paCertificates": this.onRequestPACertificates != null,
             "taCertificates": this.onRequestTACertificates != null,
             "taSignature": this.onRequestTASignature != null,
+            "aaChallenge": this.onRequestAAChallenge != null,
             "paceProtocol": this.onRequestPACEProtocol != null,
             "caProtocol": this.onRequestCAProtocol != null,
         }

@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-if [[ " $* " == *" --open "* ]] || [[ " $* " == *" -o "* ]]; then
-    open ios/Document.xcworkspace
-else
+[[ " $* " == *" --open "* || " $* " == *" -o "* ]] &&
+    open ios/Document.xcworkspace ||
     npx expo run:ios --device --no-bundler "$@"
-fi
