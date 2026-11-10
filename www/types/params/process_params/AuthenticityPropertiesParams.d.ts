@@ -2,6 +2,8 @@ export declare class AuthenticityPropertiesParams {
     /** Set to true to enable detection of the document holder’s signature. */
     checkHoldersSignature?: boolean;
 
+    checkDocumentDamage?: boolean;
+
     /**
      * Allows you to deserialize object.
      * @param jsonObject

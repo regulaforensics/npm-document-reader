@@ -229,6 +229,7 @@ class RFIDConfig {
     onRequestPACertificates
     onRequestTACertificates
     onRequestTASignature
+    onRequestAAChallenge
     onRequestPACEProtocol
     onRequestCAProtocol
 
@@ -249,6 +250,7 @@ class RFIDConfig {
             "paCertificates": this.onRequestPACertificates != null,
             "taCertificates": this.onRequestTACertificates != null,
             "taSignature": this.onRequestTASignature != null,
+            "aaChallenge": this.onRequestAAChallenge != null,
             "paceProtocol": this.onRequestPACEProtocol != null,
             "caProtocol": this.onRequestCAProtocol != null,
         }
@@ -1113,6 +1115,7 @@ class DocumentReader {
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setPaCertificateCompletion)(config.onRequestPACertificates);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setTaCertificateCompletion)(config.onRequestTACertificates);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setTaSignatureCompletion)(config.onRequestTASignature);
+        (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setAAChallengeCompletion)(config.onRequestAAChallenge);
 
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setPACEProtocolCompletion)(config.onRequestPACEProtocol);
         (0,_internal_bridge__WEBPACK_IMPORTED_MODULE_0__._setCAProtocolCompletion)(config.onRequestCAProtocol);
@@ -1759,6 +1762,7 @@ class RFIDException {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   _setAAChallengeCompletion: () => (/* binding */ _setAAChallengeCompletion),
 /* harmony export */   _setCAProtocolCompletion: () => (/* binding */ _setCAProtocolCompletion),
 /* harmony export */   _setChipDetectedCompletion: () => (/* binding */ _setChipDetectedCompletion),
 /* harmony export */   _setCustomButtonTappedCompletion: () => (/* binding */ _setCustomButtonTappedCompletion),
@@ -1889,6 +1893,14 @@ function _setTaSignatureCompletion(completion) {
     _setEvent("ta_signature_completion", completion, json => {
         return [_rfid_TAChallenge__WEBPACK_IMPORTED_MODULE_7__.TAChallenge.fromJson(JSON.parse(json)), async signature => {
             await exec("provideTASignature", [signature])
+        }]
+    })
+}
+
+function _setAAChallengeCompletion(completion) {
+    _setEvent("aaChallengeCompletionEvent", completion, json => {
+        return [json, async challenge => {
+            await exec("provideAAChallenge", [challenge])
         }]
     })
 }
@@ -4541,11 +4553,18 @@ class AuthenticityPropertiesParams {
         this._set({ "checkHoldersSignature": val });
     }
 
+    get checkDocumentDamage() { return this._checkDocumentDamage; }
+    set checkDocumentDamage(val) {
+        this._checkDocumentDamage = val;
+        this._set({ "checkDocumentDamage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new AuthenticityPropertiesParams();
 
         const result = new AuthenticityPropertiesParams();
         result._checkHoldersSignature = jsonObject["checkHoldersSignature"];
+        result._checkDocumentDamage = jsonObject["checkDocumentDamage"];
 
         return result;
     }
@@ -4560,6 +4579,7 @@ class AuthenticityPropertiesParams {
     toJson() {
         return {
             "checkHoldersSignature": this.checkHoldersSignature,
+            "checkDocumentDamage": this.checkDocumentDamage,
         }
     }
 }
@@ -8273,6 +8293,8 @@ const CheckDiagnose = {
     PROPERTY_NO_SIGNATURE: 260,
     PROPERTY_TEXT_AS_SIGNATURE: 261,
     PROPERTY_FINGERPRINT_AS_SIGNATURE: 262,
+    PROPERTY_DOCUMENT_DAMAGED: 263,
+    PROPERTY_DOCUMENT_CANCELLED: 264,
 }
 
 
@@ -8353,6 +8375,7 @@ const SecurityFeatureType = {
     PORTRAIT_COMPARISON_GHOSTVSLIVE: 60,
     PORTRAIT_COMPARISON_EXTVSGHOST: 61,
     SIGNATURE_PRESENCE: 62,
+    DAMAGE_CHECK: 63,
 }
 
 
@@ -11481,6 +11504,8 @@ const FieldType = {
   DLCLASSCODE_B3_FROM: 706,
   DLCLASSCODE_B3_TO: 707,
   DLCLASSCODE_B3_NOTES: 708,
+  ADDRESS_POST_OFFICE: 709,
+  ADDRESS_LOT: 710,
 }
 
 FieldType.getTranslation = async function (value) {

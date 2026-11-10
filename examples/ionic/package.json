@@ -20,7 +20,7 @@
     "@ionic/cordova-builders": "^13.0.0",
     "@awesome-cordova-plugins/camera": "^9.6.0",
     "@awesome-cordova-plugins/file": "^9.6.0",
-    "@regulaforensics/document-reader": "9.10.1288-nightly",
+    "@regulaforensics/document-reader": "9.10.1304-nightly",
     "@regulaforensics/document-reader-core-fullauthrfid": "9.9.3305",
     "@regulaforensics/document-reader-btdevice": "9.9.140",
     "cordova": "^13.0.0",
@@ -40,7 +40,24 @@
     "serialize-javascript": "^7.1.2",
     "uuid": "^11.1.1",
     "source-map-js": "^1.2.2",
-    "shell-quote": "^1.11.0"
+    "shell-quote": "^1.11.0",
+    "glob@^13.0.0": "^14.0.3",
+    "minimatch@^10.0.0": "^11.0.4",
+    "@ionic/cli": {
+      "tar": "^7.5.22"
+    },
+    "get-uri": {
+      "basic-ftp": "^6.2.5"
+    },
+    "tmp@<0.2.6": "^0.2.7",
+    "@regulaforensics/document-reader": {
+      "@expo/config-plugins": {
+        "glob": "^14.0.3"
+      }
+    },
+    "@ionic/cli-framework": {
+      "rimraf": "^6.1.4"
+    }
   },
   "cordova": {
     "plugins": {

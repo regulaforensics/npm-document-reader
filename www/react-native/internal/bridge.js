@@ -106,6 +106,14 @@ export function _setTaSignatureCompletion(completion) {
     })
 }
 
+export function _setAAChallengeCompletion(completion) {
+    _setEvent("aaChallengeCompletionEvent", completion, json => {
+        return [json, async challenge => {
+            await exec("provideAAChallenge", [challenge])
+        }]
+    })
+}
+
 export function _setPACEProtocolCompletion(completion) {
     _setEvent("paceProtocolCompletionEvent", completion, json => {
         return [JSON.parse(json).map(item => PACEProtocol.fromJson(item)), async protocol => {

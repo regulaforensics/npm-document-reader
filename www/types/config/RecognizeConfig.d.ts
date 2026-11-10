@@ -9,14 +9,14 @@ export declare class RecognizeConfig {
     /**
      * Documents processing scenario.
      */
-    readonly scenario?: Scenario;
+    scenario?: Scenario;
 
     /**
      * Configuration class for online processing.
      *
      * Requires network connection.
      */
-    readonly onlineProcessingConfig?: OnlineProcessingConfig;
+    onlineProcessingConfig?: OnlineProcessingConfig;
 
     /**
      * Image for processing. Base64 string.
