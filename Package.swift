@@ -4,13 +4,13 @@ import PackageDescription
 
 let package = Package(
     name: "@regulaforensics/document-reader",
-    platforms: [.iOS(.v15)],
+    platforms: [.iOS(.v16)],
     products: [.library(name: "@regulaforensics/document-reader", targets: ["@regulaforensics/document-reader"])],
     dependencies: [
         .package(url: "https://github.com/apache/cordova-ios.git", branch: "master"),
         .package(
             url: "https://github.com/regulaforensics/DocumentReader-Swift-Package",
-            exact: "9.9.7126"
+            exact: "9.10.7343"
         )
     ],
     targets: [

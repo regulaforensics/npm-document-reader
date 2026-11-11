@@ -7,11 +7,18 @@ export class AuthenticityPropertiesParams {
         this._set({ "checkHoldersSignature": val });
     }
 
+    get checkDocumentDamage() { return this._checkDocumentDamage; }
+    set checkDocumentDamage(val) {
+        this._checkDocumentDamage = val;
+        this._set({ "checkDocumentDamage": val });
+    }
+
     static fromJson(jsonObject) {
         if (jsonObject == null) return new AuthenticityPropertiesParams();
 
         const result = new AuthenticityPropertiesParams();
         result._checkHoldersSignature = jsonObject["checkHoldersSignature"];
+        result._checkDocumentDamage = jsonObject["checkDocumentDamage"];
 
         return result;
     }
@@ -26,6 +33,7 @@ export class AuthenticityPropertiesParams {
     toJson() {
         return {
             "checkHoldersSignature": this.checkHoldersSignature,
+            "checkDocumentDamage": this.checkDocumentDamage,
         }
     }
 }
