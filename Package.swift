@@ -18,7 +18,7 @@ let package = Package(
             name: "@regulaforensics/document-reader",
             dependencies: [
                 .product(name: "Cordova", package: "cordova-ios"),
-                .product(name: "product_place_holder", package: "DocumentReader-Swift-Package")
+                .product(name: "DocumentReader", package: "DocumentReader-Swift-Package")
             ],
             path: "ios",
             exclude: ["RNDocumentReader.h", "RNDocumentReader.m"],
