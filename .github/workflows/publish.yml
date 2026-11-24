@@ -83,6 +83,10 @@ jobs:
           LOCAL_BUILD: 'false'
           NPM_BUILD_ONLY: 'true'
         run: |
+          if [ "$ANDROID_VERSION" = '+' ]; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends libxml2-utils
+          fi
           bash ./update.sh
           rm -f ../.used-build-folder
           if [ -d examples ]; then
