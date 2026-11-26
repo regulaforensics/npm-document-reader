@@ -510,6 +510,10 @@ export class DocumentReader {
         exec("startNewSession", []);
     }
 
+    clearLastPage() {
+        exec("clearLastPage", []);
+    }
+
     scan(config, completion) {
         _setDocumentReaderCompletion(completion);
         exec("scan", [config.toJson()]);

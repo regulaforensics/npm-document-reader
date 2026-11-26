@@ -61,6 +61,7 @@ export declare class RFIDScenario {
     onlineTAToSignDataType?: number;
     defaultReadingBufferSize: number;
     signManagementAction?: SignManagementAction;
+    /** @deprecated Not used anymore */
     profilerType?: RFIDSDKProfilerType;
     authProcType?: RFIDAuthenticationProcedureType;
     baseSMProcedure?: AccessControlProcedureType;
