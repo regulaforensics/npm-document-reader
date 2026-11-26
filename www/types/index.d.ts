@@ -507,6 +507,9 @@ export class DocumentReader {
     /** Used to start a scanning process. */
     startNewSession(): void;
 
+    /** Removes the last processed page of the current document. */
+    clearLastPage(): void;
+
     /**
      * Used for multiple frames processing which are captured from the camera(old UI).
      *

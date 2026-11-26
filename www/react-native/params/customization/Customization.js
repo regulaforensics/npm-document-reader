@@ -86,6 +86,12 @@ export class Customization {
         this._set({ "multipageButtonText": val });
     }
 
+    get globalFontFamily() { return this._globalFontFamily; }
+    set globalFontFamily(val) {
+        this._globalFontFamily = val;
+        this._set({ "globalFontFamily": val });
+    }
+
     get cameraFrameDefaultColor() { return this._cameraFrameDefaultColor; }
     set cameraFrameDefaultColor(val) {
         this._cameraFrameDefaultColor = val;
@@ -482,6 +488,7 @@ export class Customization {
         result._status = jsonObject["status"];
         result._resultStatus = jsonObject["resultStatus"];
         result._multipageButtonText = jsonObject["multipageButtonText"];
+        result._globalFontFamily = jsonObject["globalFontFamily"];
         result._cameraFrameDefaultColor = jsonObject["cameraFrameDefaultColor"];
         result._cameraFrameActiveColor = jsonObject["cameraFrameActiveColor"];
         result._statusTextColor = jsonObject["statusTextColor"];
@@ -565,6 +572,7 @@ export class Customization {
             "status": this.status,
             "resultStatus": this.resultStatus,
             "multipageButtonText": this.multipageButtonText,
+            "globalFontFamily": this.globalFontFamily,
             "cameraFrameDefaultColor": this.cameraFrameDefaultColor,
             "cameraFrameActiveColor": this.cameraFrameActiveColor,
             "statusTextColor": this.statusTextColor,

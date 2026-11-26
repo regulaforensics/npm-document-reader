@@ -280,6 +280,7 @@ export var customization = {
   "status": "test1",
   "resultStatus": "test2",
   "multipageButtonText": "test3",
+  "globalFontFamily": font1["name"],
   "cameraFrameDefaultColor": 0xff000000,
   "cameraFrameActiveColor": 0xff000001,
   "statusTextColor": 0xff000002,

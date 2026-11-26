@@ -103,6 +103,14 @@ export declare class Customization {
 
     multipageButtonText?: string;
 
+    /** Font family used by SDK UI elements when a more specific font is not configured.
+     * 
+     * Set to nil to use the system font family. Default: nil.
+     * 
+     * Beware that Android and iOS have diffrent font names.
+     */
+    globalFontFamily?: string;
+
     /** Allows you to set a color for the camera frame when a document is out of the camera frame or is not detected. */
     cameraFrameDefaultColor?: number;
 
