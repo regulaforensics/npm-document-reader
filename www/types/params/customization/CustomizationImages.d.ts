@@ -1,30 +1,31 @@
 export declare class CustomizationImages {
-    helpAnimation?: string;
-    livenessAnimation?: string;
-    borderBackground?: string;
-    torchButtonOn?: string;
-    torchButtonOff?: string;
-    captureButton?: string;
-    switchButton?: string;
-    closeButton?: string;
+    helpAnimation?: string | null;
+    livenessAnimation?: string | null;
+    borderBackground?: string | null;
+    torchButtonOn?: string | null;
+    torchButtonOff?: string | null;
+    captureButton?: string | null;
+    switchButton?: string | null;
+    closeButton?: string | null;
+    multipageButton?: string | null;
     /** Base64 string. */
-    rfidProcessingScreenFailureImage?: string;
+    rfidProcessingScreenFailureImage?: string | null;
     /** Android only. */
-    rfidEnableNfcImage?: string;
+    rfidEnableNfcImage?: string | null;
     /** Android only. */
-    rfidDisableNfcImage?: string;
-    mdlProcessingScreenFailureImage?: string;
+    rfidDisableNfcImage?: string | null;
+    mdlProcessingScreenFailureImage?: string | null;
     /** Android only. */
-    mdlEnableNfcImage?: string;
+    mdlEnableNfcImage?: string | null;
     /** Android only. */
-    mdlDisableNfcImage?: string;
-    nextPageIdCardFront?: string;
-    nextPageIdCardBack?: string;
-    nextPagePassportShift?: string;
-    nextPagePassportFlipStart?: string;
-    nextPagePassportFlipClean?: string;
-    nextPagePassportFlipTop?: string;
-    nextPagePassportFlipBottom?: string;
+    mdlDisableNfcImage?: string | null;
+    nextPageIdCardFront?: string | null;
+    nextPageIdCardBack?: string | null;
+    nextPagePassportShift?: string | null;
+    nextPagePassportFlipStart?: string | null;
+    nextPagePassportFlipClean?: string | null;
+    nextPagePassportFlipTop?: string | null;
+    nextPagePassportFlipBottom?: string | null;
 
     /**
      * Allows you to deserialize object.
